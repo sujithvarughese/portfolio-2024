@@ -39,11 +39,11 @@ const Landing = forwardRef((props, ref) => {
 
           <VStack alignItems="flex-end" gap={{ base: "0", sm: "8px" }}>
             <HStack alignItems="flex-end">
-              <Heading fontSize={{ base: "18px", sm: "22px" }} fontWeight="500" marginY="4px">My name is</Heading>
+              <Heading fontSize={{ base: "18px", sm: "22px" }} fontWeight="500" marginY="4px" color={colorMode === "dark" ? "#F6E05E" : "#2B6CB0"}>My name is</Heading>
               <Heading fontSize={{ base: "28px", sm: "36px" }}>Sujith Varughese.</Heading>
             </HStack>
 
-            <Heading  fontSize={{ base: "18px", sm: "22px" }} fontWeight="500">Software Developer</Heading>
+            <Heading  fontSize={{ base: "18px", sm: "22px" }} fontWeight="500" >Software Developer</Heading>
 
             <HStack gap="0" alignItems="flex-end">
               <Icon as={MdLocationPin} fontSize={{ base: "28px", sm: "32px" }} />

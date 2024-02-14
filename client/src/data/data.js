@@ -12,4 +12,4 @@ export const aboutMe = "I create web and mobile applications that aim to solve r
 export const aboutMe2 = "My recent work should give an accurate representation of my ability and where my strengths and weaknesses are."
 
 
-export const skills = ["Javascript", "Python", "Java", "React", "NodeJS", "RESTful APIs", "3rd party API integration", "Express", "MongoDB", "SQL", "Data Structures", "Software Testing", "Software deployment", "DNS configurations", "HTML/CSS", "Bootstrap", "Tailwind", "Git version control"]
+export const skills = ["Javascript", "Python", "Java", "React", "NodeJS", "RESTful APIs", "API integration", "Express", "MongoDB", "SQL", "Data Structures", "Software Testing", "App deployment", "DNS config", "HTML/CSS", "Bootstrap", "Tailwind", "Git version control"]

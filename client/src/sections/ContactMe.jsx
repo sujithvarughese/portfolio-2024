@@ -126,7 +126,12 @@ const ContactMe = forwardRef((props, ref) => {
                 />
                 <FormErrorMessage>{formik.errors.message}</FormErrorMessage>
               </FormControl>
-              <Button type="submit" colorScheme="yellow" isLoading={isLoading} backdropFilter="blur(12px)">
+              <Button
+                type="submit"
+                colorScheme={colorMode === "dark" ? "yellow" : "telegram"}
+                isLoading={isLoading}
+                backdropFilter="blur(12px)"
+              >
                 Submit
               </Button>
             </VStack>

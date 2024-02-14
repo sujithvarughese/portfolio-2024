@@ -38,10 +38,7 @@ const Project = ({ title, coverImage, heading, link, github, captions, images, i
       <SimpleGrid
         gap="24px"
         maxWidth={{lg: "240px", xl: "420px" }}
-
       >
-
-
         <Heading fontSize="28px" textTransform="uppercase">{title}</Heading>
 
 
@@ -51,13 +48,27 @@ const Project = ({ title, coverImage, heading, link, github, captions, images, i
           {captions.map((caption, index) => <ListItem key={index}>{caption}</ListItem>)}
         </UnorderedList>
 
-        <ButtonGroup fontSize="20px" gap="8px" maxHeight="45px">
-          <Link color="#F6E05E" border="#F6E05E 2px solid" borderRadius="5px" padding="5px" minWidth="141px" textAlign="center" _hover={{ fontWeight: "600" }}
-                href={link} target="_blank" rel="noreferrer">
+        <ButtonGroup fontSize="20px" gap="8px" maxHeight="45px" color={colorMode === "dark" ? "#F6E05E" : "#2B6CB0"}>
+          <Link
+            border={colorMode === "dark" ? "#F6E05E 2px solid" : "#2B6CB0 2px solid"}
+            borderRadius="5px"
+            padding="5px"
+            minWidth="141px"
+            textAlign="center"
+            _hover={{ fontWeight: "600" }}
+            href={link} target="_blank" rel="noreferrer"
+          >
             Launch Demo
           </Link>
-          <Link color="#F6E05E" border="#F6E05E 2px solid" borderRadius="5px" padding="5px" minWidth="141px" textAlign="center" _hover={{ fontWeight: "600" }}
-                href={github} target="_blank" rel="noreferrer">
+          <Link
+            border={colorMode === "dark" ? "#F6E05E 2px solid" : "#2B6CB0 2px solid"}
+            borderRadius="5px"
+            padding="5px"
+            minWidth="141px"
+            textAlign="center"
+            _hover={{ fontWeight: "600" }}
+            href={github} target="_blank" rel="noreferrer"
+          >
             View Code
           </Link>
         </ButtonGroup>
