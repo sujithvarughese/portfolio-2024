@@ -1,19 +1,20 @@
 import React, { forwardRef, useEffect } from 'react'
 import Section from '../ui/Section.jsx'
-import { Avatar, Box, Container, Heading, HStack, Icon, ListIcon, ListItem, SimpleGrid, Stack, Text, UnorderedList, VStack } from '@chakra-ui/react'
+import { Avatar, Box, Container, Heading, HStack, Icon, ListIcon, ListItem, SimpleGrid, Stack, Text, UnorderedList, useColorMode, VStack } from '@chakra-ui/react'
 import { MdArrowRight, MdLocationPin } from "react-icons/md";
 
 import avatarIMG from "../assets/images/profile/profile.png"
 import { useGlobalContext } from '../context/GlobalContext.jsx'
 import { intro, aboutMe, aboutMe2, skills } from "../data/data.js";
-import bgKnight from "../assets/images/backgrounds/bg-knight.jpeg"
 import bgChessKingPawn from "../assets/images/backgrounds/chess-pawn-king1.png"
-import goldExhibit from "../assets/images/backgrounds/black-gold-exhibit.jpeg"
+import bgChessKingPawnLight from "../assets/images/backgrounds/chess-pawn-king1-light.png"
 
 const Landing = forwardRef((props, ref) => {
 
   const { setActiveLink } = useGlobalContext()
+  const { colorMode } = useColorMode()
 
+  console.log(colorMode)
   useEffect(() => {
     const observer = new IntersectionObserver((entries, observer) => {
       const entry = entries[0]
@@ -25,9 +26,10 @@ const Landing = forwardRef((props, ref) => {
   }, [])
   return (
     <Section
-      bgImage={bgChessKingPawn}
+      bgImage={colorMode === "dark" ? bgChessKingPawn : bgChessKingPawnLight}
       bgSize="cover"
-      bgPosition="bottom"
+      bgPosition="center"
+
       paddingTop={{ base: "24px", sm: "52px" }}
     >
         <SimpleGrid margin={{ base: "8px", sm: "16px" }}>
@@ -52,10 +54,6 @@ const Landing = forwardRef((props, ref) => {
 
 
           <VStack marginY={{ base: "36px", sm: "8" }} marginX={{ base: "12px", sm: "8" }} gap="0" alignItems="start" maxWidth="520px">
-            <VStack gap="24px">
-              <Text>{intro}</Text>
-              <Text>{aboutMe}</Text>
-            </VStack>
 
             <VStack marginTop={{ base: "40px", sm: "120px" }} alignSelf="flex-end" alignItems="flex-start" gap="4px">
               <Heading fontSize="20px" >Technical Skills</Heading>

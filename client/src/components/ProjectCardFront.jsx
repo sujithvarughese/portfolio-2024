@@ -1,7 +1,6 @@
 import { Box, Button, ButtonGroup, Card, CardBody, CardHeader, Heading, HStack, Icon, Image, Link, SimpleGrid, Stack, Text, VStack } from '@chakra-ui/react'
 import { FaCircleArrowRight } from "react-icons/fa6";
 import {IoLogoGithub, IoRocketSharp} from "react-icons/io5";
-import bgBlur from "../assets/images/backgrounds/bg-blur.jpeg"
 const ProjectCardFront = ({ title, coverImage, heading, link, github, flipCard }) => {
 
   return (

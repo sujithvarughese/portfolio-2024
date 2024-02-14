@@ -3,9 +3,7 @@ import { Card, CardBody, Heading, Icon, Image, Modal, ModalContent, ModalOverlay
 import { AnimatePresence } from 'framer-motion'
 import ProjectPreview from './ProjectPreview.jsx'
 import { FaCircleArrowLeft } from 'react-icons/fa6'
-import bgSpotlightIMG from "../assets/images/backgrounds/bg-spotlight.jpeg"
-import bgTableIMG from "../assets/images/backgrounds/bg-table.jpeg"
-import bgBlackGoldExhibit from "../assets/images/backgrounds/black-gold-exhibit.jpeg"
+
 const ProjectModal = ({ isOpen, onClose, captions, coverImage, images, image, link, github }) => {
 
   return (
@@ -16,7 +14,7 @@ const ProjectModal = ({ isOpen, onClose, captions, coverImage, images, image, li
             width="80vw"
             minWidth="470px"
             maxWidth="800px"
-            bgImage={bgBlackGoldExhibit}
+
             bgSize="cover"
             bgPosition="bottom"
             borderRadius="20px"

@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { Header, Footer } from "./components"
-import { Landing, Projects, Resume, ContactMe } from "./sections"
+import { Landing, Projects, Resume, ContactMe, About } from './sections'
 import Alert from './components/Alert.jsx'
 const App = () => {
 
@@ -11,6 +11,7 @@ const App = () => {
   const projectsRef = useRef()
   const contactMeRef = useRef()
   const resumeRef = useRef()
+  const aboutRef = useRef()
 
   // scroll functions for above refs are passed to Heading.jsx as onClick for each navbar link
   const scrollToLanding = () => {
@@ -38,7 +39,12 @@ const App = () => {
       block: "start",
     })
   }
-
+  const scrollToAbout = () => {
+    aboutRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    })
+  }
   return (
     <>
 
@@ -47,9 +53,11 @@ const App = () => {
         scrollToProjects={scrollToProjects}
         scrollToResume={scrollToResume}
         scrollToContactMe={scrollToContactMe}
+        scrollToAbout={scrollToAbout}
       />
       <main style={{ marginTop: "50px" }}>
         <Landing ref={landingRef}/>
+        <About ref={aboutRef} />
         <Projects ref={projectsRef}/>
         {/*<Resume ref={resumeRef}/>*/}
         <ContactMe ref={contactMeRef}/>

@@ -1,23 +1,19 @@
 import Section from '../ui/Section.jsx'
 import { forwardRef, useEffect, useRef } from 'react'
-import { Box, Container, Heading, HStack, Image, SimpleGrid, Stack, Text, VStack } from '@chakra-ui/react'
+import { Box, Container, Heading, HStack, Image, SimpleGrid, Stack, Text, useColorMode, VStack } from '@chakra-ui/react'
 import { useGlobalContext } from '../context/GlobalContext.jsx'
 import { projects } from "../data/projects.js";
 import ProjectCardFront from "../components/ProjectCardFront.jsx"
 import ProjectCard from '../ui/ProjectCard.jsx'
-import bgBlur from "../assets/images/backgrounds/bg-blur.jpeg"
 import Project from '../components/Project.jsx'
-import diagonalLines from "../assets/images/backgrounds/gold-diagonal-lines.jpeg"
-import bgLightFixture from "../assets/images/backgrounds/bg-light-fixture.png"
-import bgRocky from "..//assets/images/backgrounds/black-rock.jpeg"
-import bgTable from "../assets/images/backgrounds/bg-table.jpeg"
-//import blackGoldFrame from "../assets/images/backgrounds/black-gold-frame.jpeg"
-import blackGrunge from "../assets/images/backgrounds/Black-grunge.jpeg"
+
+import bg from "../assets/images/bg/AdobeStock_329681600.png"
+import bgLight from "../assets/images/bg/AdobeStock_329681600-light.png"
 
 const Projects = forwardRef((props, ref) => {
 
   const { setActiveLink } = useGlobalContext()
-
+  const { colorMode } = useColorMode()
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries, observer) => {
@@ -31,11 +27,11 @@ const Projects = forwardRef((props, ref) => {
 
   return (
     <Section
-      bgImage={blackGrunge}
-      bgSize="cover"
-      bgPosition="center"
       p={{ base: "3", md: "8" }}
       spacing="8"
+      bgImage={colorMode === "dark" ? bg : bgLight}
+      bgSize="cover"
+      bgPosition="center"
     >
       <Heading ref={ref} paddingTop="80px">Projects</Heading>
 
