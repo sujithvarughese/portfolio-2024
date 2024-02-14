@@ -14,7 +14,6 @@ const Landing = forwardRef((props, ref) => {
   const { setActiveLink } = useGlobalContext()
   const { colorMode } = useColorMode()
 
-  console.log(colorMode)
   useEffect(() => {
     const observer = new IntersectionObserver((entries, observer) => {
       const entry = entries[0]
@@ -60,7 +59,7 @@ const Landing = forwardRef((props, ref) => {
               <UnorderedList
                 gap="2px"
                 display="grid"
-                gridTemplateColumns="1fr 1fr"
+                gridTemplateColumns={{ base: "1fr 1fr", sm: "1fr 1fr 1fr" }}
                 alignSelf="stretch"
                 styleType="none"
                 fontSize={{ base: "14px", sm: "16px" }}

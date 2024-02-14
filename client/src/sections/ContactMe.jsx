@@ -4,8 +4,8 @@ import Section from '../ui/Section.jsx'
 import { useGlobalContext } from '../context/GlobalContext.jsx'
 import { useFormik } from "formik";
 import * as Yup from 'yup';
-import bg from "../assets/images/bg/AdobeStock_370326153.jpeg"
-import bgLight from "../assets/images/bg/AdobeStock_296706788.jpeg"
+import bg from "../assets/images/bg/AdobeStock_237425533.jpeg"
+import bgLight from "../assets/images/bg/AdobeStock_237425533 copy.png"
 import emailjs from "@emailjs/browser";
 const credentials = {
   serviceID: import.meta.env.VITE_SERVICE_ID,
@@ -78,7 +78,7 @@ const ContactMe = forwardRef((props, ref) => {
         <Heading ref={ref} paddingTop="80px">Contact Me</Heading>
         <Box paddingX={{ base: "36px", sm: "24px" }} maxWidth="600px" fontSize={{ base: "14px", md: "20px" }}>
           <Box display="flex">Feel free to contact me with any&nbsp;<Text display={{ base: "none", sm: "revert" }}> questions or&nbsp;</Text>enquiries.</Box>
-          <Text display="flex">Any general feedback is also&nbsp;<Box display={{ base: "none", sm: "revert" }}> welcome and&nbsp;</Box>appreciated!</Text>
+          <Box display="flex">Any general feedback is also&nbsp;<Text display={{ base: "none", sm: "revert" }}> welcome and&nbsp;</Text>appreciated!</Box>
         </Box>
         <Box width="100%" p="6" maxWidth="800px">
           <form ref={formRef} onSubmit={formik.handleSubmit}>
@@ -92,6 +92,8 @@ const ContactMe = forwardRef((props, ref) => {
                   onBlur={formik.handleBlur}
                   value={formik.values.from_name}
                   onChange={formik.handleChange}
+                  border={colorMode === "dark" ? "gray solid 1px" : "black solid 1px"}
+                  backdropFilter="blur(12px)"
                 />
                 <FormErrorMessage>{formik.errors.from_name}</FormErrorMessage>
               </FormControl>
@@ -104,6 +106,8 @@ const ContactMe = forwardRef((props, ref) => {
                   onBlur={formik.handleBlur}
                   value={formik.values.from_email}
                   onChange={formik.handleChange}
+                  border={colorMode === "dark" ? "gray solid 1px" : "black solid 1px"}
+                  backdropFilter="blur(12px)"
                 />
                 <FormErrorMessage>{formik.errors.from_email}</FormErrorMessage>
               </FormControl>
@@ -117,10 +121,12 @@ const ContactMe = forwardRef((props, ref) => {
                   value={formik.values.message}
                   onBlur={formik.handleBlur}
                   onChange={formik.handleChange}
+                  border={colorMode === "dark" ? "gray solid 1px" : "black solid 1px"}
+                  backdropFilter="blur(12px)"
                 />
                 <FormErrorMessage>{formik.errors.message}</FormErrorMessage>
               </FormControl>
-              <Button type="submit" colorScheme="yellow" width="full" isLoading={isLoading}>
+              <Button type="submit" colorScheme="yellow" isLoading={isLoading} backdropFilter="blur(12px)">
                 Submit
               </Button>
             </VStack>

@@ -34,11 +34,11 @@ export const projects = [
 	{
 		title: "Simpler Fitness",
 		coverImage: simplerFitnessCoverIMG,
-		heading: "Fitness app makes getting in shape simple by filtering workouts to your criteria and displaying detailed instructions and animated images",
+		heading: "Fitness app makes getting in shape simple by filtering workouts to your criteria and displaying detailed animated images.",
 		captions: [
-			"Browse by target muscles, available equipment, and experience level",
-			"Back end sends paginated results which are rendered with infinite scroll using React",
-			"Start typing the name of any workout as results populate from a database of more than a thousand exercises"
+			"Browse workouts by target muscles, available equipment, and experience level.",
+			"Data fetched from back end in paginated results which are efficiently rendered with infinite scroll.",
+			"Create an account to save workouts to your favorites."
 		],
 		images: [fitnessBrowseIMG, fitnessSearchIMG, fitnessInstructionsIMG],
 		image: realtyScreenshots,
@@ -53,7 +53,7 @@ export const projects = [
 		heading: "Learn perfect strategy and beat the house with live feedback after each move, and an ROI tracker to calculate how profitable you can be.",
 		captions: [
 			"Customizable settings- Choose number of decks, blackjack payouts, your bankroll, number of splits allowed, and more.",
-			"Live stat tracker that automatically updates with the amount won or lost, and your current return on investment percent.",
+			"Live stat tracker that updates every hand with the amount won or lost and your current return on investment.",
 			"Stuck on the right move? Ask for help at any time during a hand.",
 		],
 		images: [blackjackMobileDoubleIMG, blackjackPlayerWinIMG],
@@ -68,11 +68,11 @@ export const projects = [
 	{
 		title: "Realty Solutions",
 		coverImage: realtyCoverIMG,
-		heading: "Full-fledged property management app to stay on top of finances and efficient owner-tenant messaging.",
+		heading: "Full-stack property management app for owners of rental units to manage finances and communicate with tenants.",
 		captions: [
-			"Retrieve mortgage information, then determine monthly payments, view live payoff quotes, and get profits/losses all managed and calculated in React state",
-			"Separate user roles for tenants and managers, authorized and authenticated using JWT and signed HTTP cookies",
-			"HUD.gov API to retrieve rental rates for any location in the US.",
+			"Retrieve mortgage information, then determine monthly payments, view live payoff quotes, and get profits/losses.",
+			"User roles for tenants and owners/managers, authorized and authenticated using JSON web tokens attached to signed HTTP cookies.",
+			"HUD.gov API integration to retrieve rental rates for any location in the US.",
 		],
 		images : [searchIMG, messagesIMG, mobileFinancesIMG, receiptsIMG, fmrIMG],
 		image: realtyScreenshots,
@@ -86,11 +86,11 @@ export const projects = [
 	{
 		title: "On the Books.",
 		coverImage: onTheBooksCoverIMG,
-		heading: "A personal library designed to help you retain and remember what you read.",
+		heading: "Personal library application designed to help you find books and take notes.",
 		captions: [
-			"OpenLibrary API for access to books, recommendations, and previews",
-			"Global state management with Context API and Reducer",
-			"Search feature to find any book in your library",
+			"OpenLibrary API integration to search books by genre and get previews and recommendations.",
+			"CRUD operations in database using mongoose models while front end state is simultaneously updated and rendered.",
+			"Navigation using react router with loader functions and state management with context API and reducer.",
 		],
 		images: [bookDiscoverIMG, notebookIMG, bookSearchIMG, bookPreviewIMG],
 		image: onTheBooksScreenshots,

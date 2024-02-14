@@ -15,7 +15,7 @@ const Project = ({ title, coverImage, heading, link, github, captions, images, i
     <Stack
       flexDirection={{md: "column", lg: direction }}
       gap="42px"
-      backdropFilter="blur(24px)"
+
       justifyContent="space-between"
       borderRadius="12px"
 
@@ -38,24 +38,25 @@ const Project = ({ title, coverImage, heading, link, github, captions, images, i
       <SimpleGrid
         gap="24px"
         maxWidth={{lg: "240px", xl: "420px" }}
+
       >
 
 
         <Heading fontSize="28px" textTransform="uppercase">{title}</Heading>
 
 
-        <Text fontSize="18px" fontWeight="600">{heading}</Text>
+        <Text fontSize="18px" fontWeight="600"         backdropFilter="blur(32px)">{heading}</Text>
 
-        <UnorderedList spacing="12px">
+        <UnorderedList spacing="12px" backdropFilter="blur(32px)">
           {captions.map((caption, index) => <ListItem key={index}>{caption}</ListItem>)}
         </UnorderedList>
 
         <ButtonGroup fontSize="20px" gap="8px" maxHeight="45px">
-          <Link sx={{ color: "gray", border: "gray 2px solid", borderRadius: "5px", padding: "5px", minWidth: "141px", textAlign: "center" }}
+          <Link color="#F6E05E" border="#F6E05E 2px solid" borderRadius="5px" padding="5px" minWidth="141px" textAlign="center" _hover={{ fontWeight: "600" }}
                 href={link} target="_blank" rel="noreferrer">
             Launch Demo
           </Link>
-          <Link sx={{ color: "gray", border: "gray 2px solid", borderRadius: "5px", padding: "5px", minWidth: "141px", textAlign: "center" }}
+          <Link color="#F6E05E" border="#F6E05E 2px solid" borderRadius="5px" padding="5px" minWidth="141px" textAlign="center" _hover={{ fontWeight: "600" }}
                 href={github} target="_blank" rel="noreferrer">
             View Code
           </Link>

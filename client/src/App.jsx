@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import { Header, Footer } from "./components"
 import { Landing, Projects, Resume, ContactMe, About } from './sections'
 import Alert from './components/Alert.jsx'
+import { Box, useColorMode } from '@chakra-ui/react'
 const App = () => {
 
   // refs are forwarded to appropriate components to ref component in that section
@@ -12,6 +13,8 @@ const App = () => {
   const contactMeRef = useRef()
   const resumeRef = useRef()
   const aboutRef = useRef()
+
+  const { colorMode } = useColorMode()
 
   // scroll functions for above refs are passed to Heading.jsx as onClick for each navbar link
   const scrollToLanding = () => {
@@ -46,7 +49,7 @@ const App = () => {
     })
   }
   return (
-    <>
+    <Box backgroundImage={colorMode === "dark" ? "linear-gradient(to bottom, #000000, #202020)" : "linear-gradient(to bottom, #FFFFFF, #DCDCDC)"}>
 
       <Header
         scrollToLanding={scrollToLanding}
@@ -67,7 +70,7 @@ const App = () => {
       <Footer />
 
 
-    </>
+    </Box>
   )
 }
 
