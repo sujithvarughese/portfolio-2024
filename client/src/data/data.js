@@ -5,7 +5,7 @@ export const projectsText = [
   'Note: Cross-site tracking will need to be disabled if using Safari'
 ]
 
-export const aboutMe = 'While I have always been obsessed with anything tech-related, I started my official journey into software in 2020 when I decided to put my goals in motion by pursing a degree in computer science. I quickly became fascinated by the fact that I could build complex structures from scratch to function together to perform virtually any task I set it to.'
+export const aboutMe = 'While I have always been obsessed with anything tech-related, I started my official journey into software in 2020 when I decided to put my goals in motion by pursing a degree in computer science. While in school, I quickly became fascinated by the fact that I could build complex structures from scratch to function together to perform virtually any task. (Seems a bit obvious when I put it in writing, but bear with me.)'
 
 export const aboutMe2 = 'To transition these abstractions over into the real world, I started building web applications in Javascript. My recent projects (React, NodeJS, MongoDB) were created with a focus on building with scalability. The creative process has guided me to gain a solid understanding of how a library such as React works under the hood which I believe has drastically increased by ability to create efficiently. The deployment experience gave me the opportunity to familiarize myself with the complete software life cycle process including testing and maintenance, while giving me exposure to network and DNS server configurations, which I thoroughly enjoyed.'
 

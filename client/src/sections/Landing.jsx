@@ -23,12 +23,12 @@ const Landing = forwardRef((props, ref) => {
     })
     observer.observe(ref.current)
   }, [])
+
   return (
     <Section
       bgImage={colorMode === "dark" ? bgChessKingPawn : bgChessKingPawnLight}
       bgSize="cover"
       bgPosition="center"
-
       paddingTop={{ base: "24px", sm: "52px" }}
     >
         <SimpleGrid margin={{ base: "8px", sm: "16px" }}>
@@ -47,7 +47,7 @@ const Landing = forwardRef((props, ref) => {
 
             <HStack gap="0" alignItems="flex-end">
               <Icon as={MdLocationPin} fontSize={{ base: "28px", sm: "32px" }} />
-              <Heading fontSize={{ base: "16px", sm: "18px" }} fontWeight="400">Ft. Lauderdale, FL</Heading>
+              <Heading fontSize={{ base: "16px", sm: "18px" }} fontWeight="400">Miami, FL</Heading>
             </HStack>
           </VStack>
 
