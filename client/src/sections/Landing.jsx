@@ -5,7 +5,7 @@ import { MdArrowRight, MdLocationPin } from "react-icons/md";
 
 import avatarIMG from "../assets/images/profile/profile.png"
 import { useGlobalContext } from '../context/GlobalContext.jsx'
-import { intro, aboutMe, aboutMe2, skills } from "../data/data.js";
+import { skills } from "../data/data.js";
 import bgChessKingPawn from "../assets/images/backgrounds/chess-pawn-king1.png"
 import bgChessKingPawnLight from "../assets/images/backgrounds/chess-pawn-king1-light.png"
 
