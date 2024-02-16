@@ -59,7 +59,7 @@ const Landing = forwardRef((props, ref) => {
               <UnorderedList
                 gap="2px"
                 display="grid"
-                gridTemplateColumns={{ base: "1fr 1fr", sm: "1fr 1fr 1fr" }}
+                gridTemplateColumns={{ base: "1fr 1fr", md: "1fr 1fr 1fr" }}
                 alignSelf="stretch"
                 styleType="none"
                 fontSize={{ base: "14px", sm: "16px" }}

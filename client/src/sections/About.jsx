@@ -42,26 +42,36 @@ const About = forwardRef((props, ref) => {
         backdropFilter="blur(8px)"
         justifyContent="space-evenly"
         width="100%"
-        flexDirection={{ base: "column", md: "row"}}
+        flexDirection={{ base: "column", lg: "row"}}
+        padding={1}
         alignItems="center"
+        marginY="18px"
       >
 
         <Image
           src={heraMeImage}
           alt="hera+me"
-          width={{ base: "", md: "40%" }}
+          width="50%"
+          maxWidth="700px"
           borderRadius="12px"
+          display={{ base: "none", lg: "revert" }}
         />
 
         <VStack
-          gap="24px"
-          marginY={{ base: "12px", sm: "8" }}
-          maxWidth="520px"
+          gap={{ base: "24px", xl: "56px" }}
+          margin={{ base: "12px", sm: "24px" }}
           fontWeight={500}
-          lineHeight={{ base: "1.5", sm: "2"}}
+          lineHeight={{ base: "1.5", sm: "2" }}
         >
           <Text>{aboutMe}</Text>
           <Text>{aboutMe2}</Text>
+          <Image
+            src={heraMeImage}
+            alt="hera+me"
+            width={{ base: "80%", sm: "60%" }}
+            borderRadius="12px"
+            display={{ lg: "none" }}
+          />
           <Text>{aboutMe3}</Text>
         </VStack>
       </Stack>
