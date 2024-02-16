@@ -47,7 +47,6 @@ const App = () => {
       <Header
         scrollToLanding={scrollToLanding}
         scrollToProjects={scrollToProjects}
-        scrollToResume={scrollToResume}
         scrollToContactMe={scrollToContactMe}
         scrollToAbout={scrollToAbout}
       />
@@ -55,7 +54,6 @@ const App = () => {
         <Landing ref={landingRef}/>
         <About ref={aboutRef} />
         <Projects ref={projectsRef}/>
-        {/*<Resume ref={resumeRef}/>*/}
         <ContactMe ref={contactMeRef}/>
         <Alert />
       </main>

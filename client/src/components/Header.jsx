@@ -7,7 +7,7 @@ import MobileMenu from './MobileMenu.jsx'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { useEffect, useState } from 'react'
 
-const Header = ({ scrollToLanding, scrollToProjects, scrollToResume, scrollToContactMe, scrollToAbout }) => {
+const Header = ({ scrollToLanding, scrollToProjects, scrollToContactMe, scrollToAbout }) => {
 
   const { activeLink } = useGlobalContext()
   const { colorMode } = useColorMode()
