@@ -1,10 +1,11 @@
-import { Box, Button, ButtonGroup, Container, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Link, useDisclosure } from '@chakra-ui/react'
+import { Box, Button, ButtonGroup, Container, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Link, useColorMode, useDisclosure } from '@chakra-ui/react'
 import resume from '../assets/images/portfolio-2024.pdf'
 import { FiExternalLink } from 'react-icons/fi'
 
 const MobileMenu = ({ isOpen, onClose, scrollToLanding, scrollToAbout, scrollToProjects, scrollToContactMe }) => {
 
 
+  const { colorMode } = useColorMode()
 
   return (
     <Drawer
@@ -36,7 +37,7 @@ const MobileMenu = ({ isOpen, onClose, scrollToLanding, scrollToAbout, scrollToP
                   justifyContent="flex-start"
                   gap="8px"
                   fontWeight="600"
-                  bgColor="gray.100"
+                  bgColor={colorMode === "dark" ? "gray.600" : "gray.100"}
                   height="100%" width="100%"
                   padding={4}
                   href={resume} isExternal
