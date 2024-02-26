@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Card, CardBody, Container, Heading, Icon, Image, ListItem, SimpleGrid, Text, UnorderedList } from '@chakra-ui/react'
+import { Box, Card, CardBody, Container, Heading, Icon, Image, ListItem, SimpleGrid, Text, UnorderedList, useColorMode } from '@chakra-ui/react'
 import { AnimatePresence } from 'framer-motion'
 import ProjectPreview from './ProjectPreview.jsx'
 import { FaCircleArrowLeft } from 'react-icons/fa6'
@@ -8,8 +8,16 @@ import DesktopMobileImageContainer from '../ui/DesktopMobileImageContainer.jsx'
 
 
 const ProjectCardBack = ({ captions, images, image, desktop, mobile, link, github, flipCard, index }) => {
+
+  const { colorMode } = useColorMode()
+
   return (
-    <Card minHeight="560px" onClick={flipCard}>
+    <Card
+      minHeight="560px"
+      onClick={flipCard}
+      boxShadow={colorMode === 'dark' ? "2xl" : "dark-lg"}
+      bgColor={colorMode === "dark" ? "gray.800" : "white"}
+    >
       <CardBody paddingBottom="0" >
         {/*<AnimatePresence>
           <ProjectPreview captions={captions} images={images} />

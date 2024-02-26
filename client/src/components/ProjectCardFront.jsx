@@ -1,10 +1,18 @@
-import { Box, Button, ButtonGroup, Card, CardBody, CardHeader, Heading, HStack, Icon, Image, Link, SimpleGrid, Stack, Text, VStack } from '@chakra-ui/react'
+import { Box, Button, ButtonGroup, Card, CardBody, CardHeader, Heading, HStack, Icon, Image, Link, SimpleGrid, Stack, Text, useColorMode, VStack } from '@chakra-ui/react'
 import { FaCircleArrowRight } from "react-icons/fa6";
 import {IoLogoGithub, IoRocketSharp} from "react-icons/io5";
 const ProjectCardFront = ({ title, coverImage, heading, link, github, flipCard }) => {
 
+  const { colorMode } = useColorMode()
+
   return (
-    <Card minHeight="560px" borderRadius="11px" boxShadow="dark-lg" onClick={flipCard}>
+    <Card
+      minHeight="560px"
+      borderRadius="11px"
+      boxShadow={colorMode === 'dark' ? "2xl" : "dark-lg"}
+      bgColor={colorMode === "dark" ? "gray.800" : "white"}
+      onClick={flipCard}
+    >
       <Image src={coverImage} alt="cover" borderRadius="10px"></Image>
 
       <CardBody display="flex" flexDir="column" justifyContent="space-around">

@@ -3,7 +3,7 @@ import Section from '../ui/Section.jsx'
 import { Avatar, Box, Container, Heading, HStack, Icon, ListIcon, ListItem, SimpleGrid, Stack, Text, UnorderedList, useColorMode, VStack } from '@chakra-ui/react'
 import { MdArrowRight, MdLocationPin } from "react-icons/md";
 
-import avatarIMG from "../assets/images/profile/profile.png"
+import avatarIMG from "../assets/images/profile/profile_studio.png"
 import { useGlobalContext } from '../context/GlobalContext.jsx'
 import { skills } from "../data/data.js";
 import bgChessKingPawn from "../assets/images/backgrounds/chess-pawn-king1.png"
@@ -51,30 +51,41 @@ const Landing = forwardRef((props, ref) => {
             </HStack>
           </VStack>
 
+          <Avatar
+            name="profile"
+            src={avatarIMG}
+            marginTop="-9"
+            marginBottom={{ base: "-9", sm: "1" }}
+            width={{ base: "120px", sm: "240px"}}
+            height={{ base: "120px", sm: "240px"}}
+          />
 
-          <VStack marginY={{ base: "36px", sm: "8" }} marginX={{ base: "12px", sm: "8" }} gap="0" alignItems="start" maxWidth="520px">
+          <VStack
+            marginY={{ base: "36px", sm: "8" }}
+            marginLeft={{ base: "12px", sm: "8" }}
+            alignSelf="flex-end"
 
-            <VStack marginTop={{ base: "40px", sm: "120px" }} alignSelf="flex-end" alignItems="flex-start" gap="4px">
-              <Heading fontSize="20px" >Technical Skills</Heading>
-              <UnorderedList
-                gap="2px"
-                display="grid"
-                gridTemplateColumns={{ base: "1fr 1fr", md: "1fr 1fr 1fr" }}
-                alignSelf="stretch"
-                styleType="none"
-                fontSize={{ base: "14px", sm: "16px" }}
-              >
-                {
-                  skills.map((skill, index) =>
-                    <ListItem key={index} display="flex" alignItems="center"><ListIcon as={MdArrowRight}/>{skill}</ListItem>)
-                }
+            gap="4px"
+            width="100%"
+          >
+            <Heading fontSize="20px" alignSelf={{ base: "flex-end", sm: "flex-start" }} paddingRight={9}>Technical Skills</Heading>
+            <UnorderedList
+              gap="2px"
+              display="grid"
+              gridTemplateColumns={{ base: "1fr 1fr", md: "1fr 1fr 1fr" }}
+              alignSelf="stretch"
+              styleType="none"
+              fontSize={{ base: "14px", sm: "16px" }}
+            >
+              {
+                skills.map((skill, index) =>
+                  <ListItem key={index} display="flex" alignItems="center"><ListIcon as={MdArrowRight}/>{skill}</ListItem>)
+              }
 
-              </UnorderedList>
-            </VStack>
-
-
-
+            </UnorderedList>
           </VStack>
+
+
         </SimpleGrid>
 
     </Section>

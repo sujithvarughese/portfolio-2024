@@ -12,6 +12,7 @@ const MobileMenu = ({ isOpen, onClose, scrollToLanding, scrollToAbout, scrollToP
       isOpen={isOpen}
       placement="left"
       onClose={onClose}
+
     >
       <DrawerOverlay>
         <DrawerContent height="50%">
@@ -26,10 +27,10 @@ const MobileMenu = ({ isOpen, onClose, scrollToLanding, scrollToAbout, scrollToP
             padding={0} margin="none"
           >
 
-            <Button padding={4} height="100%" width="100%" justifyContent="flex-start" onClick={()=> {scrollToLanding(); onClose()}}>Home</Button>
-            <Button padding={4} height="100%" width="100%" justifyContent="flex-start" variant="ghost"  onClick={()=>{scrollToAbout(); onClose()}}>About</Button>
-            <Button padding={4} height="100%" width="100%" justifyContent="flex-start" onClick={()=> {scrollToProjects(); onClose()}}>Projects</Button>
-            <Button padding={4} height="100%" width="100%" justifyContent="flex-start"  variant="ghost" onClick={()=>{scrollToContactMe(); onClose()}}>Contact Me</Button>
+            <Button padding={4} paddingLeft={6} height="100%" width="100%" justifyContent="flex-start" onClick={()=> {scrollToLanding(); onClose()}}>Home</Button>
+            <Button padding={4} paddingLeft={6} height="100%" width="100%" justifyContent="flex-start" variant="ghost"  onClick={()=>{scrollToAbout(); onClose()}}>About</Button>
+            <Button padding={4} paddingLeft={6} height="100%" width="100%" justifyContent="flex-start" onClick={()=> {scrollToProjects(); onClose()}}>Projects</Button>
+            <Button padding={4} paddingLeft={6} height="100%" width="100%" justifyContent="flex-start"  variant="ghost" onClick={()=>{scrollToContactMe(); onClose()}}>Contact Me</Button>
 
 
             <Link display="flex"
@@ -40,6 +41,7 @@ const MobileMenu = ({ isOpen, onClose, scrollToLanding, scrollToAbout, scrollToP
                   bgColor={colorMode === "dark" ? "gray.600" : "gray.100"}
                   height="100%" width="100%"
                   padding={4}
+                  paddingLeft={6}
                   href={resume} isExternal
             >Resume<FiExternalLink />
             </Link>

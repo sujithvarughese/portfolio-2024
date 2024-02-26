@@ -13,4 +13,4 @@ export const aboutMe2 = 'To transition these abstractions over into the real wor
 
 const s = ".'"
 export const aboutMe3 = "Aside from programming, in my free time I enjoy working out, playing basketball, creating and editing videos, and hanging out with (mostly spoiling) my 10 year old rottweiler, Hera!"
-export const skills = ['Javascript', 'Python', 'Java', 'React', 'NodeJS', 'RESTful APIs', 'API integration', 'Express', 'MongoDB', 'SQL', 'Data Structures', 'Software Testing', 'App deployment', 'DNS config', 'HTML/CSS', 'Bootstrap', 'Tailwind', 'Git version control']
+export const skills = ['Javascript', 'Python', 'Java', 'React', 'NodeJS', 'RESTful APIs', 'API integration', 'HTML/CSS', 'MongoDB/SQL', 'Data Structures', 'Software Testing', 'GraphQL', "Agile/Scrum", 'DNS config', 'Google Analytics', 'Postman', 'Bootstrap', 'Tailwind', 'Jetbrains', 'VSCode', 'Git version control']
