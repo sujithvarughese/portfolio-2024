@@ -1,6 +1,6 @@
-import React, { forwardRef, useEffect } from 'react'
+import React, { forwardRef, useEffect, useState } from 'react'
 import Section from '../ui/Section.jsx'
-import { Avatar, Box, Container, Heading, HStack, Icon, ListIcon, ListItem, SimpleGrid, Stack, Text, UnorderedList, useColorMode, VStack } from '@chakra-ui/react'
+import { Avatar, Box, Container, Heading, HStack, Icon, ListIcon, ListItem, SimpleGrid, Spinner, Stack, Text, UnorderedList, useColorMode, VStack } from '@chakra-ui/react'
 import { MdArrowRight, MdLocationPin } from "react-icons/md";
 
 import avatarIMG from "../assets/images/profile/profile_studio.png"
@@ -13,6 +13,7 @@ const Landing = forwardRef((props, ref) => {
 
   const { setActiveLink } = useGlobalContext()
   const { colorMode } = useColorMode()
+  const [imageLoading, setImageLoading] = useState(true)
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries, observer) => {
@@ -51,14 +52,21 @@ const Landing = forwardRef((props, ref) => {
             </HStack>
           </VStack>
 
+
+          <Spinner display={imageLoading ? "block" : "none"} size="xl"/>
+
           <Avatar
+            display={imageLoading ? "none" : "block"}
             name="profile"
             src={avatarIMG}
             marginTop="-9"
             marginBottom={{ base: "-9", sm: "1" }}
             width={{ base: "120px", sm: "240px"}}
             height={{ base: "120px", sm: "240px"}}
+            onLoad={()=>setImageLoading(false)}
           />
+
+
 
           <VStack
             marginY={{ base: "36px", sm: "8" }}
