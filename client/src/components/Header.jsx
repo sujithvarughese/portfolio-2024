@@ -1,6 +1,6 @@
 import { Box, Button, ButtonGroup, HStack, IconButton, Link, useColorMode, useDisclosure } from '@chakra-ui/react'
 import { useGlobalContext } from '../context/GlobalContext.jsx'
-import resume from "../assets/images/profile/portfolio-2024.pdf"
+import resume from "../assets/images/profile/portfolio-resume-2024.pdf"
 import { FiExternalLink } from "react-icons/fi";
 import ToggleColorMode from '../ui/ToggleColorMode.jsx'
 import MobileMenu from './MobileMenu.jsx'
