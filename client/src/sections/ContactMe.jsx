@@ -1,4 +1,4 @@
-import { forwardRef, useEffect, useRef, useState } from 'react'
+import React, { forwardRef, useEffect, useRef, useState } from 'react'
 import { Box, Button, FormControl, FormErrorMessage, FormLabel, Heading, Input, Progress, Text, Textarea, useColorMode, VStack } from '@chakra-ui/react'
 import Section from '../ui/Section.jsx'
 import { useGlobalContext } from '../context/GlobalContext.jsx'
@@ -7,6 +7,7 @@ import * as Yup from 'yup';
 import bg from "../assets/images/bg/AdobeStock_237425533.jpeg"
 import bgLight from "../assets/images/bg/AdobeStock_237425533 copy.png"
 import emailjs from "@emailjs/browser";
+import { CustomDivider } from '../components/index.js'
 const credentials = {
   serviceID: import.meta.env.VITE_SERVICE_ID,
   templateID: import.meta.env.VITE_TEMPLATE_ID,
@@ -68,14 +69,11 @@ const ContactMe = forwardRef((props, ref) => {
 
 
   return (
-    <Section
-      bgImage={colorMode === "dark" ? bg : bgLight}
-      bgSize="cover"
-      bgPosition="center"
-      p={{ base: "12px"}} paddingY="24px"
-    >
+    <Section p={{ base: "12px"}} paddingY="24px">
       {isLoading && <Progress isIndeterminate />}
-        <Heading ref={ref} paddingTop="80px">Contact Me</Heading>
+      <Box ref={ref} top="80px"></Box>
+      <CustomDivider index="3" name="Contact Me" />
+
         <Box paddingX={{ base: "36px", sm: "24px" }} maxWidth="600px" fontSize={{ base: "14px", md: "20px" }}>
           <Box display="flex">Feel free to contact me with any&nbsp;<Text display={{ base: "none", sm: "revert" }}> questions or&nbsp;</Text>enquiries.</Box>
           <Box display="flex">Any general feedback is also&nbsp;<Text display={{ base: "none", sm: "revert" }}> welcome and&nbsp;</Text>appreciated!</Box>

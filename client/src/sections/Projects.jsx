@@ -1,5 +1,5 @@
 import Section from '../ui/Section.jsx'
-import { forwardRef, useEffect, useRef } from 'react'
+import React, { forwardRef, useEffect, useRef } from 'react'
 import { Box, Container, Heading, HStack, Image, SimpleGrid, Stack, Text, useColorMode, VStack } from '@chakra-ui/react'
 import { useGlobalContext } from '../context/GlobalContext.jsx'
 import { projects } from "../data/projects.js";
@@ -11,6 +11,7 @@ import bg from "../assets/images/bg/AdobeStock_329681600.png"
 import bgLight from "../assets/images/bg/AdobeStock_329681600-light.png"
 
 import bgLightMobile from "../assets/images/bg/AdobeStock_442943212.jpeg"
+import { CustomDivider } from '../components/index.js'
 
 const Projects = forwardRef((props, ref) => {
 
@@ -31,11 +32,10 @@ const Projects = forwardRef((props, ref) => {
     <Section
       p={{ base: "3", md: "8" }}
       spacing="8"
-      bgImage={colorMode === "dark" ? bg1 : bgLightMobile}
-      bgSize="contain"
-      bgPosition="center"
     >
-      <Heading ref={ref} paddingTop="80px">Projects</Heading>
+
+      <Box ref={ref} top="80px"></Box>
+      <CustomDivider index="2" name="Projects" />
 
       <VStack
         display={{ base: "flex", md: "none" }}

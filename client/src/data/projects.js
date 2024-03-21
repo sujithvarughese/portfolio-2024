@@ -44,7 +44,7 @@ export const projects = [
 		image: realtyScreenshots,
 		link: 'https://simpler-fitness.com',
 		github: 'https://github.com/sujithvarughese/simple-fitness',
-		tech: ["javascript", "node", "react", "mongodb"],
+		tech: ["javascript", "node", "react", "mongodb", "openai"],
 		featured: true,
 	},
 	{

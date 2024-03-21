@@ -1,4 +1,4 @@
-import { Box, Button, ButtonGroup, HStack, IconButton, Link, useColorMode, useDisclosure } from '@chakra-ui/react'
+import { Box, Button, ButtonGroup, HStack, IconButton, Link, Text, useColorMode, useDisclosure } from '@chakra-ui/react'
 import { useGlobalContext } from '../context/GlobalContext.jsx'
 import resume from "../assets/images/profile/portfolio-resume-2024.pdf"
 import { FiExternalLink } from "react-icons/fi";
@@ -39,7 +39,7 @@ const Header = ({ scrollToLanding, scrollToProjects, scrollToContactMe, scrollTo
         px={{ base: "2", md: "16" }}
         py={{ base: "3", md: "4" }}
         display="flex"
-        justifyContent={{ base: "space-between", sm: "flex-end" }}
+        justifyContent={{ base: "space-between" }}
         alignItems="center"
         direction="row"
       >
@@ -56,6 +56,10 @@ const Header = ({ scrollToLanding, scrollToProjects, scrollToContactMe, scrollTo
               scrollToContactMe={scrollToContactMe}
             />}
 
+          <Box display={{ base: "none", sm: "flex"}} >
+            <Text>sujith varughese</Text>
+          </Box>
+
           <ButtonGroup display={{ base: "none", sm: "flex"}} >
             <Button fontWeight={homeActive} color={activeLink === "home" ? colorActive : ""} variant="link" onClick={scrollToLanding}>Home</Button>
             <Button fontWeight={aboutActive}  color={activeLink === "about" ? colorActive : ""} variant="link" onClick={scrollToAbout}>About</Button>
@@ -66,9 +70,10 @@ const Header = ({ scrollToLanding, scrollToProjects, scrollToContactMe, scrollTo
                 href={resume} isExternal
           >Resume<FiExternalLink />
           </Link>
+          <ToggleColorMode />
           </ButtonGroup>
 
-          <ToggleColorMode />
+
         </HStack>
 
 

@@ -1,4 +1,4 @@
 import Header from './Header.jsx'
 import Footer from './Footer.jsx'
-
-export { Header, Footer }
+import CustomDivider from './CustomDivider.jsx'
+export { Header, Footer, CustomDivider }
