@@ -5,7 +5,8 @@ import { useState } from 'react'
 import ProjectModal from "./ProjectModal.jsx"
 import PhoneImageContainer from '../ui/PhoneImageContainer.jsx'
 import DesktopMobileImageContainer from '../ui/DesktopMobileImageContainer.jsx'
-const Project = ({ title, coverImage, heading, link, github, captions, images, image, desktop, mobile, index }) => {
+import { TechTag } from './index.js'
+const Project = ({ title, coverImage, heading, link, github, captions, images, tech, image, desktop, mobile, index }) => {
   const { colorMode } = useColorMode()
   const { isOpen, onOpen, onClose } = useDisclosure()
 
@@ -40,6 +41,12 @@ const Project = ({ title, coverImage, heading, link, github, captions, images, i
         maxWidth={{lg: "240px", xl: "420px" }}
       >
         <Heading fontSize="28px" textTransform="uppercase">{title}</Heading>
+
+        <HStack>
+          {
+            tech.map(item => <TechTag key={item} text={item}/>)
+          }
+        </HStack>
 
 
         <Text fontSize="18px" fontWeight="600"         backdropFilter="blur(32px)">{heading}</Text>

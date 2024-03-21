@@ -8,6 +8,7 @@ import { useGlobalContext } from '../context/GlobalContext.jsx'
 import { skills } from "../data/data.js";
 import bgChessKingPawn from "../assets/images/backgrounds/chess-pawn-king1.png"
 import bgChessKingPawnLight from "../assets/images/backgrounds/chess-pawn-king1-light.png"
+import { TechTag } from '../components/index.js'
 
 const Landing = forwardRef((props, ref) => {
 

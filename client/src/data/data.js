@@ -1,4 +1,4 @@
-export const aboutMeHeadline = 'The creative process has guided me to gain a solid understanding of how a library such as React works under the hood which I believe has drastically increased my ability to create efficiently'
+export const aboutMeHeadline = 'The creative process has guided me to gain a solid understanding of how a library such as React works under the hood which I believe has drastically increased my ability to <strong>create efficiently</strong>'
 
 export const aboutMe = 'Hi, I\'m Sujith. While I have always been obsessed with anything tech-related, learning to code quickly intrigued my fascination in which I could build complex structures from scratch to function together to perform virtually any task.'
 

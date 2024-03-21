@@ -44,7 +44,7 @@ export const projects = [
 		image: realtyScreenshots,
 		link: 'https://simpler-fitness.com',
 		github: 'https://github.com/sujithvarughese/simple-fitness',
-		tech: ["javascript", "node", "react", "mongodb", "openai"],
+		tech: ["JavaScript", "NodeJS", "React", "MongoDB", "OpenAI"],
 		featured: true,
 	},
 	{
@@ -62,7 +62,7 @@ export const projects = [
 		mobile: bjMobile,
 		link: 'https://beat-blackjack.com',
 		github: 'https://github.com/sujithvarughese/beat-blackjack',
-		tech: ["javascript", "react"],
+		tech: ["JavaScript", "React"],
 		featured: false,
 	},
 	{
@@ -80,7 +80,7 @@ export const projects = [
 		mobile: rsMobile,
 		link: 'https://sgs-properties.com',
 		github: 'https://github.com/sujithvarughese/realty-solutions',
-		tech: ["javascript", "node", "react", "mongodb"],
+		tech: ["JavaScript", "NodeJS", "React", "MongoDB"],
 		featured: true,
 	},
 	{
@@ -98,7 +98,7 @@ export const projects = [
 		mobile: otbMobile,
 		link: 'https://onthebooks.sujithvarughese.com',
 		github: 'https://github.com/sujithvarughese/on-the-books',
-		tech: ["javascript", "node", "react", "mongodb"],
+		tech: ["JavaScript", "NodeJS", "React", "MongoDB"],
 		featured: false,
 	},
 
