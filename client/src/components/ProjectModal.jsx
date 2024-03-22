@@ -22,7 +22,7 @@ const ProjectModal = ({ isOpen, onClose, captions, coverImage, images, image, li
             <CardBody paddingBottom="0">
 
               <AnimatePresence>
-                <ProjectPreview captions={captions} images={images} image={image}/>
+                <ProjectPreview images={images} />
               </AnimatePresence>
 
               <HStack>

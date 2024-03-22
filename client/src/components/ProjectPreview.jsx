@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { Box, Button, ButtonGroup, HStack, Image, VStack } from '@chakra-ui/react'
 import {FaAngleLeft, FaAngleRight, FaCircleArrowLeft, FaCircleArrowRight} from "react-icons/fa6";
 
-const ProjectPreview = ({ captions, images }) => {
+const ProjectPreview = ({ images }) => {
 
   const elementRef = useRef(null)
   const handleHorizontalScroll = (element, speed, distance, step) => {

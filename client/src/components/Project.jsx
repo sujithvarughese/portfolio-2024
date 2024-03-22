@@ -21,6 +21,16 @@ const Project = ({ title, coverImage, heading, link, github, captions, images, t
       borderRadius="12px"
 
     >
+      <ProjectModal
+        isOpen={isOpen}
+        onClose={onClose}
+        captions={captions}
+        coverImage={coverImage}
+        images={images}
+        image={image}
+        link={link}
+        github={github}
+      />
 
       {
         index === 0 ?
@@ -40,7 +50,7 @@ const Project = ({ title, coverImage, heading, link, github, captions, images, t
         gap="24px"
         maxWidth={{lg: "240px", xl: "420px" }}
       >
-        <Heading fontSize="28px" textTransform="uppercase">{title}</Heading>
+        <Heading onClick={onOpen} fontSize="28px" textTransform="uppercase">{title}</Heading>
 
         <HStack>
           {
