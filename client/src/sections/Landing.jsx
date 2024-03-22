@@ -53,8 +53,8 @@ const Landing = forwardRef((props, ref) => {
 
           <Heading fontFamily="Liu Jian Mao Cao" fontSize="72px">Software Developer</Heading>
           <Box m={12}>
-            <Text>I am a software developer based in Miami, FL</Text>
-            <Text>I specialize in JavaScript, React, and NodeJS with OpenAI integration</Text>
+            <Text>I am a software developer based in Miami, FL.</Text>
+            <Text>I specialize in JavaScript, React, and NodeJS with OpenAI integration.</Text>
           </Box>
 
 

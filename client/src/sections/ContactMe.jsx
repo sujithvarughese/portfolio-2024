@@ -75,8 +75,7 @@ const ContactMe = forwardRef((props, ref) => {
       <CustomDivider index="3" name="Contact Me" />
 
         <Box paddingX={{ base: "36px", sm: "24px" }} maxWidth="600px" fontSize={{ base: "14px", md: "20px" }}>
-          <Box display="flex">Feel free to contact me with any&nbsp;<Text display={{ base: "none", sm: "revert" }}> questions or&nbsp;</Text>enquiries.</Box>
-          <Box display="flex">Any general feedback is also&nbsp;<Text display={{ base: "none", sm: "revert" }}> welcome and&nbsp;</Text>appreciated!</Box>
+          <Box display="flex"><Text>Feel free to connect with me for freelance work, career guidance, or any general feedback!</Text></Box>
         </Box>
         <Box width="100%" p="6" maxWidth="800px">
           <form ref={formRef} onSubmit={formik.handleSubmit}>
