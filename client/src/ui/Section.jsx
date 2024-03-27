@@ -3,12 +3,11 @@ import { VStack } from '@chakra-ui/react'
 const Section = (props) => {
   return (
     <VStack
-      backgroundColor={props.backgroundColor}
-      color={props.color}
-    >
-      <VStack maxWidth="1920px" width="100%"{...props}>
-        { props.children }
-      </VStack>
+      maxWidth="1920px"
+
+      p={{ base: "3", md: "8" }}
+      {...props}>
+      { props.children }
     </VStack>
   )
 }

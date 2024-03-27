@@ -22,11 +22,7 @@ const Projects = forwardRef((props, ref) => {
   }, [])
 
   return (
-    <Section
-      p={{ base: "3", md: "8" }}
-      spacing="8"
-    >
-
+    <Section>
       <Box ref={ref} top="80px"></Box>
       <CustomDivider index="2" name="Projects" />
 

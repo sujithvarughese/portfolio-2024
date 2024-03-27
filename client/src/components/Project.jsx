@@ -28,26 +28,26 @@ const Project = ({ title, coverImage, heading, link, github, captions, images, t
         github={github}
       />
       <HStack>
-        <SimpleGrid>
-
-          <Image src={coverImage} width="320px" borderRadius="10px"/>
-        </SimpleGrid>
 
 
-        <SimpleGrid gap="24px">
-          <Heading onClick={onOpen} fontSize="28px" textTransform="uppercase">{title}</Heading>
+        <Image src={coverImage} display={{ base: "none", sm: "flex" }} width="320px" borderRadius="10px"/>
+
+        <SimpleGrid gap={4}>
           <HStack>
-            {tech.map(item => <TechTag key={item} text={item}/>)}
+            <Image src={coverImage} display={{ base: "flex", sm: "none" }} width="120px" borderRadius="10px"/>
+            <Heading onClick={onOpen} fontSize="28px" textTransform="uppercase">{title}</Heading>
           </HStack>
 
-          <Text fontSize="18px" fontWeight="400">{heading}</Text>
 
-          <ButtonGroup fontSize="20px" gap="8px" maxHeight="45px" color={colorMode === "dark" ? "#F6E05E" : "#2B6CB0"}>
+          <HStack flexWrap="wrap">{tech.map(item => <TechTag key={item} text={item}/>)}</HStack>
+
+          <Text>{heading}</Text>
+
+          <ButtonGroup size="sm" color={colorMode === "dark" ? "#F6E05E" : "#2B6CB0"}>
             <Link
               border={colorMode === "dark" ? "#F6E05E 2px solid" : "#2B6CB0 2px solid"}
               borderRadius="5px"
               padding="5px"
-              minWidth="141px"
               textAlign="center"
               _hover={{ fontWeight: "600" }}
               href={link} target="_blank" rel="noreferrer"
@@ -58,7 +58,6 @@ const Project = ({ title, coverImage, heading, link, github, captions, images, t
               border={colorMode === "dark" ? "#F6E05E 2px solid" : "#2B6CB0 2px solid"}
               borderRadius="5px"
               padding="5px"
-              minWidth="141px"
               textAlign="center"
               _hover={{ fontWeight: "600" }}
               href={github} target="_blank" rel="noreferrer"

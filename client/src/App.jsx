@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import { Header, Footer } from "./components"
 import { Landing, Projects, ContactMe, About } from './sections'
 import Alert from './components/Alert.jsx'
-import { Box, useColorMode } from '@chakra-ui/react'
+import { Box, SimpleGrid, useColorMode, VStack } from '@chakra-ui/react'
 const App = () => {
 
   // refs are forwarded to appropriate components to ref component in that section
@@ -29,39 +29,25 @@ const App = () => {
       rootMargin: "500px"
     })
   }
-  const scrollToContactMe = () => {
-    contactMeRef.current.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    })
-  }
-  const scrollToAbout = () => {
-    aboutRef.current.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    })
-  }
+
   return (
-    <Box backgroundImage={colorMode === "dark" ? "#202020" : "#DCDCDC"}>
+    <VStack backgroundColor={colorMode === "dark" ? "#202020" : "#DCDCDC"}>
 
       <Header
         scrollToLanding={scrollToLanding}
         scrollToProjects={scrollToProjects}
-        scrollToContactMe={scrollToContactMe}
-        scrollToAbout={scrollToAbout}
       />
       <main style={{ marginTop: "50px" }}>
         <Landing ref={landingRef}/>
-        <About ref={aboutRef} />
+        <About />
         <Projects ref={projectsRef}/>
-        <ContactMe ref={contactMeRef}/>
+        <ContactMe />
         <Alert />
       </main>
 
       <Footer />
 
-
-    </Box>
+    </VStack>
   )
 }
 

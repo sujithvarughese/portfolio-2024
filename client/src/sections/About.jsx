@@ -5,30 +5,12 @@ import Section from '../ui/Section.jsx'
 import { aboutMe, aboutMe2, aboutMe3 } from '../data/data.js'
 import { CustomDivider } from '../ui'
 
-const About = forwardRef((props, ref) => {
+const About = () => {
 
-  const { setActiveLink } = useGlobalContext()
-
-  const { colorMode } = useColorMode()
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries, observer) => {
-      const entry = entries[0]
-      if (entry.isIntersecting) {
-        setActiveLink("about")
-      }
-    })
-    observer.observe(ref.current)
-  }, [])
 
   return (
-    <Section p={{ base: "3", md: "8" }} position="relative">
+    <Section position="relative">
     <CustomDivider index="1" name="About Me" />
-      <Box
-        ref={ref}
-        position="absolute"
-        top="24px"
-      ></Box>
-
       <Stack
         backdropFilter="blur(8px)"
         justifyContent="space-evenly"
@@ -53,6 +35,6 @@ const About = forwardRef((props, ref) => {
 
     </Section>
   )
-})
+}
 
 export default About
