@@ -6,7 +6,7 @@ import { SiMongodb, SiOpenai, SiChakraui, SiStyledcomponents } from "react-icons
 
 const TechTag = ({ text }) => {
   return (
-    <Tag size='md' variant="solid" p={1} colorScheme="yellow">
+    <Tag size={{base: "sm", sm: 'md'}} variant="solid" p={1} colorScheme="yellow">
       <TagLabel whiteSpace="nowrap">{text}</TagLabel>
       <TagRightIcon as={tags[text]}/>
     </Tag>

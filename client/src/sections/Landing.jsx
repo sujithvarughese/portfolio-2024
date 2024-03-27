@@ -1,5 +1,5 @@
 import React, { forwardRef, useEffect, useState } from 'react'
-import { Box, Heading, Image,  SimpleGrid, Spinner, Text, useColorMode } from '@chakra-ui/react'
+import { Box, Heading, Image, SimpleGrid, Spinner, Text, useColorMode, VStack } from '@chakra-ui/react'
 import avatarIMG from "../assets/images/profile/profile_studio.png"
 import { useGlobalContext } from '../context/GlobalContext.jsx'
 import { Section } from '../ui/index.js'
@@ -27,11 +27,12 @@ const Landing = forwardRef((props, ref) => {
 
         <Spinner display={imageLoading ? "block" : "none"} size="xl"/>
 
-        <Heading fontFamily="Liu Jian Mao Cao" fontSize="72px">Software Developer</Heading>
-        <Box m={12}>
+        <Heading fontFamily="Liu Jian Mao Cao" fontSize={{base: "48px", sm: "72px"}} textAlign={{ base: "center", sm: "start" }}>Software Developer</Heading>
+
+        <VStack m={{ base: "2", sm: "12" }} alignItems="flex-start" gap={3}>
           <Text>I am a software developer based in Miami, FL.</Text>
           <Text>I specialize in JavaScript, React, and NodeJS with OpenAI integration.</Text>
-        </Box>
+        </VStack>
 
         <Image
           display={imageLoading ? "none" : "block"}

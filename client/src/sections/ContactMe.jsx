@@ -1,6 +1,6 @@
-import { Heading, HStack, Link, SimpleGrid, Text } from '@chakra-ui/react'
+import { Heading, HStack, Icon, Link, LinkBox, LinkOverlay, SimpleGrid, Stack, Tag, Text } from '@chakra-ui/react'
 import Section from '../ui/Section.jsx'
-
+import { SiMinutemailer } from "react-icons/si"
 
 import { CustomDivider } from '../ui'
 
@@ -11,22 +11,33 @@ const ContactMe = () => {
   return (
     <Section>
       <CustomDivider index="3" name="Connect" />
-      <Heading>LET'S CONNECT</Heading>
+      <Heading fontFamily="Saira">LET'S CONNECT</Heading>
 
-      <HStack justifyContent="space-between" width="100%">
+      <Stack flexDirection={{ base: "column", sm: "row" }} justifyContent="space-between" gap={8} width="100%">
+
         <SimpleGrid>
-          <Text>Find me Here.</Text>
+          <Text fontWeight="700" paddingBottom={2}>Find me Here.</Text>
+          <Link href={`mailto:${emailAddress}`}>sujith.varug@gmail.com</Link>
           <Link>LinkedIn</Link>
           <Link>GitHub</Link>
         </SimpleGrid>
+
         <SimpleGrid>
-          <Text>Feel free to connect with me via email with career guidance or just to chat at <Link href={`mailto:${emailAddress}`}>sujith.varug@gmail.com</Link>.</Text>
-        </SimpleGrid>
-        <SimpleGrid>
-          <Link href={`mailto:${emailAddress}`}>Email Me</Link>
+          <Text fontWeight="700" paddingBottom={2}>Reach Out</Text>
+          <Text>Feel free to reach out- whether regarding freelance opportunities, career guidance, or just to chat about technology!</Text>
         </SimpleGrid>
 
-      </HStack>
+        <LinkBox as="article">
+          <Tag>
+            <HStack>
+              <Icon as={SiMinutemailer} />
+              <Text>Email Me</Text>
+            </HStack>
+            <LinkOverlay href={`mailto:${emailAddress}`}></LinkOverlay>
+          </Tag>
+        </LinkBox>
+
+      </Stack>
 
     </Section>
   )

@@ -1,11 +1,14 @@
-import { Box, Divider, HStack, Text } from '@chakra-ui/react'
+import { Box, Divider, HStack, Text, useColorMode } from '@chakra-ui/react'
+import { useState } from 'react'
 
 const CustomDivider = ({ index, name }) => {
-  return (
 
+  const { colorMode } = useColorMode()
+
+  return (
     <HStack justifyContent="space-between" width="100%" whiteSpace="nowrap">
       <Text>{index}</Text>
-      <Divider orientation="horizontal" size="xl"/>
+      <Divider orientation="horizontal" size="xl" borderColor={colorMode === "dark" ? "white" : "gray"}/>
       <Text>{name}</Text>
     </HStack>
 

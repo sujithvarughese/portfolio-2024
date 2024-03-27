@@ -1,4 +1,4 @@
-import { ButtonGroup, Heading, HStack, Image, Link, SimpleGrid, Text, useColorMode, useDisclosure } from '@chakra-ui/react'
+import { Button, ButtonGroup, Heading, HStack, Image, Link, SimpleGrid, Text, useColorMode, useDisclosure } from '@chakra-ui/react'
 import ProjectModal from "./ProjectModal.jsx"
 import { TechTag } from './index.js'
 const Project = ({ title, coverImage, heading, link, github, captions, images, tech, image, desktop, mobile, index }) => {
@@ -30,7 +30,7 @@ const Project = ({ title, coverImage, heading, link, github, captions, images, t
         <SimpleGrid gap={4}>
           <HStack>
             <Image src={coverImage} display={{ base: "flex", sm: "none" }} width="120px" borderRadius="10px"/>
-            <Heading onClick={onOpen} fontSize="28px" textTransform="uppercase">{title}</Heading>
+            <Button fontFamily="Signika Negative" onClick={onOpen} fontSize="28px" textTransform="capitalize" variant="unstyled">{title}</Button>
           </HStack>
 
 

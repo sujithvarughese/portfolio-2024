@@ -43,10 +43,10 @@ const Header = ({ scrollToLanding, scrollToProjects, scrollToContactMe, scrollTo
 
           <HStack>
             <ToggleColorMode />
-            <Button variant="link" onClick={scrollToLanding}>sujith varughese</Button>
+            <Button variant="link" fontSize="14px" onClick={scrollToLanding}>sujith varughese</Button>
           </HStack>
 
-          <HStack>
+          <HStack fontSize="14px">
             <Button fontWeight={projectsActive}  color={activeLink === "projects" ? colorActive : ""} variant="link" onClick={scrollToProjects}>Projects</Button>
             <Link href="mailto:sujith.varug@gmail.com">Contact</Link>
           </HStack>
