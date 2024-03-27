@@ -4,6 +4,7 @@ import { Box, Heading, SimpleGrid, Stack, Text, useColorMode, VStack } from '@ch
 import Section from '../ui/Section.jsx'
 import { aboutMe, aboutMe2, aboutMe3 } from '../data/data.js'
 import { CustomDivider } from '../ui'
+
 const About = forwardRef((props, ref) => {
 
   const { setActiveLink } = useGlobalContext()
@@ -36,17 +37,6 @@ const About = forwardRef((props, ref) => {
         alignItems="center"
         marginY="18px"
       >
-        {/*
-          <Image
-            src={heraMeImage}
-            alt="hera+me"
-            width="50%"
-            maxWidth="700px"
-            borderRadius="12px"
-            display={{ base: "none", lg: "revert" }}
-          />
-        */}
-
         <SimpleGrid>
           <Heading fontSize="24px" fontWeight="200">The creative process has guided me to gain a solid understanding of how a library such as React works <strong>under the hood</strong> which I believe has drastically increased my ability to <strong>create efficiently</strong>.</Heading>
         </SimpleGrid>
@@ -57,16 +47,6 @@ const About = forwardRef((props, ref) => {
         >
           <Text fontWeight="400">{aboutMe}</Text>
           <Text fontWeight="400">{aboutMe2}</Text>
-          {/*
-            <Image
-              src={heraMeImage}
-              alt="hera+me"
-              width={{ base: "80%", sm: "60%" }}
-              borderRadius="12px"
-              display={{ lg: "none" }}
-            />
-          */}
-
           <Text fontWeight="400">{aboutMe3}</Text>
         </VStack>
       </Stack>
