@@ -1,15 +1,16 @@
 import mobileScreen from "../assets/images/backgrounds/smartphone.png";
 import desktopScreen from "../assets/images/backgrounds/monitor.png";
 import { Box, Container, HStack, Image } from '@chakra-ui/react'
+import DesktopScreenshot from './DesktopScreenshot.jsx'
 const DesktopMobileImageContainer = ({ desktop, mobile }) => {
 
   return (
-    <Container>
-      <HStack
+      <Box
         alignItems="flex-end"
         position="relative"
         zIndex="0"
         gap="0"
+        marginX={10}
       >
         <Box>
           <Image
@@ -24,7 +25,7 @@ const DesktopMobileImageContainer = ({ desktop, mobile }) => {
           <Image
             zIndex="10"
             src={mobileScreen}
-
+            position="absolute"
             maxWidth={{ base: "65px", md: "150px"}}
             bottom={{ base: "0", md: "0"}}
             left={{ base: "210px", md: "500px" }}
@@ -51,8 +52,8 @@ const DesktopMobileImageContainer = ({ desktop, mobile }) => {
           left={{ base: "213px", md: "508px" }}
           borderRadius={{base: "10px", md: "18px"}}
         ></Image>
-      </HStack>
-    </Container>
+      </Box>
+
 
   )
 }
