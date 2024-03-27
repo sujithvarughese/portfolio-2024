@@ -24,7 +24,7 @@ const DesktopMobileImageContainer = ({ desktop, mobile }) => {
           <Image
             zIndex="10"
             src={mobileScreen}
-            position="absolute"
+
             maxWidth={{ base: "65px", md: "150px"}}
             bottom={{ base: "0", md: "0"}}
             left={{ base: "210px", md: "500px" }}

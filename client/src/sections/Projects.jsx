@@ -37,31 +37,7 @@ const Projects = forwardRef((props, ref) => {
       <Box ref={ref} top="80px"></Box>
       <CustomDivider index="2" name="Projects" />
 
-      <VStack
-        display={{ base: "flex", md: "none" }}
-        flexWrap="wrap"
-        gap="24px"
-        justifyContent="space-evenly"
-      >
-        {
-          projects.map((project,index) => {
-            return (
-            <Box
-              key={index}
-            >
-              <ProjectCard project={project} index={index}/>
-            </Box>
-            )
-          })
-        }
-      </VStack>
-
-      <VStack
-        display={{ base: "none", md: "grid" }}
-        gap="10rem"
-        marginX="5rem"
-        paddingBottom="72px"
-      >
+      <SimpleGrid gap="4rem">
         {
           projects.map((project,index) => {
             return (
@@ -73,7 +49,7 @@ const Projects = forwardRef((props, ref) => {
             )
           })
         }
-      </VStack>
+      </SimpleGrid>
 
 
     </Section>

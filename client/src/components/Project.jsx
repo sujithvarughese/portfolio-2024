@@ -13,12 +13,7 @@ const Project = ({ title, coverImage, heading, link, github, captions, images, t
   const direction = index % 2 === 0 ? "row" : "row-reverse"
 
   return (
-    <HStack
-      gap="42px"
-      justifyContent="space-between"
-      borderRadius="12px"
-
-    >
+    <SimpleGrid>
       <ProjectModal
         isOpen={isOpen}
         onClose={onClose}
@@ -32,62 +27,50 @@ const Project = ({ title, coverImage, heading, link, github, captions, images, t
         link={link}
         github={github}
       />
+      <HStack>
+        <SimpleGrid>
 
-      <Image src={coverImage} width="320px"/>
-
-      <SimpleGrid
-        gap="24px"
-        maxWidth={{lg: "240px", xl: "420px" }}
-      >
-        <Heading onClick={onOpen} fontSize="28px" textTransform="uppercase">{title}</Heading>
-
-        <HStack>
-          {
-            tech.map(item => <TechTag key={item} text={item}/>)
-          }
-        </HStack>
+          <Image src={coverImage} width="320px" borderRadius="10px"/>
+        </SimpleGrid>
 
 
-        <Text fontSize="18px" fontWeight="600"         backdropFilter="blur(32px)">{heading}</Text>
+        <SimpleGrid gap="24px">
+          <Heading onClick={onOpen} fontSize="28px" textTransform="uppercase">{title}</Heading>
+          <HStack>
+            {tech.map(item => <TechTag key={item} text={item}/>)}
+          </HStack>
 
-        <UnorderedList spacing="12px" backdropFilter="blur(32px)">
-          {captions.map((caption, index) => <ListItem key={index}>{caption}</ListItem>)}
-        </UnorderedList>
+          <Text fontSize="18px" fontWeight="400">{heading}</Text>
 
-        <ButtonGroup fontSize="20px" gap="8px" maxHeight="45px" color={colorMode === "dark" ? "#F6E05E" : "#2B6CB0"}>
-          <Link
-            border={colorMode === "dark" ? "#F6E05E 2px solid" : "#2B6CB0 2px solid"}
-            borderRadius="5px"
-            padding="5px"
-            minWidth="141px"
-            textAlign="center"
-            _hover={{ fontWeight: "600" }}
-            href={link} target="_blank" rel="noreferrer"
-          >
-            Launch Demo
-          </Link>
-          <Link
-            border={colorMode === "dark" ? "#F6E05E 2px solid" : "#2B6CB0 2px solid"}
-            borderRadius="5px"
-            padding="5px"
-            minWidth="141px"
-            textAlign="center"
-            _hover={{ fontWeight: "600" }}
-            href={github} target="_blank" rel="noreferrer"
-          >
-            View Code
-          </Link>
-        </ButtonGroup>
+          <ButtonGroup fontSize="20px" gap="8px" maxHeight="45px" color={colorMode === "dark" ? "#F6E05E" : "#2B6CB0"}>
+            <Link
+              border={colorMode === "dark" ? "#F6E05E 2px solid" : "#2B6CB0 2px solid"}
+              borderRadius="5px"
+              padding="5px"
+              minWidth="141px"
+              textAlign="center"
+              _hover={{ fontWeight: "600" }}
+              href={link} target="_blank" rel="noreferrer"
+            >
+              Launch Demo
+            </Link>
+            <Link
+              border={colorMode === "dark" ? "#F6E05E 2px solid" : "#2B6CB0 2px solid"}
+              borderRadius="5px"
+              padding="5px"
+              minWidth="141px"
+              textAlign="center"
+              _hover={{ fontWeight: "600" }}
+              href={github} target="_blank" rel="noreferrer"
+            >
+              View Code
+            </Link>
+          </ButtonGroup>
+        </SimpleGrid>
 
-      </SimpleGrid>
+      </HStack>
+    </SimpleGrid>
 
-      {/*
-        // not in use
-        isOpen && <ProjectModal isOpen={isOpen} onClose={onClose} captions={captions} images={images} image={image} coverImage={coverImage}/>
-      */}
-
-
-    </HStack>
 
 
 

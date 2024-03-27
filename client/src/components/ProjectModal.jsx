@@ -5,7 +5,7 @@ import ProjectPreview from './ProjectPreview.jsx'
 import { FaCircleArrowLeft } from 'react-icons/fa6'
 import ProjectScreenshots from './ProjectScreenshots.jsx'
 
-const ProjectModal = ({ isOpen, onClose, captions, coverImage, title, images, image, link, github }) => {
+const ProjectModal = ({ isOpen, onClose, captions, title, images, image, link, github }) => {
 
   return (
     <Modal isOpen={isOpen} isCentered onClose={onClose}>
@@ -17,7 +17,7 @@ const ProjectModal = ({ isOpen, onClose, captions, coverImage, title, images, im
             <ProjectScreenshots title={title} images={images} />
 
             <HStack>
-              <UnorderedList color="white">
+              <UnorderedList>
                 {captions.map((caption, index) => <ListItem key={index}>{caption}</ListItem>)}
               </UnorderedList>
             </HStack>
