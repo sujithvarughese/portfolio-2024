@@ -1,13 +1,10 @@
 import React, { forwardRef, useEffect, useRef, useState } from 'react'
-import { Box, Button, FormControl, FormErrorMessage, FormLabel, Heading, HStack, Input, Link, Progress, SimpleGrid, Text, Textarea, useColorMode, VStack } from '@chakra-ui/react'
+import { Box, Heading, HStack, Link, SimpleGrid, Text, useColorMode } from '@chakra-ui/react'
 import Section from '../ui/Section.jsx'
 import { useGlobalContext } from '../context/GlobalContext.jsx'
-import { useFormik } from "formik";
-import * as Yup from 'yup';
-import bg from "../assets/images/bg/AdobeStock_237425533.jpeg"
-import bgLight from "../assets/images/bg/AdobeStock_237425533 copy.png"
-import emailjs from "@emailjs/browser";
-import { CustomDivider } from '../components/index.js'
+
+import { CustomDivider } from '../ui'
+
 const credentials = {
   serviceID: import.meta.env.VITE_SERVICE_ID,
   templateID: import.meta.env.VITE_TEMPLATE_ID,
@@ -27,45 +24,6 @@ const ContactMe = forwardRef((props, ref) => {
     })
     observer.observe(ref.current)
   }, [])
-
-
-  const [isLoading, setIsLoading] = useState(false)
-  const formRef = useRef()
-
-  const formik = useFormik({
-    initialValues: {
-      from_name: "",
-      from_email: "",
-      message: ""
-    },
-    onSubmit: async (values) => {
-      setIsLoading(true)
-      console.log(formRef.current)
-      try {
-        const response = await emailjs.sendForm(credentials.serviceID, credentials.templateID, formRef.current, credentials.publicKey)
-        console.log(response)
-        if (response.status === 200) {
-          showAlert({
-            type: 'success',
-            message: `Thanks for your message ${values.from_name}. I will get back to you shortly.`,
-          })
-        }
-      } catch (error) {
-        showAlert({
-          type: 'error',
-          message: 'Something went wrong, please try again.',
-        })
-      } finally {
-        setIsLoading(false)
-        formik.resetForm()
-      }
-    },
-    validationSchema: Yup.object({
-      from_name: Yup.string().required("Required"),
-      from_email: Yup.string().email("Invalid Email Address").required("Required"),
-      message: Yup.string().required("Required")
-    })
-  });
 
 
   return (

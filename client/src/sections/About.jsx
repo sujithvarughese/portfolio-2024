@@ -1,13 +1,9 @@
 import React, { forwardRef, useEffect } from 'react'
 import { useGlobalContext } from '../context/GlobalContext.jsx'
-import { Box, Heading, HStack, Image, SimpleGrid, Stack, Text, useColorMode, VStack } from '@chakra-ui/react'
+import { Box, Heading, SimpleGrid, Stack, Text, useColorMode, VStack } from '@chakra-ui/react'
 import Section from '../ui/Section.jsx'
-import { aboutMeHeadline, aboutMe, aboutMe2, aboutMe3 } from '../data/data.js'
-import heraMeImage from "../assets/images/profile/me_hera.png"
-import bg from "../assets/images/bg/AdobeStock_329681600.png"
-import bgLight from "../assets/images/bg/AdobeStock_237425533 copy.png"
-import bgLight1 from "../assets/images/bg/AdobeStock_329681600-light.png"
-import { CustomDivider } from '../components/index.js'
+import { aboutMe, aboutMe2, aboutMe3 } from '../data/data.js'
+import { CustomDivider } from '../ui'
 const About = forwardRef((props, ref) => {
 
   const { setActiveLink } = useGlobalContext()

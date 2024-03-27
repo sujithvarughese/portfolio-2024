@@ -1,14 +1,7 @@
 import React, { forwardRef, useEffect, useState } from 'react'
-import Section from '../ui/Section.jsx'
-import { Avatar, Box, Container, Heading, HStack, Icon, Image, ListIcon, ListItem, SimpleGrid, Spinner, Stack, Text, UnorderedList, useColorMode, VStack } from '@chakra-ui/react'
-import { MdArrowRight, MdLocationPin } from "react-icons/md";
-
+import { Box, Heading, Image,  SimpleGrid, Spinner, Text, useColorMode } from '@chakra-ui/react'
 import avatarIMG from "../assets/images/profile/profile_studio.png"
 import { useGlobalContext } from '../context/GlobalContext.jsx'
-import { skills } from "../data/data.js";
-import bgChessKingPawn from "../assets/images/backgrounds/chess-pawn-king1.png"
-import bgChessKingPawnLight from "../assets/images/backgrounds/chess-pawn-king1-light.png"
-import { TechTag } from '../components/index.js'
 
 const Landing = forwardRef((props, ref) => {
 
@@ -31,23 +24,6 @@ const Landing = forwardRef((props, ref) => {
         <SimpleGrid margin={{ base: "8px", sm: "revert" }} px={{ base: "2", md: "16" }}>
 
           <Box ref={ref} position="absolute" top="-46px"></Box>
-          {/*
-          <Heading fontSize={{ base: "28px", sm: "64px" }}>Welcome.</Heading>
-
-          <VStack alignItems="flex-end" gap={{ base: "0", sm: "8px" }}>
-            <HStack alignItems="flex-end">
-              <Heading fontSize={{ base: "18px", sm: "22px" }} fontWeight="500" marginY="4px" color={colorMode === "dark" ? "#F6E05E" : "#2B6CB0"}>My name is</Heading>
-              <Heading fontSize={{ base: "28px", sm: "36px" }}>Sujith Varughese.</Heading>
-            </HStack>
-
-            <Heading  fontSize={{ base: "18px", sm: "22px" }} fontWeight="500" >Software Developer</Heading>
-
-            <HStack gap="0" alignItems="flex-end">
-              <Icon as={MdLocationPin} fontSize={{ base: "28px", sm: "32px" }} />
-              <Heading fontSize={{ base: "16px", sm: "18px" }} fontWeight="400">Miami, FL</Heading>
-            </HStack>
-          </VStack>
-          */}
 
           <Spinner display={imageLoading ? "block" : "none"} size="xl"/>
 

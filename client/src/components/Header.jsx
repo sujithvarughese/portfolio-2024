@@ -45,33 +45,15 @@ const Header = ({ scrollToLanding, scrollToProjects, scrollToContactMe, scrollTo
       >
 
 
-          <IconButton display={{ sm: "none" }} aria-label="Toggle Mobile Menu" icon={<HamburgerIcon />} onClick={onOpen}>Mobile Menu</IconButton>
-          {isOpen &&
-            <MobileMenu
-              isOpen={isOpen}
-              onClose={onClose}
-              scrollToLanding={scrollToLanding}
-              scrollToAbout={scrollToAbout}
-              scrollToProjects={scrollToProjects}
-              scrollToContactMe={scrollToContactMe}
-            />}
+          <HStack>
+            <ToggleColorMode />
+            <Button variant="link" onClick={scrollToLanding}>sujith varughese</Button>
+          </HStack>
 
-          <Box display={{ base: "none", sm: "flex"}} >
-            <Text>sujith varughese</Text>
-          </Box>
-
-          <ButtonGroup display={{ base: "none", sm: "flex"}} >
-            <Button fontWeight={homeActive} color={activeLink === "home" ? colorActive : ""} variant="link" onClick={scrollToLanding}>Home</Button>
-            <Button fontWeight={aboutActive}  color={activeLink === "about" ? colorActive : ""} variant="link" onClick={scrollToAbout}>About</Button>
+          <HStack>
             <Button fontWeight={projectsActive}  color={activeLink === "projects" ? colorActive : ""} variant="link" onClick={scrollToProjects}>Projects</Button>
-            <Button  fontWeight={contactMeActive}  color={activeLink === "contact-me" ? colorActive : ""} variant="link" onClick={scrollToContactMe}>Contact Me</Button>
-
-          <Link sx={{ border: "gray 2px solid", borderRadius: "5px", padding: "5px", display: "flex", alignItems: "center", gap: "8px" }}
-                href={resume} isExternal
-          >Resume<FiExternalLink />
-          </Link>
-          <ToggleColorMode />
-          </ButtonGroup>
+            <Link href="mailto:sujith.varug@gmail.com">Contact</Link>
+          </HStack>
 
 
         </HStack>

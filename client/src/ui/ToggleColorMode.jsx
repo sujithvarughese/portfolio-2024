@@ -7,6 +7,8 @@ const ToggleColorMode = () => {
   return (
     <Button
       onClick={toggleColorMode}
+      size="sm"
+      display={{ base: "none", sm: "flex"}}
     >
       {colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
     </Button>
