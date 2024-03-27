@@ -13,8 +13,10 @@ const Project = ({ title, coverImage, heading, link, github, captions, images, t
   const direction = index % 2 === 0 ? "row" : "row-reverse"
 
   return (
-    <HStack
+    <Stack
+      flexDirection={{md: "column", lg: direction }}
       gap="42px"
+
       justifyContent="space-between"
       borderRadius="12px"
 
@@ -24,16 +26,25 @@ const Project = ({ title, coverImage, heading, link, github, captions, images, t
         onClose={onClose}
         captions={captions}
         coverImage={coverImage}
-        title={title}
         images={images}
-        desktop={desktop}
-        mobile={mobile}
         image={image}
         link={link}
         github={github}
       />
 
-      <Image src={coverImage} width="320px"/>
+      {
+        index === 0 ?
+          <Container display="flex" position="relative">
+            <PhoneImageContainer images={images}/>
+          </Container>
+
+          :
+          <Box>
+            {/*<Image src={image} alt="image"></Image>*/}
+            <DesktopMobileImageContainer desktop={desktop} mobile={mobile} />
+          </Box>
+
+      }
 
       <SimpleGrid
         gap="24px"
@@ -87,7 +98,7 @@ const Project = ({ title, coverImage, heading, link, github, captions, images, t
       */}
 
 
-    </HStack>
+    </Stack>
 
 
 

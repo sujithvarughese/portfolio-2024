@@ -42,7 +42,7 @@ const App = () => {
     })
   }
   return (
-    <Box backgroundImage={colorMode === "dark" ? "linear-gradient(to bottom, #000000, #202020)" : "linear-gradient(to bottom, #FFFFFF, #DCDCDC)"}>
+    <Box backgroundImage={colorMode === "dark" ? "#202020" : "#DCDCDC"}>
 
       <Header
         scrollToLanding={scrollToLanding}
