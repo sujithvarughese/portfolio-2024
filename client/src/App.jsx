@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import { Header, Footer } from "./components"
 import { Landing, Projects, ContactMe, About } from './sections'
 import Alert from './components/Alert.jsx'
-import { Box, SimpleGrid, useColorMode, VStack } from '@chakra-ui/react'
+import {  useColorMode, VStack } from '@chakra-ui/react'
 const App = () => {
 
   // refs are forwarded to appropriate components to ref component in that section

@@ -1,4 +1,4 @@
-import { Box, Button, ButtonGroup, Container, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Link, useColorMode, useDisclosure } from '@chakra-ui/react'
+import { Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Link, useColorMode } from '@chakra-ui/react'
 import resume from '../assets/images/profile/portfolio-resume-2024.pdf'
 import { FiExternalLink } from 'react-icons/fi'
 

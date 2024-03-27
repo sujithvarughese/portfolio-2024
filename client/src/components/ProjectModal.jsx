@@ -1,8 +1,4 @@
-import React from 'react'
-import { Card, CardBody, Heading, Icon, Image, Modal, ModalContent, ModalOverlay, Text, useDisclosure, keyframes, HStack, VStack, Box, UnorderedList, ListItem, ModalHeader, ModalCloseButton, ModalBody } from '@chakra-ui/react'
-import { AnimatePresence } from 'framer-motion'
-import ProjectPreview from './ProjectPreview.jsx'
-import { FaCircleArrowLeft } from 'react-icons/fa6'
+import {  Modal, ModalContent, ModalOverlay,  HStack,  UnorderedList, ListItem, ModalHeader, ModalCloseButton, ModalBody } from '@chakra-ui/react'
 import ProjectScreenshots from './ProjectScreenshots.jsx'
 
 const ProjectModal = ({ isOpen, onClose, captions, title, images, image, link, github }) => {

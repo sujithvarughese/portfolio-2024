@@ -1,8 +1,5 @@
 import phone from "../assets/images/backgrounds/phone-angled.png"
-import { Box, Container, HStack, Image } from '@chakra-ui/react'
-import fitnessBrowseIMG from "../assets/images/simpler-fitness/browse.png"
-import fitnessSearchIMG from "../assets/images/simpler-fitness/search.png"
-import fitnessInstructionsIMG from "../assets/images/simpler-fitness/instructions.png"
+import { Box, HStack, Image } from '@chakra-ui/react'
 const PhoneImageContainer = ({ images }) => {
   return (
     <HStack>
