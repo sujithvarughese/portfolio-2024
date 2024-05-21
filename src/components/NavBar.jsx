@@ -3,6 +3,9 @@ import { useEffect, useState } from 'react'
 import linkedInIcon from '../assets/icons/linkedin-icon.svg';
 import fbIcon from '../assets/icons/fb-icon.svg';
 import githubIcon from "../assets/icons/github-mark-white.svg"
+import jsIcon from "../assets/icons/javascript-icon.svg"
+import IconLogo from './IconLogo.jsx'
+
 const NavBar = () => {
 
   const [activeLink, setActiveLink] = useState("home")
@@ -28,10 +31,8 @@ const NavBar = () => {
         <Navbar.Brand href="/">
           sujith varughese
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav">
-          <span className="navbar-toggle-icon"></span>
-        </Navbar.Toggle>
-        <Navbar.Collapse id="basic-navbar-nav">
+
+
           <Nav className="me-auto">
             <Nav.Link href="#home" className={activeLink === "home" ? "active navbar-link" : "navbar-link"} onClick={() => onUpdateActiveLink("home")}>Home</Nav.Link>
             <Nav.Link href="#about" className={activeLink === "about" ? "active navbar-link" : "navbar-link"} onClick={() => onUpdateActiveLink("about")}>About</Nav.Link>
@@ -45,7 +46,7 @@ const NavBar = () => {
             </div>
           </span>
           <button className="vvd"><span>Let's Connect</span></button>
-        </Navbar.Collapse>
+
       </Container>
     </Navbar>
   )

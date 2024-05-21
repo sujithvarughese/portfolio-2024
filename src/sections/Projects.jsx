@@ -1,6 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap'
 import { projects } from '../data/projects.js'
-import ProjectCard from './ProjectCard.jsx'
+import ProjectCard from '../components/ProjectCard.jsx'
 
 const Projects = () => {
   return (

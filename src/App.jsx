@@ -1,14 +1,14 @@
 import NavBar from './components/NavBar.jsx'
-import Banner from './components/Banner.jsx'
-import Projects from './components/Projects.jsx'
-import AboutMe from './components/AboutMe.jsx'
+import Hero from './sections/Hero.jsx'
+import Projects from './sections/Projects.jsx'
+import AboutMe from './sections/AboutMe.jsx'
 
 const App = () => {
 
   return (
     <>
       <NavBar />
-      <Banner />
+      <Hero />
       <AboutMe />
       <Projects />
     </>

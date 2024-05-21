@@ -2,7 +2,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { ArrowRightCircle, CursorText  } from "react-bootstrap-icons"
 import { introductionText, descriptionText,  } from "../data/data.js"
 import { useEffect, useState } from 'react'
-const Banner = () => {
+const Hero = () => {
 
   const [currentIntroductionText, setCurrentIntroductionText] = useState("")
   const [currentDescriptionText, setCurrentDescriptionText] = useState("")
@@ -30,14 +30,13 @@ const Banner = () => {
 
 
   return (
-    <section className="banner" id="home">
+    <section className="hero" id="home">
       <Container>
         <h1 className="welcome">Welcome.</h1>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
-
             <h1>{currentIntroductionText}</h1>
-            <h2>{currentDescriptionText}</h2>
+            <h3>{currentDescriptionText}</h3>
           </Col>
         </Row>
       </Container>
@@ -45,4 +44,4 @@ const Banner = () => {
   )
 }
 
-export default Banner
+export default Hero
