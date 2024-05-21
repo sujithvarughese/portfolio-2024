@@ -208,7 +208,7 @@ nav.navbar .navbar-toggle[aria-expanded="true"] .navbar-toggle-icon {
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
-  padding: 260px 0 100px 0;
+  padding: 120px 0 100px 0;
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -270,10 +270,31 @@ nav.navbar .navbar-toggle[aria-expanded="true"] .navbar-toggle-icon {
     transform: translateY(-20px);
   }
 }
+.welcome {
+  animation: fade 2s ease-in-out;
+  opacity: 0;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+
+  }
+}
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
 }
-
+.about-highlight {
+  align-self: center;
+  font-size: 20px;
+}
 .project-cards {
 
 }

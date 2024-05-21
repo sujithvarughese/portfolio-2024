@@ -1,35 +1,43 @@
 import { Container, Row, Col } from 'react-bootstrap'
-import { ArrowRightCircle } from "react-bootstrap-icons"
+import { ArrowRightCircle, CursorText  } from "react-bootstrap-icons"
+import { introductionText, descriptionText,  } from "../data/data.js"
 import { useEffect, useState } from 'react'
 const Banner = () => {
-  const fullText = "Hello, my name is Sujith."
-  const textLine1 = "I am a software developer based out of Miami, FL"
-  const textLine2 = "I create web and mobile applications, specializing in JavaScript, React, React Native, OpenAI integration, and prompt engineering."
-  const [text, setText] = useState("")
-  const [currentTextIndex, setCurrentTextIndex] = useState(1)
+
+  const [currentIntroductionText, setCurrentIntroductionText] = useState("")
+  const [currentDescriptionText, setCurrentDescriptionText] = useState("")
+
+  const [currentIntroductionIndex, setCurrentIntroductionIndex] = useState(1)
+  const [currentDescriptionIndex, setCurrentDescriptionIndex] = useState(1)
 
   useEffect(() => {
-    const delta = Math.random() * 100
-    let ticker = setInterval(() => {
-      tick()
-    }, delta)
+    let ticker
+    if (currentIntroductionText === introductionText) {
+      ticker = setInterval(() => {
+        const updatedText = descriptionText.substring(0, currentIntroductionIndex)
+        setCurrentDescriptionText(prev => updatedText)
+        setCurrentIntroductionIndex(prevState => prevState + 1)
+      }, 25)
+    } else {
+      ticker = setInterval(() => {
+        const updatedText = introductionText.substring(0, currentDescriptionIndex)
+        setCurrentIntroductionText(prev => updatedText)
+        setCurrentDescriptionIndex(prevState => prevState + 1)
+      }, 50)
+    }
     return () => clearInterval(ticker)
-  }, [text])
+  }, [currentIntroductionText, currentDescriptionText])
 
-  const tick = () => {
-    const updatedText = fullText.substring(0, currentTextIndex)
-    setText(prev => updatedText)
-    setCurrentTextIndex(prevState => prevState + 1)
-  }
 
   return (
     <section className="banner" id="home">
       <Container>
+        <h1 className="welcome">Welcome.</h1>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
-            <span>Welcome to my portfolio</span>
-            <h1>{text}</h1>
-            <p>About me paragraph</p>
+
+            <h1>{currentIntroductionText}</h1>
+            <h2>{currentDescriptionText}</h2>
           </Col>
         </Row>
       </Container>
