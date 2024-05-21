@@ -17,6 +17,7 @@ body {
   background-color: #121212;
   color: #fff;
   font-family: "Avenir Next Condensed",  Helvetica, Arial, sans-serif;
+
 }
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -208,7 +209,6 @@ nav.navbar .navbar-toggle[aria-expanded="true"] .navbar-toggle-icon {
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
-  background-image: url('./assets/img/banner-bg.png');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -272,4 +272,24 @@ nav.navbar .navbar-toggle[aria-expanded="true"] .navbar-toggle-icon {
 }
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
+}
+
+.project-cards {
+
+}
+@media (min-width: 1080px) {
+  .project-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 24px;
+  }
+}
+.project-card {
+  width: 480px;
+  height: 480px;
+}
+.about-paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }

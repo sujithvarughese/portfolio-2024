@@ -2,12 +2,14 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { ArrowRightCircle } from "react-bootstrap-icons"
 import { useEffect, useState } from 'react'
 const Banner = () => {
-  const fullText = "Hello, my name is Sujith"
+  const fullText = "Hello, my name is Sujith."
+  const textLine1 = "I am a software developer based out of Miami, FL"
+  const textLine2 = "I create web and mobile applications, specializing in JavaScript, React, React Native, OpenAI integration, and prompt engineering."
   const [text, setText] = useState("")
   const [currentTextIndex, setCurrentTextIndex] = useState(1)
-  const [delta, setDelta] = useState(Math.random() * 100)
 
   useEffect(() => {
+    const delta = Math.random() * 100
     let ticker = setInterval(() => {
       tick()
     }, delta)
