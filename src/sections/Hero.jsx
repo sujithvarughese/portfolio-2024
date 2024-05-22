@@ -1,4 +1,5 @@
 import { Container, Row, Col } from 'react-bootstrap'
+import classes from '../styles/Hero.module.css'
 import { ArrowRightCircle, CursorText  } from "react-bootstrap-icons"
 import { introductionText, descriptionText,  } from "../data/data.js"
 import { useEffect, useState } from 'react'
@@ -33,19 +34,17 @@ const Hero = () => {
 
 
   return (
-    <section className="hero" id="home">
+    <section className={classes.hero} id="home">
       <Container>
-        <h1 className="welcome">Welcome.</h1>
-        <Row className="">
-          <Col xs={12} md={6} xl={7}>
-            <h1>{currentIntroductionText}</h1>
-            <h3>{currentDescriptionText}</h3>
+        <h1 className={classes.welcome}>Welcome.</h1>
+        <Row className={classes.content}>
+          <Col xs={12} sm={8} md={6} xl={7}>
+            <h1 className={classes.intro}>{currentIntroductionText}</h1>
+            <h3 className={classes.description}>{currentDescriptionText}</h3>
           </Col>
 
-          <img src={chessboardImage} alt="chessboard" className="chessboard"/>
-          <img src={knightImage} alt="knight" className="knight"/>
-
-
+          <img src={chessboardImage} alt="chessboard" className={classes.chessboard}/>
+          <img src={knightImage} alt="knight" className={classes.knight}/>
         </Row>
       </Container>
     </section>

@@ -1,5 +1,5 @@
 import { ListGroup, Offcanvas } from 'react-bootstrap'
-
+import classes from "../styles/Projects.module.css"
 const ProjectDrawer = ({ isOpen, onClose, title, coverImage, coverVideo, heading, link, github, captions, images, tech, image, desktop, mobile, index }) => {
   return (
     <Offcanvas show={isOpen} onHide={onClose}>

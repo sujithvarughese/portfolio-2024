@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Container } from 'react-bootstrap'
-import { motion } from "framer-motion"
+import classes from "../styles/Projects.module.css"
 import ProjectDrawer from './ProjectDrawer.jsx'
 
 const ProjectCard = ({ title, coverImage, coverVideo, heading, link, github, captions, images, tech, image, desktop, mobile, index }) => {
@@ -37,9 +37,9 @@ const ProjectCard = ({ title, coverImage, coverVideo, heading, link, github, cap
         tech={tech}
         index={index}
       />
-      <Container className="project-card" onClick={onOpen}>
+      <Container className={classes.card} onClick={onOpen}>
         <img src={coverVideo} alt="gif"/>
-        <Container className="project-text">
+        <Container className={classes.text}>
           <h3>{title}</h3>
           <h4>{heading}</h4>
         </Container>

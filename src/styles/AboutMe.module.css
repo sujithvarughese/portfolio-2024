@@ -1,0 +1,17 @@
+.aboutMe {
+
+}
+
+.text {
+
+}
+
+.highlight {
+    align-self: center;
+    font-size: 20px;
+}
+.paragraph {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}

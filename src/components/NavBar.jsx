@@ -1,4 +1,5 @@
 import { Nav, Navbar, NavDropdown, Container } from "react-bootstrap"
+import classes from '../styles/NavBar.module.css'
 import { useEffect, useState } from 'react'
 import linkedInIcon from '../assets/icons/linkedin-icon.svg';
 import fbIcon from '../assets/icons/fb-icon.svg';
