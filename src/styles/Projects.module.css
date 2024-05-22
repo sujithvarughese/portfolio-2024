@@ -45,10 +45,14 @@
     font-size: 15px;
     letter-spacing: 0.8px;
 }
+
 @media (min-width: 800px) {
     .cards {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 36px;
+    }
+    .drawer {
+        width: 50%;
     }
 }

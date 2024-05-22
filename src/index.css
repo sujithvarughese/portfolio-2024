@@ -14,7 +14,7 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #121212;
+  background-color: #05070a;
   color: #fff;
   font-family: "Avenir Next Condensed",  Helvetica, Arial, sans-serif;
 
@@ -142,4 +142,16 @@ span.navbar-text {
 
 .offcanvas {
   margin-top: 52px;
+  width: 100% !important;
+
+}
+@media (min-width: 768px) {
+  .offcanvas {
+    width: 70% !important;
+  }
+}
+@media (min-width: 1200px) {
+  .offcanvas {
+    width: 60% !important;
+  }
 }

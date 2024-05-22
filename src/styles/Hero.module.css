@@ -67,7 +67,7 @@
 }
 .chessboard {
     top: 0;
-    z-index: -10;
+
 }
 .knight {
     position: absolute;
