@@ -55,6 +55,9 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+section {
+  height: 100vh;
+}
 
 /************ navbar ************/
 nav.navbar {
@@ -133,6 +136,52 @@ span.navbar-text {
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+}
+.welcome {
+  animation: fade 2s ease-in-out;
+  opacity: 0;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.4, 0.4, 0.4) translate(-85%, 5%);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-100%, -35%)
+  }
+  100% {
+
+  }
+}
+.bg-image {
+  position: absolute;
+}
+.chessboard {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  z-index: -10;
+}
+.knight {
+  position: absolute;
+  top: 0;
+  left: 400px;
+  z-index: 0;
+  animation: knight-move 3s ease-in-out;
+}
+@keyframes knight-move {
+  0% {
+    transform: scale3d(0.4, 0.4, 0.4) translate(-85%, 5%);
+  }
+  50% {
+    transform: translateX(-35%)
+  }
+  100% {
+
+  }
+
 }
 .hero .tagline {
   font-weight: 700;
@@ -177,37 +226,7 @@ span.navbar-text {
 .hero button:hover svg {
   margin-left: 25px;
 }
-.hero img {
-  animation: updown 3s linear infinite;
-}
-@keyframes updown {
-  0% {
-    transform: translateY(-20px);
-  }
-  50% {
-    transform: translateY(20px);
-  }
-  100% {
-    transform: translateY(-20px);
-  }
-}
-.welcome {
-  animation: fade 2s ease-in-out;
-  opacity: 0;
-}
-@keyframes fade {
-  0% {
-    opacity: 0;
-    transform: translateX(-200px);
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-}
+
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
 }
@@ -224,29 +243,65 @@ span.navbar-text {
   gap: 24px;
 }
 
-
 /************ Projects Css ************/
 .project-cards {
 
 }
-@media (min-width: 1080px) {
+@media (min-width: 800px) {
   .project-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: 24px;
+    gap: 36px;
   }
 }
 .project-card {
-  width: 480px;
-  height: 480px;
+  padding: 0;
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
 }
-.project-card:hover {
-  opacity: 1;
-  text-shadow: 0 0 8px rgb(0,0,0);
-  box-shadow: 0 0 8px rgb(0,0,0);
-  backdrop-filter: blur(10px);
-}
+.project-card img {
 
+  border-radius: 30px;
+}
+.project-card::before {
+  content: "";
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  opacity: 0.85;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  transition: 0.4s ease-in-out;
+}
+.project-card:hover::before {
+  height: 100%;
+}
+.project-text {
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  width: 100%;
+}
+.project-card:hover .project-text {
+  top: 50%;
+  opacity: 1;
+}
+.project-text h3 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
+}
+.project-text h4 {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+}
 .offcanvas {
   margin-top: 52px;
 }

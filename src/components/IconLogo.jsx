@@ -1,34 +1,35 @@
-import reactIcon from "../assets/icons/react-icon.svg"
-import javascriptIcon from "../assets/icons/javascript-icon-white.svg"
-import nodeIcon from "../assets/icons/node-icon.svg"
-import mongoIcon from "../assets/icons/mongodb-icon.svg"
-import sqlIcon from "../assets/icons/sql-icon.svg"
-import firebaseIcon from "../assets/icons/mongodb-icon.svg"
-import openaiIcon from "../assets/icons/openai-icon.svg"
-import chakraIcon from "../assets/icons/chakraui-icon.svg"
-import styledComponentsIcon from "../assets/icons/styled-components-icon.svg"
-import expoIcon from "../assets/icons/expo-icon.svg"
-import htmlIcon from "../assets/icons/html-icon.svg"
-import cssIcon from "../assets/icons/css-icon.svg"
-import bootstrapIcon from "../assets/icons/bootstrap-icon.svg"
+import { RiJavascriptFill } from "react-icons/ri";
+import { FaReact, FaNode } from "react-icons/fa6";
+import { TbFileTypeSql } from "react-icons/tb";
+import { SiHtml5, SiCss3, SiBootstrap, SiMongodb, SiOpenai, SiChakraui, SiStyledcomponents, SiExpo, SiFirebase } from "react-icons/si"
+import { Badge } from 'react-bootstrap'
 
-const IconLogo = ({ name }) => <img src={logos[name]} alt="logo" color="white"/>
+
+const IconLogo = ({ name }) => {
+  console.log(logos[name])
+  return (
+    <Badge pill bg="info">
+      <span>{name}</span>
+      <span>{logos[name]}</span>
+    </Badge>
+  )
+}
 
 const logos = {
-  "JavaScript" : javascriptIcon,
-  "React": reactIcon,
-  "React Native": reactIcon,
-  "NodeJS": nodeIcon,
-  "MongoDB": mongoIcon,
-  "Firebase": firebaseIcon,
-  "OpenAI": openaiIcon,
-  "ChakraUI": chakraIcon,
-  "Styled Components": styledComponentsIcon,
-  "Expo": expoIcon,
-  "HTML": htmlIcon,
-  "CSS": cssIcon,
-  "SQL": sqlIcon,
-  "Bootstrap": bootstrapIcon
+  "JavaScript": <RiJavascriptFill />,
+  "React": <FaReact />,
+  "React Native": <FaReact />,
+  "NodeJS": <FaNode />,
+  "MongoDB": <SiMongodb />,
+  "Firebase": <SiFirebase />,
+  "OpenAI": <SiOpenai />,
+  "ChakraUI": <SiChakraui />,
+  "Styled Components": <SiStyledcomponents />,
+  "Expo": <SiExpo />,
+  "HTML": <SiHtml5 />,
+  "CSS": <SiCss3 />,
+  "SQL": <TbFileTypeSql />,
+  "Bootstrap": <SiBootstrap />
 }
 
 export default IconLogo

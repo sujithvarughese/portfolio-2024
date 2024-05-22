@@ -37,21 +37,9 @@ const ProjectCard = ({ title, coverImage, coverVideo, heading, link, github, cap
         tech={tech}
         index={index}
       />
-      <Container as="button" className="project-card" onClick={onOpen}>
-        <img src={coverVideo} alt="gif" />
-
-        <Container
-          className="project-card"
-          zIndex="100"
-          justifyContent="flex-end"
-          alignItems="flex-end"
-          padding={4}
-          width="100%"
-          height="100%"
-          variants={textVariants}
-          initial="hidden"
-          whileHover="visible"
-        >
+      <Container className="project-card" onClick={onOpen}>
+        <img src={coverVideo} alt="gif"/>
+        <Container className="project-text">
           <h3>{title}</h3>
           <h4>{heading}</h4>
         </Container>

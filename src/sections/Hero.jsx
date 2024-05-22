@@ -2,6 +2,9 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { ArrowRightCircle, CursorText  } from "react-bootstrap-icons"
 import { introductionText, descriptionText,  } from "../data/data.js"
 import { useEffect, useState } from 'react'
+import chessBackground from "../assets/images/backgrounds/chess_bg.png"
+import chessboardImage from "../assets/images/backgrounds/chessboard.png"
+import knightImage from "../assets/images/backgrounds/knight.png"
 const Hero = () => {
 
   const [currentIntroductionText, setCurrentIntroductionText] = useState("")
@@ -33,11 +36,16 @@ const Hero = () => {
     <section className="hero" id="home">
       <Container>
         <h1 className="welcome">Welcome.</h1>
-        <Row className="align-items-center">
+        <Row className="">
           <Col xs={12} md={6} xl={7}>
             <h1>{currentIntroductionText}</h1>
             <h3>{currentDescriptionText}</h3>
           </Col>
+
+          <img src={chessboardImage} alt="chessboard" className="chessboard"/>
+          <img src={knightImage} alt="knight" className="knight"/>
+
+
         </Row>
       </Container>
     </section>

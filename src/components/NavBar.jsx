@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react'
 import linkedInIcon from '../assets/icons/linkedin-icon.svg';
 import fbIcon from '../assets/icons/fb-icon.svg';
 import githubIcon from "../assets/icons/github-mark-white.svg"
-import jsIcon from "../assets/icons/javascript-icon.svg"
 import IconLogo from './IconLogo.jsx'
 
 const NavBar = () => {
