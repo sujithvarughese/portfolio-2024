@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import linkedInIcon from '../assets/icons/linkedin-icon.svg';
 import fbIcon from '../assets/icons/fb-icon.svg';
 import githubIcon from "../assets/icons/github-mark-white.svg"
-import IconLogo from './IconLogo.jsx'
+
 
 const NavBar = () => {
 
@@ -28,8 +28,8 @@ const NavBar = () => {
   return (
     <Navbar expand="lg" className={isScrolled ? "scrolled" : ""}>
       <Container>
-        <Navbar.Brand href="/">
-          sujith varughese
+        <Navbar.Brand href="/" className={classes.brand}>
+          sujithvarughese
         </Navbar.Brand>
 
 
@@ -40,9 +40,9 @@ const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="http://linkedin.com/sujithvarughese" className="social-icon" target="_blank" rel="noreferrer"><img src={linkedInIcon} alt="icon" /></a>
-              <a href="http://facebook.com/sujithvarughese" className="social-icon" target="_blank" rel="noreferrer"><img src={fbIcon} alt="icon" /></a>
-              <a href="http://github.com/sujithvarughese" className="social-icon" target="_blank" rel="noreferrer"><img src={githubIcon} alt="icon" /></a>
+              <a href="http://linkedin.com/sujithvarughese" className="social-icon" target="_blank" rel="noreferrer"><img src={linkedInIcon} alt="Icon" /></a>
+              <a href="http://facebook.com/sujithvarughese" className="social-icon" target="_blank" rel="noreferrer"><img src={fbIcon} alt="Icon" /></a>
+              <a href="http://github.com/sujithvarughese" className="social-icon" target="_blank" rel="noreferrer"><img src={githubIcon} alt="Icon" /></a>
             </div>
           </span>
           <a href={`mailto:${emailAddress}`} className="vvd"><span>Let's Connect</span></a>

@@ -16,6 +16,10 @@ span.text {
 }
 .brand {
     width: 9%;
+    color: #fff3cd;
+}
+.brand:hover {
+    color: #fff;
 }
 .link.active {
     opacity: 1;

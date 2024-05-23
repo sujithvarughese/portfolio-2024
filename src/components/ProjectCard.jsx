@@ -22,7 +22,7 @@ const ProjectCard = ({ title, coverImage, coverVideo, heading, link, github, cap
         github={github}
         tech={tech}
       />
-      <Container as="button" className={classes.card} onClick={onOpen}>
+      <Container as="button" className={`${classes.card} card`} onClick={onOpen}>
         <Image src={coverVideo} alt="gif"/>
         <Container className={classes.text}>
           <h3>{title}</h3>

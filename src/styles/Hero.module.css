@@ -67,7 +67,6 @@
 }
 .chessboard {
     top: 0;
-
 }
 .knight {
     position: absolute;
@@ -75,6 +74,7 @@
     left: 165px;
     z-index: 0;
     animation: knight-move 3s ease-in-out;
+    cursor: grab;
 }
 @keyframes knight-move {
     0% {

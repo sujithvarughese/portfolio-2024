@@ -1,5 +1,6 @@
-import { Container, Row, Col, Stack } from 'react-bootstrap'
+import { Container, Row, Col, Stack, Image } from 'react-bootstrap'
 import classes from '../styles/Hero.module.css'
+import { motion } from "framer-motion"
 import { ArrowRightCircle, CursorText  } from "react-bootstrap-icons"
 import { introductionText, descriptionText,  } from "../data/data.js"
 import { useEffect, useState } from 'react'
@@ -37,7 +38,14 @@ const Hero = () => {
     <section className={classes.hero} id="home">
 
       <Container className={classes.container}>
-        <h1 className={classes.tagline}>Welcome.</h1>
+        <motion.h1
+          className={classes.tagline}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0, transition: { delay: 0.25, duration: 1 } }}
+          viewport={{ once: false, amount: 0.5 }}
+        >
+          Welcome.
+        </motion.h1>
         <Row className={classes.content}>
           <Col xs={12} sm={8} md={6} xl={7}>
             <h1 className={classes.intro}>{currentIntroductionText}</h1>
@@ -46,7 +54,16 @@ const Hero = () => {
         </Row>
         <Row className={classes.image}>
           <img className={classes.chessboard} src={chessboardImage} alt="chessboard" />
-          <img className={classes.knight} src={knightImage} alt="knight" />
+
+          <motion.img
+            className={classes.knight}
+            src={knightImage}
+            alt="knight"
+            drag
+            dragConstraints={{ top: 50, right: 50, bottom: 50, left: 100 }}
+            dragTransition={{ bounceStiffness: 200, bounceDamping: 10 }}
+          />
+
         </Row>
 
 
