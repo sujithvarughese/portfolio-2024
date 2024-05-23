@@ -3,7 +3,7 @@ import { Container, Image } from 'react-bootstrap'
 import classes from "../styles/Projects.module.css"
 import ProjectDrawer from './ProjectDrawer.jsx'
 
-const ProjectCard = ({ title, coverImage, coverVideo, heading, link, github, captions, images, tech, image, desktop, mobile, index }) => {
+const ProjectCard = ({ title, coverImage, coverVideo, heading, link, github, captions, images, tech }) => {
 
   const [showDrawer, setShowDrawer] = useState(false)
   const onOpen = () => setShowDrawer(true)
@@ -17,15 +17,10 @@ const ProjectCard = ({ title, coverImage, coverVideo, heading, link, github, cap
         captions={captions}
         coverImage={coverImage}
         title={title}
-        heading={heading}
         images={images}
-        desktop={desktop}
-        mobile={mobile}
-        image={image}
         link={link}
         github={github}
         tech={tech}
-        index={index}
       />
       <Container as="button" className={classes.card} onClick={onOpen}>
         <Image src={coverVideo} alt="gif"/>

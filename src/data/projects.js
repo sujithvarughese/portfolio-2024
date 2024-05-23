@@ -52,7 +52,7 @@ export const projects = [
 		coverImage: medscopeCoverIMG,
 		coverVideo: medscopeCoverGIF,
 		heading: "Mobile medical assistant integrated with OpenAI to get personalized treatment options for your condition.",
-		about: "",
+		description: "",
 		captions: [
 			"Search through drug list with autocompletion.",
 			"Get treatment based on age, sex, and selected list of symptoms.",
@@ -70,7 +70,7 @@ export const projects = [
 		coverImage: bookstaxCoverIMG,
 		coverVideo: bookstaxCoverGIF,
 		heading: "Mobile app to organize and annotate your reading collection while giving recommendations based on best sellers or your interests.",
-		about: "",
+		description: "",
 		captions: [
 			"Integration with New York Times Best Sellers API, along with OpenAI.",
 			"Smooth tabbed switching with React Navigation.",
@@ -88,7 +88,7 @@ export const projects = [
 		coverImage: simplerFitnessCoverIMG,
 		coverVideo: simplerFitnessCoverGIF,
 		heading: "Fitness app that personalizes your workouts using OpenAI by curating routines based on age, experience level, and available equipment.",
-		about: "",
+		description: "",
 		captions: [
 			"Browse workouts by target muscles, available equipment, and experience level.",
 			"Data fetched from back end in paginated results which are efficiently rendered with infinite scroll.",
@@ -106,7 +106,7 @@ export const projects = [
 		coverImage: blackjackCoverIMG,
 		coverVideo: blackjackCoverGIF,
 		heading: "Learn perfect strategy with live feedback after each move and an ROI tracker to calculate your profitability.",
-		about: "",
+		description: "",
 		captions: [
 			"Customizable settings- Choose number of decks, blackjack payouts, your bankroll, number of splits allowed, and more.",
 			"Live stat tracker that updates every hand with the amount won or lost and your current return on investment.",
@@ -126,7 +126,7 @@ export const projects = [
 		coverImage: realtyCoverIMG,
 		coverVideo: realtyCoverGIF,
 		heading: "Management app for owners of rental units to manage finances, communicate with tenants, and get market rental rates.",
-		about: "",
+		description: "",
 		captions: [
 			"Retrieve mortgage information, then determine monthly payments, view live payoff quotes, and get profits/losses.",
 			"User roles for tenants and owners/managers, authorized and authenticated using JSON web tokens attached to signed HTTP cookies.",
@@ -146,7 +146,7 @@ export const projects = [
 		coverImage: onTheBooksCoverIMG,
 		coverVideo: onTheBooksCoverGIF,
 		heading: "Original reading application designed to help you find books and take notes.",
-		about: "",
+		description: "",
 		captions: [
 			"OpenLibrary API integration to search books by genre and get previews and recommendations.",
 			"CRUD operations in database using mongoose models while front end state is simultaneously updated and rendered.",

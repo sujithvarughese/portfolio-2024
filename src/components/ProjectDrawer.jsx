@@ -2,8 +2,9 @@ import { Carousel, Container, Image, ListGroup, Offcanvas, Stack } from 'react-b
 import classes from "../styles/Projects.module.css"
 import PhoneImageContainer from './PhoneImageContainer.jsx'
 import DesktopMobileImageContainer from './DesktopMobileImageContainer.jsx'
+import IconLogo from './IconLogo.jsx'
 //import DesktopMobileImageContainer from './DesktopMobileImageContainer.jsx'
-const ProjectDrawer = ({ isOpen, onClose, title, coverImage, coverVideo, heading, link, github, captions, images, tech, image, desktop, mobile, index }) => {
+const ProjectDrawer = ({ isOpen, onClose, title, link, github, captions, images, tech }) => {
   return (
     <Offcanvas show={isOpen} onHide={onClose}>
       <Offcanvas.Header closeButton>
@@ -22,9 +23,19 @@ const ProjectDrawer = ({ isOpen, onClose, title, coverImage, coverVideo, heading
           })}
         </Carousel>
 
+        <Container>
+          {tech.map((item, index) => <IconLogo key={index} name={item}/>)}
+        </Container>
+
         <ListGroup as="ol">
           {captions.map((caption, index) => <ListGroup.Item key={index}>{caption}</ListGroup.Item>)}
         </ListGroup>
+
+        <Stack>
+          <a href={github} target="_blank" rel="noreferrer">Github</a>
+          <a href={link} target="_blank" rel="noreferrer">Website</a>
+        </Stack>
+
       </Offcanvas.Body>
     </Offcanvas>
   )
