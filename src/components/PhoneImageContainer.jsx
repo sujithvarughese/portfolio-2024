@@ -12,9 +12,9 @@ const PhoneImageContainer = ({ images }) => {
 
 const SinglePhoneContainer = ({ image }) => {
   return (
-    <Container className={classes.container}>
+    <Container>
       <Image src={phone} alt="phone" />
-      <Image src={image} className={classes.image} alt="mobile-screenshot" />
+      <Image src={image} className={classes.rotated} alt="mobile-screenshot" />
     </Container>
   )
 }

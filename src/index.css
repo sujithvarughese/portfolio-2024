@@ -57,8 +57,9 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 section {
-
   height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 576px) {
@@ -142,16 +143,4 @@ span.navbar-text {
 
 .offcanvas {
   margin-top: 52px;
-  width: 100% !important;
-
-}
-@media (min-width: 768px) {
-  .offcanvas {
-    width: 70% !important;
-  }
-}
-@media (min-width: 1200px) {
-  .offcanvas {
-    width: 60% !important;
-  }
 }

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Container } from 'react-bootstrap'
+import { Container, Image } from 'react-bootstrap'
 import classes from "../styles/Projects.module.css"
 import ProjectDrawer from './ProjectDrawer.jsx'
 
@@ -7,17 +7,7 @@ const ProjectCard = ({ title, coverImage, coverVideo, heading, link, github, cap
 
   const [showDrawer, setShowDrawer] = useState(false)
   const onOpen = () => setShowDrawer(true)
-  const textVariants = {
-    hidden: {
-      opacity: 0
-    },
-    visible: {
-      opacity: 1,
-      textShadow: "0px 0px 8px rgb(0,0,0)",
-      boxShadow: "0px 0px 8px rgb(0,0,0)",
-      backdropFilter: "blur(10px)"
-    }
-  }
+
 
   return (
     <>
@@ -37,8 +27,8 @@ const ProjectCard = ({ title, coverImage, coverVideo, heading, link, github, cap
         tech={tech}
         index={index}
       />
-      <Container className={classes.card} onClick={onOpen}>
-        <img src={coverVideo} alt="gif"/>
+      <Container as="button" className={classes.card} onClick={onOpen}>
+        <Image src={coverVideo} alt="gif"/>
         <Container className={classes.text}>
           <h3>{title}</h3>
           <h4>{heading}</h4>

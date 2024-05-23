@@ -10,6 +10,10 @@
     border-radius: 11px 13px 10px 6px;
 }
 
+.rotated {
+    transform: rotate3d(0, 0, 0, 40deg);
+}
+
 @media (min-width: 768px) {
     .image {
         top: 9px;
