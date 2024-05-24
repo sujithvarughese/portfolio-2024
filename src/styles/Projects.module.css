@@ -11,9 +11,12 @@
     margin: 0;
     padding: 0;
 }
+.description {
+    text-align: justify;
+    white-space: break-spaces;
+}
 .image {
     aspect-ratio: 1/1;
-
 }
 .text {
     background: white;

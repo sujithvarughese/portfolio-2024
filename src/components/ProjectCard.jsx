@@ -4,7 +4,7 @@ import classes from "../styles/Projects.module.css"
 import ProjectDrawer from './ProjectDrawer.jsx'
 import { motion, useInView } from 'framer-motion'
 
-const ProjectCard = ({ title, coverImage, coverVideo, heading, link, github, captions, images, tech }) => {
+const ProjectCard = ({ title, description, coverImage, coverVideo, heading, link, github, captions, images, tech }) => {
 
   const [showDrawer, setShowDrawer] = useState(false)
   const onOpen = () => setShowDrawer(true)
@@ -19,10 +19,10 @@ const ProjectCard = ({ title, coverImage, coverVideo, heading, link, github, cap
       <ProjectDrawer
         isOpen={showDrawer}
         onClose={() => setShowDrawer(false)}
-        captions={captions}
-        coverImage={coverImage}
         title={title}
+        description={description}
         images={images}
+        captions={captions}
         link={link}
         github={github}
         tech={tech}

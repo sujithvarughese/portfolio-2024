@@ -1,13 +1,18 @@
 import { Carousel, Container, Image, ListGroup, Offcanvas, Stack } from 'react-bootstrap'
 import classes from "../styles/Projects.module.css"
 import IconLogo from './IconLogo.jsx'
-const ProjectDrawer = ({ isOpen, onClose, title, link, github, captions, images, tech }) => {
+const ProjectDrawer = ({ isOpen, onClose, title, description, images, captions, link, github, tech }) => {
   return (
     <Offcanvas show={isOpen} onHide={onClose}>
       <Offcanvas.Header closeButton>
         <Offcanvas.Title><h3>{title}</h3></Offcanvas.Title>
       </Offcanvas.Header>
       <Offcanvas.Body>
+
+        <Stack className={classes.description}>
+          {description}
+        </Stack>
+
         <Carousel variant="dark" className={classes.carousel}>
           {images.map((image, index) => {
             return (
@@ -30,7 +35,11 @@ const ProjectDrawer = ({ isOpen, onClose, title, link, github, captions, images,
 
         <Stack>
           <a href={github} target="_blank" rel="noreferrer">Github</a>
-          <a href={link} target="_blank" rel="noreferrer">Website</a>
+          {link?.substring(0, 4) === "http" ?
+            <a href={link} target="_blank" rel="noreferrer">Website</a>
+            :
+            <>{link}</>
+          }
         </Stack>
 
       </Offcanvas.Body>
