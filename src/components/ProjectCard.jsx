@@ -37,9 +37,7 @@ const ProjectCard = ({ title, coverImage, coverVideo, heading, link, github, cap
         {isHovering ?
           <Image src={coverImage} alt="gif"/>
           :
-          <video autoPlay loop muted controls={false}>
-            <source src={coverVideo} type="video/mp4"/>
-          </video>
+          <Image src={coverVideo} alt="gif"/>
         }
         <Container className={classes.text}>
           <h3>{title}</h3>
@@ -60,9 +58,7 @@ const ProjectCard = ({ title, coverImage, coverVideo, heading, link, github, cap
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
         {isInView ?
-          <video autoPlay loop muted controls={false}>
-            <source src={coverVideo} type="video/mp4"/>
-          </video>
+          <Image src={coverVideo} alt="gif"/>
           :
           <Image src={coverImage} alt="image" />
         }
