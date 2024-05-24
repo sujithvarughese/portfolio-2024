@@ -68,10 +68,6 @@ const ProjectCard = ({ title, coverImage, coverVideo, heading, link, github, cap
             <h4>{heading}</h4>
           </Container>
         }
-
-
-
-
       </Container>
 
 
