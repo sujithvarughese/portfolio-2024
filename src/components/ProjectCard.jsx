@@ -58,9 +58,9 @@ const ProjectCard = ({ title, coverImage, coverVideo, heading, link, github, cap
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
         {isInView ?
-          <Image src={coverVideo} alt="gif"/>
+          <Image src={coverVideo} alt="gif" className={classes.image}/>
           :
-          <Image src={coverImage} alt="image" />
+          <Image src={coverImage} alt="image" className={classes.image}/>
         }
         {isInView &&
           <Container className={classes.text}>

@@ -6,25 +6,22 @@
     flex-direction: column;
     gap: 24px;
 }
-.card {
-    padding: 0;
-    position: relative;
-    border-radius: 30px;
-    overflow: hidden;
-}
 
+.card {
+    margin: 0;
+    padding: 0;
+}
+.image {
+    aspect-ratio: 1/1;
+
+}
 .text {
-    position: absolute;
     background: white;
     text-align: center;
     align-items: center;
     justify-content: center;
-    top: 87%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     transition: 0.5s ease-in-out;
-    opacity: 1;
-    width: 100%;
+
 }
 .text h3 {
     font-size: 30px;
@@ -46,12 +43,7 @@
 .large {
     display: none;
 }
-@media (min-width: 576px) {
-    .card {
-        width: 480px;
-        height: 480px;
-    }
-}
+
 @media (min-width: 992px) {
     .small {
         display: none;
@@ -63,6 +55,12 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 36px;
+    }
+    .card {
+        padding: 0;
+        position: relative;
+        border-radius: 30px;
+        overflow: hidden;
     }
     .card::before {
         content: "";
@@ -81,9 +79,13 @@
         opacity: 1;
     }
     .text {
+        position: absolute;
         opacity: 0;
         background: none;
         top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
     }
 
 }
