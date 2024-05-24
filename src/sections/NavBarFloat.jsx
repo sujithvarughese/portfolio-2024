@@ -24,7 +24,7 @@ const NavBarFloat = () => {
       as={motion.nav}
       className={classes.container}
       variants={{
-        visible: { y: 0 },
+        visible: { y: "2%" },
         hidden: { y: "-100%" }
       }}
       animate={isHidden ? "hidden" : "visible"}

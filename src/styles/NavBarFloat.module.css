@@ -1,6 +1,5 @@
 .container {
     position: sticky;
-    top: 2%;
     display: flex;
     z-index: 10000;
     justify-content: center;

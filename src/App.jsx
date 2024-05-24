@@ -15,10 +15,8 @@ const App = () => {
         <NavBar />
       </div>
       <div className="small">
-
+        <NavBarFloat />
       </div>
-
-      <NavBarFloat />
       <Hero />
       <AboutMe />
       <Projects />
