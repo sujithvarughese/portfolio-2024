@@ -1,9 +1,6 @@
 import { Carousel, Container, Image, ListGroup, Offcanvas, Stack } from 'react-bootstrap'
 import classes from "../styles/Projects.module.css"
-import PhoneImageContainer from './PhoneImageContainer.jsx'
-import DesktopMobileImageContainer from './DesktopMobileImageContainer.jsx'
 import IconLogo from './IconLogo.jsx'
-//import DesktopMobileImageContainer from './DesktopMobileImageContainer.jsx'
 const ProjectDrawer = ({ isOpen, onClose, title, link, github, captions, images, tech }) => {
   return (
     <Offcanvas show={isOpen} onHide={onClose}>

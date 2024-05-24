@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
-import { Container, Image } from 'react-bootstrap'
+import { Container, Image, Stack } from 'react-bootstrap'
 import classes from "../styles/Projects.module.css"
 import ProjectDrawer from './ProjectDrawer.jsx'
+import { motion, useInView } from 'framer-motion'
 
 const ProjectCard = ({ title, coverImage, coverVideo, heading, link, github, captions, images, tech }) => {
 
@@ -10,7 +11,8 @@ const ProjectCard = ({ title, coverImage, coverVideo, heading, link, github, cap
 
   const [isHovering, setIsHovering] = useState(false)
 
-
+  const ref = useRef(null)
+  const isInView = useInView(ref, { amount: 1})
 
   return (
     <>
@@ -27,7 +29,7 @@ const ProjectCard = ({ title, coverImage, coverVideo, heading, link, github, cap
       />
       <Container
         as="button"
-        className={`${classes.card} card`}
+        className={`${classes.large} ${classes.card} card`}
         onClick={onOpen}
         onMouseEnter={()=>setIsHovering(true)}
         onMouseLeave={()=>setIsHovering(false)}
@@ -35,16 +37,42 @@ const ProjectCard = ({ title, coverImage, coverVideo, heading, link, github, cap
         {isHovering ?
           <Image src={coverImage} alt="gif"/>
           :
-          <video autoPlay loop muted>
+          <video autoPlay loop muted controls={false}>
             <source src={coverVideo} type="video/mp4"/>
           </video>
+        }
+        <Container className={classes.text}>
+          <h3>{title}</h3>
+          <h4>{heading}</h4>
+        </Container>
+      </Container>
+
+      <Container
+        as={motion.button}
+        ref={ref}
+        className={`${classes.small} ${classes.card} card`}
+        onClick={onOpen}
+        initial={{ opacity: 0.1 }}
+        whileInView={{ opacity: 1 }}
+      >
+        {isInView ?
+          <video autoPlay loop muted controls={false}>
+            <source src={coverVideo} type="video/mp4"/>
+          </video>
+          :
+          <Image src={coverImage} alt="gif"/>
         }
 
         <Container className={classes.text}>
           <h3>{title}</h3>
           <h4>{heading}</h4>
         </Container>
+
+
+
       </Container>
+
+
     </>
 
   )
