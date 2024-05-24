@@ -12,7 +12,7 @@ const ProjectCard = ({ title, coverImage, coverVideo, heading, link, github, cap
   const [isHovering, setIsHovering] = useState(false)
 
   const ref = useRef(null)
-  const isInView = useInView(ref, { amount: 1})
+  const isInView = useInView(ref, { amount: 0.9})
 
   return (
     <>
@@ -48,25 +48,31 @@ const ProjectCard = ({ title, coverImage, coverVideo, heading, link, github, cap
       </Container>
 
       <Container
-        as={motion.button}
+        as={motion.div}
         ref={ref}
         className={`${classes.small} ${classes.card} card`}
         onClick={onOpen}
-        initial={{ opacity: 0.1 }}
-        whileInView={{ opacity: 1 }}
+        initial={{ opacity: 0.5, scale: 0.95 }}
+        animate={{
+          opacity: isInView ? 1 : 0.5,
+          scale: isInView ? 1 : 0.9
+      }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
       >
         {isInView ?
           <video autoPlay loop muted controls={false}>
             <source src={coverVideo} type="video/mp4"/>
           </video>
           :
-          <Image src={coverImage} alt="gif"/>
+          <Image src={coverImage} alt="image" />
+        }
+        {isInView &&
+          <Container className={classes.text}>
+            <h3 style={{ paddingTop: "8px" }}>{title}</h3>
+            <h4>{heading}</h4>
+          </Container>
         }
 
-        <Container className={classes.text}>
-          <h3>{title}</h3>
-          <h4>{heading}</h4>
-        </Container>
 
 
 
