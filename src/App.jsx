@@ -4,12 +4,21 @@ import Projects from './sections/Projects.jsx'
 import AboutMe from './sections/AboutMe.jsx'
 import Contact from './sections/Contact.jsx'
 import Footer from './sections/Footer.jsx'
+import NavBarFloat from './sections/NavBarFloat.jsx'
+import { Fragment } from 'react'
 
 const App = () => {
 
   return (
     <>
-      <NavBar />
+      <div className="large">
+        <NavBar />
+      </div>
+      <div className="small">
+
+      </div>
+
+      <NavBarFloat />
       <Hero />
       <AboutMe />
       <Projects />

@@ -17,7 +17,6 @@ body {
   background-color: #05070a;
   color: #fff;
   font-family: "Avenir Next Condensed",  Helvetica, Arial, sans-serif;
-
 }
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -241,4 +240,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.large {
+  display: none;
+}
+@media (min-width: 992px) {
+  .small {
+    display: none;
+  }
+  .large {
+    display: initial;
+  }
 }

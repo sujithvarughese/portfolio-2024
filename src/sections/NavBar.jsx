@@ -34,11 +34,7 @@ const NavBar = () => {
         <Navbar.Brand href="/">
           sujithvarughese
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav">
-          <span className="navbar-toggler-icon"></span>
-        </Navbar.Toggle>
 
-        <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link
               href="#home"
@@ -67,7 +63,7 @@ const NavBar = () => {
             </div>
           </span>
           <a href={`mailto:${emailAddress}`} className="connect vvd"><span>Let's Connect</span></a>
-        </Navbar.Collapse>
+
       </Container>
     </Navbar>
   )
