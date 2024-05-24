@@ -5,6 +5,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    height: 100vh;
+    min-height: 700px;
 }
 .tagline {
     font-weight: 700;
@@ -83,6 +85,9 @@
 }
 
 @media (min-width: 576px) {
+    .hero {
+        height: 700px;
+    }
     .intro {
         font-size: 24px;
     }
@@ -91,6 +96,9 @@
     }
 }
 @media (min-width: 768px) {
+    .hero {
+        height: 800px;
+    }
     .intro {
         font-size: 28px;
     }
@@ -99,6 +107,9 @@
     }
 }
 @media (min-width: 992px) {
+    .hero {
+        height: 1000px;
+    }
     .intro {
         font-size: 42px;
     }
@@ -110,6 +121,12 @@
     }
 }
 @media (min-width: 1200px) {
+    .hero {
+        height: 1200px;
+    }
+    .hero {
+        min-height: 1100px;
+    }
     .intro {
         font-size: 61px;
     }
