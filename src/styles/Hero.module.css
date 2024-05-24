@@ -105,6 +105,9 @@
     .description {
         font-size: 22px;
     }
+    .hero {
+        padding: 120px 0 100px 0;
+    }
 }
 @media (min-width: 1200px) {
     .intro {

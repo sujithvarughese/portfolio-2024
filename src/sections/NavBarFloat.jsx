@@ -11,11 +11,20 @@ const NavBarFloat = () => {
   const [isHidden, setIsHidden] = useState(false)
   const [activeLink, setActiveLink] = useState("home")
 
-  useMotionValueEvent(scrollY, "change", latestY => {
+  useMotionValueEvent(scrollY, "change", currentY => {
     const previousY = scrollY.getPrevious()
-    latestY > previousY ? setIsHidden(true) : setIsHidden(false)
+    console.log("previous", previousY)
+    console.log("current", currentY)
+    if (currentY > previousY) {
+      setIsHidden(true)
+    } else {
+      setIsHidden(false)
+    }
   })
 
+  useEffect(() => {
+
+  }, [isHidden])
   const onUpdateActiveLink = (value) => setActiveLink(value)
 
   return (
@@ -24,8 +33,8 @@ const NavBarFloat = () => {
       as={motion.nav}
       className={classes.container}
       variants={{
-        visible: { y: "2%" },
-        hidden: { y: "-100%" }
+        visible: { y: 0 },
+        hidden: { y: "-10%" }
       }}
       animate={isHidden ? "hidden" : "visible"}
       transition={{ duration: 0.5, ease: "easeInOut" }}
