@@ -70,8 +70,9 @@
 }
 .knight {
     position: absolute;
-    width: 90px;
-    left: 165px;
+    width: 25%;
+    top: 15%;
+    left: 43%;
     z-index: 0;
     animation: knight-move 3s ease-in-out;
     cursor: grab;
@@ -84,23 +85,13 @@
         transform: translateX(-80%)
     }
 }
-@media (min-width: 420px) {
-    .knight {
-        width: 110px;
-        left: 200px;
-    }
-}
+
 @media (min-width: 576px) {
     .intro {
         font-size: 24px;
     }
     .description {
         font-size: 16px;
-    }
-    .knight {
-        width: 120px;
-        left: 250px;
-
     }
 }
 @media (min-width: 768px) {
@@ -110,11 +101,6 @@
     .description {
         font-size: 18px;
     }
-    .knight {
-        top: -50px;
-        left: 300px;
-        width: 180px;
-    }
 }
 @media (min-width: 992px) {
     .intro {
@@ -123,10 +109,6 @@
     .description {
         font-size: 22px;
     }
-    .knight {
-        left: 400px;
-        width: 210px;
-    }
 }
 @media (min-width: 1200px) {
     .intro {
@@ -134,15 +116,5 @@
     }
     .description {
         font-size: 28px;
-    }
-    .knight {
-        width: 250px;
-        left: 490px;
-    }
-}
-@media (min-width: 1400px) {
-    .knight {
-        width: 300px;
-        left: 600px;
     }
 }

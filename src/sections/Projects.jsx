@@ -15,28 +15,10 @@ const Projects = () => {
       <Container>
         <h2>Projects</h2>
 
-        <Container
-          as={motion.div}
-          className={classes.cards}
-          variants={{
-            hidden: { opacity: 0 },
-            show: {
-              opacity: 1,
-              transition: {
-                staggerChildren: 0.75
-              }
-            }
-          }}
-          initial="hidden"
-          animate="show"
-        >
+        <Container className={classes.cards}>
           {projects?.map((project, index) => {
             return (
-              <motion.div
-                variants={{ hidden: { opacity: 0 }, show: { opacity: 1 }}}
-              >
-                <ProjectCard key={index} {...project} index={index}/>
-              </motion.div>
+              <ProjectCard key={index} {...project} index={index}/>
             )
           })}
         </Container>
