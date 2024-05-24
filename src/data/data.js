@@ -7,6 +7,6 @@ export const aboutMe2 = 'I completed a Bachelor\'s in Computer Science at FUI in
 export const aboutMe3 = "Aside from programming, in my free time I enjoy working out, playing basketball, creating and editing videos, and hanging out with my 10 year old rottweiler, Hera!"
 export const skills = ['Javascript', 'Python', 'Java', 'React', 'NodeJS', 'RESTful APIs', 'API integration', 'HTML/CSS', 'MongoDB/SQL', 'Data Structures', 'Software Testing', 'GraphQL', "Agile/Scrum", 'DNS config', 'Google Analytics', 'Postman', 'Bootstrap', 'Tailwind', 'Jetbrains', 'VSCode', 'Git version control']
 
-export const introductionText = "Hello, my name is Sujith."
+export const introductionText = "My name is Sujith."
 export const textLine1 = "I am a software developer based out of Miami, FL"
 export const descriptionText = "I am a software developer based out of Miami, FL. I create web and mobile applications, specializing in JavaScript, React, React Native, OpenAI integration, and prompt engineering."

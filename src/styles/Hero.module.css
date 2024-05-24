@@ -10,12 +10,9 @@
 .tagline {
     font-weight: 700;
     letter-spacing: 0.8px;
-    padding: 8px 10px;
-    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    font-size: 20px;
-    margin-bottom: 16px;
-    display: inline-block;
+    font-size: 96px;
+    margin: 16px;
+
 }
 .intro {
     font-size: 24px;
@@ -61,9 +58,12 @@
 .container {
     position: relative;
 }
+.content {
+    margin: 32px;
+}
 .image {
     position: absolute;
-    top: 120px;
+    top: 280px;
 }
 .chessboard {
     top: 0;
@@ -74,14 +74,14 @@
     top: 15%;
     left: 43%;
     z-index: 0;
-    animation: knight-move 3s ease-in-out;
+    animation: knight-move 4s ease-in-out;
     cursor: grab;
 }
 @keyframes knight-move {
     0% {
         transform: scale3d(0.4, 0.4, 0.4) translate(-160%, 25%);
     }
-    50% {
+    70% {
         transform: translateX(-80%)
     }
 }

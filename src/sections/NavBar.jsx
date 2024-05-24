@@ -66,7 +66,7 @@ const NavBar = () => {
               <a href="http://github.com/sujithvarughese" className="social-icon" target="_blank" rel="noreferrer"><img src={githubIcon} alt="Icon" /></a>
             </div>
           </span>
-          <a href={`mailto:${emailAddress}`} className="vvd"><span>Let's Connect</span></a>
+          <a href={`mailto:${emailAddress}`} className="connect vvd"><span>Let's Connect</span></a>
         </Navbar.Collapse>
       </Container>
     </Navbar>

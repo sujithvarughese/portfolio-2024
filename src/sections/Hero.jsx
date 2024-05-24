@@ -41,17 +41,19 @@ const Hero = () => {
         <motion.h1
           className={classes.tagline}
           initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0, transition: { delay: 0.25, duration: 1 } }}
+          animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
           viewport={{ once: false, amount: 0.5 }}
         >
           Welcome.
         </motion.h1>
+
         <Row className={classes.content}>
           <Col xs={12} sm={8} md={6} xl={7}>
             <h1 className={classes.intro}>{currentIntroductionText}</h1>
             <h3 className={classes.description}>{currentDescriptionText}</h3>
           </Col>
         </Row>
+
         <Row className={classes.image}>
           <img className={classes.chessboard} src={chessboardImage} alt="chessboard" />
 
