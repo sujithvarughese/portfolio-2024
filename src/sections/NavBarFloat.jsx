@@ -13,8 +13,6 @@ const NavBarFloat = () => {
 
   useMotionValueEvent(scrollY, "change", currentY => {
     const previousY = scrollY.getPrevious()
-    console.log("previous", previousY)
-    console.log("current", currentY)
     if (currentY > previousY) {
       setIsHidden(true)
     } else {
@@ -23,7 +21,7 @@ const NavBarFloat = () => {
   })
 
   useEffect(() => {
-
+    console.log(isHidden)
   }, [isHidden])
   const onUpdateActiveLink = (value) => setActiveLink(value)
 

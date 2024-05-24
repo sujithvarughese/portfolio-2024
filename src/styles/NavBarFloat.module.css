@@ -1,7 +1,6 @@
 .container {
     position: sticky;
     top: 0;
-    display: flex;
     z-index: 10000;
     justify-content: center;
     width: 280px;
@@ -10,5 +9,8 @@
 }
 
 .links {
-    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
 }
