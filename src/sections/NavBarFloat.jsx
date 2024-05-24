@@ -11,7 +11,7 @@ const NavBarFloat = () => {
   const [isHidden, setIsHidden] = useState(false)
   const [activeLink, setActiveLink] = useState("home")
 
-  useMotionValueEvent(scrollY, "change", (latestY) => {
+  useMotionValueEvent(scrollY, "change", latestY => {
     const previousY = scrollY.getPrevious()
     latestY > previousY ? setIsHidden(true) : setIsHidden(false)
   })
@@ -30,27 +30,27 @@ const NavBarFloat = () => {
       animate={isHidden ? "hidden" : "visible"}
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >
-      <Nav className="">
+      <Nav className={classes.links}>
         <Nav.Link
           href="#home"
           className={activeLink === "home" ? "active navbar-link" : "navbar-link"}
           onClick={() => onUpdateActiveLink("home")}
         >
-          <HiOutlineHome />
+          <HiOutlineHome size="32px" />
         </Nav.Link>
         <Nav.Link
           href="#about"
           className={activeLink === "about" ? "active navbar-link" : "navbar-link"}
           onClick={() => onUpdateActiveLink("about")}
         >
-          <HiOutlineUser />
+          <HiOutlineUser size="32px" />
         </Nav.Link>
         <Nav.Link
           href="#projects"
           className={activeLink === "projects" ? "active navbar-link" : "navbar-link"}
           onClick={() => onUpdateActiveLink("projects")}
         >
-          <IoIosApps />
+          <IoIosApps size="32px" />
         </Nav.Link>
       </Nav>
     </Container>
