@@ -4,16 +4,13 @@ import { useEffect, useState } from 'react'
 import linkedInIcon from '../assets/icons/linkedin-icon.svg';
 import fbIcon from '../assets/icons/fb-icon.svg';
 import githubIcon from "../assets/icons/github-mark-white.svg"
-
-import { HiOutlineHome, HiOutlineUser } from "react-icons/hi";
-import { IoIosApps } from "react-icons/io";
+const emailAddress = "sujith.varug@gmail.com"
 
 
 const NavBar = () => {
 
   const [activeLink, setActiveLink] = useState("home")
   const [isScrolled, setIsScrolled] = useState(false)
-  const emailAddress = "sujith.varug@gmail.com"
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY > 50) {

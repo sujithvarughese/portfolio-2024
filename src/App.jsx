@@ -6,6 +6,7 @@ import Contact from './sections/Contact.jsx'
 import Footer from './sections/Footer.jsx'
 import NavBarFloat from './sections/NavBarFloat.jsx'
 import { Fragment } from 'react'
+import MessageFloat from './sections/MessageFloat.jsx'
 
 const App = () => {
 
@@ -22,6 +23,10 @@ const App = () => {
       <Projects />
       <Contact />
       <Footer />
+
+      <div className="small">
+        <MessageFloat />
+      </div>
     </>
   )
 }

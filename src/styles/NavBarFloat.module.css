@@ -1,16 +1,29 @@
 .container {
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 10000;
-    justify-content: center;
-    width: 280px;
-    border-radius: 100px;
-    backdrop-filter: blur(10px);
+    z-index: 999;
+    width: 100%;
 }
 
 .links {
+    width: 50%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px;
+    border-radius: 100px;
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+
+.active {
+    background: rgba(217, 217, 217, 0.1);
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    aspect-ratio: 1/1;
+
 }

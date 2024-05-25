@@ -2,8 +2,9 @@ import classes from '../styles/NavBarFloat.module.css'
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import { Container, Nav, Navbar } from 'react-bootstrap'
 import { useEffect, useState } from 'react'
-import { HiOutlineHome, HiOutlineUser } from "react-icons/hi";
-import { IoIosApps } from "react-icons/io";
+import { IoIosHome, IoIosApps } from "react-icons/io";
+import { RiUser3Fill } from "react-icons/ri";
+
 
 const NavBarFloat = () => {
 
@@ -20,47 +21,47 @@ const NavBarFloat = () => {
     }
   })
 
-  useEffect(() => {
-    console.log(isHidden)
-  }, [isHidden])
+
+
   const onUpdateActiveLink = (value) => setActiveLink(value)
 
   return (
+      <Nav
+        as={motion.nav}
+        className={classes.container}
+        variants={{
+          visible: { y: "20%" },
+          hidden: { y: "-100%" }
+        }}
+        animate={isHidden ? "hidden" : "visible"}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+      >
+        <Container className={classes.links}>
+          <Nav.Link
+            href="#home"
+            className={activeLink === "home" ? classes.active : ""}
+            onClick={() => onUpdateActiveLink("home")}
+          >
+            <IoIosHome size="24px" />
+          </Nav.Link>
+          <Nav.Link
+            href="#about"
+            className={activeLink === "about" ? classes.active : ""}
+            onClick={() => onUpdateActiveLink("about")}
+          >
+            <RiUser3Fill size="24px" />
+          </Nav.Link>
+          <Nav.Link
+            href="#projects"
+            className={activeLink === "projects" ? classes.active : ""}
+            onClick={() => onUpdateActiveLink("projects")}
+          >
+            <IoIosApps size="24px" />
+          </Nav.Link>
+        </Container>
 
-    <Container
-      as={motion.nav}
-      className={classes.container}
-      variants={{
-        visible: { y: 0 },
-        hidden: { y: "-10%" }
-      }}
-      animate={isHidden ? "hidden" : "visible"}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
-    >
-      <Nav className={classes.links}>
-        <Nav.Link
-          href="#home"
-          className={activeLink === "home" ? "active navbar-link" : "navbar-link"}
-          onClick={() => onUpdateActiveLink("home")}
-        >
-          <HiOutlineHome size="32px" />
-        </Nav.Link>
-        <Nav.Link
-          href="#about"
-          className={activeLink === "about" ? "active navbar-link" : "navbar-link"}
-          onClick={() => onUpdateActiveLink("about")}
-        >
-          <HiOutlineUser size="32px" />
-        </Nav.Link>
-        <Nav.Link
-          href="#projects"
-          className={activeLink === "projects" ? "active navbar-link" : "navbar-link"}
-          onClick={() => onUpdateActiveLink("projects")}
-        >
-          <IoIosApps size="32px" />
-        </Nav.Link>
       </Nav>
-    </Container>
+
 
 
   )
