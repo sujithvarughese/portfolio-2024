@@ -10,3 +10,5 @@ export const skills = ['Javascript', 'Python', 'Java', 'React', 'NodeJS', 'RESTf
 export const introductionText = "My name is Sujith."
 export const textLine1 = "I am a software developer based in Miami, FL"
 export const descriptionText = "I am a software developer based in Miami, FL. I create web and mobile applications, specializing in JavaScript, React, and React Native, along with OpenAI integration and prompt engineering."
+
+export const projectTestingMessage = "App currently in testing. Full source code is available. Contact me for access to test version."

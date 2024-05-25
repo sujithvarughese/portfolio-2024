@@ -43,6 +43,13 @@
     justify-content: center;
     align-items: center;
 }
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 4px auto;
+    padding: 4px
+}
 .large {
     display: none;
 }

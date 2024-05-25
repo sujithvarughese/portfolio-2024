@@ -1,6 +1,7 @@
 import { Carousel, Container, Image, ListGroup, Offcanvas, Stack } from 'react-bootstrap'
 import classes from "../styles/Projects.module.css"
 import IconLogo from './IconLogo.jsx'
+import { projectTestingMessage } from '../data/data.js'
 const ProjectDrawer = ({ isOpen, onClose, title, description, images, captions, link, github, tech }) => {
   return (
     <Offcanvas show={isOpen} onHide={onClose}>
@@ -24,7 +25,7 @@ const ProjectDrawer = ({ isOpen, onClose, title, description, images, captions, 
           })}
         </Carousel>
 
-        <Container style={{ display: "flex", gap: "6px", margin: "4px auto", padding: "4px" }}>
+        <Container className={classes.icons}>
           {tech.map((item, index) => <IconLogo key={index} name={item}/>)}
         </Container>
 
@@ -32,12 +33,12 @@ const ProjectDrawer = ({ isOpen, onClose, title, description, images, captions, 
           {captions.map((caption, index) => <ListGroup.Item key={index}>{caption}</ListGroup.Item>)}
         </ListGroup>
 
-        <Stack direction="horizontal" style={{ justifyContent: "space-evenly", padding: "4px" }}>
+        <Stack direction="horizontal" style={{ justifyContent: "center", gap: "36px", padding: "10px" }}>
           <a href={github} target="_blank" rel="noreferrer"><h5>Github</h5></a>
-          {link?.substring(0, 4) === "http" ?
+          {link ?
           <a href={link} target="_blank" rel="noreferrer"><h5>Website</h5></a>
           :
-          <>{link}</>
+          <p>{projectTestingMessage}</p>
           }
         </Stack>
 
