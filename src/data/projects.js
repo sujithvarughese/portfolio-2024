@@ -18,7 +18,6 @@ import fitnessInstructionsIMG from "../assets/images/projects/simpler-fitness/in
 
 import realtyCoverIMG from "../assets/images/projects/realty-solutions/cover.jpeg"
 import realtyCoverGIF from "../assets/images/projects/realty-solutions/cover.gif"
-import realtyScreenshots from "../assets/images/projects/realty-solutions/home-combined.png"
 import fmrIMG from "../assets/images/projects/realty-solutions/fmr.png"
 import messagesIMG from "../assets/images/projects/realty-solutions/messages.png"
 import receiptsIMG from "../assets/images/projects/realty-solutions/receipts.png"
@@ -27,17 +26,17 @@ import searchIMG from "../assets/images/projects/realty-solutions/search.png"
 
 import onTheBooksCoverIMG from "../assets/images/projects/on-the-books/cover.jpeg"
 import onTheBooksCoverGIF from "../assets/images/projects/on-the-books/cover.gif"
-import onTheBooksScreenshots from "../assets/images/projects/on-the-books/on-the-books-screenshot.png"
 import bookDiscoverIMG from "../assets/images/projects/on-the-books/discover.png"
 import notebookIMG from "../assets/images/projects/on-the-books/notebook.png"
 import bookPreviewIMG from "../assets/images/projects/on-the-books/preview.png"
 import bookSearchIMG from "../assets/images/projects/on-the-books/search.png"
 
-import blackjackScreenshots from "../assets/images/projects/blackjack/blackjack-screenshots.png"
 import blackjackCoverIMG from "../assets/images/projects/blackjack/cover.jpeg"
 import blackjackCoverGIF from "../assets/images/projects/blackjack/cover.gif"
 import blackjackMobileDoubleIMG from "../assets/images/projects/blackjack/mobile-double.png"
 import blackjackPlayerWinIMG from "../assets/images/projects/blackjack/player-win.png"
+import blackjackMobileIMG from "../assets/images/projects/blackjack/bj-mobile2.png"
+import blackjackDesktopIMG from "../assets/images/projects/blackjack/bj-desktop.png"
 
 import rsDesktop from "../assets/images/projects/realty-solutions/home-desktop.png"
 import rsMobile from "../assets/images/projects/realty-solutions/home-mobile.png"
@@ -109,7 +108,7 @@ export const projects = [
 			"Live stat tracker that updates every hand with the amount won or lost and your current return on investment.",
 			"Stuck on the right move? Ask for help at any time during a hand.",
 		],
-		images: [blackjackMobileDoubleIMG, blackjackPlayerWinIMG],
+		images: [blackjackMobileIMG, blackjackDesktopIMG, blackjackMobileDoubleIMG, blackjackPlayerWinIMG],
 		desktop: bjDesktop,
 		mobile: bjMobile,
 		link: 'https://beat-blackjack.com',
@@ -128,7 +127,7 @@ export const projects = [
 			"User roles for tenants and owners/managers, authorized and authenticated using JSON web tokens securely attached to signed HTTP cookies.",
 			"HUD.gov API integration to retrieve rental rates for any location in the US.",
 		],
-		images : [searchIMG, messagesIMG, mobileFinancesIMG, receiptsIMG, fmrIMG],
+		images : [mobileFinancesIMG, searchIMG, messagesIMG, receiptsIMG, fmrIMG],
 		desktop: rsDesktop,
 		mobile: rsMobile,
 		link: 'https://sgs-properties.com',

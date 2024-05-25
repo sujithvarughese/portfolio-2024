@@ -7,13 +7,12 @@ const ProjectDrawer = ({ isOpen, onClose, title, description, images, captions, 
       <Offcanvas.Header closeButton>
         <Offcanvas.Title><h3>{title}</h3></Offcanvas.Title>
       </Offcanvas.Header>
+
       <Offcanvas.Body>
 
-        <Stack className={classes.description}>
-          {description}
-        </Stack>
+        <p className={classes.description}>{description}</p>
 
-        <Carousel variant="dark" className={classes.carousel}>
+        <Carousel data-bs-theme="dark" className={classes.carousel}>
           {images.map((image, index) => {
             return (
               <Carousel.Item key={index}>
@@ -25,7 +24,7 @@ const ProjectDrawer = ({ isOpen, onClose, title, description, images, captions, 
           })}
         </Carousel>
 
-        <Container>
+        <Container style={{ display: "flex", gap: "6px", margin: "4px auto", padding: "4px" }}>
           {tech.map((item, index) => <IconLogo key={index} name={item}/>)}
         </Container>
 
@@ -33,12 +32,12 @@ const ProjectDrawer = ({ isOpen, onClose, title, description, images, captions, 
           {captions.map((caption, index) => <ListGroup.Item key={index}>{caption}</ListGroup.Item>)}
         </ListGroup>
 
-        <Stack>
-          <a href={github} target="_blank" rel="noreferrer">Github</a>
+        <Stack direction="horizontal" style={{ justifyContent: "space-evenly", padding: "4px" }}>
+          <a href={github} target="_blank" rel="noreferrer"><h5>Github</h5></a>
           {link?.substring(0, 4) === "http" ?
-            <a href={link} target="_blank" rel="noreferrer">Website</a>
-            :
-            <>{link}</>
+          <a href={link} target="_blank" rel="noreferrer"><h5>Website</h5></a>
+          :
+          <>{link}</>
           }
         </Stack>
 
