@@ -85,6 +85,18 @@ nav.navbar a.navbar-brand {
 nav.navbar a.navbar-brand:hover {
   color: #ffffff;
 }
+
+#basic-nav-dropdown {
+  font-weight: 400;
+  color: #fff !important;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  font-size: 18px;
+  opacity: 0.75;
+}
+#basic-nav-dropdown:hover {
+  opacity: 1;
+}
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
   color: #fff !important;

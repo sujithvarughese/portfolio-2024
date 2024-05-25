@@ -5,6 +5,14 @@ import fbIcon from '../assets/icons/fb-icon.svg';
 import githubIcon from "../assets/icons/github-mark-white.svg"
 const emailAddress = "sujith.varug@gmail.com"
 
+import diploma from "../assets/images/certificates/diploma.png"
+import metaCert from "../assets/images/certificates/meta_frontend_cert.png"
+import javascriptCert from "../assets/images/certificates/adv_javascript_cert.jpg"
+import reactNativeCert from "../assets/images/certificates/react_native_cert.jpg"
+import mernCert from "../assets/images/certificates/MERN_2024_cert.jpg"
+import accountingCert from "../assets/images/certificates/accounting_certificate.png"
+import businessManagementCert from "../assets/images/certificates/business_management_cert.png"
+
 
 const NavBar = () => {
 
@@ -31,7 +39,7 @@ const NavBar = () => {
           sujithvarughese
         </Navbar.Brand>
 
-          <Nav className="me-auto">
+          <Nav className="me-auto" style={{ alignItems: "center" }}>
             <Nav.Link
               href="#home"
               className={activeLink === "home" ? "active navbar-link" : "navbar-link"}
@@ -50,6 +58,24 @@ const NavBar = () => {
               onClick={() => onUpdateActiveLink("projects")}>
               Projects
             </Nav.Link>
+
+            <NavDropdown
+              title="Certificates"
+              id="basic-nav-dropdown"
+              menuVariant="dark"
+              className="dropdown"
+            >
+              <NavDropdown.Item href={diploma} target="_blank" rel="noreferrer">Bachelor's Diploma</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href={metaCert} target="_blank" rel="noreferrer">Meta Front End Developer</NavDropdown.Item>
+              <NavDropdown.Item href={javascriptCert} target="_blank" rel="noreferrer">Advanced Javascript</NavDropdown.Item>
+              <NavDropdown.Item href={reactNativeCert} target="_blank" rel="noreferrer">React Native 2024</NavDropdown.Item>
+              <NavDropdown.Item href={mernCert} target="_blank" rel="noreferrer">MERN Stack 2024</NavDropdown.Item>
+              <NavDropdown.Item href={accountingCert} target="_blank" rel="noreferrer">Accounting Technology</NavDropdown.Item>
+              <NavDropdown.Item href={businessManagementCert} target="_blank" rel="noreferrer">Business Management</NavDropdown.Item>
+
+            </NavDropdown>
+
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
