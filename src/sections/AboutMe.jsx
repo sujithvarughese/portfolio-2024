@@ -5,30 +5,22 @@ import profilePicture from "../assets/images/profile/profile_studio.png"
 
 const AboutMe = () => {
   return (
-    <section className={classes.aboutMe} id="about">
-      <Container className="container-fluid">
+    <Container as="section" className={classes.container} id="about">
+
         <h2>About Me</h2>
-        <div className="row">
-          <div className="col-12 col-lg-6">
+        <Row className={classes.content}>
+          <Col xs={12} lg={6} className={classes.image}>
+            <Image src={profilePicture} alt="Profile Picture" />
+          </Col>
 
-            <div className={`${classes.image} col`}>
-              <Image src={profilePicture} alt="Profile Picture" />
-            </div>
+          <Col className={`${classes.paragraph}`}>
+            <p>{aboutMe}</p>
+            <p>{aboutMe2}</p>
+            <p>{aboutMe3}</p>
+          </Col>
+        </Row>
 
-            <div className={`${classes.paragraph} col`}>
-              <p>{aboutMe}</p>
-              <p>{aboutMe2}</p>
-              <p>{aboutMe3}</p>
-            </div>
-          </div>
-
-          {/*<div className={`${classes.text} ${classes.highlight}`}>
-            The creative process has guided me to gain a solid understanding of how a library such as React works <strong>under the hood</strong> which I believe has drastically increased my ability to <strong>create efficiently</strong>.
-          </div>*/}
-
-        </div>
-      </Container>
-    </section>
+    </Container>
   )
 }
 

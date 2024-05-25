@@ -1,5 +1,4 @@
 import { Nav, Navbar, NavDropdown, Container } from "react-bootstrap"
-import classes from '../styles/NavBar.module.css'
 import { useEffect, useState } from 'react'
 import linkedInIcon from '../assets/icons/linkedin-icon.svg';
 import fbIcon from '../assets/icons/fb-icon.svg';
@@ -58,8 +57,9 @@ const NavBar = () => {
               <a href="http://facebook.com/sujithvarughese" className="social-icon" target="_blank" rel="noreferrer"><img src={fbIcon} alt="Icon" /></a>
               <a href="http://github.com/sujithvarughese" className="social-icon" target="_blank" rel="noreferrer"><img src={githubIcon} alt="Icon" /></a>
             </div>
+            <a href={`mailto:${emailAddress}`} className="connect vvd"><span>Let's Connect</span></a>
           </span>
-          <a href={`mailto:${emailAddress}`} className="connect vvd"><span>Let's Connect</span></a>
+
 
       </Container>
     </Navbar>

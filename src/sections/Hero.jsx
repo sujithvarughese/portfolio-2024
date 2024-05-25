@@ -4,7 +4,6 @@ import { motion } from "framer-motion"
 import { ArrowRightCircle, CursorText  } from "react-bootstrap-icons"
 import { introductionText, descriptionText,  } from "../data/data.js"
 import { useEffect, useState } from 'react'
-import chessBackground from "../assets/images/backgrounds/chess_bg.png"
 import chessboardImage from "../assets/images/backgrounds/chessboard.png"
 import knightImage from "../assets/images/backgrounds/knight.png"
 const Hero = () => {
@@ -35,11 +34,10 @@ const Hero = () => {
 
 
   return (
-    <section className={classes.hero} id="home">
+    <Container as="section" className={classes.container} id="home">
 
-      <Container className={classes.container}>
         <motion.h1
-          className={classes.tagline}
+          className={classes.welcome}
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
           viewport={{ once: false, amount: 0.5 }}
@@ -47,16 +45,16 @@ const Hero = () => {
           Welcome.
         </motion.h1>
 
-        <Row className={classes.content}>
+        <Row className={classes.text}>
           <Col xs={12} sm={8} md={6} xl={7}>
-            <h1 className={classes.intro}>{currentIntroductionText}</h1>
-            <h3 className={classes.description}>{currentDescriptionText}</h3>
+            <h1>{currentIntroductionText}</h1>
+            <p>{currentDescriptionText}</p>
           </Col>
         </Row>
 
+
         <Row className={classes.image}>
           <img className={classes.chessboard} src={chessboardImage} alt="chessboard" />
-
           <motion.img
             className={classes.knight}
             src={knightImage}
@@ -65,12 +63,10 @@ const Hero = () => {
             dragConstraints={{ top: 50, right: 50, bottom: 50, left: 100 }}
             dragTransition={{ bounceStiffness: 200, bounceDamping: 10 }}
           />
-
         </Row>
 
 
-      </Container>
-    </section>
+    </Container>
   )
 }
 

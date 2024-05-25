@@ -6,7 +6,6 @@ import { Badge } from 'react-bootstrap'
 
 
 const IconLogo = ({ name }) => {
-  console.log(logos[name])
   return (
     <Badge pill bg="info">
       <span>{name}</span>
