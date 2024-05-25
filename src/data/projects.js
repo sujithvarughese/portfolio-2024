@@ -114,7 +114,7 @@ export const projects = [
 			"Live stat tracker that updates every hand with the amount won or lost and your current return on investment.",
 			"Context API for global variables and Reducer for global state management",
 		],
-		images: [blackjackMobileIMG, blackjackDesktopIMG, blackjackMobileDoubleIMG, blackjackPlayerWinIMG],
+		images: [blackjackMobileIMG, blackjackDesktopIMG],
 		desktop: bjDesktop,
 		mobile: bjMobile,
 		link: 'https://beat-blackjack.com',
