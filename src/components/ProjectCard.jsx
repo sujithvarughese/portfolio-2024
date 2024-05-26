@@ -5,7 +5,7 @@ import ProjectDrawer from './ProjectDrawer.jsx'
 import { motion, useInView } from 'framer-motion'
 import VideoJS from './VideoJS.jsx'
 
-const ProjectCard = ({ title, description, coverImage, coverVideo, heading, link, github, captions, images, tech }) => {
+const ProjectCard = ({ title, description, coverImage, coverVideo, coverGif, heading, link, github, captions, images, tech }) => {
 
   const [showDrawer, setShowDrawer] = useState(false)
   const onOpen = () => setShowDrawer(true)
@@ -13,7 +13,7 @@ const ProjectCard = ({ title, description, coverImage, coverVideo, heading, link
   const [isHovering, setIsHovering] = useState(false)
 
   const ref = useRef(null)
-  const isInView = useInView(ref, { amount: 0.4 })
+  const isInView = useInView(ref, { amount: 0.8 })
 
   const playerRef = useRef(null);
 
@@ -67,9 +67,10 @@ const ProjectCard = ({ title, description, coverImage, coverVideo, heading, link
         onMouseLeave={()=>setIsHovering(false)}
       >
         {isHovering ?
-          <Image src={coverImage} alt="gif"/>
+          <Image src={coverImage} alt="image"/>
           :
-          <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
+          //<VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
+          <Image src={coverGif} alt="gif" />
         }
         <Container className={classes.text}>
           <h3>{title}</h3>
@@ -92,7 +93,7 @@ const ProjectCard = ({ title, description, coverImage, coverVideo, heading, link
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
         {isInView ?
-          <Image src={coverImage} alt="image" className={classes.image}/>
+          <Image src={coverGif} alt="image" className={classes.image}/>
           :
           <Image src={coverImage} alt="image" className={classes.image}/>
         }

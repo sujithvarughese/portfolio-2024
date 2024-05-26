@@ -7,7 +7,7 @@ import Footer from './sections/Footer.jsx'
 import NavBarFloat from './components/NavBarFloat.jsx'
 import { Fragment } from 'react'
 import MessageFloat from './components/MessageFloat.jsx'
-
+import { motion } from "framer-motion"
 const App = () => {
 
   return (
@@ -24,9 +24,13 @@ const App = () => {
       <Contact />
       <Footer />
 
-      <div className="small">
+      <motion.div
+        className="small"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { duration: 1, delay: 1.5 } }}
+      >
         <MessageFloat />
-      </div>
+      </motion.div>
     </>
   )
 }

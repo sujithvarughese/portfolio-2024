@@ -56,6 +56,7 @@ export const projects = [
 		title: "MedScope",
 		coverImage: medscopeCoverIMG,
 		coverVideo: medscopeCoverMP4,
+		coverGif: medscopeCoverGIF,
 		heading: "Medical assistant that uses AI to give you personalized and accurate treatment options.",
 		description: "When I was feeling sick last month, I called the specialist to make an appointment. Boy, was I shocked as the receptionist told me there is a 3 month wait just for a visit. I tried googling my symptoms but filtering for accurate results proved quite difficult, and taking medical advice from a 12-year old resident Reddit doctor didn't sound too appealing.\n\nThis app puts everything in one place. Enter up to five symptoms, along with your age and sex. With the help of AI, you will get several options of reliable treatment, sorted in order of effectiveness. Results include medication details, dosing and usage, and potential risks and side effects. I recently partnered with DrugBank, and their API will further improve accuracy and detail, along with added features such as drug to drug interactions. ",
 		captions: [
@@ -73,6 +74,7 @@ export const projects = [
 		title: "BookStax",
 		coverImage: bookstaxCoverIMG,
 		coverVideo: bookstaxCoverMP4,
+		coverGif: bookstaxCoverGIF,
 		heading: "Mobile app to organize and annotate your reading collection while giving recommendations based on best sellers or your interests.",
 		description: "A remake of an older app I created called On The Books, but this time using React Native for full mobile functionality.\n\nThe current top reading apps are essentially just online stores to buy e-books. This app is geared toward organization and efficient note-taking, while still having the ability to discover and purchase books through Apple and Amazon.",
 		captions: [
@@ -90,6 +92,7 @@ export const projects = [
 		title: "Simpler Fitness",
 		coverImage: simplerFitnessCoverIMG,
 		coverVideo: simplerFitnessCoverMP4,
+		coverGif: simplerFitnessCoverGIF,
 		heading: "Get personal workouts routines, along with detailed instructions and animations based on age, experience level, and available equipment.",
 		description: "At the start of the pandemic, I decided to build a home gym to help my parents get in shape. Within months, the equipment began collecting dust. I realized the problem for my parents, like many of us wanting to get in shape, is not that we don't want to work out. Most of us simply have no idea which exercises to do, how to do them safely, and what kind of workout routine to follow.\n\nI created this app as a solution to create personal workout routines based on experience level, time, available equipment, and target body parts if desired.",
 		captions: [
@@ -107,6 +110,7 @@ export const projects = [
 		title: "Beat Blackjack",
 		coverImage: blackjackCoverIMG,
 		coverVideo: blackjackCoverMP4,
+		coverGif: blackjackCoverGIF,
 		heading: "Learn perfect strategy with live feedback after each move and an ROI tracker to calculate your profitability.",
 		description: "Beat Blackjack is designed to teach blackjack strategy while having fun trying to beat the house. Use the optional hint feature at any time to get the correct book play, or choose to get live feedback after your move.",
 		captions: [
@@ -126,6 +130,7 @@ export const projects = [
 		title: "Realty Solutions",
 		coverImage: realtyCoverIMG,
 		coverVideo: realtyCoverMP4,
+		coverGif: realtyCoverGIF,
 		heading: "Management app for owners of rental units to manage finances, communicate with tenants, and get market rental rates.",
 		description: "Through my experience in property management, my largest gripe is the lack of an efficient system for managing payments and tenant-owner communication.\n\nI created Realty Solutions where all properties can be organized in one place. View mortgage details, insurance premiums, association fees, just to name a few. Owners can send rent receipts and talk to tenants through the messaging functionality. In the future, I would like to integrate a payment processor such as Stripe, where tenants can directly pay owners and owners can pay all expenses using only this app.",
 		captions: [
@@ -145,6 +150,7 @@ export const projects = [
 		title: "On the Books.",
 		coverImage: onTheBooksCoverIMG,
 		coverVideo: onTheBooksCoverMP4,
+		coverGif: onTheBooksCoverGIF,
 		heading: "Original reading application designed to help you find books and take notes.",
 		description: "One of the first full-stack web applications I designed and created. This is the original version of the BOOKSTAX app, and performs much of the same functionality. It amazes me seeing my own growth as a developer in less than a year. ",
 		captions: [

@@ -6,10 +6,12 @@
     flex-direction: column;
     gap: 24px;
 }
-
 .card {
     margin: 0;
     padding: 0;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
 }
 .description {
     text-align: justify;
@@ -24,6 +26,7 @@
     align-items: center;
     justify-content: center;
     transition: 0.5s ease-in-out;
+    padding: 0 6px 8px 6px;
 
 }
 .text h3 {
