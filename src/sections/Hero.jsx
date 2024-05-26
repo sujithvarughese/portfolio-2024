@@ -52,7 +52,6 @@ const Hero = () => {
 
   useEffect(() => {
     if (currentDescriptionText.length === 0) {
-      window.scrollTo(0, 0)
       return
     }
     printLetter()
@@ -95,28 +94,6 @@ const Hero = () => {
           // dragTransition={{ bounceStiffness: 200, bounceDamping: 10 }}
         />
       </Row>
-
-
-      <motion.button className={classes.next}>
-        Next
-      </motion.button>
-
-      {/*
-      <Container className={`${classes.skills} col-11 col-sm-7 col-lg-4`}>
-        <h4>Skills</h4>
-        {skills.map((skill, index) =>
-          <Icon
-            key={index}
-            name={skill}
-            variant="secondary"
-            styles={{
-              gap: "6px",
-              fontSize: "14px"
-            }}
-          />
-        )}
-      </Container>
-      */}
 
     </Container>
   )

@@ -1,5 +1,5 @@
 import { RiJavascriptFill } from "react-icons/ri";
-import { FaReact, FaNode } from "react-icons/fa6";
+import { FaReact, FaNode, FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
 import { TbApiApp, TbBinaryTree, TbFileTypeSql } from 'react-icons/tb'
 import { SiHtml5, SiMui, SiCss3, SiBootstrap, SiMongodb, SiOpenai, SiChakraui, SiStyledcomponents, SiExpo, SiFirebase, SiGraphql, SiJest, SiPostman, SiTailwindcss, SiJetbrains, SiGoogleanalytics, SiPython } from 'react-icons/si'
 import { Badge, Stack } from 'react-bootstrap'
@@ -33,23 +33,19 @@ const logos = {
   "Python": <SiPython />,
   "Java": <FaJava />,
   "OpenAI": <SiOpenai />,
-
   "React": <FaReact />,
   "React Native": <FaReact />,
   "Expo": <SiExpo />,
   "NodeJS": <FaNode />,
-
   "MongoDB": <SiMongodb />,
   "SQL": <TbFileTypeSql />,
   "Firebase": <SiFirebase />,
   "AWS": <FaAws />,
   "Google Analytics": <SiGoogleanalytics />,
   "DNS & Networks": <MdDns />,
-
   "APIs": <TbApiApp />,
   "GraphQL": <SiGraphql />,
   "Data Structures": <TbBinaryTree />,
-
   "HTML": <SiHtml5 />,
   "CSS": <SiCss3 />,
   "Material UI": <SiMui />,
@@ -57,8 +53,6 @@ const logos = {
   "Styled Components": <SiStyledcomponents />,
   "Bootstrap": <SiBootstrap />,
   "Tailwind CSS": <SiTailwindcss />,
-
-
   "Git": <FaGitAlt />,
   "Postman": <SiPostman />,
   "Scrum": <DiScrum />,
@@ -66,5 +60,7 @@ const logos = {
   "Deployment": <IoIosRocket />,
   "VSCode": <VscVscode />,
   "JetBrains": <SiJetbrains />,
+  "Facebook": <FaFacebookF />,
+  "LinkedIn": <FaLinkedinIn />
 }
 

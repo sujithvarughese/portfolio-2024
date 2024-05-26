@@ -41,17 +41,11 @@ const NavBar = () => {
       expand="lg"
       className={isScrolled ? "scrolled" : ""}>
       <Container>
-        <Navbar.Brand href="/">
+        <Navbar.Brand href="#home">
           sujithvarughese
         </Navbar.Brand>
 
           <Nav className="me-auto" style={{ alignItems: "center" }}>
-            <Nav.Link
-              href="#home"
-              className={activeLink === "home" ? "active navbar-link" : "navbar-link"}
-              onClick={() => onUpdateActiveLink("home")}
-            >Home
-            </Nav.Link>
             <Nav.Link
               href="#about"
               className={activeLink === "about" ? "active navbar-link" : "navbar-link"}

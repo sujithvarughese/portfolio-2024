@@ -1,3 +1,4 @@
+export const emailAddress = "sujith.varug@gmail.com"
 export const aboutMeHeadline = 'The creative process has guided me to gain a solid understanding of how a library such as React works <strong>under the hood</strong> which I believe has drastically increased my ability to <strong>create efficiently</strong>.\n'
 
 export const aboutMe = "When I was younger, I remember when I first had an enlightening moment when I realized every problem could be solved if you can break them down into smaller and more manageable problems. It's much easier to correctly apply logic to solve a small problem than than trying to logically solve a problem using a macro view. Learning to code quickly intrigued my fascination in which I could do essentially just that, but for virtually any task."

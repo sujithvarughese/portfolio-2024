@@ -4,6 +4,7 @@
 
 .content {
     justify-content: center;
+    align-items: center;
 }
 .image {
     transform: rotate(6deg);
@@ -44,6 +45,12 @@
 .paragraph p {
     line-height: 1.2;
 }
+
+
+@media (min-width: 576px) {
+
+}
+
 @media (min-width: 992px) {
     .container {
         padding-bottom: 132px;

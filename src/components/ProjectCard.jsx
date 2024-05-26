@@ -58,7 +58,6 @@ const ProjectCard = ({ title, description, coverImage, coverVideo, coverGif, hea
         tech={tech}
       />
 
-
       <Container
         as="button"
         className={`${classes.large} ${classes.card} card`}
@@ -99,7 +98,7 @@ const ProjectCard = ({ title, description, coverImage, coverVideo, coverGif, hea
         }
         {isInView &&
           <Container className={classes.text}>
-            <h3 style={{ paddingTop: "8px" }}>{title}</h3>
+            <h3>{title}</h3>
             <h4>{heading}</h4>
           </Container>
         }
