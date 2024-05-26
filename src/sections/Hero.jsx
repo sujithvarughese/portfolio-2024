@@ -44,8 +44,6 @@ const Hero = () => {
         setCurrentIntroductionText("M")
         clearTimeout(temp)
       }, 1800)
-
-
     } else {
       printLetter()
     }
@@ -54,6 +52,7 @@ const Hero = () => {
 
   useEffect(() => {
     if (currentDescriptionText.length === 0) {
+      window.scrollTo(0, 0)
       return
     }
     printLetter()
@@ -91,11 +90,17 @@ const Hero = () => {
           className={classes.knight}
           src={knightImage}
           alt="knight"
-          drag
-          dragConstraints={{ top: 50, right: 50, bottom: 50, left: 100 }}
-          dragTransition={{ bounceStiffness: 200, bounceDamping: 10 }}
+          // drag
+          // dragConstraints={{ top: 50, right: 50, bottom: 50, left: 100 }}
+          // dragTransition={{ bounceStiffness: 200, bounceDamping: 10 }}
         />
       </Row>
+
+
+      <motion.button className={classes.next}>
+        Next
+      </motion.button>
+
       {/*
       <Container className={`${classes.skills} col-11 col-sm-7 col-lg-4`}>
         <h4>Skills</h4>
