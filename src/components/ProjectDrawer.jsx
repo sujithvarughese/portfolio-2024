@@ -1,6 +1,6 @@
 import { Carousel, Container, Image, ListGroup, Offcanvas, Stack } from 'react-bootstrap'
 import classes from "../styles/Projects.module.css"
-import IconLogo from './IconLogo.jsx'
+import Icon from './Icon.jsx'
 import { projectTestingMessage } from '../data/data.js'
 const ProjectDrawer = ({ isOpen, onClose, title, description, images, captions, link, github, tech }) => {
   return (
@@ -26,7 +26,7 @@ const ProjectDrawer = ({ isOpen, onClose, title, description, images, captions, 
         </Carousel>
 
         <Container className={classes.icons}>
-          {tech.map((item, index) => <IconLogo key={index} name={item}/>)}
+          {tech.map((item, index) => <Icon key={index} name={item}/>)}
         </Container>
 
         <ListGroup as="ol">

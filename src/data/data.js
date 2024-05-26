@@ -5,7 +5,7 @@ export const aboutMe = "When I was younger, I remember when I first had an enlig
 export const aboutMe2 = 'I completed a Bachelor\'s in Computer Science at FUI in 2022, and immediately began focusing on gaining experience in building software. I created web and mobile applications in Javascript using React and React Native. I focused on making the applications scalable and efficient. The experience has given me the opportunity to familiarize myself with the complete software life cycle process including testing and maintenance, while giving me exposure to network and DNS server configurations.'
 
 export const aboutMe3 = "Aside from programming, in my free time I enjoy working out, playing basketball, creating and editing videos, and hanging out with my 10 year old rottweiler, Hera!"
-export const skills = ['Javascript', 'Python', 'Java', 'React', 'NodeJS', 'RESTful APIs', 'API integration', 'HTML/CSS', 'MongoDB/SQL', 'Data Structures', 'Software Testing', 'GraphQL', "Agile/Scrum", 'DNS config', 'Google Analytics', 'Postman', 'Bootstrap', 'Tailwind', 'Jetbrains', 'VSCode', 'Git version control']
+export const skills = ['JavaScript', 'Python', 'Java', 'OpenAI', 'React', 'React Native', 'Expo', 'NodeJS','MongoDB', 'SQL', 'Firebase', 'AWS', 'Google Analytics', 'DNS & Networks', 'APIs', 'GraphQL', 'Data Structures', 'HTML', 'CSS', 'Material UI', 'ChakraUI', 'Styled Components', 'Bootstrap', 'Tailwind CSS', 'Git', 'Postman', "Scrum", 'Testing', 'Deployment']
 
 export const introductionText = "My name is Sujith."
 export const textLine1 = "I am a software developer based in Miami, FL"

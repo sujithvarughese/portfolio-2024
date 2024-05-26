@@ -12,6 +12,7 @@ import reactNativeCert from "../assets/images/certificates/react_native_cert.jpg
 import mernCert from "../assets/images/certificates/MERN_2024_cert.jpg"
 import accountingCert from "../assets/images/certificates/accounting_certificate.png"
 import businessManagementCert from "../assets/images/certificates/business_management_cert.png"
+import { motion } from 'framer-motion'
 
 
 const NavBar = () => {
@@ -33,7 +34,12 @@ const NavBar = () => {
   const onUpdateActiveLink = (value) => setActiveLink(value)
 
   return (
-    <Navbar expand="lg" className={isScrolled ? "scrolled" : ""}>
+    <Navbar
+      as={motion.nav}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 1, delay: 2 } }}
+      expand="lg"
+      className={isScrolled ? "scrolled" : ""}>
       <Container>
         <Navbar.Brand href="/">
           sujithvarughese
