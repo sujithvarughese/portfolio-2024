@@ -9,6 +9,12 @@ export const aboutMe2 = 'I completed a Bachelor\'s in Computer Science at FUI in
 export const aboutMe3 = "Aside from programming, in my free time I enjoy working out, playing basketball, creating and editing videos, and hanging out with my 10 year old rottweiler, Hera!"
 export const skills = ['JavaScript', 'Python', 'Java', 'OpenAI', 'React', 'React Native', 'Expo', 'NodeJS','MongoDB', 'SQL', 'Firebase', 'AWS', 'Google Analytics', 'DNS & Networks', 'APIs', 'GraphQL', 'Data Structures', 'HTML', 'CSS', 'Material UI', 'ChakraUI', 'Styled Components', 'Bootstrap', 'Tailwind CSS', 'Git', 'Postman', "Scrum", 'Testing', 'Deployment']
 
+export const softwareSkills = "Experienced in both functional and object-oriented programming with solid understanding of data structures and algorithms. My strongest language being JavaScript, as it is what I use most. However, I am also proficient in Python and Java, and have a strong understanding of C/C++."
+
+export const fullStackSkills = "Understanding of web and mobile design process using HTML and CSS. Experienced in React and React Native libraries. Experienced using NodeJS in back-end servers and SQL and NOSQL databases (MongoDB, Firebase). Experienced in Vanilla CSS and Bootstrap, TailwindCSS, MaterialUI, ChakraUI, and Styled Components."
+
+export const deploymentSkills = "Experienced in full software life cycle process from design to testing and deployment. Experience in Scrum/Agile methods, deployment using AWS, understanding Google Analytics, and building and publishing mobile apps in Expo."
+
 export const introductionText = "My name is Sujith."
 export const textLine1 = "I am a software developer based in Miami, FL"
 export const descriptionText = "I am a software developer based in Miami, FL. I am passionate about creating useful and efficient ways to solve problems through software. I specialize in JavaScript, React, and React Native. My current focus is engineering OpenAI prompts to combine with traditional APIs to fetch data thoroughly as possible."

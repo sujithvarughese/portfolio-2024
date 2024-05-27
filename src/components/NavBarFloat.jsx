@@ -61,9 +61,9 @@ const NavBarFloat = () => {
           </NavDropdown>
           <Nav className={classes.links}>
             <Nav.Link
-              href="#home"
-              className={activeLink === "home" ? classes.active : ""}
-              onClick={() => onUpdateActiveLink("home")}
+              href="#skills"
+              className={activeLink === "skills" ? classes.active : ""}
+              onClick={() => onUpdateActiveLink("skills")}
             >
               <IoIosHome size="24px" />
             </Nav.Link>

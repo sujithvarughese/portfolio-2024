@@ -9,15 +9,16 @@ import { useRef, Fragment, useEffect, useState } from 'react'
 import MessageFloat from './components/MessageFloat.jsx'
 import { motion, useMotionValue } from 'framer-motion'
 import { Stack } from 'react-bootstrap'
+import Skills from './sections/Skills.jsx'
 const App = () => {
 
   // refs are forwarded to appropriate components to ref component in that section
   // each component uses IntersectionObserver to observe if component is in view
   // When in view, activeLink global state updates to indicate section in view on navbar
   const heroRef = useRef()
+  const skillsRef = useRef()
   const aboutRef = useRef()
   const projectsRef = useRef()
-  const contactMeRef = useRef()
 
   // scroll functions for above refs are passed to Heading.jsx as onClick for each navbar link
   const scrollToHero = () => {
@@ -26,7 +27,14 @@ const App = () => {
       block: "start",
     })
   }
+
   const scrollToAbout = () => {
+    aboutRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    })
+  }
+  const scrollToSkills = () => {
     aboutRef.current.scrollIntoView({
       behavior: "smooth",
       block: "start",
@@ -37,12 +45,6 @@ const App = () => {
       behavior: "smooth",
       block: "start",
       rootMargin: "500px"
-    })
-  }
-  const scrollToContactMe = () => {
-    contactMeRef.current.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
     })
   }
 
@@ -60,9 +62,9 @@ const App = () => {
       <div className="large">
         <NavBar
           scrollToHero={scrollToHero}
+          scrollToSkills={scrollToSkills}
           scrollToAbout={scrollToAbout}
           scrollToProjects={scrollToProjects}
-          scrollToContactMe={scrollToContactMe}
         />
       </div>
 
@@ -80,6 +82,7 @@ const App = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 1, delay: 1.5 } }}
       >
+        <Skills ref={skillsRef} />
         <About ref={aboutRef}/>
         <Projects ref={projectsRef}/>
         <Footer />

@@ -51,6 +51,12 @@ const NavBar = ({ scrollToHero, scrollToAboutMe, scrollToProjects, scrollToConta
 
         <Nav className="me-auto" >
           <Nav.Link
+            href="#skills"
+            className={activeLink === "skills" ? "active navbar-link" : "navbar-link"}
+            onClick={() => onUpdateActiveLink("skills")}
+          >Skills
+          </Nav.Link>
+          <Nav.Link
             href="#about"
             className={activeLink === "about" ? "active navbar-link" : "navbar-link"}
             onClick={() => onUpdateActiveLink("about")}

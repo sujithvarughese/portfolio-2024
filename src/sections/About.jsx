@@ -40,7 +40,7 @@ const About = forwardRef((props, ref) => {
           <Col className={`${classes.paragraph}`}>
             <p>{aboutMeAlt}</p>
           </Col>
-
+          {/*
           <Col className="col-11 col-lg-6 offset-lg-6 p-3">
             <h4>Skills</h4>
             {skills.map((skill, index) =>
@@ -55,6 +55,8 @@ const About = forwardRef((props, ref) => {
               />
             )}
           </Col>
+          */}
+
         </Row>
 
 

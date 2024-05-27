@@ -209,6 +209,7 @@ span.navbar-text {
 }
 .footer {
   margin: 36px 12px;
+  background-image: url("./assets/images/backgrounds/knight_wins_board.png");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
