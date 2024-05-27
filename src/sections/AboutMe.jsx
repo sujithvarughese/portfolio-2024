@@ -1,6 +1,6 @@
 import { Col, Container, Image, Row, Stack } from 'react-bootstrap'
 import classes from '../styles/AboutMe.module.css'
-import { aboutMeHeadline, aboutMe, aboutMe2, aboutMe3 } from '../data/data.js'
+import { aboutMeHeadline, aboutMe, aboutMe2, aboutMe3, aboutMeAlt } from '../data/data.js'
 import profilePicture from "../assets/images/profile/profile_studio.png"
 import { skills } from '../data/data.js'
 import Icon from '../components/Icon.jsx'
@@ -35,9 +35,7 @@ const AboutMe = forwardRef((props, ref) => {
           </Col>
 
           <Col className={`${classes.paragraph}`}>
-            <p>{aboutMe}</p>
-            <p>{aboutMe2}</p>
-            <p>{aboutMe3}</p>
+            <p>{aboutMeAlt}</p>
           </Col>
 
           <Col className="col-11 col-lg-6 offset-lg-6 p-3">

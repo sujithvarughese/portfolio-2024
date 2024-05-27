@@ -41,6 +41,7 @@
 }
 .paragraph p {
     line-height: 1.2;
+    white-space: break-spaces;
 }
 
 

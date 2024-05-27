@@ -28,13 +28,13 @@ const Hero = forwardRef((props, ref) => {
         const updatedText = descriptionText.substring(0, currentDescriptionIndex)
         setCurrentDescriptionText(prev => updatedText)
         setCurrentDescriptionIndex(prevState => prevState + 1)
-      }, 25)
+      }, 23)
     } else {
       ticker = setTimeout(() => {
         const updatedText = introductionText.substring(0, currentIntroductionIndex)
         setCurrentIntroductionText(prev => updatedText)
         setCurrentIntroductionIndex(prevState => prevState + 1)
-      }, 50)
+      }, 45)
     }
   }
 

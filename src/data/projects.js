@@ -147,7 +147,7 @@ export const projects = [
 		featured: true,
 	},
 	{
-		title: "On the Books.",
+		title: "On the Books",
 		coverImage: onTheBooksCoverIMG,
 		coverVideo: onTheBooksCoverMP4,
 		coverGif: onTheBooksCoverGIF,
