@@ -33,21 +33,21 @@ const NavBarFloat = () => {
     } else {
       setIsHidden(false)
     }
-    console.log(isHidden)
   })
 
   return (
-    <>
+
       <Navbar
         as={motion.nav}
-        initial={false}
+        className={classes.navbar}
+        initial={{ opacity: 0 }}
         animate={{
-          transform: isHidden ? "translateY(-100px)" : "translateY(0)",
+          opacity: 1,
+          transform: isHidden ? "translateY(100px)" : "translateY(0px)",
           transition: { duration: 0.5, ease: "easeInOut" }
       }}
-
       >
-        <Container direction="horizontal" style={{ margin: "0 16px"}}>
+        <Container direction="horizontal">
           <NavDropdown
             title={<PiCertificateFill size="28px" color="#fff"/>}
             autoClose={false}
@@ -92,14 +92,7 @@ const NavBarFloat = () => {
         </Container>
       </Navbar>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, y: 0, transition: { duration: 1, delay: 1.5 } }}
-      >
-        <MessageFloat />
-      </motion.div>
 
-    </>
 
 
 

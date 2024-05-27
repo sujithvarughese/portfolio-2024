@@ -1,5 +1,5 @@
 import { Col, Container, Image, Row, Stack } from 'react-bootstrap'
-import classes from '../styles/AboutMe.module.css'
+import classes from '../styles/About.module.css'
 import { aboutMeHeadline, aboutMe, aboutMe2, aboutMe3, aboutMeAlt } from '../data/data.js'
 import profilePicture from "../assets/images/profile/profile_studio.png"
 import { skills } from '../data/data.js'
@@ -7,7 +7,7 @@ import Icon from '../components/Icon.jsx'
 import { useEffect, forwardRef } from 'react'
 import { useGlobalContext } from '../context/GlobalContext.jsx'
 
-const AboutMe = forwardRef((props, ref) => {
+const About = forwardRef((props, ref) => {
 
   const { onUpdateActiveLink } = useGlobalContext()
 
@@ -27,7 +27,10 @@ const AboutMe = forwardRef((props, ref) => {
       className={classes.container}
       id="about"
     >
-        <h2 ref={ref}>About Me</h2>
+        <h2
+          ref={ref}
+          style={{ margin: "16px 0" }}
+        >About Me</h2>
 
         <Row className={classes.content}>
           <Col xs={12} lg={6} className={classes.image}>
@@ -60,4 +63,4 @@ const AboutMe = forwardRef((props, ref) => {
   )
 })
 
-export default AboutMe
+export default About

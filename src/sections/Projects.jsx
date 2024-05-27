@@ -25,7 +25,11 @@ const Projects = forwardRef((props, ref) => {
       className={classes.container}
       id="projects"
     >
-        <h2 ref={ref}>Projects</h2>
+        <h2
+          ref={ref}
+          style={{ margin: "16px 0" }}
+        >Projects
+        </h2>
 
         <Stack className={classes.cards}>
           {projects?.map((project, index) => {

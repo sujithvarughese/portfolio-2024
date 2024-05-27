@@ -3,17 +3,20 @@
     justify-content: center;
     align-items: center;
 }
+h2 {
+    margin: 0 12px;
+}
 .image {
     transform: rotate(6deg);
     z-index: -10;
-    margin: 28px;
+
     padding: 0;
     width: 80%;
     transition: 0.3s ease-in-out;
 }
 .image img {
     border-radius: 36px;
-
+    aspect-ratio: 1/1;
 }
 .image::before {
     content: "";
@@ -50,9 +53,7 @@
 }
 
 @media (min-width: 992px) {
-    .container {
-        padding-bottom: 132px;
-    }
+
     .image {
         width: 40%;
     }

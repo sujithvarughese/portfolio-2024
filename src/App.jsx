@@ -1,13 +1,14 @@
 import NavBar from './components/NavBar.jsx'
 import Hero from './sections/Hero.jsx'
 import Projects from './sections/Projects.jsx'
-import AboutMe from './sections/AboutMe.jsx'
+import About from './sections/About.jsx'
 import Contact from './sections/Contact.jsx'
 import Footer from './sections/Footer.jsx'
 import NavBarFloat from './components/NavBarFloat.jsx'
 import { useRef, Fragment, useEffect, useState } from 'react'
 import MessageFloat from './components/MessageFloat.jsx'
 import { motion, useMotionValue } from 'framer-motion'
+import { Stack } from 'react-bootstrap'
 const App = () => {
 
   // refs are forwarded to appropriate components to ref component in that section
@@ -53,10 +54,9 @@ const App = () => {
     window.addEventListener("load",resetLoading);
     return () => window.removeEventListener("load", resetLoading)
   }, [])
-  console.log(isLoading)
 
   return (
-    <>
+    <Stack>
       <div className="large">
         <NavBar
           scrollToHero={scrollToHero}
@@ -65,11 +65,11 @@ const App = () => {
           scrollToContactMe={scrollToContactMe}
         />
       </div>
-      <div className="small">
+      <div className="small" style={{ width: "100%"}}>
         <NavBarFloat />
       </div>
       <Hero ref={heroRef}/>
-      <AboutMe ref={aboutRef}/>
+      <About ref={aboutRef}/>
       <Projects ref={projectsRef}/>
       <Contact />
       <Footer />
@@ -81,7 +81,7 @@ const App = () => {
       >
 
       </motion.div>
-    </>
+    </Stack>
   )
 }
 

@@ -88,8 +88,7 @@ const Hero = forwardRef((props, ref) => {
         Welcome.
       </motion.h1>
 
-      <Container
-        className={classes.text}>
+      <Container className={classes.text}>
         <Col xs={12} sm={8} md={6} xl={7}>
           <h1>{currentIntroductionText}</h1>
           <p>{currentDescriptionText}</p>
