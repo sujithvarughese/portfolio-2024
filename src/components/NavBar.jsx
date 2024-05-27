@@ -67,6 +67,7 @@ const NavBar = ({ scrollToHero, scrollToAboutMe, scrollToProjects, scrollToConta
             title="Certificates"
             id="basic-nav-dropdown"
             menuVariant="dark"
+            autoClose={false}
           >
             <NavDropdown.Item href={diploma} target="_blank" rel="noreferrer">Bachelor's Diploma</NavDropdown.Item>
             <NavDropdown.Divider />
