@@ -58,7 +58,7 @@ button:focus-visible {
 section {
   align-items: center;
   justify-content: center;
-  margin: 64px 0;
+  margin: 36px 0;
 }
 
 /************ Navbar Css ************/
@@ -70,6 +70,7 @@ nav.navbar {
   border-radius: 100px;
   backdrop-filter: blur(10px);
   width: 100%;
+  transition: 1s ease-in-out;
 }
 @media (min-width: 576px) {
   nav.navbar {
@@ -207,7 +208,7 @@ span.navbar-text {
   margin-top: 52px;
 }
 .footer {
-  padding: 30px;
+  margin: 36px 12px;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

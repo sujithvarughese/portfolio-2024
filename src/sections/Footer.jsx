@@ -8,15 +8,29 @@ import { emailAddress } from '../data/data.js'
 const Footer = () => {
   return (
     <footer className="footer">
-
       <Stack className="text-center">
 
-        <div className="social-icon">
+        <Stack
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "12px",
+            letterSpacing: 1,
+            margin: "24px 0"
+          }}
+        >
+          <h2>Thank you for visiting.</h2>
+          <h4>Feel free to contact me with any feedback or opportunities to work together.</h4>
+        </Stack>
+
+
+        <Stack className="social-icon">
           <a href={`mailto:${emailAddress}`} target="_blank" rel="noreferrer"><img src={sendMessageIcon} alt="Icon" /></a>
           <a href="http://linkedin.com/sujithvarughese" target="_blank" rel="noreferrer"><img src={linkedInIcon} alt="Icon" /></a>
           <a href="http://facebook.com/sujithvarughese" target="_blank" rel="noreferrer"><img src={fbIcon} alt="Icon" /></a>
           <a href="http://github.com/sujithvarughese" target="_blank" rel="noreferrer"><img src={githubIcon} alt="Icon" /></a>
-        </div>
+        </Stack>
 
         <div>
           <p style={style}>Copyright 2024. All Rights Reserved</p>

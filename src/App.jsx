@@ -65,22 +65,27 @@ const App = () => {
           scrollToContactMe={scrollToContactMe}
         />
       </div>
-      <div className="small" style={{ width: "100%"}}>
-        <NavBarFloat />
-      </div>
-      <Hero ref={heroRef}/>
-      <About ref={aboutRef}/>
-      <Projects ref={projectsRef}/>
-      <Contact />
-      <Footer />
 
       <motion.div
         className="small"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 1, delay: 1.5 } }}
       >
-
+        <NavBarFloat />
       </motion.div>
+
+      <Hero ref={heroRef}/>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { duration: 1, delay: 1.5 } }}
+      >
+        <About ref={aboutRef}/>
+        <Projects ref={projectsRef}/>
+        <Footer />
+      </motion.div>
+
+
     </Stack>
   )
 }
