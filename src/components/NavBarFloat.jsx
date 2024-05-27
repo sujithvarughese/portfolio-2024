@@ -16,6 +16,7 @@ import accountingCert from "../assets/images/certificates/accounting_certificate
 import businessManagementCert from "../assets/images/certificates/business_management_cert.png"
 import { useGlobalContext } from '../context/GlobalContext.jsx'
 import { BiMessageRoundedDetail } from "react-icons/bi";
+import MessageFloat from './MessageFloat.jsx'
 const emailAddress = "sujith.varug@gmail.com"
 
 const NavBarFloat = () => {
@@ -32,22 +33,21 @@ const NavBarFloat = () => {
     } else {
       setIsHidden(false)
     }
+    console.log(isHidden)
   })
 
   return (
+    <>
       <Navbar
         as={motion.nav}
-        className={classes.navbar}
         initial={false}
-        //animate={isHidden ? { y : -10 } : { y: 10 }}
-        transition={{
-          transform: isHidden ? "translateY(-100px)" : "translateY(100px)",
-          duration: 0.5,
-          ease: "easeInOut" }}
+        animate={{
+          transform: isHidden ? "translateY(-100px)" : "translateY(0)",
+          transition: { duration: 0.5, ease: "easeInOut" }
+      }}
+
       >
-        <Container direction="horizontal"
-          className={classes.content}
-        >
+        <Container direction="horizontal" style={{ margin: "0 16px"}}>
           <NavDropdown
             title={<PiCertificateFill size="28px" color="#fff"/>}
             autoClose={false}
@@ -90,9 +90,16 @@ const NavBarFloat = () => {
             {/*<a href="http://github.com/sujithvarughese" target="_blank" rel="noreferrer"><FaGithub size="24px"/></a>*/}
           </Stack>
         </Container>
-
-
       </Navbar>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, y: 0, transition: { duration: 1, delay: 1.5 } }}
+      >
+        <MessageFloat />
+      </motion.div>
+
+    </>
 
 
 

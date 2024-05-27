@@ -70,17 +70,15 @@ nav.navbar {
   z-index: 999;
   border-radius: 100px;
   backdrop-filter: blur(10px);
-  padding: 18px 0;
   width: 100%;
 }
 @media (min-width: 576px) {
   nav.navbar {
     padding: 18px 0;
     position: sticky;
-    width: 100%;
-    top: 0;
-    z-index: 999;
     transition:  0.32s ease-in-out;
+    border-radius: revert;
+    backdrop-filter: revert;
   }
 }
 nav.navbar.scrolled {
