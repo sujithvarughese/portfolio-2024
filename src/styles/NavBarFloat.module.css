@@ -1,15 +1,7 @@
-.navbar {
-    position: fixed;
-    top: 0;
-    z-index: 999;
-    border-radius: 100px;
-    backdrop-filter: blur(10px);
-    transition:  0.32s ease-out;
 
-}
 .content {
-    justify-content: space-around;
-    width: 100%;
+
+
 }
 .links {
     gap: 10px;

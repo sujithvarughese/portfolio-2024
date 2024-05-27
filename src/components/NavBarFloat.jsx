@@ -32,7 +32,6 @@ const NavBarFloat = () => {
     } else {
       setIsHidden(false)
     }
-    console.log(isHidden)
   })
 
   return (
@@ -46,7 +45,7 @@ const NavBarFloat = () => {
           duration: 0.5,
           ease: "easeInOut" }}
       >
-        <Stack direction="horizontal"
+        <Container direction="horizontal"
           className={classes.content}
         >
           <NavDropdown
@@ -90,7 +89,7 @@ const NavBarFloat = () => {
             {/*<a href="http://facebook.com/sujithvarughese" target="_blank" rel="noreferrer"><FaFacebookF size="24px"/></a>*/}
             {/*<a href="http://github.com/sujithvarughese" target="_blank" rel="noreferrer"><FaGithub size="24px"/></a>*/}
           </Stack>
-        </Stack>
+        </Container>
 
 
       </Navbar>

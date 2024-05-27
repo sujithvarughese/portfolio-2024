@@ -1,5 +1,5 @@
 .container {
-    margin-top: 120px;
+    margin-top: 86px;
     position: relative;
 }
 .welcome {
@@ -48,7 +48,7 @@
 }
 .image {
     position: absolute;
-    top: 320px;
+    top: 45%;
 }
 .chessboard {
     top: 0;
@@ -62,6 +62,9 @@
     animation: knight-move-mobile 1.5s ease-in-out;
 }
 @media (min-width: 576px) {
+    .image {
+        top: 35%;
+    }
     .knight {
         animation: knight-move 1.5s ease-in-out;
     }
