@@ -59,6 +59,7 @@ section {
   min-height: 100vh;
   align-items: center;
   justify-content: center;
+  padding-top: 5%;
 }
 
 /************ Navbar Css ************/
@@ -82,6 +83,8 @@ nav.navbar a.navbar-brand {
 }
 nav.navbar a.navbar-brand:hover {
   color: #ffffff;
+  font-weight: 500;
+
 }
 #basic-nav-dropdown {
   font-weight: 400;
@@ -93,6 +96,7 @@ nav.navbar a.navbar-brand:hover {
 }
 #basic-nav-dropdown:hover {
   opacity: 1;
+  text-shadow: 0 0 1px white;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
@@ -102,9 +106,13 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   font-size: 18px;
   opacity: 0.75;
 }
-nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
+nav.navbar .navbar-nav a.nav-link.navbar-link:hover {
+  opacity: 1;
+  text-shadow: 0 0 1px white;
+}
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   opacity: 1;
+  font-weight: 700;
 }
 span.navbar-text {
   display: flex;

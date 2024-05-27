@@ -14,13 +14,16 @@ import reactNativeCert from "../assets/images/certificates/react_native_cert.jpg
 import mernCert from "../assets/images/certificates/MERN_2024_cert.jpg"
 import accountingCert from "../assets/images/certificates/accounting_certificate.png"
 import businessManagementCert from "../assets/images/certificates/business_management_cert.png"
-
+import { useGlobalContext } from '../context/GlobalContext.jsx'
+import { BiMessageRoundedDetail } from "react-icons/bi";
+const emailAddress = "sujith.varug@gmail.com"
 
 const NavBarFloat = () => {
 
+  const { activeLink, onUpdateActiveLink } = useGlobalContext()
+
   const { scrollY } = useScroll()
   const [isHidden, setIsHidden] = useState(false)
-  const [activeLink, setActiveLink] = useState("home")
 
   useMotionValueEvent(scrollY, "change", currentY => {
     const previousY = scrollY.getPrevious()
@@ -29,25 +32,22 @@ const NavBarFloat = () => {
     } else {
       setIsHidden(false)
     }
+    console.log(isHidden)
   })
-
-
-
-  const onUpdateActiveLink = (value) => setActiveLink(value)
 
   return (
       <Navbar
         as={motion.nav}
         className={classes.navbar}
-        variants={{
-          visible: { y: "20%" },
-          hidden: { y: "-100%" }
-        }}
-        animate={isHidden ? "hidden" : "visible"}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
+        initial={false}
+        //animate={isHidden ? { y : -10 } : { y: 10 }}
+        transition={{
+          transform: isHidden ? "translateY(-100px)" : "translateY(100px)",
+          duration: 0.5,
+          ease: "easeInOut" }}
       >
         <Stack direction="horizontal"
-          className={classes.container}
+          className={classes.content}
         >
           <NavDropdown
             title={<PiCertificateFill size="28px" color="#fff"/>}
@@ -85,8 +85,9 @@ const NavBarFloat = () => {
             </Nav.Link>
           </Nav>
           <Stack direction="horizontal" className={classes.socials}>
-            <a href="http://facebook.com/sujithvarughese" target="_blank" rel="noreferrer"><FaFacebookF size="24px"/></a>
-            <a href="http://github.com/sujithvarughese" target="_blank" rel="noreferrer"><FaGithub size="24px"/></a>
+            <a href={`mailto:${emailAddress}`} target="_blank" rel="noreferrer"><BiMessageRoundedDetail size="24px"/></a>
+            {/*<a href="http://facebook.com/sujithvarughese" target="_blank" rel="noreferrer"><FaFacebookF size="24px"/></a>*/}
+            {/*<a href="http://github.com/sujithvarughese" target="_blank" rel="noreferrer"><FaGithub size="24px"/></a>*/}
           </Stack>
         </Stack>
 

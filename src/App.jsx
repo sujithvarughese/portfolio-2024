@@ -5,22 +5,72 @@ import AboutMe from './sections/AboutMe.jsx'
 import Contact from './sections/Contact.jsx'
 import Footer from './sections/Footer.jsx'
 import NavBarFloat from './components/NavBarFloat.jsx'
-import { Fragment } from 'react'
+import { useRef, Fragment, useEffect, useState } from 'react'
 import MessageFloat from './components/MessageFloat.jsx'
-import { motion } from "framer-motion"
+import { motion, useMotionValue } from 'framer-motion'
 const App = () => {
+
+  // refs are forwarded to appropriate components to ref component in that section
+  // each component uses IntersectionObserver to observe if component is in view
+  // When in view, activeLink global state updates to indicate section in view on navbar
+  const heroRef = useRef()
+  const aboutRef = useRef()
+  const projectsRef = useRef()
+  const contactMeRef = useRef()
+
+  // scroll functions for above refs are passed to Heading.jsx as onClick for each navbar link
+  const scrollToHero = () => {
+    heroRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    })
+  }
+  const scrollToAbout = () => {
+    aboutRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    })
+  }
+  const scrollToProjects = () => {
+    projectsRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      rootMargin: "500px"
+    })
+  }
+  const scrollToContactMe = () => {
+    contactMeRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    })
+  }
+
+  const [isLoading, setIsLoading] = useState(true)
+
+  const resetLoading = () => setIsLoading(false)
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    window.addEventListener("load",resetLoading);
+    return () => window.removeEventListener("load", resetLoading)
+  }, [])
+  console.log(isLoading)
 
   return (
     <>
       <div className="large">
-        <NavBar />
+        <NavBar
+          scrollToHero={scrollToHero}
+          scrollToAbout={scrollToAbout}
+          scrollToProjects={scrollToProjects}
+          scrollToContactMe={scrollToContactMe}
+        />
       </div>
       <div className="small">
         <NavBarFloat />
       </div>
-      <Hero />
-      <AboutMe />
-      <Projects />
+      <Hero ref={heroRef}/>
+      <AboutMe ref={aboutRef}/>
+      <Projects ref={projectsRef}/>
       <Contact />
       <Footer />
 

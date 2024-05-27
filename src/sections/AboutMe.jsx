@@ -4,11 +4,30 @@ import { aboutMeHeadline, aboutMe, aboutMe2, aboutMe3 } from '../data/data.js'
 import profilePicture from "../assets/images/profile/profile_studio.png"
 import { skills } from '../data/data.js'
 import Icon from '../components/Icon.jsx'
+import { useEffect, forwardRef } from 'react'
+import { useGlobalContext } from '../context/GlobalContext.jsx'
 
-const AboutMe = () => {
+const AboutMe = forwardRef((props, ref) => {
+
+  const { onUpdateActiveLink } = useGlobalContext()
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries, observer) => {
+      const entry = entries[0]
+      if (entry.isIntersecting) {
+        onUpdateActiveLink("about")
+      }
+    })
+    observer.observe(ref.current)
+  }, [])
+
   return (
-    <Container as="section" className={classes.container} id="about">
-        <h2>About Me</h2>
+    <Container
+      as="section"
+      className={classes.container}
+      id="about"
+    >
+        <h2 ref={ref}>About Me</h2>
 
         <Row className={classes.content}>
           <Col xs={12} lg={6} className={classes.image}>
@@ -41,6 +60,6 @@ const AboutMe = () => {
 
     </Container>
   )
-}
+})
 
 export default AboutMe

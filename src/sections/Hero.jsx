@@ -3,13 +3,16 @@ import classes from '../styles/Hero.module.css'
 import { motion } from "framer-motion"
 import { ArrowRightCircle, CursorText  } from "react-bootstrap-icons"
 import { introductionText, descriptionText,  } from "../data/data.js"
-import { useEffect, useState } from 'react'
+import { forwardRef, useEffect, useState } from 'react'
 import chessboardImage from "../assets/images/backgrounds/chessboard.png"
 import knightImage from "../assets/images/backgrounds/knight.png"
 import { skills } from '../data/data.js'
 import Icon from '../components/Icon.jsx'
+import { useGlobalContext } from '../context/GlobalContext.jsx'
 
-const Hero = () => {
+const Hero = forwardRef((props, ref) => {
+
+  const { onUpdateActiveLink } = useGlobalContext()
 
   const [currentIntroductionText, setCurrentIntroductionText] = useState("")
   const [currentDescriptionText, setCurrentDescriptionText] = useState("")
@@ -58,9 +61,23 @@ const Hero = () => {
     return () => clearTimeout(ticker)
   }, [currentDescriptionText])
 
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries, observer) => {
+      const entry = entries[0]
+      if (entry.isIntersecting) {
+        onUpdateActiveLink("home")
+      }
+    })
+    observer.observe(ref.current)
+  }, [])
 
   return (
-    <Container as="section" className={classes.container} id="home">
+    <Container
+      as="section"
+      className={classes.container}
+      id="home"
+      ref={ref}
+    >
 
       <motion.h1
         className={classes.welcome}
@@ -97,6 +114,6 @@ const Hero = () => {
 
     </Container>
   )
-}
+})
 
 export default Hero

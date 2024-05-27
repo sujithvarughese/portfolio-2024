@@ -1,5 +1,4 @@
 import { BiMessageRoundedDetail } from "react-icons/bi";
-import { Container } from 'react-bootstrap'
 const emailAddress = "sujith.varug@gmail.com"
 
 const MessageFloat = () => {
@@ -7,7 +6,6 @@ const MessageFloat = () => {
   return (
     <a
       href={`mailto:${emailAddress}`}
-
       style={styles}
     >
       <BiMessageRoundedDetail />

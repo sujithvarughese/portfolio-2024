@@ -5,12 +5,11 @@
     border-radius: 100px;
     backdrop-filter: blur(10px);
     transition:  0.32s ease-out;
-}
 
-.container {
+}
+.content {
     justify-content: space-around;
     width: 100%;
-
 }
 .links {
     gap: 10px;
@@ -19,20 +18,14 @@
     color: #fff;
     z-index: 999;
 }
-
 .active {
     background: rgba(217, 217, 217, 0.4);
-    color: #fff;
     padding: 10px;
-    transition: 0.3s ease-in-out;
     border-radius: 50%;
-    display: flex;
     aspect-ratio: 1/1;
 }
-
 .socials {
     gap: 10px;
-    color: #fff;
 }
 .socials a {
     color: #fff;
