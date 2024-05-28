@@ -1,3 +1,7 @@
+:root {
+  --colorAlt: #66d9ed;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -88,16 +92,16 @@ nav.navbar.scrolled {
 
 nav.navbar a.navbar-brand {
   width: 9%;
-  color: #fff3cd;
+  color: #fff;
 }
 nav.navbar a.navbar-brand:hover {
-  color: #ffffff;
+  color: #66d9ed;
   font-weight: 500;
 
 }
 #basic-nav-dropdown {
   font-weight: 400;
-  color: #fff !important;
+  color: #fff;
   letter-spacing: 0.8px;
   padding: 0 25px;
   font-size: 18px;
@@ -105,11 +109,12 @@ nav.navbar a.navbar-brand:hover {
 }
 #basic-nav-dropdown:hover {
   opacity: 1;
-  text-shadow: 0 0 1px white;
+  color: #66d9ed ;
+  text-shadow: 0 0 1px white ;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
-  color: #fff !important;
+  color: #fff;
   letter-spacing: 0.8px;
   padding: 0 25px;
   font-size: 18px;
@@ -117,7 +122,8 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover {
   opacity: 1;
-  text-shadow: 0 0 1px white;
+  text-shadow: 0 0 1px #66d9ed ;
+  color: #66d9ed ;
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   opacity: 1;
@@ -185,10 +191,25 @@ span.navbar-text {
   width: 0%;
   height: 100%;
   position: absolute;
-  background-color: rgba(205, 217, 278, 0.4);
+  background: linear-gradient(
+          90deg,
+          hsl(188deg 79% 5%) 0%,
+          hsl(190deg 62% 9%) 8%,
+          hsl(189deg 67% 12%) 17%,
+          hsl(188deg 72% 15%) 25%,
+          hsl(189deg 74% 18%) 33%,
+          hsl(189deg 76% 21%) 42%,
+          hsl(189deg 79% 24%) 50%,
+          hsl(189deg 79% 29%) 58%,
+          hsl(189deg 80% 33%) 67%,
+          hsl(189deg 80% 38%) 75%,
+          hsl(189deg 57% 49%) 83%,
+          hsl(189deg 64% 58%) 92%,
+          hsl(189deg 79% 66%) 100%
+  );
   left: 0;
   top: 0;
-  z-index: 50;
+  z-index: -50;
   transition: 0.3s ease-in-out;
 }
 .connect:hover {
@@ -208,7 +229,8 @@ span.navbar-text {
   margin-top: 52px;
 }
 .footer {
-  margin: 36px 12px;
+  height: 450px;
+  margin: 36px 12px 0 12px;
   background-image: url("./assets/images/backgrounds/knight_wins_board.png");
   background-position: center center;
   background-size: cover;

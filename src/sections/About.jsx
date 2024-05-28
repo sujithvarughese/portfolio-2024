@@ -27,10 +27,10 @@ const About = forwardRef((props, ref) => {
       className={classes.container}
       id="about"
     >
-        <h2
+        <h1
           ref={ref}
           style={{ margin: "16px 0" }}
-        >About Me</h2>
+        >About Me</h1>
 
         <Row className={classes.content}>
           <Col xs={12} lg={6} className={classes.image}>

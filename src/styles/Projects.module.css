@@ -64,17 +64,33 @@
     .cards {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 36px;
+        gap: 72px;
     }
     .card {
         padding: 0;
         position: relative;
         border-radius: 30px;
+
         overflow: hidden;
     }
     .card::before {
         content: "";
-        background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+        background: linear-gradient(
+                50deg,
+                hsl(188deg 79% 5%) 0%,
+                hsl(190deg 62% 9%) 9%,
+                hsl(189deg 67% 12%) 18%,
+                hsl(188deg 72% 15%) 28%,
+                hsl(189deg 74% 18%) 37%,
+                hsl(189deg 76% 21%) 47%,
+                hsl(189deg 79% 24%) 56%,
+                hsl(189deg 79% 29%) 65%,
+                hsl(189deg 80% 33%) 73%,
+                hsl(189deg 80% 38%) 81%,
+                hsl(189deg 57% 49%) 88%,
+                hsl(189deg 64% 58%) 94%,
+                hsl(189deg 79% 66%) 100%
+        );
         opacity: 0.85;
         position: absolute;
         width: 100%;

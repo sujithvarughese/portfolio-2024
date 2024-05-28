@@ -5,6 +5,9 @@ import { useEffect, useState } from 'react'
 import { IoIosHome, IoIosApps } from "react-icons/io";
 import { RiUser3Fill } from "react-icons/ri";
 import { PiCertificateFill } from "react-icons/pi";
+import { IoAppsSharp } from "react-icons/io5";
+import { GiGearStickPattern } from "react-icons/gi";
+
 import { FaFacebookF, FaGithub } from "react-icons/fa6";
 
 import diploma from "../assets/images/certificates/diploma.png"
@@ -65,7 +68,7 @@ const NavBarFloat = () => {
               className={activeLink === "skills" ? classes.active : ""}
               onClick={() => onUpdateActiveLink("skills")}
             >
-              <IoIosHome size="24px" />
+              <GiGearStickPattern size="24px" />
             </Nav.Link>
             <Nav.Link
               href="#about"
@@ -79,7 +82,7 @@ const NavBarFloat = () => {
               className={activeLink === "projects" ? classes.active : ""}
               onClick={() => onUpdateActiveLink("projects")}
             >
-              <IoIosApps size="24px" />
+              <IoAppsSharp size="24px" />
             </Nav.Link>
           </Nav>
           <Stack direction="horizontal" className={classes.socials}>
