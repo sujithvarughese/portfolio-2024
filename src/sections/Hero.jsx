@@ -14,52 +14,29 @@ const Hero = forwardRef((props, ref) => {
 
   const { onUpdateActiveLink } = useGlobalContext()
 
+  const [currentWelcomeText, setCurrentWelcomeText] = useState("")
   const [currentIntroductionText, setCurrentIntroductionText] = useState("")
-  const [currentDescriptionText, setCurrentDescriptionText] = useState("")
 
-  const [currentIntroductionIndex, setCurrentIntroductionIndex] = useState(2)
-  const [currentDescriptionIndex, setCurrentDescriptionIndex] = useState(2)
-
-  let ticker
-  const printLetter = () => {
-
-    if (currentIntroductionText === introductionText) {
-      ticker = setTimeout(() => {
-        const updatedText = descriptionText.substring(0, currentDescriptionIndex)
-        setCurrentDescriptionText(prev => updatedText)
-        setCurrentDescriptionIndex(prevState => prevState + 1)
-      }, 23)
-    } else {
-      ticker = setTimeout(() => {
-        const updatedText = introductionText.substring(0, currentIntroductionIndex)
-        setCurrentIntroductionText(prev => updatedText)
-        setCurrentIntroductionIndex(prevState => prevState + 1)
-      }, 45)
+  const updateWord = (word, currentWord) => {
+    if (word.length === currentWord.length) {
+      return currentWord
     }
+    return word.substring(0, currentWord.length + 1)
   }
 
   useEffect(() => {
-    if (currentIntroductionText === introductionText) {
-      setCurrentDescriptionText("I")
-    }
-    if (currentIntroductionText.length === 0) {
-      const temp = setTimeout(() => {
-        setCurrentIntroductionText("M")
-        clearTimeout(temp)
-      }, 1800)
-    } else {
-      printLetter()
-    }
-    return () => clearTimeout(ticker)
-  }, [currentIntroductionText])
+    const timer = setTimeout(() => {
+      if (currentWelcomeText !== "Welcome.") {
+        const updatedWord = updateWord("Welcome.", currentWelcomeText)
+        setCurrentWelcomeText(updatedWord)
+      } else if (currentIntroductionText !== introductionText) {
+        const updatedWord = updateWord(introductionText, currentIntroductionText)
+        setCurrentIntroductionText(updatedWord)
+      }
+    }, 45)
+    return () => clearTimeout(timer)
+  }, [currentWelcomeText, currentIntroductionText])
 
-  useEffect(() => {
-    if (currentDescriptionText.length === 0) {
-      return
-    }
-    printLetter()
-    return () => clearTimeout(ticker)
-  }, [currentDescriptionText])
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries, observer) => {
@@ -81,17 +58,18 @@ const Hero = forwardRef((props, ref) => {
 
       <motion.h1
         className={classes.welcome}
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0, transition: { duration: 1, delay: 1.5 } }}
-        viewport={{ once: false, amount: 0.5 }}
       >
-        Welcome.
+        {currentWelcomeText}
       </motion.h1>
 
       <Container className={classes.text}>
         <Col xs={12} sm={8} md={6} xl={7}>
           <h1>{currentIntroductionText}</h1>
-          <p>{currentDescriptionText}</p>
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0, transition: { duration: 1, delay: 1.4 } }}
+            viewport={{ once: false, amount: 0.5 }}
+          >{descriptionText}</motion.p>
         </Col>
       </Container>
 
@@ -105,6 +83,8 @@ const Hero = forwardRef((props, ref) => {
           className={classes.knight}
           src={knightImage}
           alt="knight"
+          // animate={{ opacity: [0.6, 1, 1], x: [-110, -220, 0], y: [-55, 0, 0], scale: [0.7, 1, 1] }}
+          // transition={{ times: [0, 0.5, 1], duration: 2 }}
           // drag
           // dragConstraints={{ top: 50, right: 50, bottom: 50, left: 100 }}
           // dragTransition={{ bounceStiffness: 200, bounceDamping: 10 }}

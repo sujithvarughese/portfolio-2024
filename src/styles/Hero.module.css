@@ -5,16 +5,14 @@
     font-weight: 700;
     font-size: 84px;
 }
-.text {
-    height: 250px;
-}
+
 .text h1 {
     font-size: 24px;
     font-weight: 700;
     letter-spacing: 0.8px;
     line-height: 1;
-    margin-bottom: 20px;
     display: block;
+    height: 50px;
 
 }
 .container p {
@@ -43,37 +41,92 @@
 }
 .image {
     position: relative;
-
-}
-.chessboard {
-    top: 0;
 }
 .knight {
     position: absolute;
-    width: 25%;
-    top: 15%;
-    left: 43%;
+    width: 20%;
+    top: 23%;
+    left: 39%;
     z-index: 0;
-    animation: knight-move-mobile 1.5s ease-in-out;
-}
-@media (min-width: 576px) {
-    .knight {
-        animation: knight-move 1.5s ease-in-out;
-    }
-}
-@keyframes knight-move {
-    0% {
-        transform: scale3d(0.4, 0.4, 0.4) translate(-160%, 25%);
-    }
-    70% {
-        transform: translateX(-80%)
-    }
+    animation: 1s knight-move-mobile ease-in-out;
 }
 @keyframes knight-move-mobile {
     0% {
-        transform: scale3d(0.4, 0.4, 0.4) translate(-160%, 45%);
+        transform: scale(0.7, 0.7) translate(-70%, -15%);
     }
-    70% {
-        transform: translateX(-80%)
+    50% {
+        transform: scale(1, 1) translateX(-100%)
+    }
+}
+
+@media (min-width: 576px) {
+    .knight {
+        animation: 1s knight-move-sm ease-in-out;
+    }
+}
+@keyframes knight-move-sm {
+    0% {
+        transform: scale(0.7, 0.7) translate(-80%, -15%);
+    }
+    50% {
+        transform: scale(1, 1) translateX(-115%)
+    }
+}
+
+@media (min-width: 768px) {
+    .knight {
+        top: 15%;
+        animation: 1s knight-move-md ease-in-out;
+    }
+}
+@keyframes knight-move-md {
+    0% {
+        transform: scale(0.8, 0.8) translate(-70%, -15%);
+    }
+    50% {
+        transform: scale(1, 1) translateX(-105%)
+    }
+}
+
+@media (min-width: 992px) {
+    .knight {
+        top: 15%;
+        animation: 1s knight-move-lg ease-in-out;
+    }
+}
+@keyframes knight-move-lg {
+    0% {
+        transform: scale(0.7, 0.7) translate(-75%, -15%);
+    }
+    50% {
+        transform: scale(1, 1) translate(-115%)
+    }
+}
+
+@media (min-width: 1200px) {
+    .knight {
+        animation: 1s knight-move-xl ease-in-out;
+    }
+}
+@keyframes knight-move-xl {
+    0% {
+        transform: scale(0.7, 0.7) translate(-75%, -15%);
+    }
+    50% {
+        transform: scale(1, 1) translate(-120%)
+    }
+}
+
+@media (min-width: 1400px) {
+    .knight {
+        animation: 1s knight-move-xl ease-in-out;
+    }
+}
+@keyframes knight-move-xl {
+    0% {
+        transform: scale(0.7, 0.7) translate(-85%, -15%);
+    }
+    50% {
+        transform: scale(1, 1) translate(-125%)
     }
 }

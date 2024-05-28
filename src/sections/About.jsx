@@ -37,26 +37,9 @@ const About = forwardRef((props, ref) => {
             <Image src={profilePicture} alt="Profile Picture" />
           </Col>
 
-          <Col className={`${classes.paragraph}`}>
+          <Col xs={12} lg={6} className={`${classes.paragraph}`}>
             <p>{aboutMeAlt}</p>
           </Col>
-          {/*
-          <Col className="col-11 col-lg-6 offset-lg-6 p-3">
-            <h4>Skills</h4>
-            {skills.map((skill, index) =>
-              <Icon
-                key={index}
-                name={skill}
-                variant="secondary"
-                styles={{
-                  gap: "6px",
-                  fontSize: "14px"
-                }}
-              />
-            )}
-          </Col>
-          */}
-
         </Row>
 
 

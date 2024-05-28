@@ -3,6 +3,8 @@ import { Container, Image, Stack } from 'react-bootstrap'
 import classes from "../styles/Projects.module.css"
 import ProjectDrawer from './ProjectDrawer.jsx'
 import { motion, useInView } from 'framer-motion'
+import { FaArrowRightFromBracket } from "react-icons/fa6";
+import arrowIcon from "../assets/icons/arrow-right.svg"
 import VideoJS from './VideoJS.jsx'
 
 const ProjectCard = ({ title, description, coverImage, coverVideo, coverGif, heading, link, github, captions, images, tech }) => {
@@ -72,8 +74,16 @@ const ProjectCard = ({ title, description, coverImage, coverVideo, coverGif, hea
           <Image src={coverGif} alt="gif" />
         }
         <Container className={classes.text}>
-          <h3>{title}</h3>
+          <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <h3>{title}</h3>
+            <div className="social-icon">
+              <a className="social-icon"><img src={arrowIcon} alt="arrow" /></a>
+            </div>
+          </div>
+
+
           <h4>{heading}</h4>
+
         </Container>
       </Container>
 

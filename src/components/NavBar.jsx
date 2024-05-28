@@ -35,9 +35,6 @@ const NavBar = ({ scrollToHero, scrollToAboutMe, scrollToProjects, scrollToConta
 
   return (
     <Navbar
-      as={motion.nav}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { duration: 1, delay: 2 } }}
       expand="lg"
       className={isScrolled ? "scrolled" : ""}>
       <Container>

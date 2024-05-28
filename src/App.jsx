@@ -59,19 +59,23 @@ const App = () => {
 
   return (
     <Stack>
-      <div className="large">
+      <motion.div
+        className="large"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { duration: 1, delay: 1.4 } }}
+      >
         <NavBar
           scrollToHero={scrollToHero}
           scrollToSkills={scrollToSkills}
           scrollToAbout={scrollToAbout}
           scrollToProjects={scrollToProjects}
         />
-      </div>
+      </motion.div>
 
       <motion.div
         className="small"
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { duration: 1, delay: 1.5 } }}
+        animate={{ opacity: 1, transition: { duration: 1, delay: 1.4 } }}
       >
         <NavBarFloat />
       </motion.div>
@@ -80,7 +84,7 @@ const App = () => {
 
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { duration: 1, delay: 1.5 } }}
+        animate={{ opacity: 1, transition: { duration: 1, delay: 1.4 } }}
       >
         <Skills ref={skillsRef} />
         <About ref={aboutRef}/>
