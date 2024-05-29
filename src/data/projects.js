@@ -57,7 +57,7 @@ export const projects = [
 		coverImage: medscopeCoverIMG,
 		coverVideo: medscopeCoverMP4,
 		coverGif: medscopeCoverGIF,
-		heading: "AI powered medical assistant for personalized treatment options.",
+		heading: "AI powered medical assistant for personalized treatment options based on your symptoms.",
 		description: "When I was feeling sick last month, I called the specialist to make an appointment. Boy, was I shocked as the receptionist told me there is a 3 month wait just for a visit. I tried googling my symptoms but filtering for accurate results proved quite difficult, and taking medical advice from a 12-year old resident Reddit doctor didn't sound too appealing.\n\nThis app puts everything in one place. Enter up to five symptoms, along with your age and sex. With the help of AI, you will get several options of reliable treatment, sorted in order of effectiveness. Results include medication details, dosing and usage, and potential risks and side effects. I recently partnered with DrugBank, and their API will further improve accuracy and detail, along with added features such as drug to drug interactions. ",
 		captions: [
 			"Search through drug list with autocompletion.",
@@ -75,7 +75,7 @@ export const projects = [
 		coverImage: bookstaxCoverIMG,
 		coverVideo: bookstaxCoverMP4,
 		coverGif: bookstaxCoverGIF,
-		heading: "One stop reading organizer to arrange, annotate and retain information from your reading.",
+		heading: "Reading organizer to keep track of your reading and discover new books.",
 		description: "A remake of an older app I created called On The Books, but this time using React Native for full mobile functionality.\n\nThe current top reading apps are essentially just online stores to buy e-books. This app is geared toward organization and efficient note-taking, while still having the ability to discover and purchase books through Apple and Amazon.",
 		captions: [
 			"Integration with New York Times Best Sellers API and OpenLibrary's search API",
@@ -93,7 +93,7 @@ export const projects = [
 		coverImage: simplerFitnessCoverIMG,
 		coverVideo: simplerFitnessCoverMP4,
 		coverGif: simplerFitnessCoverGIF,
-		heading: "AI-powered workout assistant that creates routines and gives detailed breakdowns of each exercise based on your personal profile and available equipment.",
+		heading: "AI-powered exercise app that creates customized routines and detailed instructions of each workout.",
 		description: "At the start of the pandemic, I decided to build a home gym to help my parents get in shape. Within months, the equipment began collecting dust. I realized the problem for my parents, like many of us wanting to get in shape, is not that we don't want to work out. Most of us simply have no idea which exercises to do, how to do them safely, and what kind of workout routine to follow.\n\nI created this app as a solution to create personal workout routines based on experience level, time, available equipment, and target body parts if desired.",
 		captions: [
 			"Custom workouts through OpenAI prompt returns data to back end in JSON.",
@@ -111,7 +111,7 @@ export const projects = [
 		coverImage: blackjackCoverIMG,
 		coverVideo: blackjackCoverMP4,
 		coverGif: blackjackCoverGIF,
-		heading: "Learn perfect strategy and see how profitable you can be with live feedback after each move and an ROI tracker.",
+		heading: "Learn perfect strategy with hints, live feedback and an ROI tracker.",
 		description: "Beat Blackjack is designed to teach blackjack strategy while having fun trying to beat the house. Use the optional hint feature at any time to get the correct book play, or choose to get live feedback after your move.",
 		captions: [
 			"Customizable settings- Choose number of decks, blackjack payouts, your bankroll, number of splits allowed, and more.",
@@ -131,7 +131,7 @@ export const projects = [
 		coverImage: realtyCoverIMG,
 		coverVideo: realtyCoverMP4,
 		coverGif: realtyCoverGIF,
-		heading: "Property management app for owners of rental units to manage finances, communicate with tenants, and get current market rental data.",
+		heading: "Property management app to manage finances, communicate with tenants, and get market rental data.",
 		description: "Through my experience in property management, my largest gripe is the lack of an efficient system for managing payments and tenant-owner communication.\n\nI created Realty Solutions where all properties can be organized in one place. View mortgage details, insurance premiums, association fees, just to name a few. Owners can send rent receipts and talk to tenants through the messaging functionality. In the future, I would like to integrate a payment processor such as Stripe, where tenants can directly pay owners and owners can pay all expenses using only this app.",
 		captions: [
 			"Retrieve mortgage information, then determine monthly payments, view live payoff quotes, and get profits/losses.",
@@ -151,7 +151,7 @@ export const projects = [
 		coverImage: onTheBooksCoverIMG,
 		coverVideo: onTheBooksCoverMP4,
 		coverGif: onTheBooksCoverGIF,
-		heading: "Original reading application designed to help you organize your collection, discover new books, and take notes.",
+		heading: "Original reading application designed to help you organize, discover new books, and take notes.",
 		description: "One of the first full-stack web applications I designed and created. This is the original version of the BOOKSTAX app, and performs much of the same functionality. It amazes me seeing my own growth as a developer in less than a year. ",
 		captions: [
 			"OpenLibrary API integration to search books by genre and get previews and recommendations.",

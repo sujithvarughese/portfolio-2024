@@ -4,10 +4,12 @@
 }
 .links a {
     color: #fff;
+
     z-index: 999;
 }
 .active {
-    background: rgba(217, 217, 217, 0.4);
+    color: #66d9ed;
+
     padding: 10px;
     border-radius: 50%;
     aspect-ratio: 1/1;

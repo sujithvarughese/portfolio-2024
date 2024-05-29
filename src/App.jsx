@@ -71,17 +71,8 @@ const App = () => {
 
   return (
     <Stack ref={mouseRef}>
-      <motion.div
-        animate={{
-          opacity: 1,
-          height: 10,
-          width: 10,
-          backgroundColor: "red",
-          x: mouse?.clientX,
-          y: mouse?.clientY
-        }}
-      />
-      <Cursor style={{ width: "100%", height: "100%"}}/>
+
+      <Cursor />
       <motion.div
         className="large"
         initial={{ opacity: 0 }}

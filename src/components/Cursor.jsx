@@ -1,32 +1,36 @@
-import React, { forwardRef, useEffect, useRef } from 'react'
-import { useMotionValue, useMotionValueEvent } from 'framer-motion'
-import useMouse from '@react-hook/mouse-position'
-import { motion } from "framer-motion"
+import AnimatedCursor from 'react-animated-cursor'
 const Cursor = () => {
-
-
-  const mouseRef = useRef()
-  const mouse = useMouse(mouseRef, {
-    enterDelay: 100,
-    leaveDelay: 100,
-  })
 
 
 
   return (
-    <motion.div
-      ref={mouseRef}
-      animate={{
-        opacity: 1,
-        height: 10,
-        width: 10,
-        backgroundColor: "green",
-        x: mouse?.clientX,
-        y: mouse?.clientY
+    <AnimatedCursor
+      innerSize={8}
+      outerSize={35}
+      innerScale={1}
+      outerScale={2}
+      outerAlpha={0}
+      hasBlendMode={true}
+      innerStyle={{
+        backgroundColor: 'var(--color-alt)'
       }}
-    >
-      <h1>idk</h1>
-    </motion.div>
+      outerStyle={{
+        border: '1px solid var(--color-alt)'
+      }}
+      clickables={[
+        'a',
+        'input[type="text"]',
+        'input[type="email"]',
+        'input[type="number"]',
+        'input[type="submit"]',
+        'input[type="image"]',
+        'label[for]',
+        'select',
+        'textarea',
+        'button',
+        '.link',
+      ]}
+    />
   )
 }
 

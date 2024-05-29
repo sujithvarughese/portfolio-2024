@@ -1,5 +1,5 @@
 :root {
-  --colorAlt: #66d9ed;
+  --color-alt: #66d9ed;
 }
 
 * {
@@ -76,7 +76,7 @@ nav.navbar {
   width: 100%;
   transition: 1s ease-in-out;
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   nav.navbar {
     padding: 18px 0;
     position: sticky;
@@ -127,7 +127,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link:hover {
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   opacity: 1;
-  font-weight: 700;
+  text-shadow: 0 0 1px #66d9ed ;
 }
 span.navbar-text {
   display: flex;

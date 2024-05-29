@@ -25,7 +25,7 @@ const emailAddress = "sujith.varug@gmail.com"
 const NavBarFloat = () => {
 
   const { activeLink, onUpdateActiveLink } = useGlobalContext()
-
+  console.log(activeLink)
   const { scrollY } = useScroll()
   const [isHidden, setIsHidden] = useState(false)
 
@@ -85,21 +85,21 @@ const NavBarFloat = () => {
               className={activeLink === "skills" ? classes.active : ""}
               onClick={() => onUpdateActiveLink("skills")}
             >
-              <GiGearStickPattern size="24px" />
+              <GiGearStickPattern size="24px" color={activeLink === "skills" ? "#66d9ed" : "#fff"}/>
             </Nav.Link>
             <Nav.Link
               href="#about"
               className={activeLink === "about" ? classes.active : ""}
               onClick={() => onUpdateActiveLink("about")}
             >
-              <RiUser3Fill size="24px" />
+              <RiUser3Fill size="24px" color={activeLink === "about" ? "#66d9ed" : "#fff"} />
             </Nav.Link>
             <Nav.Link
               href="#projects"
               className={activeLink === "projects" ? classes.active : ""}
               onClick={() => onUpdateActiveLink("projects")}
             >
-              <IoAppsSharp size="24px" />
+              <IoAppsSharp size="24px" color={activeLink === "projects" ? "#66d9ed" : "#fff"}/>
             </Nav.Link>
           </Nav>
           <Stack direction="horizontal" className={classes.socials}>

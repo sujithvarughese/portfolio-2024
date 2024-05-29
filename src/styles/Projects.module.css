@@ -19,24 +19,25 @@
     aspect-ratio: 1/1;
 }
 .text {
-    background: white;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
     text-align: center;
     align-items: center;
     justify-content: center;
     transition: 0.5s ease-in-out;
-    padding: 20px;
+    padding: 24px;
+
 }
 .text h3 {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 700;
-    letter-spacing: 0.8px;
-    line-height: 1.1em;
+    line-height: 1.8em;
 }
-.text h4 {
-    font-style: italic;
+.text p {
+    color: grey;
     font-weight: 400;
-    font-size: 15px;
-    letter-spacing: 0.8px;
+    font-size: 16px;
+    letter-spacing: 0.7px;
 }
 .carouselContainer {
     display: flex;
@@ -54,7 +55,7 @@
     display: none;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     .small {
         display: none;
     }
@@ -64,21 +65,17 @@
     .cards {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 72px;
     }
-    .text h3 {
-        font-size: 48px;
-        font-weight: 800;
-    }
-    .text h4 {
-        padding-top: 8px;
-        font-size: 20px;
-        font-weight: 600;
-        color: #BEBEBE
+    .text {
+        padding: 4px;
     }
 }
-
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
+    .text {
+        padding: 12px;
+    }
+}
+@media (min-width: 992px) {
     .cards {
         grid-template-columns: 1fr 1fr 1fr;
     }

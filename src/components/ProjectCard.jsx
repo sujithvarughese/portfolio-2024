@@ -75,12 +75,9 @@ const ProjectCard = ({ title, description, coverImage, coverVideo, coverGif, hea
         }
         <Container  style={{ maxWidth: "400px" }} className={classes.text}>
           <h3>{title}</h3>
-          <h4>{heading}</h4>
+          <p>{heading}</p>
         </Container>
       </Container>
-
-
-
 
 
       <Container
@@ -99,12 +96,12 @@ const ProjectCard = ({ title, description, coverImage, coverVideo, coverGif, hea
           :
           <Image src={coverImage} alt="image" className={classes.image}/>
         }
-        {isInView &&
-          <Container className={classes.text}>
-            <h3>{title}</h3>
-            <h4>{heading}</h4>
-          </Container>
-        }
+
+        <Container className={classes.text}>
+          <h3>{title}</h3>
+          <p>{heading}</p>
+        </Container>
+
       </Container>
 
 
