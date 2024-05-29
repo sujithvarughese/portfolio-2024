@@ -24,7 +24,6 @@ const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
 
   useMotionValueEvent(scrollY, "change", currentY => {
-    console.log(isScrolled)
     if (currentY > 50) {
       setIsScrolled(true)
     } else {

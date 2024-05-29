@@ -10,6 +10,8 @@ import MessageFloat from './components/MessageFloat.jsx'
 import { motion, useMotionValue } from 'framer-motion'
 import { Stack } from 'react-bootstrap'
 import Skills from './sections/Skills.jsx'
+import Cursor from './components/Cursor.jsx'
+import useMouse from '@react-hook/mouse-position'
 const App = () => {
 
   // refs are forwarded to appropriate components to ref component in that section
@@ -57,8 +59,29 @@ const App = () => {
     return () => window.removeEventListener("load", resetLoading)
   }, [])
 
+
+  const mouseRef = useRef()
+  const mouse = useMouse(mouseRef, {
+    enterDelay: 100,
+    leaveDelay: 100,
+  })
+
+
+
+
   return (
-    <Stack>
+    <Stack ref={mouseRef}>
+      <motion.div
+        animate={{
+          opacity: 1,
+          height: 10,
+          width: 10,
+          backgroundColor: "red",
+          x: mouse?.clientX,
+          y: mouse?.clientY
+        }}
+      />
+      <Cursor style={{ width: "100%", height: "100%"}}/>
       <motion.div
         className="large"
         initial={{ opacity: 0 }}

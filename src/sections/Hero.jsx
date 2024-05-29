@@ -48,6 +48,7 @@ const Hero = forwardRef((props, ref) => {
     observer.observe(ref.current)
   }, [])
 
+
   return (
     <Container
       as="section"
