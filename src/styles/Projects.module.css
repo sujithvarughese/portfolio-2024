@@ -50,13 +50,6 @@
     margin: 4px auto;
     padding: 4px
 }
-.arrow {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding: 8px
-
-}
 .large {
     display: none;
 }
@@ -73,17 +66,6 @@
         grid-template-columns: 1fr 1fr;
         gap: 72px;
     }
-
-    .text {
-        position: absolute;
-        opacity: 0;
-        color: #ffffff;
-        background: none;
-        top: 65%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-    }
     .text h3 {
         font-size: 48px;
         font-weight: 800;
@@ -94,5 +76,10 @@
         font-weight: 600;
         color: #BEBEBE
     }
+}
 
+@media (min-width: 1400px) {
+    .cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }

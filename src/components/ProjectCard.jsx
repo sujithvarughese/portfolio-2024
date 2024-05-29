@@ -73,16 +73,11 @@ const ProjectCard = ({ title, description, coverImage, coverVideo, coverGif, hea
           //<VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
           <Image src={coverImage} alt="gif" />
         }
-        <Container  style={{ maxWidth: "400px" }}>
+        <Container  style={{ maxWidth: "400px" }} className={classes.text}>
           <h3>{title}</h3>
           <h4>{heading}</h4>
         </Container>
-
-        <div className={classes.arrow}>
-          <FaArrowRightFromBracket size={24}/>
-        </div>
       </Container>
-
 
 
 
