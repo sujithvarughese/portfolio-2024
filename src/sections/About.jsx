@@ -48,4 +48,8 @@ const About = forwardRef((props, ref) => {
   )
 })
 
+const styles = {
+
+}
+
 export default About

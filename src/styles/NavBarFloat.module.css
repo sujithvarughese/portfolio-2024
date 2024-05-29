@@ -18,3 +18,14 @@
 .socials a {
     color: #fff;
 }
+.tablet {
+    display: none;
+}
+@media (min-width: 576px) {
+    .tablet {
+        display: initial;
+    }
+    .mobile {
+        display: none;
+    }
+}
