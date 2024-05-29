@@ -225,9 +225,7 @@ span.navbar-text {
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
 }
-.offcanvas {
-  margin-top: 52px;
-}
+
 .footer {
   height: 450px;
   margin: 36px 12px 0 12px;

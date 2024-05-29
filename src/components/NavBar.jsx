@@ -12,38 +12,36 @@ import reactNativeCert from "../assets/images/certificates/react_native_cert.jpg
 import mernCert from "../assets/images/certificates/MERN_2024_cert.jpg"
 import accountingCert from "../assets/images/certificates/accounting_certificate.png"
 import businessManagementCert from "../assets/images/certificates/business_management_cert.png"
-import { motion } from 'framer-motion'
+import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import { useGlobalContext } from '../context/GlobalContext.jsx'
 
 
 const NavBar = ({ scrollToHero, scrollToAboutMe, scrollToProjects, scrollToContactMe }) => {
 
   const { activeLink, onUpdateActiveLink }  = useGlobalContext()
+
+  const { scrollY } = useScroll()
   const [isScrolled, setIsScrolled] = useState(false)
 
-  useEffect(() => {
-    const onScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true)
-      } else {
-        setIsScrolled(false)
-      }
+  useMotionValueEvent(scrollY, "change", currentY => {
+    console.log(isScrolled)
+    if (currentY > 50) {
+      setIsScrolled(true)
+    } else {
+      setIsScrolled(false)
     }
-    window.addEventListener("scroll", onScroll)
-    return () => window.removeEventListener("scroll", onScroll)
-  }, [])
+  })
 
   return (
-    <Navbar
-      expand="lg"
-      className={isScrolled ? "scrolled" : ""}>
+    <Navbar className={isScrolled ? "scrolled" : ""}>
       <Container>
         <Navbar.Brand
           href="#home"
           className={activeLink === "home" ? "active navbar-link" : "navbar-link"}
           onClick={()=> onUpdateActiveLink("home")}
         >
-          <p className={activeLink === "home" ? "active navbar-link" : "navbar-link"}>sujithvarughese</p>
+          <p className={activeLink === "home" ? "active navbar-link" : "navbar-link"}>
+            sujithvarughese</p>
         </Navbar.Brand>
 
         <Nav className="me-auto" >
