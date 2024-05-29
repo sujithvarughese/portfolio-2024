@@ -38,13 +38,12 @@ h2 {
 
 .paragraph {
     font-size: 22px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+
 }
 .paragraph p {
     line-height: 1.2;
     white-space: break-spaces;
+    margin: 32px;
 }
 
 
