@@ -17,6 +17,6 @@ export const deploymentSkills = "Experienced in full software life cycle process
 
 export const introductionText = "My name is Sujith."
 export const textLine1 = "I am a software developer based in Miami, FL"
-export const descriptionText = "I am a software developer based in Miami, FL. I am passionate about creating useful and efficient ways to solve problems through software. I specialize in JavaScript, React, and React Native. My current focus is engineering OpenAI prompts to combine with traditional APIs to fetch data thoroughly as possible."
+export const descriptionText = "I am a software developer based in Miami, FL. I am passionate about creating useful and efficient ways to solve problems through software. I specialize in JavaScript, React, and React Native."
 
 export const projectTestingMessage = "App currently in testing. Full source code is available. Contact me for access to test version."

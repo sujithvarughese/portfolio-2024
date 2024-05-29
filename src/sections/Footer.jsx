@@ -27,7 +27,6 @@ const Footer = () => {
 
         <Stack className="social-icon">
           <a href={`mailto:${emailAddress}`} target="_blank" rel="noreferrer"><img src={sendMessageIcon} alt="Icon" /></a>
-          <a href="http://linkedin.com/sujithvarughese" target="_blank" rel="noreferrer"><img src={linkedInIcon} alt="Icon" /></a>
           <a href="http://facebook.com/sujithvarughese" target="_blank" rel="noreferrer"><img src={fbIcon} alt="Icon" /></a>
           <a href="http://github.com/sujithvarughese" target="_blank" rel="noreferrer"><img src={githubIcon} alt="Icon" /></a>
         </Stack>
