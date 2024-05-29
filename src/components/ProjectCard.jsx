@@ -68,24 +68,22 @@ const ProjectCard = ({ title, description, coverImage, coverVideo, coverGif, hea
         onMouseLeave={()=>setIsHovering(false)}
       >
         {isHovering ?
-          <Image src={coverImage} alt="image"/>
+          <Image src={coverGif} alt="image"/>
           :
           //<VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
-          <Image src={coverGif} alt="gif" />
+          <Image src={coverImage} alt="gif" />
         }
-        <Container className={classes.text}>
-          <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <h3>{title}</h3>
-            <div className="social-icon">
-              <a className="social-icon"><img src={arrowIcon} alt="arrow" /></a>
-            </div>
-          </div>
-
-
+        <Container  style={{ maxWidth: "400px" }}>
+          <h3>{title}</h3>
           <h4>{heading}</h4>
-
         </Container>
+
+        <div className={classes.arrow}>
+          <FaArrowRightFromBracket size={24}/>
+        </div>
       </Container>
+
+
 
 
 
