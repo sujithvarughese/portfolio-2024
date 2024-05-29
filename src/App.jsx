@@ -10,8 +10,8 @@ import MessageFloat from './components/MessageFloat.jsx'
 import { motion, useMotionValue } from 'framer-motion'
 import { Stack } from 'react-bootstrap'
 import Skills from './sections/Skills.jsx'
-import Cursor from './components/Cursor.jsx'
 import useMouse from '@react-hook/mouse-position'
+import Cursor from './components/Cursor.jsx'
 const App = () => {
 
   // refs are forwarded to appropriate components to ref component in that section
@@ -60,17 +60,10 @@ const App = () => {
   }, [])
 
 
-  const mouseRef = useRef()
-  const mouse = useMouse(mouseRef, {
-    enterDelay: 100,
-    leaveDelay: 100,
-  })
-
-
 
 
   return (
-    <Stack ref={mouseRef}>
+    <Stack>
 
       <Cursor />
       <motion.div
