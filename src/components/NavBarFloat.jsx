@@ -52,6 +52,7 @@ const NavBarFloat = () => {
           <NavDropdown
             title={<PiCertificateFill size="28px" color="#fff"/>}
             autoClose={false}
+            drop="up"
           >
             <NavDropdown.Item href={diploma} target="_blank" rel="noreferrer">Bachelor's Diploma</NavDropdown.Item>
             <NavDropdown.Divider />

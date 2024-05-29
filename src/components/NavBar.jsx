@@ -16,7 +16,7 @@ import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import { useGlobalContext } from '../context/GlobalContext.jsx'
 
 
-const NavBar = ({ scrollToHero, scrollToAboutMe, scrollToProjects, scrollToContactMe }) => {
+const NavBar = () => {
 
   const { activeLink, onUpdateActiveLink }  = useGlobalContext()
 
