@@ -1,25 +1,26 @@
 .container {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.content {
+    justify-content: center;
+    align-items: center;
+    position: relative;
 
 }
-.welcome {
-    font-weight: 700;
-    font-size: 84px;
-}
-
 .text h1 {
-    font-size: 24px;
+    font-size: 84px;
     font-weight: 700;
     letter-spacing: 0.8px;
-    line-height: 1;
     display: block;
-    height: 50px;
 
 }
 .container p {
     color: #B8B8B8;
     font-size: 20px;
     letter-spacing: 0.8px;
-    line-height: 1.5em;
 }
 .container button {
     color: #fff;
@@ -40,8 +41,33 @@
     margin-left: 25px;
 }
 .image {
-    position: relative;
+    transform: rotate(6deg);
+    z-index: -10;
+    padding: 0;
+    transition: 0.3s ease-in-out;
 }
+.image img {
+    border-radius: 36px;
+    aspect-ratio: 1/1;
+}
+.image::before {
+    content: "";
+    transform: rotate(-10deg);
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    width: inherit;
+    aspect-ratio: 1/1;
+    position: absolute;
+    z-index: -100;
+    border-radius: 36px;
+    transition: 0.3s ease-in-out;
+}
+.image:hover {
+    transform: rotate(-1deg);
+}
+.image:hover::before {
+    transform: rotate(4deg);
+}
+
 .knight {
     position: absolute;
     width: 20%;

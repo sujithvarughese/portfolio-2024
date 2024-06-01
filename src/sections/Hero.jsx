@@ -2,11 +2,11 @@ import { Container, Row, Col, Stack, Image } from 'react-bootstrap'
 import classes from '../styles/Hero.module.css'
 import { motion } from "framer-motion"
 import { ArrowRightCircle, CursorText  } from "react-bootstrap-icons"
-import { introductionText, descriptionText,  } from "../data/data.js"
+import { introductionText, descriptionText, fullName, bio } from "../data/data.js"
 import { forwardRef, useEffect, useState } from 'react'
 import chessboardImage from "../assets/images/backgrounds/chessboard.png"
 import knightImage from "../assets/images/backgrounds/knight.png"
-import { skills } from '../data/data.js'
+import profilePicture from "../assets/images/profile/profile_square.png"
 import Icon from '../components/Icon.jsx'
 import { useGlobalContext } from '../context/GlobalContext.jsx'
 
@@ -17,6 +17,8 @@ const Hero = forwardRef((props, ref) => {
   const [currentWelcomeText, setCurrentWelcomeText] = useState("")
   const [currentIntroductionText, setCurrentIntroductionText] = useState("")
 
+  const [currentNameText, setCurrentNameText] = useState("")
+
   const updateWord = (word, currentWord) => {
     if (word.length === currentWord.length) {
       return currentWord
@@ -26,16 +28,16 @@ const Hero = forwardRef((props, ref) => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (currentWelcomeText !== "Welcome.") {
-        const updatedWord = updateWord("Welcome.", currentWelcomeText)
-        setCurrentWelcomeText(updatedWord)
-      } else if (currentIntroductionText !== introductionText) {
-        const updatedWord = updateWord(introductionText, currentIntroductionText)
+      if (currentNameText !== fullName) {
+        const updatedWord = updateWord(fullName, currentNameText)
+        setCurrentNameText(updatedWord)
+      } else if (currentIntroductionText !== bio) {
+        const updatedWord = updateWord(bio, currentIntroductionText)
         setCurrentIntroductionText(updatedWord)
       }
     }, 45)
     return () => clearTimeout(timer)
-  }, [currentWelcomeText, currentIntroductionText])
+  }, [currentNameText, currentIntroductionText])
 
 
   useEffect(() => {
@@ -56,23 +58,42 @@ const Hero = forwardRef((props, ref) => {
       id="home"
       ref={ref}
     >
+      <Row className={classes.content}>
+        <Col className={classes.text} xs={12} sm={8} md={6} xl={7} style={{ placeSelf: "center"}}>
+          <h1>{currentNameText}</h1>
+          <h2>{currentIntroductionText}</h2>
+        </Col>
+        <Col as={motion.p}
+           xs={12} lg={4}
+           className={classes.image}
+           initial={{ opacity: 0, y: 50 }}
+           animate={{ opacity: 1, y: 0, transition: { duration: 1, delay: 1.4 } }}
+           viewport={{ once: false, amount: 0.5 }}
+        >
+          <Image src={profilePicture} alt="profile picture" />
+        </Col>
+      </Row>
 
-      <motion.h1
-        className={classes.welcome}
-      >
-        {currentWelcomeText}
-      </motion.h1>
 
-      <Container className={classes.text}>
-        <Col xs={12} sm={8} md={6} xl={7}>
-          <h1>{currentIntroductionText}</h1>
-          <motion.p
+
+
+
+
+
+    </Container>
+  )
+})
+
+export default Hero
+
+{/*
+
+       <motion.p
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0, transition: { duration: 1, delay: 1.4 } }}
             viewport={{ once: false, amount: 0.5 }}
-          >{descriptionText}</motion.p>
-        </Col>
-      </Container>
+          >{descriptionText}
+      </motion.p>
 
       <Row className={classes.image}>
 
@@ -91,9 +112,4 @@ const Hero = forwardRef((props, ref) => {
           // dragTransition={{ bounceStiffness: 200, bounceDamping: 10 }}
         />
       </Row>
-
-    </Container>
-  )
-})
-
-export default Hero
+      */}

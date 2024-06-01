@@ -65,24 +65,31 @@ section {
   margin: 36px 0;
 }
 
+
 /************ Navbar Css ************/
-nav.navbar {
-  position: fixed;
-  bottom: 3%;
-  padding: 16px 24px;
-  z-index: 999;
-  border-radius: 100px;
-  backdrop-filter: blur(10px);
-  width: 100%;
-  transition: 1s ease-in-out;
+@media (max-width: 767px) {
+  nav.navbar {
+    position: fixed;
+    bottom: 3%;
+    padding: 16px 24px;
+    z-index: 999;
+    border-radius: 100px;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    transition: 1s ease-in-out;
+  }
 }
+
 @media (min-width: 768px) {
   nav.navbar {
     padding: 18px 0;
-    position: sticky;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
     transition:  0.32s ease-in-out;
-    border-radius: revert;
-    backdrop-filter: revert;
+    border-radius: 100px;
+    backdrop-filter: blur(10px);
+
   }
 }
 nav.navbar.scrolled {
