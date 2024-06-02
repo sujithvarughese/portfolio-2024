@@ -31,26 +31,26 @@ const Skills = forwardRef((props, ref) => {
       <h1 ref={ref}>Skills</h1>
 
       <Row className={classes.table}>
-        <Col xs={12} lg={4}>
+        <Col xs={12} lg={4} className={classes.programming}>
           <Row className={classes.row}>
             <Col xs={3}><HiOutlineComputerDesktop size={56} /></Col>
-            <Col xs={8}><h2 className={classes.programming}>Programming</h2></Col>
+            <Col xs={8}><h2>Programming</h2></Col>
           </Row>
           <Container className={classes.paragraph}><h4>{softwareSkills}</h4></Container>
         </Col>
 
-        <Col xs={12} lg={4}>
+        <Col xs={12} lg={4} className={classes.development}>
           <Row className={classes.row}>
             <Col xs={3}><RiStackLine size={56} /></Col>
-            <Col xs={8}><h2 className={classes.development}>Development</h2></Col>
+            <Col xs={8}><h2>Development</h2></Col>
           </Row>
           <Container className={classes.paragraph}><h4>{fullStackSkills}</h4></Container>
         </Col>
 
-        <Col xs={12} lg={4}>
+        <Col xs={12} lg={4} className={classes.engineering}>
           <Row className={classes.row}>
             <Col xs={3}><AiOutlineDeploymentUnit size={56}/></Col>
-            <Col xs={8}><h2 className={classes.engineering}>Engineering</h2></Col>
+            <Col xs={8}><h2>Engineering</h2></Col>
           </Row>
           <Container className={classes.paragraph}><h4>{deploymentSkills}</h4></Container>
         </Col>
