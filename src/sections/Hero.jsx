@@ -59,9 +59,10 @@ const Hero = forwardRef((props, ref) => {
       ref={ref}
     >
       <Row className={classes.content}>
-        <Col className={classes.text} xs={12} sm={8} md={6} xl={7} style={{ placeSelf: "center"}}>
+        <Col className={classes.text} lg={8} xl={7} style={{ placeSelf: "center"}}>
           <h1>{currentNameText}</h1>
           <h2>{currentIntroductionText}</h2>
+
         </Col>
         <Col as={motion.p}
            xs={12} lg={4}

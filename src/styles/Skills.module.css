@@ -1,13 +1,15 @@
 
 .table {
-    padding: 42px 0;
+
 }
 .row {
     align-items: center;
 }
+.row h4 {
 
+}
 .paragraph {
     padding: 36px;
-    font-size: 18px;
+    font-size: 24px;
     letter-spacing: 0.6px;
 }

@@ -34,25 +34,25 @@ const Skills = forwardRef((props, ref) => {
         <Col xs={12} lg={4}>
           <Row className={classes.row}>
             <Col xs={3}><HiOutlineComputerDesktop size={56} /></Col>
-            <Col xs={8} style={{ textDecoration: "underline 6px red" }}><h4>Software Development</h4></Col>
+            <Col xs={8} style={{ textDecoration: "underline 6px red" }}><h2>Programming</h2></Col>
           </Row>
-          <Container className={classes.paragraph}><p>{softwareSkills}</p></Container>
+          <Container className={classes.paragraph}><h4>{softwareSkills}</h4></Container>
         </Col>
 
         <Col xs={12} lg={4}>
           <Row className={classes.row}>
             <Col xs={3}><RiStackLine size={56} /></Col>
-            <Col xs={8} style={{ textDecoration: "underline 6px blue" }}><h4>Full-Stack Development</h4></Col>
+            <Col xs={8} style={{ textDecoration: "underline 6px blue" }}><h2>Development</h2></Col>
           </Row>
-          <Container className={classes.paragraph}><p>{fullStackSkills}</p></Container>
+          <Container className={classes.paragraph}><h4>{fullStackSkills}</h4></Container>
         </Col>
 
         <Col xs={12} lg={4}>
           <Row className={classes.row}>
             <Col xs={3}><AiOutlineDeploymentUnit size={56}/></Col>
-            <Col xs={8} style={{ textDecoration: "underline 6px orange" }}><h4>Network & Deployment</h4></Col>
+            <Col xs={8} style={{ textDecoration: "underline 6px orange" }}><h2>Engineering</h2></Col>
           </Row>
-          <Container className={classes.paragraph}><p>{deploymentSkills}</p></Container>
+          <Container className={classes.paragraph}><h4>{deploymentSkills}</h4></Container>
         </Col>
 
       </Row>
