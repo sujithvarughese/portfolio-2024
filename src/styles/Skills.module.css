@@ -13,3 +13,13 @@
     font-size: 24px;
     letter-spacing: 0.6px;
 }
+
+.programming {
+    text-decoration: underline 6px red;
+}
+.development {
+    text-decoration: underline 6px blue;
+}
+.engineering {
+    text-decoration: underline 6px green;
+}
