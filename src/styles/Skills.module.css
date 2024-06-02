@@ -15,11 +15,11 @@
 }
 
 .programming {
-    text-decoration: underline 6px red;
+    text-decoration: underline 6px red !important;
 }
 .development {
-    text-decoration: underline 6px blue;
+    text-decoration: underline 6px blue !important;
 }
 .engineering {
-    text-decoration: underline 6px green;
+    text-decoration: underline 6px green !important;
 }
