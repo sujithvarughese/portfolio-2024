@@ -9,15 +9,16 @@ import knightImage from "../assets/images/backgrounds/knight.png"
 import profilePicture from "../assets/images/profile/profile_square.png"
 import Icon from '../components/Icon.jsx'
 import { useGlobalContext } from '../context/GlobalContext.jsx'
+import { IoLocationSharp } from "react-icons/io5";
 
 const Hero = forwardRef((props, ref) => {
 
   const { onUpdateActiveLink } = useGlobalContext()
 
-  const [currentWelcomeText, setCurrentWelcomeText] = useState("")
-  const [currentIntroductionText, setCurrentIntroductionText] = useState("")
-
   const [currentNameText, setCurrentNameText] = useState("")
+  const [currentIntroductionText, setCurrentIntroductionText] = useState("")
+  const [currentLocationText, setCurrentLocationText] = useState("")
+
 
   const updateWord = (word, currentWord) => {
     if (word.length === currentWord.length) {
@@ -34,10 +35,13 @@ const Hero = forwardRef((props, ref) => {
       } else if (currentIntroductionText !== bio) {
         const updatedWord = updateWord(bio, currentIntroductionText)
         setCurrentIntroductionText(updatedWord)
+      } else if (currentLocationText !== "Miami, FL") {
+        const updatedWord = updateWord("Miami, FL", currentLocationText)
+        setCurrentLocationText(updatedWord)
       }
     }, 45)
     return () => clearTimeout(timer)
-  }, [currentNameText, currentIntroductionText])
+  }, [currentNameText, currentIntroductionText, currentLocationText])
 
 
   useEffect(() => {
@@ -62,14 +66,25 @@ const Hero = forwardRef((props, ref) => {
         <Col className={classes.text} lg={8} xl={7} style={{ placeSelf: "center"}}>
           <h1>{currentNameText}</h1>
           <h2>{currentIntroductionText}</h2>
-
+          <span>
+            <motion.div
+              initial={{ opacity: 0, y: -1000, x: -50 }}
+              animate={{
+                opacity: 1, y: 0, x: 0,
+                transition: { delay: 3, type: "spring", damp: 350, mass: 0.2, stiffness: 250  }
+            }}
+            >
+              <IoLocationSharp size={28}/>
+            </motion.div>
+            <h4>{currentLocationText}</h4>
+          </span>
         </Col>
         <Col as={motion.p}
            xs={12} lg={4}
            className={classes.image}
            initial={{ opacity: 0, y: 50 }}
-           animate={{ opacity: 1, y: 0, transition: { duration: 1, delay: 1.4 } }}
-           viewport={{ once: false, amount: 0.5 }}
+           animate={{ opacity: 1, y: 0, transition: { duration: 1, delay: 0.5 } }}
+
         >
           <Image src={profilePicture} alt="profile picture" />
         </Col>

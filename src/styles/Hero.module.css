@@ -5,18 +5,24 @@
         place-items: center;
     }
 }
-
 .content {
     justify-content: center;
     align-items: center;
     position: relative;
 }
+.text {
+    letter-spacing: 0.8px;
 
+}
 .text h1 {
     font-size: 84px;
     font-weight: 700;
-    letter-spacing: 0.8px;
     display: block;
+}
+.text span {
+    display: flex;
+    gap: 4px;
+    padding-top: 14px;
 }
 @media (max-width: 766px) {
     .text h1 {
