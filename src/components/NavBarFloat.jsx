@@ -25,7 +25,6 @@ const emailAddress = "sujith.varug@gmail.com"
 const NavBarFloat = () => {
 
   const { activeLink, onUpdateActiveLink } = useGlobalContext()
-  console.log(activeLink)
   const { scrollY } = useScroll()
   const [isHidden, setIsHidden] = useState(false)
 

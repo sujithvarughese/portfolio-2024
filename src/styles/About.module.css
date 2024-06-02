@@ -1,7 +1,16 @@
 .container {
-    padding-top: 125px;
-    padding-bottom: 125px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
+
+
+@media (min-width: 992px) {
+    .container {
+        padding-top: 125px;
+        padding-bottom: 125px;
+    }
+}
+
 .content {
     justify-content: center;
     align-items: center;

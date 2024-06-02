@@ -40,7 +40,7 @@ const NavBar = () => {
           onClick={()=> onUpdateActiveLink("home")}
         >
           <p className={activeLink === "home" ? "active navbar-link" : "navbar-link"}>
-            sujithvarughese</p>
+            SV</p>
         </Navbar.Brand>
 
         <Nav className="me-auto" >

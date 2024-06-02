@@ -7,7 +7,7 @@ import Footer from './sections/Footer.jsx'
 import NavBarFloat from './components/NavBarFloat.jsx'
 import { useRef, Fragment, useEffect, useState } from 'react'
 import MessageFloat from './components/MessageFloat.jsx'
-import { motion, useMotionValue } from 'framer-motion'
+import { motion, useMotionValue, useMotionValueEvent, useScroll } from 'framer-motion'
 import { Stack } from 'react-bootstrap'
 import Skills from './sections/Skills.jsx'
 import useMouse from '@react-hook/mouse-position'
@@ -60,7 +60,25 @@ const App = () => {
   }, [])
 
 
+  const { scrollY } = useScroll()
+  const [isScrolled, setIsScrolled] = useState(false)
 
+
+  useMotionValueEvent(scrollY, "change", currentY => {
+    const previousY = scrollY.getPrevious()
+    if (currentY > previousY) {
+      setIsScrolled(true)
+    }
+  })
+
+  const [showComponents, setShowComponents] = useState(false)
+  useEffect(() => {
+    setTimeout(() => {
+      setShowComponents(true)
+    }, 3000)
+  }, [])
+
+  console.log(isScrolled)
 
   return (
     <Stack>
@@ -87,17 +105,28 @@ const App = () => {
         <NavBarFloat />
       </motion.div>
 
-      <Hero ref={heroRef}/>
 
+      <Hero ref={heroRef} />
+
+
+      {showComponents &&
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { duration: 1, delay: 1.4 } }}
+        initial={{ opacity: 0, y: 1000 }}
+        animate={{
+          y: isScrolled ? 0 : 1000,
+          opacity: 1, transition: { duration: 1, ease: "easeInOut" }
+        }}
       >
         <Skills ref={skillsRef} />
         <About ref={aboutRef}/>
         <Projects ref={projectsRef}/>
         <Footer />
       </motion.div>
+
+      }
+
+
+
 
 
     </Stack>
