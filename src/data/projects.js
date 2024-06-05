@@ -161,7 +161,7 @@ export const projects = [
 		images: [bookDiscoverIMG, notebookIMG, bookSearchIMG, bookPreviewIMG],
 		desktop: otbDesktop,
 		mobile: otbMobile,
-		link: 'https://onthebooks.sujithvarughese.com',
+		link: 'https://otb.sujithvarughese.com',
 		github: 'https://github.com/sujithvarughese/on-the-books',
 		tech: ["JavaScript", "NodeJS", "React", "MongoDB", "Styled Components", "HTML", "CSS"],
 		featured: false,

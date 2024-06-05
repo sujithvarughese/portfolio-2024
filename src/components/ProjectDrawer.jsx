@@ -4,7 +4,12 @@ import Icon from './Icon.jsx'
 import { projectTestingMessage } from '../data/data.js'
 const ProjectDrawer = ({ isOpen, onClose, title, description, images, captions, link, github, tech }) => {
   return (
-    <Offcanvas show={isOpen} onHide={onClose}>
+    <Offcanvas
+        show={isOpen}
+        onHide={onClose}
+        className={classes.modal}
+        backdropClassName={classes.backdrop}
+    >
       <Offcanvas.Header closeButton>
         <Offcanvas.Title><h3>{title}</h3></Offcanvas.Title>
       </Offcanvas.Header>
