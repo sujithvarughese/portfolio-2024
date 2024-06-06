@@ -77,9 +77,7 @@ const App = () => {
       setShowComponents(true)
     }, 3000)
   }, [])
-
-  console.log(isScrolled)
-
+  
   return (
     <Stack>
 

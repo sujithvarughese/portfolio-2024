@@ -58,7 +58,7 @@ export const projects = [
 		coverVideo: medscopeCoverMP4,
 		coverGif: medscopeCoverGIF,
 		heading: "AI powered medical assistant for personalized treatment options based on your symptoms.",
-		description: "When I was feeling sick last month, I called the specialist to make an appointment. Boy, was I shocked as the receptionist told me there is a 3 month wait just for a visit. I tried googling my symptoms but filtering for accurate results proved quite difficult, and taking medical advice from a 12-year old resident Reddit doctor didn't sound too appealing.\n\nThis app puts everything in one place. Enter up to five symptoms, along with your age and sex. With the help of AI, you will get several options of reliable treatment, sorted in order of effectiveness. Results include medication details, dosing and usage, and potential risks and side effects. I recently partnered with DrugBank, and their API will further improve accuracy and detail, along with added features such as drug to drug interactions. ",
+		description: "When I was feeling sick last month, I called the specialist to make an appointment. To my shock, the receptionist told me there is a 3 month wait just for a visit. I tried googling my symptoms but filtering for accurate results proved quite difficult, and taking medical advice from a 12-year old resident Reddit doctor didn't sound too appealing.\n\nThis app puts everything in one place. Enter up to five symptoms, along with your age and sex. With the help of AI, you will get several options of reliable treatment, sorted in order of effectiveness. Results include medication details, dosing and usage, and potential risks and side effects. I recently partnered with DrugBank, and their API will further improve accuracy and detail, along with added features such as drug to drug interactions. ",
 		captions: [
 			"Search through drug list with autocompletion.",
 			"Get treatment based on age, sex, and selected list of symptoms.",
@@ -76,7 +76,7 @@ export const projects = [
 		coverVideo: bookstaxCoverMP4,
 		coverGif: bookstaxCoverGIF,
 		heading: "Reading organizer to keep track of your reading and discover new books.",
-		description: "A remake of an older app I created called On The Books, but this time using React Native for full mobile functionality.\n\nThe current top reading apps are essentially just online stores to buy e-books. This app is geared toward organization and efficient note-taking, while still having the ability to discover and purchase books through Apple and Amazon.",
+		description: "A remake of an older app I created called On The Books, but this time using React Native for full mobile functionality.\n\nWhile most current reading apps are simply online stores to buy e-books, this app is geared toward organization and efficient note-taking, while still having the ability to discover and purchase books through Apple and Amazon.",
 		captions: [
 			"Integration with New York Times Best Sellers API and OpenLibrary's search API",
 			"Nested navigators with several stacks and tabs using react-native-navigation.",
@@ -161,7 +161,7 @@ export const projects = [
 		images: [bookDiscoverIMG, notebookIMG, bookSearchIMG, bookPreviewIMG],
 		desktop: otbDesktop,
 		mobile: otbMobile,
-		link: 'https://otb.sujithvarughese.com',
+		link: 'https://on-the-books.netlify.app',
 		github: 'https://github.com/sujithvarughese/on-the-books',
 		tech: ["JavaScript", "NodeJS", "React", "MongoDB", "Styled Components", "HTML", "CSS"],
 		featured: false,

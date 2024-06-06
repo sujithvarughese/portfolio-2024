@@ -14,7 +14,7 @@ const ProjectDrawer = ({ isOpen, onClose, title, description, images, captions, 
         <Offcanvas.Title><h3>{title}</h3></Offcanvas.Title>
       </Offcanvas.Header>
 
-      <Offcanvas.Body>
+      <Offcanvas.Body className={classes.content}>
 
         <p className={classes.description}>{description}</p>
 
