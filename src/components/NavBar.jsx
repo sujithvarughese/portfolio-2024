@@ -5,6 +5,7 @@ import fbIcon from '../assets/icons/fb-icon.svg';
 import githubIcon from "../assets/icons/github-mark-white.svg"
 const emailAddress = "sujith.varug@gmail.com"
 
+import resume from "../assets/images/certificates/resume-2024.png"
 import diploma from "../assets/images/certificates/diploma.png"
 import metaCert from "../assets/images/certificates/meta_frontend_cert.png"
 import javascriptCert from "../assets/images/certificates/adv_javascript_cert.jpg"
@@ -78,6 +79,8 @@ const NavBar = () => {
             <NavDropdown.Item href={accountingCert} target="_blank" rel="noreferrer">Accounting Technology</NavDropdown.Item>
             <NavDropdown.Item href={businessManagementCert} target="_blank" rel="noreferrer">Business Management</NavDropdown.Item>
           </NavDropdown>
+
+          <Nav.Link href={resume} className="navbar-link" target="_blank" rel="noreferrer">Resume</Nav.Link>
 
         </Nav>
         <span className="navbar-text">

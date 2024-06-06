@@ -10,6 +10,7 @@ import { GiGearStickPattern } from "react-icons/gi";
 
 import { FaFacebookF, FaGithub } from "react-icons/fa6";
 
+import resume from "../assets/images/certificates/resume-2024.png"
 import diploma from "../assets/images/certificates/diploma.png"
 import metaCert from "../assets/images/certificates/meta_frontend_cert.png"
 import javascriptCert from "../assets/images/certificates/adv_javascript_cert.jpg"
@@ -54,6 +55,7 @@ const NavBarFloat = () => {
             drop="down"
             className={classes.tablet}
           >
+            <NavDropdown.Item href={resume} target="_blank" rel="noreferrer">Resume</NavDropdown.Item>
             <NavDropdown.Item href={diploma} target="_blank" rel="noreferrer">Bachelor's Diploma</NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item href={metaCert} target="_blank" rel="noreferrer">Meta Front End Developer</NavDropdown.Item>
@@ -69,6 +71,7 @@ const NavBarFloat = () => {
             drop="up"
             className={classes.mobile}
           >
+            <NavDropdown.Item href={resume} target="_blank" rel="noreferrer">Resume</NavDropdown.Item>
             <NavDropdown.Item href={diploma} target="_blank" rel="noreferrer">Bachelor's Diploma</NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item href={metaCert} target="_blank" rel="noreferrer">Meta Front End Developer</NavDropdown.Item>

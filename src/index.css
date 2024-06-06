@@ -67,7 +67,7 @@ section {
 
 
 /************ Navbar Css ************/
-@media (max-width: 767px) {
+@media (max-width: 575px) {
   nav.navbar {
     position: fixed;
     bottom: 3%;
@@ -80,11 +80,11 @@ section {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   nav.navbar {
     padding: 18px 0;
     width: 100%;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 99;
     transition:  0.32s ease-in-out;
@@ -99,7 +99,7 @@ nav.navbar.scrolled {
 }
 
 nav.navbar a.navbar-brand {
-  width: 9%;
+  width: 7%;
   color: #fff;
 }
 nav.navbar a.navbar-brand:hover {
