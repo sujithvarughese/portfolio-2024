@@ -28,31 +28,31 @@ const Skills = forwardRef((props, ref) => {
       id="skills"
       className={classes.container}
     >
-      <h1 ref={ref}>Skills</h1>
+      <h1 ref={ref} style={{ textAlign: "center" }}>Skills</h1>
 
       <Row className={classes.table}>
         <Col xs={12} lg={4} className={classes.programming}>
           <Row className={classes.row}>
             <Col xs={3}><HiOutlineComputerDesktop size={56} /></Col>
-            <Col xs={8}><h2>Programming</h2></Col>
+            <Col xs={8}><h3>Programming</h3></Col>
           </Row>
-          <Container className={classes.paragraph}><h4>{softwareSkills}</h4></Container>
+          <Container className={classes.paragraph}><h5>{softwareSkills}</h5></Container>
         </Col>
 
         <Col xs={12} lg={4} className={classes.development}>
           <Row className={classes.row}>
             <Col xs={3}><RiStackLine size={56} /></Col>
-            <Col xs={8}><h2>Development</h2></Col>
+            <Col xs={8}><h3>Development</h3></Col>
           </Row>
-          <Container className={classes.paragraph}><h4>{fullStackSkills}</h4></Container>
+          <Container className={classes.paragraph}><h5>{fullStackSkills}</h5></Container>
         </Col>
 
         <Col xs={12} lg={4} className={classes.engineering}>
           <Row className={classes.row}>
             <Col xs={3}><AiOutlineDeploymentUnit size={56}/></Col>
-            <Col xs={8}><h2>Engineering</h2></Col>
+            <Col xs={8}><h3>Engineering</h3></Col>
           </Row>
-          <Container className={classes.paragraph}><h4>{deploymentSkills}</h4></Container>
+          <Container className={classes.paragraph}><h5>{deploymentSkills}</h5></Container>
         </Col>
 
       </Row>

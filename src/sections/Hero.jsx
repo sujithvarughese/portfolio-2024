@@ -7,6 +7,7 @@ import { forwardRef, useEffect, useState } from 'react'
 import chessboardImage from "../assets/images/backgrounds/chessboard.png"
 import knightImage from "../assets/images/backgrounds/knight.png"
 import profilePicture from "../assets/images/profile/profile_square.png"
+import profilePicture2 from "../assets/images/profile/profile-1.png"
 import Icon from '../components/Icon.jsx'
 import { useGlobalContext } from '../context/GlobalContext.jsx'
 import { IoLocationSharp } from "react-icons/io5";
@@ -74,7 +75,7 @@ const Hero = forwardRef((props, ref) => {
                 transition: { delay: 3, type: "spring", damp: 350, mass: 0.2, stiffness: 250  }
             }}
             >
-              <IoLocationSharp size={28}/>
+              <IoLocationSharp fontSize={28} className={classes.icon}/>
             </motion.div>
             <h4>{currentLocationText}</h4>
           </span>
@@ -86,7 +87,7 @@ const Hero = forwardRef((props, ref) => {
            animate={{ opacity: 1, y: 0, transition: { duration: 1, delay: 0.5 } }}
 
         >
-          <Image src={profilePicture} alt="profile picture" />
+          <Image src={profilePicture2} alt="profile picture" />
         </Col>
       </Row>
 

@@ -27,7 +27,7 @@ const Projects = forwardRef((props, ref) => {
     >
         <h1
           ref={ref}
-          style={{ margin: "16px 0" }}
+          style={{ margin: "16px 0", textAlign: "center" }}
         >Projects
         </h1>
 

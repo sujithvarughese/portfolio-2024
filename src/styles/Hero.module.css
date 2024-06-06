@@ -1,6 +1,6 @@
 @media (min-width: 992px) {
     .container {
-        padding: 240px 0;
+        padding-top: 100px;
         display: grid;
         place-items: center;
     }
@@ -23,46 +23,54 @@
     gap: 4px;
     padding-top: 14px;
 }
-@media (max-width: 766px) {
+@media (max-width: 991px) {
     .text h1 {
-        font-size: 72px;
+        padding-top: 36px;
+        font-size: 48px;
+    }
+    .image {
+        width: 80%;
+        margin-top: 24px;
     }
 }
 @media (max-width: 575px) {
     .text {
         gap: 56px;
-        padding-top: 42px;
+        padding-top: 24px;
     }
     .text h1 {
-        font-size: 48px;
+        font-size: 36px;
     }
     .text h2 {
-        font-size: 20px;
+        font-size: 18px;
+    }
+    .text h4 {
+        font-size: 16px;
+    }
+    .text .icon {
+       font-size: 24px;
+    }
+    .text span {
+        align-items: center;
     }
 }
+
 .image {
     transform: rotate(6deg);
     z-index: -10;
     padding: 0;
     transition: 0.3s ease-in-out;
 }
-@media (max-width: 991px) {
-    .image {
-        width: 80%;
-        margin-top: 76px;
-        margin-bottom: 76px;
-    }
-}
 .image img {
     border-radius: 36px;
-    aspect-ratio: 1/1;
+    transform: rotate(3deg);
 }
 .image::before {
     content: "";
-    transform: rotate(-10deg);
+    transform: rotate(-5deg);
     background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
     width: inherit;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1/2.4;
     position: absolute;
     z-index: -100;
     border-radius: 36px;
@@ -73,93 +81,4 @@
 }
 .image:hover::before {
     transform: rotate(4deg);
-}
-
-.knight {
-    position: absolute;
-    width: 20%;
-    top: 23%;
-    left: 39%;
-    z-index: 0;
-    animation: 1s knight-move-mobile ease-in-out;
-}
-@keyframes knight-move-mobile {
-    0% {
-        transform: scale(0.7, 0.7) translate(-70%, -15%);
-    }
-    50% {
-        transform: scale(1, 1) translateX(-100%)
-    }
-}
-
-@media (min-width: 576px) {
-    .knight {
-        animation: 1s knight-move-sm ease-in-out;
-    }
-}
-@keyframes knight-move-sm {
-    0% {
-        transform: scale(0.7, 0.7) translate(-80%, -15%);
-    }
-    50% {
-        transform: scale(1, 1) translateX(-115%)
-    }
-}
-
-@media (min-width: 768px) {
-    .knight {
-        top: 15%;
-        animation: 1s knight-move-md ease-in-out;
-    }
-}
-@keyframes knight-move-md {
-    0% {
-        transform: scale(0.8, 0.8) translate(-70%, -15%);
-    }
-    50% {
-        transform: scale(1, 1) translateX(-105%)
-    }
-}
-
-@media (min-width: 992px) {
-    .knight {
-        top: 15%;
-        animation: 1s knight-move-lg ease-in-out;
-    }
-}
-@keyframes knight-move-lg {
-    0% {
-        transform: scale(0.7, 0.7) translate(-75%, -15%);
-    }
-    50% {
-        transform: scale(1, 1) translate(-115%)
-    }
-}
-
-@media (min-width: 1200px) {
-    .knight {
-        animation: 1s knight-move-xl ease-in-out;
-    }
-}
-@keyframes knight-move-xl {
-    0% {
-        transform: scale(0.7, 0.7) translate(-75%, -15%);
-    }
-    50% {
-        transform: scale(1, 1) translate(-120%)
-    }
-}
-
-@media (min-width: 1400px) {
-    .knight {
-        animation: 1s knight-move-xl ease-in-out;
-    }
-}
-@keyframes knight-move-xl {
-    0% {
-        transform: scale(0.7, 0.7) translate(-85%, -15%);
-    }
-    50% {
-        transform: scale(1, 1) translate(-125%)
-    }
 }

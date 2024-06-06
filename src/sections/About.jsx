@@ -29,7 +29,8 @@ const About = forwardRef((props, ref) => {
     >
         <h1
           ref={ref}
-          style={{ margin: "16px 0" }}
+          className={classes.title}
+          style={{ margin: "16px 0", textAlign: "center" }}
         >About Me</h1>
 
         <Row className={classes.content}>
@@ -38,7 +39,7 @@ const About = forwardRef((props, ref) => {
           </Col>
 
           <Col xs={12} lg={6} className={`${classes.paragraph}`}>
-            <p>{aboutMeAlt}</p>
+            <h5>{aboutMeAlt}</h5>
           </Col>
         </Row>
 

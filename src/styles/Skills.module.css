@@ -1,4 +1,6 @@
-
+.container {
+    padding-top: 52px;
+}
 .table {
 
 }
@@ -10,7 +12,6 @@
 }
 .paragraph {
     padding: 36px;
-    font-size: 24px;
     letter-spacing: 0.6px;
 }
 
