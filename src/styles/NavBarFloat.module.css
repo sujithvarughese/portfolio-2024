@@ -23,7 +23,7 @@
 .tablet {
     display: none;
 }
-@media (min-width: 576px) {
+@media (min-width: 992px) {
     .tablet {
         display: initial;
     }
