@@ -11,7 +11,7 @@ export const aboutMeUpdated = "As a passionate software developer, I specialize 
 export const aboutMe3 = "Aside from programming, in my free time I enjoy working out, playing basketball, creating and editing videos, and hanging out with my 10 year old rottweiler, Hera!"
 export const skills = ['JavaScript', 'Python', 'Java', 'OpenAI', 'React', 'React Native', 'Expo', 'NodeJS','MongoDB', 'SQL', 'Firebase', 'AWS', 'Google Analytics', 'DNS & Networks', 'APIs', 'GraphQL', 'Data Structures', 'HTML', 'CSS', 'Material UI', 'ChakraUI', 'Styled Components', 'Bootstrap', 'Tailwind CSS', 'Git', 'Postman', "Scrum", 'Testing', 'Deployment']
 
-export const softwareSkills = "Experienced in both functional and object-oriented programming including JavaScript, Python, and Java."
+export const softwareSkills = "Experienced in both functional and object-oriented programming including JavaScript (including TypeScript), Python, and Java."
 
 export const fullStackSkills = "Over 2 years experience in React, React Native, NextJS, HTML, CSS, NodeJS, SQL, and MongoDB."
 
