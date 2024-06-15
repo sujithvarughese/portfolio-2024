@@ -64,17 +64,20 @@
 .image img {
     border-radius: 36px;
     transform: rotate(3deg);
+    height: 75vh;
+    width: auto;
 }
 .image::before {
     content: "";
     transform: rotate(-5deg);
     background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-    width: inherit;
     aspect-ratio: 1/2.4;
     position: absolute;
     z-index: -100;
     border-radius: 36px;
     transition: 0.3s ease-in-out;
+    height: 75vh;
+    width: auto;
 }
 .image:hover {
     transform: rotate(-1deg);
