@@ -44,7 +44,7 @@ const NavBarFloat = () => {
         as={motion.nav}
         className={classes.navbar}
         animate={{
-          transform: isHidden ? "translateY(100px)" : "translateY(0px)",
+          transform: isHidden ? "translateY(100px)" : "",
           transition: { duration: 0.5, ease: "easeInOut" }
       }}
       >
