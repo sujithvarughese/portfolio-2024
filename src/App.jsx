@@ -81,7 +81,10 @@ const App = () => {
   return (
     <Stack>
 
-      <Cursor />
+      <div className="large tablet">
+        <Cursor />
+      </div>
+
       <motion.div
         className="large"
         initial={{ opacity: 0 }}

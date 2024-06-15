@@ -248,7 +248,13 @@ span.navbar-text {
   .small {
     display: none;
   }
+
   .large {
+    display: initial;
+  }
+}
+@media (min-width: 576px) {
+  .tablet {
     display: initial;
   }
 }
