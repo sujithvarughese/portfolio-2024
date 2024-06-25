@@ -9,9 +9,6 @@
 }
 html {
   scroll-behavior: smooth;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
 }
 body {
   font-weight: 400;

@@ -5,6 +5,8 @@ import ProjectCard from '../components/ProjectCard.jsx'
 import { motion } from "framer-motion"
 import { useEffect, forwardRef } from 'react'
 import { useGlobalContext } from '../context/GlobalContext.jsx'
+import ProjectTile from '../components/ProjectTile.jsx'
+import Box from '@mui/material/Box'
 const Projects = forwardRef((props, ref) => {
 
   const { onUpdateActiveLink } = useGlobalContext()
@@ -31,13 +33,13 @@ const Projects = forwardRef((props, ref) => {
         >Projects
         </h1>
 
-        <Stack className={classes.cards}>
+        <Box sx={{ mt: 8, display: 'flex', flexWrap: 'wrap' }}>
           {projects?.map((project, index) => {
             return (
-              <ProjectCard key={index} {...project} index={index}/>
+              <ProjectTile key={index} {...project}/>
             )
           })}
-        </Stack>
+        </Box>
     </Container>
   )
 })

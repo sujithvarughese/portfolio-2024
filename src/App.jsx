@@ -8,7 +8,7 @@ import NavBarFloat from './components/NavBarFloat.jsx'
 import { useRef, Fragment, useEffect, useState } from 'react'
 import MessageFloat from './components/MessageFloat.jsx'
 import { motion, useMotionValue, useMotionValueEvent, useScroll } from 'framer-motion'
-import { Stack } from 'react-bootstrap'
+import { Container, Stack } from 'react-bootstrap'
 import Skills from './sections/Skills.jsx'
 import useMouse from '@react-hook/mouse-position'
 
@@ -79,7 +79,7 @@ const App = () => {
   }, [])
   
   return (
-    <Stack>
+    <Container style={{ maxWidth: "1200px"}}>
 
       <motion.div
         className="large"
@@ -126,7 +126,7 @@ const App = () => {
 
 
 
-    </Stack>
+    </Container>
   )
 }
 

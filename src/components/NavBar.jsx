@@ -34,7 +34,7 @@ const NavBar = () => {
 
   return (
     <Navbar className={isScrolled ? "scrolled" : ""}>
-      <Container>
+
         <Navbar.Brand
           href="#home"
           className={activeLink === "home" ? "active navbar-link" : "navbar-link"}
@@ -44,7 +44,7 @@ const NavBar = () => {
             SV</p>
         </Navbar.Brand>
 
-        <Nav className="me-auto" >
+        <Nav className="me-auto" style={{ alignItems: "center"}}>
           <Nav.Link
             href="#skills"
             className={activeLink === "skills" ? "active navbar-link" : "navbar-link"}
@@ -82,7 +82,7 @@ const NavBar = () => {
 
           <Nav.Link href={resume} className="navbar-link" target="_blank" rel="noreferrer">Resume</Nav.Link>
 
-        </Nav>
+
         <span className="navbar-text">
           <div className="social-icon">
             <a href="http://facebook.com/sujithvarughese" className="social-icon" target="_blank" rel="noreferrer"><img src={fbIcon} alt="Icon" /></a>
@@ -91,8 +91,8 @@ const NavBar = () => {
           <a href={`mailto:${emailAddress}`} className="vvd connect"><span style={{ color: "white"}}>Contact Me</span></a>
         </span>
 
-
-      </Container>
+        </Nav>
+     
     </Navbar>
   )
 }
