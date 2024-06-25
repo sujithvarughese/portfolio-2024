@@ -11,7 +11,7 @@ import { motion, useMotionValue, useMotionValueEvent, useScroll } from 'framer-m
 import { Stack } from 'react-bootstrap'
 import Skills from './sections/Skills.jsx'
 import useMouse from '@react-hook/mouse-position'
-import Cursor from './components/Cursor.jsx'
+
 const App = () => {
 
   // refs are forwarded to appropriate components to ref component in that section
@@ -80,10 +80,6 @@ const App = () => {
   
   return (
     <Stack>
-
-      <div className="large tablet">
-        <Cursor />
-      </div>
 
       <motion.div
         className="large"
