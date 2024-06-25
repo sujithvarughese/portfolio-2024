@@ -15,7 +15,6 @@ h2 {
 .image {
     transform: rotate(6deg);
     z-index: -10;
-
     padding: 0;
     width: 80%;
     transition: 0.3s ease-in-out;
@@ -43,14 +42,34 @@ h2 {
 }
 
 .paragraph {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
     letter-spacing: 0.8px;
     line-height: 1.2;
     white-space: break-spaces;
     margin: 32px;
+    color: black;
+    background-color: orangered;
+    padding: 24px
 }
 
 @media (min-width: 992px) {
-    .image {
-        width: 40%;
+    .content {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
     }
+    .image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        width: 50%;
+    }
+    .paragraph {
+        padding: 64px 96px;
+        border-radius: 8px;
+    }
+
 }

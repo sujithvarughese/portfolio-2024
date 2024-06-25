@@ -115,8 +115,8 @@ const App = () => {
         }}
       >
         <Skills ref={skillsRef} />
-        <About ref={aboutRef}/>
         <Projects ref={projectsRef}/>
+        <About ref={aboutRef}/>
         <Footer />
       </motion.div>
 

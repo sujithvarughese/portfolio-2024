@@ -28,7 +28,7 @@ const Skills = forwardRef((props, ref) => {
       id="skills"
       className={classes.container}
     >
-      <h1 ref={ref} style={{ textAlign: "center" }}>Skills</h1>
+      <h1 ref={ref} style={{ textAlign: "center" }}></h1>
 
       <Row className={classes.table}>
         <Col xs={12} lg={4} className={classes.programming}>
