@@ -11,6 +11,7 @@ import profilePicture2 from "../assets/images/profile/profile-1.png"
 import Icon from '../components/Icon.jsx'
 import { useGlobalContext } from '../context/GlobalContext.jsx'
 import { IoLocationSharp } from "react-icons/io5";
+import helloImage from '../assets/images/backgrounds/hello-transparent.png'
 
 const Hero = forwardRef((props, ref) => {
 
@@ -63,9 +64,17 @@ const Hero = forwardRef((props, ref) => {
       id="home"
       ref={ref}
     >
+      <motion.div
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 0.08 }}
+        transition={{ duration: 3 }}
+        style={{ position: "absolute" }}
+      >
+        <img src={helloImage} alt="Hello" />
+      </motion.div>
       <Row className={classes.content}>
         <Col className={classes.text} lg={8} xl={7} style={{ placeSelf: "center"}}>
-          <h1>{currentNameText}</h1>
+          <h1 style={{ fontSize: 48 }}>{currentNameText}</h1>
           <h2>{currentIntroductionText}</h2>
           <span>
             <motion.div

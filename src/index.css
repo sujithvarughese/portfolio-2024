@@ -175,6 +175,17 @@ span.navbar-text {
 .social-icon a:hover img {
   filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
 }
+
+.social-icon a:hover img {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+}
+.social-footer a {
+  background: rgba(0, 0, 0, 1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.social-footer a::before{
+  background-color: #ffffff;
+}
 .connect {
   font-weight: 700;
   color: #fff;
@@ -232,10 +243,9 @@ span.navbar-text {
 }
 
 .footer {
-  height: 450px;
-  margin: 36px 12px 0 12px;
-  background-image: url("./assets/images/backgrounds/knight_wins_board.png");
-  background-position: center center;
+  height: 400px;
+  background-image: url("./assets/images/backgrounds/chessboard.png");
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }

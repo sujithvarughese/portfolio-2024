@@ -30,12 +30,6 @@ const Contact = () => {
       <Typography variant="subtitle1" sx={{ my: 3 }}>
         Get in touch! Questions, feedback, and inquiries are all welcome.
       </Typography>
-      <Box
-        component="img"
-        src={helloImage}
-        alt="buoy"
-        sx={{ width: 720 }}
-      />
     </Container>
   );
 }

@@ -7,22 +7,10 @@ import { emailAddress } from '../data/data.js'
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" style={{ padding: 36 }}>
       <Stack className="text-center">
 
-        <Stack
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: "12px",
-            letterSpacing: 1,
-            margin: "24px 0"
-          }}
-        >
-          <h2>Thank you for visiting.</h2>
-        </Stack>
-
+        <h2>Thank you for visiting.</h2>
 
         <Stack className="social-icon social-footer">
           <a href={`mailto:${emailAddress}`} target="_blank" rel="noreferrer"><img src={sendMessageIcon} alt="Icon" /></a>

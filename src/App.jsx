@@ -11,6 +11,7 @@ import { motion, useMotionValue, useMotionValueEvent, useScroll } from 'framer-m
 import { Container, Stack } from 'react-bootstrap'
 import Skills from './sections/Skills.jsx'
 import useMouse from '@react-hook/mouse-position'
+import helloImage from "./assets/images/backgrounds/hello-transparent.png"
 
 const App = () => {
 
@@ -80,6 +81,8 @@ const App = () => {
   
   return (
     <Container>
+
+
 
       <motion.div
         className="large"
