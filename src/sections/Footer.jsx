@@ -21,11 +21,10 @@ const Footer = () => {
           }}
         >
           <h2>Thank you for visiting.</h2>
-          <h4>Feel free to contact me with any feedback or opportunities to work together.</h4>
         </Stack>
 
 
-        <Stack className="social-icon">
+        <Stack className="social-icon social-footer">
           <a href={`mailto:${emailAddress}`} target="_blank" rel="noreferrer"><img src={sendMessageIcon} alt="Icon" /></a>
           <a href="http://facebook.com/sujithvarughese" target="_blank" rel="noreferrer"><img src={fbIcon} alt="Icon" /></a>
           <a href="http://github.com/sujithvarughese" target="_blank" rel="noreferrer"><img src={githubIcon} alt="Icon" /></a>

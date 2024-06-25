@@ -79,7 +79,7 @@ const App = () => {
   }, [])
   
   return (
-    <Container style={{ maxWidth: "1200px"}}>
+    <Container>
 
       <motion.div
         className="large"
@@ -117,6 +117,7 @@ const App = () => {
         <Skills ref={skillsRef} />
         <Projects ref={projectsRef}/>
         <About ref={aboutRef}/>
+        <Contact />
         <Footer />
       </motion.div>
 

@@ -1,7 +1,8 @@
 import { forwardRef, useEffect } from 'react'
 import classes from "../styles/Skills.module.css"
 import { useGlobalContext } from '../context/GlobalContext.jsx'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
+import { Container } from "@mui/material"
 import {softwareSkills, fullStackSkills, deploymentSkills } from "../data/data.js"
 import { HiOutlineComputerDesktop } from "react-icons/hi2";
 import { AiOutlineDeploymentUnit } from "react-icons/ai";

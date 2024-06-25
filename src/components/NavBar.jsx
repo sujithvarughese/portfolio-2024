@@ -1,4 +1,5 @@
-import { Nav, Navbar, NavDropdown, Container } from "react-bootstrap"
+import { Nav, Navbar, NavDropdown } from "react-bootstrap"
+import { Container } from "@mui/material"
 import { useEffect, useState } from 'react'
 import linkedInIcon from '../assets/icons/linkedin-icon.svg';
 import fbIcon from '../assets/icons/fb-icon.svg';
@@ -15,6 +16,7 @@ import accountingCert from "../assets/images/certificates/accounting_certificate
 import businessManagementCert from "../assets/images/certificates/business_management_cert.png"
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import { useGlobalContext } from '../context/GlobalContext.jsx'
+import Box from '@mui/material/Box'
 
 
 const NavBar = () => {
@@ -33,7 +35,10 @@ const NavBar = () => {
   })
 
   return (
+
     <Navbar className={isScrolled ? "scrolled" : ""}>
+      <Container sx={{ display: "flex", alignItems: "center"}}>
+
 
         <Navbar.Brand
           href="#home"
@@ -81,19 +86,19 @@ const NavBar = () => {
           </NavDropdown>
 
           <Nav.Link href={resume} className="navbar-link" target="_blank" rel="noreferrer">Resume</Nav.Link>
-
-
-        <span className="navbar-text">
-          <div className="social-icon">
-            <a href="http://facebook.com/sujithvarughese" className="social-icon" target="_blank" rel="noreferrer"><img src={fbIcon} alt="Icon" /></a>
-            <a href="http://github.com/sujithvarughese" className="social-icon" target="_blank" rel="noreferrer"><img src={githubIcon} alt="Icon" /></a>
-          </div>
-          <a href={`mailto:${emailAddress}`} className="vvd connect"><span style={{ color: "white"}}>Contact Me</span></a>
-        </span>
-
         </Nav>
-     
+          <Box>
+            <span className="navbar-text">
+              <div className="social-icon">
+                <a href="http://facebook.com/sujithvarughese" className="social-icon" target="_blank" rel="noreferrer"><img src={fbIcon} alt="Icon" /></a>
+                <a href="http://github.com/sujithvarughese" className="social-icon" target="_blank" rel="noreferrer"><img src={githubIcon} alt="Icon" /></a>
+              </div>
+              <a href={`mailto:${emailAddress}`} className="vvd connect"><span style={{ color: "white"}}>Contact Me</span></a>
+            </span>
+          </Box>
+      </Container>
     </Navbar>
+
   )
 }
 
