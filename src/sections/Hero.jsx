@@ -7,12 +7,13 @@ import { forwardRef, useEffect, useState } from 'react'
 import chessboardImage from "../assets/images/backgrounds/chessboard.png"
 import knightImage from "../assets/images/backgrounds/knight.png"
 import profilePicture from "../assets/images/profile/profile_square.png"
-import profilePicture2 from "../assets/images/profile/profile-1.png"
+import profilePicture2 from "../assets/images/profile/profile_pic.png"
 import Icon from '../components/Icon.jsx'
 import { useGlobalContext } from '../context/GlobalContext.jsx'
 import { IoLocationSharp } from "react-icons/io5";
 import helloImage from '../assets/images/backgrounds/hello-transparent.png'
-
+import Box from '@mui/material/Box'
+import profilePictureMobile from "../assets/images/profile/profile_pic_small.png"
 const Hero = forwardRef((props, ref) => {
 
   const { onUpdateActiveLink } = useGlobalContext()
@@ -64,78 +65,24 @@ const Hero = forwardRef((props, ref) => {
       id="home"
       ref={ref}
     >
-      <motion.div
-        initial={{ opacity: 1 }}
-        animate={{ opacity: 0.09 }}
-        transition={{ duration: 3 }}
-        style={{ position: "absolute", width: "100vw", height: "100vh", zIndex: -10 }}
-      >
-        <img src={helloImage} alt="Hello" />
-      </motion.div>
-      <Row className={classes.content}>
-        <Col className={classes.text} lg={8} xl={7} style={{ placeSelf: "center"}}>
-          <h1 style={{ fontSize: 48 }}>{currentNameText}</h1>
-          <h2>{currentIntroductionText}</h2>
-          <span>
-            <motion.div
-              initial={{ opacity: 0, y: -1000, x: -50 }}
-              animate={{
-                opacity: 1, y: 0, x: 0,
-                transition: { delay: 3, type: "spring", damp: 350, mass: 0.2, stiffness: 250  }
-            }}
-            >
-              <IoLocationSharp fontSize={28} className={classes.icon}/>
-            </motion.div>
-            <h4>{currentLocationText}</h4>
-          </span>
-        </Col>
-        <Col as={motion.p}
-           xs={12} lg={4}
-           className={classes.image}
-           initial={{ opacity: 0, y: 50 }}
-           animate={{ opacity: 1, y: 0, transition: { duration: 1, delay: 0.5 } }}
-
+    <Box p={{ md: 28 }}  style={{ zIndex: 100 }}>
+      <h1 style={{ fontSize: 48, fontWeight: 700 }}>{currentNameText}</h1>
+      <h2 style={{ fontWeight: 600, whiteSpace: "break-spaces" }}>{currentIntroductionText}</h2>
+      <span style={{ display: "flex" }}>
+        <motion.div
+          initial={{ opacity: 0, y: -1000, x: -50 }}
+          animate={{
+            opacity: 1, y: 0, x: 0,
+            transition: { delay: 3, type: "spring", damp: 350, mass: 0.2, stiffness: 250  }
+        }}
         >
-          <Image src={profilePicture2} alt="profile picture" />
-        </Col>
-      </Row>
-
-
-
-
-
-
-
+          <IoLocationSharp fontSize={28}/>
+        </motion.div>
+        <h4>{currentLocationText}</h4>
+      </span>
+    </Box>
     </Container>
   )
 })
 
 export default Hero
-
-{/*
-
-       <motion.p
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0, transition: { duration: 1, delay: 1.4 } }}
-            viewport={{ once: false, amount: 0.5 }}
-          >{descriptionText}
-      </motion.p>
-
-      <Row className={classes.image}>
-
-        <motion.div>
-          <img className={classes.chessboard} src={chessboardImage} alt="chessboard" />
-        </motion.div>
-
-        <motion.img
-          className={classes.knight}
-          src={knightImage}
-          alt="knight"
-          // animate={{ opacity: [0.6, 1, 1], x: [-110, -220, 0], y: [-55, 0, 0], scale: [0.7, 1, 1] }}
-          // transition={{ times: [0, 0.5, 1], duration: 2 }}
-          // drag
-          // dragConstraints={{ top: 50, right: 50, bottom: 50, left: 100 }}
-          // dragTransition={{ bounceStiffness: 200, bounceDamping: 10 }}
-        />
-      </Row>
-      */}

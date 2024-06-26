@@ -27,7 +27,7 @@ const Skills = forwardRef((props, ref) => {
     <Container
       as="section"
       id="skills"
-      sx={{ paddingTop: "36px" }}
+
     >
       <h1 ref={ref} style={{ textAlign: "center" }}></h1>
 
