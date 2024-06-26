@@ -82,13 +82,7 @@ const NavBarFloat = () => {
             <NavDropdown.Item href={businessManagementCert} target="_blank" rel="noreferrer">Business Management</NavDropdown.Item>
           </NavDropdown>
           <Nav className={classes.links}>
-            <Nav.Link
-              href="#skills"
-              className={activeLink === "skills" ? classes.active : ""}
-              onClick={() => onUpdateActiveLink("skills")}
-            >
-              <GiGearStickPattern size="24px" color={activeLink === "skills" ? "#66d9ed" : "#fff"}/>
-            </Nav.Link>
+
             <Nav.Link
               href="#about"
               className={activeLink === "about" ? classes.active : ""}

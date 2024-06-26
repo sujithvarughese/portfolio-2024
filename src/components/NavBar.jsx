@@ -51,20 +51,8 @@ const NavBar = () => {
 
         <Nav className="me-auto" style={{ alignItems: "center"}}>
           <Nav.Link
-            href="#skills"
-            className={activeLink === "skills" ? "active navbar-link" : "navbar-link"}
-            onClick={() => onUpdateActiveLink("skills")}
-          >Skills
-          </Nav.Link>
-          <Nav.Link
-            href="#about"
-            className={activeLink === "about" ? "active navbar-link" : "navbar-link"}
-            onClick={() => onUpdateActiveLink("about")}
-          >About
-          </Nav.Link>
-          <Nav.Link
             href="#projects"
-            className={activeLink === "projects" ? "active navbar-link" : "navbar-link"}
+            className="navbar-link"
             onClick={() => onUpdateActiveLink("projects")}>
             Projects
           </Nav.Link>

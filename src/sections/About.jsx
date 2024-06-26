@@ -2,7 +2,7 @@ import { Col, Image, Row, Stack } from 'react-bootstrap'
 import { Box, Button, Container, Grid, Snackbar, TextField, Typography } from '@mui/material'
 
 import { aboutMeHeadline, aboutMe, aboutMe2, aboutMe3, aboutMeUpdated } from '../data/data.js'
-import profilePicture from "../assets/images/profile/me_hera.png"
+import profilePicture from "../assets/images/profile/hera.png"
 import { skills } from '../data/data.js'
 import Icon from '../components/Icon.jsx'
 import { useEffect, forwardRef } from 'react'
