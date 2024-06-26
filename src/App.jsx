@@ -12,6 +12,7 @@ import { Container, Stack } from 'react-bootstrap'
 import Skills from './sections/Skills.jsx'
 import useMouse from '@react-hook/mouse-position'
 import helloImage from "./assets/images/backgrounds/hello-transparent.png"
+import Box from '@mui/material/Box'
 
 const App = () => {
 
@@ -19,7 +20,6 @@ const App = () => {
   // each component uses IntersectionObserver to observe if component is in view
   // When in view, activeLink global state updates to indicate section in view on navbar
   const heroRef = useRef()
-  const skillsRef = useRef()
   const aboutRef = useRef()
   const projectsRef = useRef()
 
@@ -32,12 +32,6 @@ const App = () => {
   }
 
   const scrollToAbout = () => {
-    aboutRef.current.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    })
-  }
-  const scrollToSkills = () => {
     aboutRef.current.scrollIntoView({
       behavior: "smooth",
       block: "start",
@@ -80,21 +74,14 @@ const App = () => {
   }, [])
   
   return (
-    <Container>
-
-
+    <Box maxWidth={1400} marginX="auto">
 
       <motion.div
         className="large"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 1, delay: 1.4 } }}
       >
-        <NavBar
-          scrollToHero={scrollToHero}
-          scrollToSkills={scrollToSkills}
-          scrollToAbout={scrollToAbout}
-          scrollToProjects={scrollToProjects}
-        />
+        <NavBar/>
       </motion.div>
 
       <motion.div
@@ -112,12 +99,9 @@ const App = () => {
       {showComponents &&
       <motion.div
         initial={{ opacity: 0, y: 1000 }}
-        animate={{
-          y: isScrolled ? 0 : 1000,
-          opacity: 1, transition: { duration: 1, ease: "easeInOut" }
-        }}
+        animate={{ y: 0, opacity: 1, transition: { duration: 1, ease: "easeInOut" } }}
       >
-        <Skills ref={skillsRef} />
+        <Skills />
         <Projects ref={projectsRef}/>
         <About ref={aboutRef}/>
         <Contact />
@@ -130,7 +114,7 @@ const App = () => {
 
 
 
-    </Container>
+    </Box>
   )
 }
 

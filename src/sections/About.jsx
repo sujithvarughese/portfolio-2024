@@ -64,16 +64,14 @@ const About = forwardRef((props, ref) => {
           <Box
             component="img"
             src={profilePicture}
+            position="absolute"
+            top={-62}
+            left={-62}
+            right={0}
+            bottom={0}
+            width="100%"
+            maxWidth={600}
             alt="call to action"
-            sx={{
-              position: 'absolute',
-              top: -62,
-              left: -62,
-              right: 0,
-              bottom: 0,
-              width: '100%',
-              maxWidth: 600,
-            }}
           />
         </Grid>
       </Grid>

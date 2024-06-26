@@ -63,28 +63,27 @@ section {
 
 
 /************ Navbar Css ************/
-@media (max-width: 991px) {
-  nav.navbar {
-    position: fixed;
-    bottom: 3%;
-    padding: 16px 24px;
-    z-index: 99;
-    border-radius: 100px;
-    backdrop-filter: blur(10px);
-    width: 100%;
-    transition: 1s ease-in-out;
-    background-color: #121212;
-  }
+
+nav.navbar {
+  position: fixed;
+  bottom: 0;
+  padding: 16px 24px;
+  z-index: 99;
+  border-radius: 2px;
+  backdrop-filter: blur(10px);
+  width: 100%;
+  transition: 1s ease-in-out;
+  background-color: #121212;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 577px) {
   nav.navbar {
     padding: 18px 0;
     width: 100%;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 1000;
     transition:  0.32s ease-in-out;
     backdrop-filter: blur(10px);
     background-color: #121212;
@@ -121,7 +120,6 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
   color: #fff;
   letter-spacing: 0.8px;
-  padding: 0 25px;
   font-size: 18px;
   opacity: 0.75;
 }
@@ -148,7 +146,6 @@ span.navbar-text {
   background: rgba(217, 217, 217, 0.1);
   display: inline-flex;
   border-radius: 50%;
-  margin-right: 6px;
   align-items: center;
   justify-content: center;
   line-height: 1;
@@ -243,7 +240,7 @@ span.navbar-text {
 }
 
 .footer {
-  height: 400px;
+  height: 500px;
   background-image: url("./assets/images/backgrounds/chessboard.png");
   background-position: center;
   background-size: cover;
@@ -252,17 +249,12 @@ span.navbar-text {
 .large {
   display: none;
 }
-@media (min-width: 992px) {
+@media (min-width: 576px) {
   .small {
     display: none;
   }
 
   .large {
-    display: initial;
-  }
-}
-@media (min-width: 576px) {
-  .tablet {
     display: initial;
   }
 }

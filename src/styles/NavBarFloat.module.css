@@ -9,7 +9,6 @@
 }
 .active {
     color: #66d9ed;
-
     padding: 10px;
     border-radius: 50%;
     aspect-ratio: 1/1;
@@ -19,15 +18,4 @@
 }
 .socials a {
     color: #fff;
-}
-.tablet {
-    display: none;
-}
-@media (min-width: 992px) {
-    .tablet {
-        display: initial;
-    }
-    .mobile {
-        display: none;
-    }
 }

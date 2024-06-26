@@ -9,9 +9,6 @@ const Footer = () => {
   return (
     <footer className="footer" style={{ padding: 36 }}>
       <Stack className="text-center">
-
-        <h2>Thank you for visiting.</h2>
-
         <Stack className="social-icon social-footer">
           <a href={`mailto:${emailAddress}`} target="_blank" rel="noreferrer"><img src={sendMessageIcon} alt="Icon" /></a>
           <a href="http://facebook.com/sujithvarughese" target="_blank" rel="noreferrer"><img src={fbIcon} alt="Icon" /></a>
@@ -21,10 +18,7 @@ const Footer = () => {
         <div>
           <p style={style}>Copyright 2024. All Rights Reserved</p>
         </div>
-
-
       </Stack>
-
     </footer>
   )
 }
