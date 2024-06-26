@@ -1,5 +1,4 @@
 import { Container, Box } from '@mui/material'
-import classes from "../styles/Projects.module.css"
 import { projects } from '../data/projects.js'
 import ProjectCard from '../components/ProjectCard.jsx'
 import { motion } from "framer-motion"
@@ -24,10 +23,11 @@ const Projects = forwardRef((props, ref) => {
     <Container
       as="section"
       id="projects"
+      sx={{ marginTop: "36px" }}
     >
         <h1 ref={ref} style={{ textAlign: "center" }}>Projects</h1>
 
-        <Box sx={{ mt: 8, display: 'flex', flexWrap: 'wrap' }}>
+        <Box sx={{ mt: 2, display: 'flex', flexWrap: 'wrap' }}>
           {projects?.map((project, index) => {
             return (
               <ProjectTile key={index} {...project}/>

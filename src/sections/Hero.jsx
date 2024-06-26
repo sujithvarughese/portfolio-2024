@@ -66,9 +66,9 @@ const Hero = forwardRef((props, ref) => {
     >
       <motion.div
         initial={{ opacity: 1 }}
-        animate={{ opacity: 0.08 }}
+        animate={{ opacity: 0.09 }}
         transition={{ duration: 3 }}
-        style={{ position: "absolute" }}
+        style={{ position: "absolute", width: "100vw", height: "100vh", zIndex: -10 }}
       >
         <img src={helloImage} alt="Hello" />
       </motion.div>

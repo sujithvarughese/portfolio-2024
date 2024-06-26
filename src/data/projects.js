@@ -53,27 +53,6 @@ import bjMobile from "../assets/images/projects/blackjack/bj-mobile.png"
 
 export const projects = [
 	{
-		title: "LeaseWise",
-		coverImage: realtyCoverIMG,
-		coverVideo: realtyCoverMP4,
-		coverGif: realtyCoverGIF,
-		heading: "Property management app to manage finances, communicate with tenants, and get market rental data.",
-		description: "Through my experience in property management, my largest gripe is the lack of an efficient system for managing payments and tenant-owner communication.\n\nI created Realty Solutions where all properties can be organized in one place. View mortgage details, insurance premiums, association fees, just to name a few. Owners can send rent receipts and talk to tenants through the messaging functionality. In the future, I would like to integrate a payment processor such as Stripe, where tenants can directly pay owners and owners can pay all expenses using only this app.",
-		captions: [
-			"Retrieve mortgage information, then determine monthly payments, view live payoff quotes, and get profits/losses.",
-			"User roles for tenants and owners/managers, authorized and authenticated using JSON web tokens securely attached to signed HTTP cookies.",
-			"HUD.gov API integration to retrieve rental rates for any location in the US.",
-		],
-		images : [mobileFinancesIMG, searchIMG, messagesIMG, receiptsIMG, fmrIMG],
-		desktop: rsDesktop,
-		mobile: rsMobile,
-		link: 'https://lease-wise.com',
-		github: 'https://github.com/sujithvarughese/leasewise-client',
-		tech: ["JavaScript", "NodeJS", "React", "MongoDB", "Styled Components", "HTML", "CSS"],
-		featured: true,
-		width: "50%"
-	},
-	{
 		title: "BookStax",
 		coverImage: bookstaxCoverIMG,
 		coverVideo: bookstaxCoverMP4,
@@ -109,9 +88,29 @@ export const projects = [
 		github: 'https://github.com/sujithvarughese/medscope',
 		tech: ["JavaScript", "OpenAI", "React Native", "Expo", "NodeJS", "Firebase", "HTML", "CSS"],
 		featured: true,
+		width: "50%"
+	},
+	{
+		title: "LeaseWise",
+		coverImage: realtyCoverIMG,
+		coverVideo: realtyCoverMP4,
+		coverGif: realtyCoverGIF,
+		heading: "Property management app to manage finances, communicate with tenants, and get market rental data.",
+		description: "Through my experience in property management, my largest gripe is the lack of an efficient system for managing payments and tenant-owner communication.\n\nI created Realty Solutions where all properties can be organized in one place. View mortgage details, insurance premiums, association fees, just to name a few. Owners can send rent receipts and talk to tenants through the messaging functionality. In the future, I would like to integrate a payment processor such as Stripe, where tenants can directly pay owners and owners can pay all expenses using only this app.",
+		captions: [
+			"Retrieve mortgage information, then determine monthly payments, view live payoff quotes, and get profits/losses.",
+			"User roles for tenants and owners/managers, authorized and authenticated using JSON web tokens securely attached to signed HTTP cookies.",
+			"HUD.gov API integration to retrieve rental rates for any location in the US.",
+		],
+		images : [mobileFinancesIMG, searchIMG, messagesIMG, receiptsIMG, fmrIMG],
+		desktop: rsDesktop,
+		mobile: rsMobile,
+		link: 'https://lease-wise.com',
+		github: 'https://github.com/sujithvarughese/leasewise-client',
+		tech: ["JavaScript", "NodeJS", "React", "MongoDB", "Styled Components", "HTML", "CSS"],
+		featured: true,
 		width: "40%"
 	},
-
 	{
 		title: "Simpler Fitness",
 		coverImage: simplerFitnessCoverIMG,
