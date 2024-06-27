@@ -5,11 +5,12 @@ import App from './App.jsx'
 import './index.css'
 import ThemeProvider from 'react-bootstrap/ThemeProvider'
 import { GlobalProvider } from './context/GlobalContext.jsx'
+import theme from './theme.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <GlobalProvider>
-      <ThemeProvider>
+      <ThemeProvider theme={theme}>
         <App />
       </ThemeProvider>
     </GlobalProvider>
