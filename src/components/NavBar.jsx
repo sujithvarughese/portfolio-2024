@@ -66,7 +66,7 @@ const NavBar = () => {
           </Typography>
 
           <Nav.Link href={resume} className="navbar-link" target="_blank" rel="noreferrer">
-            <Typography fontSize={18}>Resume</Typography>
+            <Typography fontSize={18}>Resumé</Typography>
           </Nav.Link>
         </Nav>
 
