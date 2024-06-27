@@ -76,7 +76,7 @@ const Hero = forwardRef((props, ref) => {
 
         <Box component="img" src={profilePicture2} alt="Profile Picture"
           width="80%"
-          maxWidth={820}
+          maxWidth={850}
           position="absolute"
           display={{ xs: "none", sm: "initial" }}
           top={0}

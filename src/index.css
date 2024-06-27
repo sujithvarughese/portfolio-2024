@@ -68,14 +68,13 @@ section {
 
 nav.navbar {
   position: fixed;
-  bottom: 0;
+  bottom: 3%;
   padding: 16px 24px;
   z-index: 99;
   border-radius: 2px;
-  backdrop-filter: blur(10px);
   width: 100%;
   transition: 1s ease-in-out;
-  background-color: #121212;
+  background-color: transparent;
 }
 
 @media (min-width: 577px) {
@@ -88,7 +87,7 @@ nav.navbar {
     z-index: 1000;
     transition:  0.32s ease-in-out;
     backdrop-filter: blur(10px);
-    background-color: #121212;
+    background-color: #000000;
 
   }
 }

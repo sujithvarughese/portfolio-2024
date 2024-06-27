@@ -1,4 +1,3 @@
-import classes from '../styles/NavBarFloat.module.css'
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import { Container, Nav, Navbar, NavDropdown, Stack } from 'react-bootstrap'
 import { useEffect, useState } from 'react'
@@ -21,11 +20,11 @@ import businessManagementCert from "../assets/images/certificates/business_manag
 import { useGlobalContext } from '../context/GlobalContext.jsx'
 import { BiMessageRoundedDetail } from "react-icons/bi";
 import MessageFloat from './MessageFloat.jsx'
+import Box from '@mui/material/Box'
 const emailAddress = "sujith.varug@gmail.com"
 
 const NavBarFloat = () => {
-
-  const { activeLink, onUpdateActiveLink } = useGlobalContext()
+/*
   const { scrollY } = useScroll()
   const [isHidden, setIsHidden] = useState(false)
 
@@ -37,26 +36,28 @@ const NavBarFloat = () => {
       setIsHidden(false)
     }
   })
-
+*/
   return (
 
       <Navbar
-        as={motion.nav}
-        className={classes.navbar}
-        animate={{
+        /*animate={{
           transform: isHidden ? "translateY(100px)" : "",
           transition: { duration: 0.5, ease: "easeInOut" }
-      }}
+        }}*/
       >
         <Container direction="horizontal">
 
           <NavDropdown
-            title={<PiCertificateFill size="28px" color="#fff"/>}
-            autoClose={false}
+            title={<PiCertificateFill size="64px" color="#000000" />}
+            autoClose={true}
+
             drop="up"
+            style={{ backgroundColor: "#1976d2", borderRadius: "8px", opacity: "0.9", padding: "1px" }}
+
           >
+
             <NavDropdown.Item href={resume} target="_blank" rel="noreferrer">Resume</NavDropdown.Item>
-            <NavDropdown.Item href={diploma} target="_blank" rel="noreferrer">Bachelor's Diploma</NavDropdown.Item>
+            <NavDropdown.Item href={diploma} target="_blank" rel="noreferrer">Diploma</NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item href={metaCert} target="_blank" rel="noreferrer">Meta Front End Developer</NavDropdown.Item>
             <NavDropdown.Item href={accountingCert} target="_blank" rel="noreferrer">Accounting Technology</NavDropdown.Item>
@@ -64,9 +65,11 @@ const NavBarFloat = () => {
             <NavDropdown.Item href={javascriptCert} target="_blank" rel="noreferrer">Advanced Javascript</NavDropdown.Item>
             <NavDropdown.Item href={reactNativeCert} target="_blank" rel="noreferrer">React Native 2024</NavDropdown.Item>
             <NavDropdown.Item href={mernCert} target="_blank" rel="noreferrer">MERN Stack 2024</NavDropdown.Item>
-          </NavDropdown>
-          <Nav className={classes.links}>
 
+
+          </NavDropdown>
+          {/*
+          <Nav className={classes.links}>
             <Nav.Link
               href="#about"
               className={activeLink === "about" ? classes.active : ""}
@@ -82,8 +85,16 @@ const NavBarFloat = () => {
               <IoAppsSharp size="24px" color={activeLink === "projects" ? "#66d9ed" : "#fff"}/>
             </Nav.Link>
           </Nav>
-          <Stack direction="horizontal" className={classes.socials}>
-            <a href={`mailto:${emailAddress}`} target="_blank" rel="noreferrer"><BiMessageRoundedDetail size="24px"/></a>
+          */}
+          <Stack direction="horizontal">
+            <a
+              href={`mailto:${emailAddress}`} target="_blank" rel="noreferrer"
+              style={{ backgroundColor: "#1976d2", borderRadius: "8px", opacity: "0.9", padding: "1px 6px" }}
+            >
+              <BiMessageRoundedDetail size="64px" color="#000000" />
+            </a>
+
+
             {/*<a href="http://facebook.com/sujithvarughese" target="_blank" rel="noreferrer"><FaFacebookF size="24px"/></a>*/}
             {/*<a href="http://github.com/sujithvarughese" target="_blank" rel="noreferrer"><FaGithub size="24px"/></a>*/}
           </Stack>
