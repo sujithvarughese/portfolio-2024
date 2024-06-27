@@ -11,7 +11,7 @@ const Skills = () => {
 
   return (
     <Box as="section" id="skills">
-      <Stack flexDirection={{ sm: "row" }}>
+      <Stack flexDirection={{ sm: "row" }} my={12} >
 
         <Stack borderLeft="solid 6px red">
           <Stack flexDirection="row" alignItems="center" justifyContent="center">
