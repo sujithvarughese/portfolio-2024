@@ -42,7 +42,7 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setShowComponents(true)
-    }, 3000)
+    }, 1000)
   }, [])
   
   return (
@@ -50,8 +50,8 @@ const App = () => {
 
       <motion.div
         className="large"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { duration: 1, delay: 1.4 } }}
+        initial={{ opacity: 0, y: -1000 }}
+        animate={{ y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeInOut", delay: 1.5 } }}
       >
         <NavBar/>
       </motion.div>
@@ -65,6 +65,7 @@ const App = () => {
       </motion.div>
 
       <Hero />
+
       {showComponents &&
       <motion.div
         initial={{ opacity: 0, y: 1000 }}

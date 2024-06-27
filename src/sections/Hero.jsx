@@ -65,7 +65,7 @@ const Hero = forwardRef((props, ref) => {
               initial={{ opacity: 0, y: -1000, x: -50 }}
               animate={{
                 opacity: 1, y: 0, x: 0,
-                transition: { delay: 3, type: "spring", damp: 350, mass: 0.2, stiffness: 250  }
+                transition: { delay: 2, type: "spring", damp: 350, mass: 0.2, stiffness: 250  }
               }}
             >
               <IoLocationSharp fontSize={28}/>
