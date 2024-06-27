@@ -28,7 +28,7 @@ const Contact = () => {
         </Typography>
       </Link>
       <Typography variant="subtitle1" sx={{ my: 3 }}>
-        Get in touch! Questions, feedback, and inquiries are all welcome.
+        Get in touch! Feedback and inquiries are all welcome.
       </Typography>
     </Container>
   );

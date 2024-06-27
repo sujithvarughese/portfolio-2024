@@ -11,42 +11,37 @@ import { useGlobalContext } from '../context/GlobalContext.jsx'
 const About = () => {
 
   return (
-    <Container as="section" id="about" sx={{ mt: 24, display: 'flex' }}>
-      <Grid container>
-        <Grid item xs={12} md={6} sx={{ zIndex: 1 }}>
-          <Box display='flex' justifyContent='center' bgcolor='warning.main' py={8} px={3}>
-            <Box maxWidth={400}>
-              <Typography variant="h2" component="h2" gutterBottom>
-                About Me
-              </Typography>
-              <Typography variant="body2" whiteSpace="break-spaces">
-                {aboutMeUpdated}
-              </Typography>
-            </Box>
+    <Container as="section" id="about" sx={{ mt: 16 }}>
+      <Box position="relative">
 
+          <Box
+            margin={{ xs: "auto", lg: "initial" }}
+            maxWidth={600}
+            justifyContent='center'
+            bgcolor='warning.main'
+            p={{xs: 4, md: 10}}
+          >
+            <Typography variant="h2" component="h2" gutterBottom>
+              About Me
+            </Typography>
+            <Typography variant="body2" whiteSpace="break-spaces">
+              {aboutMeUpdated}
+            </Typography>
           </Box>
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          md={6}
-          sx={{ display: { md: 'block', xs: 'none' }, position: 'relative' }}
-        >
 
           <Box
             component="img"
             src={profilePicture}
-            position="absolute"
-            top={-62}
-            left={-62}
-            right={0}
-            bottom={0}
+            alt="Profile Picture"
+            position={{ xs: "initial", lg: "absolute" }}
+            display={{ xs: "none", sm: "initial" }}
+            right={72}
+            bottom={36}
             width="100%"
             maxWidth={600}
-            alt="call to action"
+            zIndex={-10}
           />
-        </Grid>
-      </Grid>
+      </Box>
     </Container>
   )
 }

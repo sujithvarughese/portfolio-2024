@@ -56,7 +56,8 @@ const Hero = forwardRef((props, ref) => {
         alignItems={{xs: "flex-end", sm: "center"}}
       >
         <Box height={{ xs: 240, sm: 320}} width={{ xs: 320, sm: 420 }} bgcolor='warning.main' py={{xs: 4, sm: 8}} px={2}>
-          <Typography variant="h3" fontWeight={700}>{currentNameText}</Typography>
+          <Typography variant="h4" fontWeight={700} display={{ sm: "none" }}>{currentNameText}</Typography>
+          <Typography variant="h3" fontWeight={700} display={{ xs: "none", sm: "initial" }}>{currentNameText}</Typography>
           <Typography variant="h5" fontWeight={600} whiteSpace="break-spaces" py={1}>{currentIntroductionText}</Typography>
 
           <Stack flexDirection="row" >

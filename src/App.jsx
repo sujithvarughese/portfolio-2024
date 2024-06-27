@@ -19,6 +19,7 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true)
 
   const resetLoading = () => setIsLoading(false)
+
   useEffect(() => {
     window.scrollTo(0, 0);
     window.addEventListener("load",resetLoading);

@@ -36,8 +36,8 @@ const Skills = () => {
           </Stack>
           <Box padding={4} ><Typography variant="body1">{deploymentSkills}</Typography></Box>
         </Stack>
-      </Stack>
 
+      </Stack>
     </Box>
   )
 }
