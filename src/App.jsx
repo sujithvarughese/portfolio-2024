@@ -16,35 +16,6 @@ import Box from '@mui/material/Box'
 
 const App = () => {
 
-  // refs are forwarded to appropriate components to ref component in that section
-  // each component uses IntersectionObserver to observe if component is in view
-  // When in view, activeLink global state updates to indicate section in view on navbar
-  const heroRef = useRef()
-  const aboutRef = useRef()
-  const projectsRef = useRef()
-
-  // scroll functions for above refs are passed to Heading.jsx as onClick for each navbar link
-  const scrollToHero = () => {
-    heroRef.current.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    })
-  }
-
-  const scrollToAbout = () => {
-    aboutRef.current.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    })
-  }
-  const scrollToProjects = () => {
-    projectsRef.current.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      rootMargin: "500px"
-    })
-  }
-
   const [isLoading, setIsLoading] = useState(true)
 
   const resetLoading = () => setIsLoading(false)
@@ -92,18 +63,15 @@ const App = () => {
         <NavBarFloat />
       </motion.div>
 
-
-      <Hero ref={heroRef} />
-
-
+      <Hero />
       {showComponents &&
       <motion.div
         initial={{ opacity: 0, y: 1000 }}
         animate={{ y: 0, opacity: 1, transition: { duration: 1, ease: "easeInOut" } }}
       >
         <Skills />
-        <Projects ref={projectsRef}/>
-        <About ref={aboutRef}/>
+        <Projects/>
+        <About />
         <Contact />
         <Footer />
       </motion.div>

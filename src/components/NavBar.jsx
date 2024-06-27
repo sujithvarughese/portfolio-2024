@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react'
 import linkedInIcon from '../assets/icons/linkedin-icon.svg';
 import fbIcon from '../assets/icons/fb-icon.svg';
 import githubIcon from "../assets/icons/github-mark-white.svg"
+import svInitials from "../assets/images/profile/sv.jpeg"
+
 const emailAddress = "sujith.varug@gmail.com"
 
 import resume from "../assets/images/certificates/resume-2024.png"

@@ -10,7 +10,6 @@ import profilePictureMobile from "../assets/images/profile/profile_pic_small.png
 import { Container, Stack, Grid, Typography, Toolbar } from '@mui/material'
 const Hero = forwardRef((props, ref) => {
 
-  const { onUpdateActiveLink } = useGlobalContext()
 
   const [currentNameText, setCurrentNameText] = useState("")
   const [currentIntroductionText, setCurrentIntroductionText] = useState("")
@@ -41,15 +40,6 @@ const Hero = forwardRef((props, ref) => {
   }, [currentNameText, currentIntroductionText, currentLocationText])
 
 
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries, observer) => {
-      const entry = entries[0]
-      if (entry.isIntersecting) {
-        onUpdateActiveLink("home")
-      }
-    })
-    observer.observe(ref.current)
-  }, [])
 
 
   return (
