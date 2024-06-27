@@ -1,7 +1,4 @@
-import { forwardRef, useEffect } from 'react'
-import { useGlobalContext } from '../context/GlobalContext.jsx'
-import { Col, Row } from 'react-bootstrap'
-import { Container, Stack } from '@mui/material'
+import { Container, Stack, Typography } from '@mui/material'
 import {softwareSkills, fullStackSkills, deploymentSkills } from "../data/data.js"
 import { HiOutlineComputerDesktop } from "react-icons/hi2";
 import { AiOutlineDeploymentUnit } from "react-icons/ai";
@@ -16,28 +13,28 @@ const Skills = () => {
     <Box as="section" id="skills">
       <Stack flexDirection={{ sm: "row" }}>
 
-        <Stack sm={4} borderLeft="solid 6px red">
+        <Stack borderLeft="solid 6px red">
           <Stack flexDirection="row" alignItems="center" justifyContent="center">
-            <Box xs={3}><HiOutlineComputerDesktop size={56} /></Box>
-            <Box xs={8}><h3 style={{ fontWeight: 700 }}>Programmer.</h3></Box>
+            <Box><HiOutlineComputerDesktop size={56} /></Box>
+            <Typography variant="h4" fontWeight={700}>Programmer.</Typography>
           </Stack>
-          <Box padding={4} ><h5>{softwareSkills}</h5></Box>
+          <Box padding={4} ><Typography variant="body1">{softwareSkills}</Typography></Box>
         </Stack>
 
-        <Stack sm={4} borderLeft="solid 6px blue">
+        <Stack borderLeft="solid 6px blue">
           <Stack flexDirection="row" alignItems="center" justifyContent="center">
-            <Box xs={3}><RiStackLine size={56} /></Box>
-            <Box xs={8}><h3 style={{ fontWeight: 700 }}>Developer.</h3></Box>
+            <Box ><RiStackLine size={56} /></Box>
+            <Typography variant="h4" fontWeight={700}>Developer.</Typography>
           </Stack>
-          <Box padding={4} ><h5>{fullStackSkills}</h5></Box>
+          <Box padding={4} ><Typography variant="body1">{fullStackSkills}</Typography></Box>
         </Stack>
 
         <Stack sm={4} borderLeft="solid 6px green">
           <Stack flexDirection="row" alignItems="center" justifyContent="center">
-            <Box xs={3}><AiOutlineDeploymentUnit size={56}/></Box>
-            <Box xs={8}><h3 style={{ fontWeight: 700 }}>Engineer.</h3></Box>
+            <Box ><AiOutlineDeploymentUnit size={56}/></Box>
+            <Typography variant="h4" fontWeight={700}>Engineer.</Typography>
           </Stack>
-          <Box padding={4} ><h5>{deploymentSkills}</h5></Box>
+          <Box padding={4} ><Typography variant="body1">{deploymentSkills}</Typography></Box>
         </Stack>
       </Stack>
 

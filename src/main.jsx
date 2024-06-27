@@ -9,10 +9,9 @@ import theme from './theme.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <GlobalProvider>
-      <ThemeProvider theme={theme}>
-        <App />
-      </ThemeProvider>
-    </GlobalProvider>
+    <ThemeProvider theme={theme}>
+      <GlobalProvider><App />
+      </GlobalProvider>
+    </ThemeProvider>
   </React.StrictMode>,
 )

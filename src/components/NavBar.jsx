@@ -1,5 +1,5 @@
 import { Nav, Navbar, NavDropdown } from "react-bootstrap"
-import { Container } from "@mui/material"
+import { Container, Stack, Typography } from '@mui/material'
 import { useEffect, useState } from 'react'
 import linkedInIcon from '../assets/icons/linkedin-icon.svg';
 import fbIcon from '../assets/icons/fb-icon.svg';
@@ -23,8 +23,6 @@ import Box from '@mui/material/Box'
 
 const NavBar = () => {
 
-  const { activeLink, onUpdateActiveLink }  = useGlobalContext()
-
   const { scrollY } = useScroll()
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -37,53 +35,50 @@ const NavBar = () => {
   })
 
   return (
-
     <Navbar className={isScrolled ? "scrolled" : ""}>
       <Container sx={{ display: "flex", alignItems: "center"}}>
-
-
-        <Navbar.Brand
-          href="#home"
-          className={activeLink === "home" ? "active navbar-link" : "navbar-link"}
-          onClick={()=> onUpdateActiveLink("home")}
-        >
-          <p className={activeLink === "home" ? "active navbar-link" : "navbar-link"}>
-            SV</p>
+        <Navbar.Brand href="#home" className="navbar-link">
+          <Nav.Link className="navbar-link">
+            <Box width={48} component="img" src={svInitials} alt="SV" ></Box>
+          </Nav.Link>
         </Navbar.Brand>
 
         <Nav className="me-auto" style={{ alignItems: "center"}}>
-          <Nav.Link
-            href="#projects"
-            className="navbar-link"
-            onClick={() => onUpdateActiveLink("projects")}>
-            Projects
+          <Nav.Link href="#projects" className="navbar-link">
+            <Typography fontSize={18}>Projects</Typography>
           </Nav.Link>
 
-          <NavDropdown
-            title="Certificates"
-            id="basic-nav-dropdown"
-            menuVariant="dark"
-            autoClose={false}
-          >
-            <NavDropdown.Item href={diploma} target="_blank" rel="noreferrer">Bachelor's Diploma</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href={metaCert} target="_blank" rel="noreferrer">Meta Front End Developer</NavDropdown.Item>
-            <NavDropdown.Item href={accountingCert} target="_blank" rel="noreferrer">Accounting Technology</NavDropdown.Item>
-            <NavDropdown.Item href={businessManagementCert} target="_blank" rel="noreferrer">Business Management</NavDropdown.Item>
-            <NavDropdown.Item href={javascriptCert} target="_blank" rel="noreferrer">Advanced Javascript</NavDropdown.Item>
-            <NavDropdown.Item href={reactNativeCert} target="_blank" rel="noreferrer">React Native 2024</NavDropdown.Item>
-            <NavDropdown.Item href={mernCert} target="_blank" rel="noreferrer">MERN Stack 2024</NavDropdown.Item>
-          </NavDropdown>
+          <Typography>
+            <NavDropdown
+              title="Certificates"
+              id="basic-nav-dropdown"
+              menuVariant="dark"
+              autoClose={true}
+            >
+              <NavDropdown.Item href={diploma} target="_blank" rel="noreferrer">Bachelor's Diploma</NavDropdown.Item>
+              <NavDropdown.Item href={metaCert} target="_blank" rel="noreferrer">Meta Front End Developer</NavDropdown.Item>
+              <NavDropdown.Item href={accountingCert} target="_blank" rel="noreferrer">Accounting Technology</NavDropdown.Item>
+              <NavDropdown.Item href={businessManagementCert} target="_blank" rel="noreferrer">Business Management</NavDropdown.Item>
+              <NavDropdown.Item href={javascriptCert} target="_blank" rel="noreferrer">Advanced Javascript</NavDropdown.Item>
+              <NavDropdown.Item href={reactNativeCert} target="_blank" rel="noreferrer">React Native 2024</NavDropdown.Item>
+              <NavDropdown.Item href={mernCert} target="_blank" rel="noreferrer">MERN Stack 2024</NavDropdown.Item>
+            </NavDropdown>
+          </Typography>
 
-          <Nav.Link href={resume} className="navbar-link" target="_blank" rel="noreferrer">Resume</Nav.Link>
+          <Nav.Link href={resume} className="navbar-link" target="_blank" rel="noreferrer">
+            <Typography fontSize={18}>Resume</Typography>
+          </Nav.Link>
         </Nav>
+
           <Box>
             <span className="navbar-text">
               <div className="social-icon">
                 <a href="http://facebook.com/sujithvarughese" className="social-icon" target="_blank" rel="noreferrer"><img src={fbIcon} alt="Icon" /></a>
                 <a href="http://github.com/sujithvarughese" className="social-icon" target="_blank" rel="noreferrer"><img src={githubIcon} alt="Icon" /></a>
               </div>
-              <a href={`mailto:${emailAddress}`} className="vvd connect"><span style={{ color: "white"}}>Contact Me</span></a>
+              <a href={`mailto:${emailAddress}`} className="vvd connect">
+                <Typography color="#fefefe">CONTACT ME</Typography>
+              </a>
             </span>
           </Box>
       </Container>

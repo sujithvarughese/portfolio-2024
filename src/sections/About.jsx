@@ -11,23 +11,11 @@ import { useGlobalContext } from '../context/GlobalContext.jsx'
 const About = () => {
 
   return (
-    <Container
-      as="section"
-      id="about"
-      sx={{ mt: 24, display: 'flex' }}
-    >
+    <Container as="section" id="about" sx={{ mt: 24, display: 'flex' }}>
       <Grid container>
         <Grid item xs={12} md={6} sx={{ zIndex: 1 }}>
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              bgcolor: 'warning.main',
-              py: 8,
-              px: 3,
-            }}
-          >
-            <Box sx={{ maxWidth: 400 }}>
+          <Box display='flex' justifyContent='center' bgcolor='warning.main' py={8} px={3}>
+            <Box maxWidth={400}>
               <Typography variant="h2" component="h2" gutterBottom>
                 About Me
               </Typography>

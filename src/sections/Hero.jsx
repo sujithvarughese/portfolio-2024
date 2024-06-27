@@ -55,9 +55,9 @@ const Hero = forwardRef((props, ref) => {
         height={{ xs: "70vh", sm: "50vh"}}
         alignItems={{xs: "flex-end", sm: "center"}}
       >
-        <Box height={{ xs: 240, sm: 320}} bgcolor='warning.main' py={{xs: 4, sm: 8}} px={3}>
-          <h1 style={{ fontSize: 42, fontWeight: 700 }}>{currentNameText}</h1>
-          <h2 style={{ fontWeight: 600, whiteSpace: "break-spaces" }}>{currentIntroductionText}</h2>
+        <Box height={{ xs: 240, sm: 320}} width={{ xs: 320, sm: 420 }} bgcolor='warning.main' py={{xs: 4, sm: 8}} px={2}>
+          <Typography variant="h3" fontWeight={700}>{currentNameText}</Typography>
+          <Typography variant="h5" fontWeight={600} whiteSpace="break-spaces" py={1}>{currentIntroductionText}</Typography>
 
           <Stack flexDirection="row" >
             <motion.div
@@ -69,7 +69,7 @@ const Hero = forwardRef((props, ref) => {
             >
               <IoLocationSharp fontSize={28}/>
             </motion.div>
-            <h4>{currentLocationText}</h4>
+            <Typography variant="h6">{currentLocationText}</Typography>
           </Stack>
         </Box>
 

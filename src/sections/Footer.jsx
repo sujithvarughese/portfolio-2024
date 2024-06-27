@@ -4,6 +4,7 @@ import fbIcon from '../assets/icons/fb-icon.svg';
 import githubIcon from "../assets/icons/github-mark-white.svg"
 import sendMessageIcon from "../assets/icons/send-message.svg"
 import { emailAddress } from '../data/data.js'
+import { Typography } from '@mui/material'
 
 const Footer = () => {
   return (
@@ -16,7 +17,7 @@ const Footer = () => {
         </Stack>
 
         <div>
-          <p style={style}>Copyright 2024. All Rights Reserved</p>
+          <Typography style={style}>Copyright 2024. All Rights Reserved</Typography>
         </div>
       </Stack>
     </footer>

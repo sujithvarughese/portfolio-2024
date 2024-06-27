@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 :root {
   --color-alt: #66d9ed;
 }
@@ -127,10 +131,6 @@ nav.navbar .navbar-nav a.nav-link.navbar-link:hover {
   opacity: 1;
   text-shadow: 0 0 1px #66d9ed ;
   color: #66d9ed ;
-}
-nav.navbar .navbar-nav a.nav-link.navbar-link.active {
-  opacity: 1;
-  text-shadow: 0 0 1px #66d9ed ;
 }
 span.navbar-text {
   display: flex;

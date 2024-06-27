@@ -17,7 +17,7 @@ export const fullStackSkills = "Well-versed in libraries and frameworks: Two yea
 
 export const deploymentSkills = "Proficient in the software developmental life cycle from design to maintenance, including testing, DNS configuration, and app store publishing."
 export const fullName = "Sujith Varughese"
-export const bio = "Software Engineer.\nFull Stack Developer."
+export const bio = "Software Engineer."
 export const introductionText = "My name is Sujith."
 export const textLine1 = "I am a software developer based in Miami, FL"
 export const descriptionText = "I am a software developer based in Miami, FL specializing in JavaScript, React, and React Native."
