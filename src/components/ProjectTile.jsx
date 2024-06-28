@@ -52,7 +52,7 @@ const ImageIconButton = styled(ButtonBase)(({ theme }) => ({
     transition: theme.transitions.create('opacity'),
   },
 }));
-const ProjectCard = ({ title, description, coverImage, coverVideo, coverGif, heading, link, github, captions, images, tech, width }) => {
+const ProjectCard = ({ title, description, coverImage, coverVideo, coverGif, heading, link, isMobile, github, captions, images, tech, width }) => {
 
   const [showDrawer, setShowDrawer] = useState(false)
   const onOpen = () => setShowDrawer(true)
@@ -68,6 +68,7 @@ const ProjectCard = ({ title, description, coverImage, coverVideo, coverGif, hea
         images={images}
         captions={captions}
         link={link}
+        isMobile={isMobile}
         github={github}
         tech={tech}
       />

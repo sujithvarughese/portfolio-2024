@@ -1,8 +1,10 @@
 import { Carousel, Container, Image, ListGroup, Offcanvas, Stack } from 'react-bootstrap'
 import classes from "../styles/Projects.module.css"
 import Icon from './Icon.jsx'
-import { projectTestingMessage } from '../data/data.js'
-const ProjectDrawer = ({ isOpen, onClose, title, description, images, captions, link, github, tech }) => {
+import { mobileWarning, projectTestingMessage } from '../data/data.js'
+import { Typography } from '@mui/material'
+import Box from '@mui/material/Box'
+const ProjectDrawer = ({ isOpen, onClose, title, description, images, captions, link, isMobile, github, tech }) => {
   return (
     <Offcanvas
         show={isOpen}
@@ -16,7 +18,7 @@ const ProjectDrawer = ({ isOpen, onClose, title, description, images, captions, 
 
       <Offcanvas.Body className={classes.content}>
 
-        <p className={classes.description}>{description}</p>
+        <Typography variant="body2" textAlign="justify" whiteSpace="break-spaces">{description}</Typography>
 
         <Carousel data-bs-theme="dark" className={classes.carousel}>
           {images.map((image, index) => {
@@ -35,15 +37,29 @@ const ProjectDrawer = ({ isOpen, onClose, title, description, images, captions, 
         </Container>
 
         <ListGroup as="ol">
-          {captions.map((caption, index) => <ListGroup.Item key={index}>{caption}</ListGroup.Item>)}
+          {captions.map((caption, index) =>
+            <ListGroup.Item key={index}>
+              <Typography variant="body2">{caption}</Typography>
+            </ListGroup.Item>)}
         </ListGroup>
 
+        {
+          isMobile &&
+          <Box px={3} py={2}>
+            <Typography variant="subtitle2">{mobileWarning}</Typography>
+          </Box>
+        }
+
+
         <Stack direction="horizontal" style={{ justifyContent: "center", gap: "36px", padding: "10px" }}>
+
+
+
           <a href={github} target="_blank" rel="noreferrer"><h5>Github</h5></a>
           {link ?
-          <a href={link} target="_blank" rel="noreferrer"><h5>Website</h5></a>
+          <a href={link} target="_blank" rel="noreferrer"><h5>Demo</h5></a>
           :
-          <p>{projectTestingMessage}</p>
+          <Typography>{projectTestingMessage}</Typography>
           }
         </Stack>
 

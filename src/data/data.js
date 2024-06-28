@@ -23,3 +23,5 @@ export const textLine1 = "I am a software developer based in Miami, FL"
 export const descriptionText = "I am a software developer based in Miami, FL specializing in JavaScript, React, and React Native."
 
 export const projectTestingMessage = "App currently in testing. Full source code is available. Contact me for access to test version."
+
+export const mobileWarning = "Note: Please be warned this app was designed for mobile. I created this web simulator to get a basic idea of the app navigation. Your browser window size will need to be adjusted accordingly. Links, icons, and pictures may not render in your web browser."

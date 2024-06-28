@@ -65,10 +65,11 @@ export const projects = [
 			"Google Firebase to manage and log in users."
 		],
 		images: [bookstaxHomeIMG, bookstaxLibraryIMG, bookstaxDiscoverIMG],
-		link: '',
+		link: 'https://bookstax.pages.dev/',
 		github: 'https://github.com/sujithvarughese/bookstax',
 		tech: ["JavaScript", "OpenAI", "React Native", "Expo", "NodeJS", "Firebase", "HTML", "CSS"],
 		featured: true,
+		isMobile: true,
 		width: "50%"
 	},
 	{
@@ -88,6 +89,7 @@ export const projects = [
 		github: 'https://github.com/sujithvarughese/medscope',
 		tech: ["JavaScript", "OpenAI", "React Native", "Expo", "NodeJS", "Firebase", "HTML", "CSS"],
 		featured: true,
+		isMobile: true,
 		width: "50%"
 	},
 	{
@@ -109,6 +111,7 @@ export const projects = [
 		github: 'https://github.com/sujithvarughese/leasewise-client',
 		tech: ["JavaScript", "NodeJS", "React", "MongoDB", "Styled Components", "HTML", "CSS"],
 		featured: true,
+		isMobile: false,
 		width: "40%"
 	},
 	{
@@ -128,6 +131,7 @@ export const projects = [
 		github: 'https://github.com/sujithvarughese/simple-fitness',
 		tech: ["JavaScript", "OpenAI", "NodeJS", "React", "MongoDB", "ChakraUI", "HTML", "CSS"],
 		featured: true,
+		isMobile: false,
 		width: "20%"
 	},
 	{
@@ -149,6 +153,7 @@ export const projects = [
 		github: 'https://github.com/sujithvarughese/beat-blackjack',
 		tech: ["JavaScript", "React", "ChakraUI", "HTML", "CSS"],
 		featured: false,
+		isMobile: false,
 		width: "20%"
 	},
 	{
@@ -170,6 +175,7 @@ export const projects = [
 		github: 'https://github.com/sujithvarughese/on-the-books',
 		tech: ["JavaScript", "NodeJS", "React", "MongoDB", "Styled Components", "HTML", "CSS"],
 		featured: false,
+		isMobile: false,
 		width: "20%"
 	},
 
