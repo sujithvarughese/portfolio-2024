@@ -85,7 +85,7 @@ export const projects = [
 			"Google OAuth 2.0 for authentication."
 		],
 		images: [medscopeHomeIMG, medscopeDrugIMG, medscopeProfileIMG],
-		link: '',
+		link: 'https://medscope.pages.dev/',
 		github: 'https://github.com/sujithvarughese/medscope',
 		tech: ["JavaScript", "OpenAI", "React Native", "Expo", "NodeJS", "Firebase", "HTML", "CSS"],
 		featured: true,

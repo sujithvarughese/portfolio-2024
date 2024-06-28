@@ -53,8 +53,6 @@ const ProjectDrawer = ({ isOpen, onClose, title, description, images, captions, 
 
         <Stack direction="horizontal" style={{ justifyContent: "center", gap: "36px", padding: "10px" }}>
 
-
-
           <a href={github} target="_blank" rel="noreferrer"><h5>Github</h5></a>
           {link ?
           <a href={link} target="_blank" rel="noreferrer"><h5>Demo</h5></a>
