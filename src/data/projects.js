@@ -58,7 +58,7 @@ export const projects = [
 		coverVideo: bookstaxCoverMP4,
 		coverGif: bookstaxCoverGIF,
 		heading: "Reading organizer to keep track of your reading and discover new books.",
-		description: "A remake of an older app I created called On The Books, but this time using React Native for full mobile functionality.\n\nWhile most current reading apps are simply online stores to buy e-books, this app is geared toward organization and efficient note-taking, while still having the ability to discover and purchase books through Apple and Amazon.",
+		description: "While most current reading apps are simply online stores to buy e-books, this app is geared toward organization and efficient note-taking, while still having the ability to discover and purchase books through Apple and Amazon.",
 		captions: [
 			"Integration with New York Times Best Sellers API and OpenLibrary's search API",
 			"Nested navigators with several stacks and tabs using react-native-navigation.",
@@ -78,7 +78,7 @@ export const projects = [
 		coverVideo: medscopeCoverMP4,
 		coverGif: medscopeCoverGIF,
 		heading: "AI powered medical assistant for personalized treatment options based on your symptoms.",
-		description: "Tired of getting your medical advice from the resident Reddit doctor? This app keeps it simple for you. Enter up to five symptoms, along with your age and sex. With the help of AI, you will get several options of reliable treatment, sorted in order of effectiveness.\n\nResults include medication details, dosing and usage, and potential risks and side effects. I recently partnered with DrugBank to incorporate their API to further improve accuracy and detail, along with added features such as drug to drug interactions. ",
+		description: "Tired of getting your medical advice from the resident Reddit doctor? This app keeps it simple for you. Enter up to five symptoms, along with your age and sex. With the help of AI, you will get several options of reliable treatment, sorted in order of effectiveness.\n\nI recently partnered with DrugBank to incorporate their API to further improve accuracy and detail, along with added features such as drug interactions. ",
 		captions: [
 			"Search through drug list with autocompletion.",
 			"Get treatment based on age, sex, and selected list of symptoms.",
@@ -98,7 +98,7 @@ export const projects = [
 		coverVideo: realtyCoverMP4,
 		coverGif: realtyCoverGIF,
 		heading: "Property management app to manage finances, communicate with tenants, and get market rental data.",
-		description: "Through my experience in property management, my biggest gripe is the lack of an efficient system for managing payments and tenant-owner communication.\n\nI created LeaseWise as an app where all properties can be organized in one place. View mortgage details, insurance premiums, association fees, just to name a few. Owners can send rent receipts and talk to tenants through direct messaging. I am currently working on integrating a payment processor such as Stripe, where tenants can directly pay owners and owners can pay any expenses using the app.",
+		description: "Through my experience in property management, my biggest gripe is the lack of an efficient system for managing payments and tenant-owner communication.\n\nI created LeaseWise as an app where all properties can be organized in one place. View mortgage details, insurance premiums, association fees, send rent receipts and directly communicate with tenants.",
 		captions: [
 			"Retrieve mortgage information, then determine monthly payments, view live payoff quotes, and get profits/losses.",
 			"User roles for tenants and owners/managers, authorized and authenticated using JSON web tokens securely attached to signed HTTP cookies.",

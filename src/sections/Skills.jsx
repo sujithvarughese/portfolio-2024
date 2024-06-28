@@ -11,9 +11,9 @@ const Skills = () => {
 
   return (
     <Box as="section" id="skills">
-      <Stack flexDirection={{ sm: "row" }} my={12} >
+      <Stack flexDirection={{ md: "row" }} gap={2} my={12} mx={2} >
 
-        <Stack borderLeft="solid 6px red">
+        <Stack borderLeft={{ md: "solid 6px #1976d2" }} borderBottom={{ xs: "solid 6px #1976d2", md: "none" }}>
           <Stack flexDirection="row" alignItems="center" justifyContent="center">
             <Box><HiOutlineComputerDesktop size={56} /></Box>
             <Typography variant="h4" fontWeight={700}>Programmer.</Typography>
@@ -21,7 +21,7 @@ const Skills = () => {
           <Box padding={4} ><Typography variant="body1">{softwareSkills}</Typography></Box>
         </Stack>
 
-        <Stack borderLeft="solid 6px blue">
+        <Stack borderLeft={{ md: "solid 6px #1976d2" }} borderBottom={{ xs: "solid 6px #1976d2", md: "none" }}>
           <Stack flexDirection="row" alignItems="center" justifyContent="center">
             <Box ><RiStackLine size={56} /></Box>
             <Typography variant="h4" fontWeight={700}>Developer.</Typography>
@@ -29,7 +29,7 @@ const Skills = () => {
           <Box padding={4} ><Typography variant="body1">{fullStackSkills}</Typography></Box>
         </Stack>
 
-        <Stack sm={4} borderLeft="solid 6px green">
+        <Stack borderLeft={{ md: "solid 6px #1976d2" }} borderBottom={{ xs: "solid 6px #1976d2", md: "none" }}>
           <Stack flexDirection="row" alignItems="center" justifyContent="center">
             <Box ><AiOutlineDeploymentUnit size={56}/></Box>
             <Typography variant="h4" fontWeight={700}>Engineer.</Typography>

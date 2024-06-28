@@ -55,7 +55,7 @@ const Hero = forwardRef((props, ref) => {
         height={{ xs: "70vh", sm: "50vh"}}
         alignItems={{xs: "flex-end", sm: "center"}}
       >
-        <Box height={{ xs: 240, sm: 320}} width={{ xs: 320, sm: 430 }} bgcolor='warning.main' py={{xs: 4, sm: 8}} px={2}>
+        <Box height={{ xs: 240, sm: 320}} width={{ xs: 320, sm: 430 }} bgcolor='warning.main' py={{xs: 4, sm: 8}} px={2} borderRadius={2}>
           <Typography variant="h4" fontWeight={700} display={{ sm: "none" }}>{currentNameText}</Typography>
           <Typography variant="h3" fontWeight={700} display={{ xs: "none", sm: "initial" }}>{currentNameText}</Typography>
           <Typography variant="h5" fontWeight={600} whiteSpace="break-spaces" py={1}>{currentIntroductionText}</Typography>
@@ -82,6 +82,7 @@ const Hero = forwardRef((props, ref) => {
           top={0}
           right={0}
           zIndex={-10}
+          borderRadius={2}
         />
 
         <Box component="img" src={profilePictureMobile} alt="Profile Picture"
@@ -91,6 +92,7 @@ const Hero = forwardRef((props, ref) => {
           right={0}
           display={{ sm: "none" }}
           zIndex={-10}
+          borderRadius={2}
         />
 
 

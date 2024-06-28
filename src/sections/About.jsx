@@ -12,14 +12,15 @@ const About = () => {
 
   return (
     <Container as="section" id="about" sx={{ mt: 16 }}>
-      <Box position="relative">
 
+      <Box position="relative">
           <Box
-            margin={{ xs: "auto", lg: "initial" }}
+            margin={{ xs: "auto", md: "initial" }}
             maxWidth={600}
             justifyContent='center'
             bgcolor='warning.main'
-            p={{xs: 4, md: 10}}
+            p={{xs: 6, md: 8, lg: 10}}
+            borderRadius={2}
           >
             <Typography variant="h2" component="h2" gutterBottom>
               About Me
@@ -33,15 +34,17 @@ const About = () => {
             component="img"
             src={profilePicture}
             alt="Profile Picture"
-            position={{ xs: "initial", lg: "absolute" }}
-            display={{ xs: "none", sm: "initial" }}
-            right={72}
+            position={{ xs: "initial", md: "absolute" }}
+            display={{ xs: "none", md: "initial" }}
+            right={{ xs: 0, md: 56, lg: 72 }}
             bottom={36}
             width="100%"
-            maxWidth={600}
+            maxWidth={{ md: 400, lg: 600 }}
             zIndex={-10}
+            borderRadius={2}
           />
       </Box>
+
     </Container>
   )
 }

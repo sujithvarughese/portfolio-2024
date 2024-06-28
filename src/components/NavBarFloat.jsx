@@ -1,5 +1,5 @@
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
-import { Container, Nav, Navbar, NavDropdown, Stack } from 'react-bootstrap'
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import { useEffect, useState } from 'react'
 import { IoIosHome, IoIosApps } from "react-icons/io";
 import { RiUser3Fill } from "react-icons/ri";
@@ -21,6 +21,7 @@ import { useGlobalContext } from '../context/GlobalContext.jsx'
 import { BiMessageRoundedDetail } from "react-icons/bi";
 import MessageFloat from './MessageFloat.jsx'
 import Box from '@mui/material/Box'
+import { Button, Stack  } from '@mui/material'
 const emailAddress = "sujith.varug@gmail.com"
 
 const NavBarFloat = () => {
@@ -44,61 +45,40 @@ const NavBarFloat = () => {
           transform: isHidden ? "translateY(100px)" : "",
           transition: { duration: 0.5, ease: "easeInOut" }
         }}*/
+
       >
-        <Container direction="horizontal">
+        <Stack direction="horizontal" width="100%" justifyContent="space-between">
 
-          <NavDropdown
-            title={<PiCertificateFill size="64px" color="#000000" />}
-            autoClose={true}
-
-            drop="up"
-            style={{ backgroundColor: "#1976d2", borderRadius: "8px", opacity: "0.9", padding: "1px" }}
-
-          >
-
-            <NavDropdown.Item href={resume} target="_blank" rel="noreferrer">Resume</NavDropdown.Item>
-            <NavDropdown.Item href={diploma} target="_blank" rel="noreferrer">Diploma</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href={metaCert} target="_blank" rel="noreferrer">Meta Front End Developer</NavDropdown.Item>
-            <NavDropdown.Item href={accountingCert} target="_blank" rel="noreferrer">Accounting Technology</NavDropdown.Item>
-            <NavDropdown.Item href={businessManagementCert} target="_blank" rel="noreferrer">Business Management</NavDropdown.Item>
-            <NavDropdown.Item href={javascriptCert} target="_blank" rel="noreferrer">Advanced Javascript</NavDropdown.Item>
-            <NavDropdown.Item href={reactNativeCert} target="_blank" rel="noreferrer">React Native 2024</NavDropdown.Item>
-            <NavDropdown.Item href={mernCert} target="_blank" rel="noreferrer">MERN Stack 2024</NavDropdown.Item>
-
-
-          </NavDropdown>
-          {/*
-          <Nav className={classes.links}>
-            <Nav.Link
-              href="#about"
-              className={activeLink === "about" ? classes.active : ""}
-              onClick={() => onUpdateActiveLink("about")}
+          <Button variant="contained">
+            <NavDropdown
+              title={<PiCertificateFill size="64px" color="#000000" />}
+              autoClose={true}
+              drop="up"
             >
-              <RiUser3Fill size="24px" color={activeLink === "about" ? "#66d9ed" : "#fff"} />
-            </Nav.Link>
-            <Nav.Link
-              href="#projects"
-              className={activeLink === "projects" ? classes.active : ""}
-              onClick={() => onUpdateActiveLink("projects")}
-            >
-              <IoAppsSharp size="24px" color={activeLink === "projects" ? "#66d9ed" : "#fff"}/>
-            </Nav.Link>
-          </Nav>
-          */}
-          <Stack direction="horizontal">
-            <a
-              href={`mailto:${emailAddress}`} target="_blank" rel="noreferrer"
-              style={{ backgroundColor: "#1976d2", borderRadius: "8px", opacity: "0.9", padding: "1px 6px" }}
-            >
+
+              <NavDropdown.Item href={resume} target="_blank" rel="noreferrer">Resume</NavDropdown.Item>
+              <NavDropdown.Item href={diploma} target="_blank" rel="noreferrer">Diploma</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href={metaCert} target="_blank" rel="noreferrer">Meta Front End Developer</NavDropdown.Item>
+              <NavDropdown.Item href={accountingCert} target="_blank" rel="noreferrer">Accounting Technology</NavDropdown.Item>
+              <NavDropdown.Item href={businessManagementCert} target="_blank" rel="noreferrer">Business Management</NavDropdown.Item>
+              <NavDropdown.Item href={javascriptCert} target="_blank" rel="noreferrer">Advanced Javascript</NavDropdown.Item>
+              <NavDropdown.Item href={reactNativeCert} target="_blank" rel="noreferrer">React Native 2024</NavDropdown.Item>
+              <NavDropdown.Item href={mernCert} target="_blank" rel="noreferrer">MERN Stack 2024</NavDropdown.Item>
+            </NavDropdown>
+          </Button>
+
+          <Button variant="contained">
+            <a href={`mailto:${emailAddress}`} target="_blank" rel="noreferrer">
               <BiMessageRoundedDetail size="64px" color="#000000" />
             </a>
 
-
             {/*<a href="http://facebook.com/sujithvarughese" target="_blank" rel="noreferrer"><FaFacebookF size="24px"/></a>*/}
             {/*<a href="http://github.com/sujithvarughese" target="_blank" rel="noreferrer"><FaGithub size="24px"/></a>*/}
-          </Stack>
-        </Container>
+          </Button>
+        </Stack>
+
+
       </Navbar>
 
 
