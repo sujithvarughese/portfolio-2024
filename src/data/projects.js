@@ -53,26 +53,6 @@ import bjMobile from "../assets/images/projects/blackjack/bj-mobile.png"
 
 export const projects = [
 	{
-		title: "BookStax",
-		coverImage: bookstaxCoverIMG,
-		coverVideo: bookstaxCoverMP4,
-		coverGif: bookstaxCoverGIF,
-		heading: "Reading organizer to keep track of your reading and discover new books.",
-		description: "While most current reading apps are simply online stores to buy e-books, this app is geared toward organization and efficient note-taking, while still having the ability to discover and purchase books through Apple and Amazon.",
-		captions: [
-			"Integration with New York Times Best Sellers API and OpenLibrary's search API",
-			"Nested navigators with several stacks and tabs using react-native-navigation.",
-			"Google Firebase to manage and log in users."
-		],
-		images: [bookstaxHomeIMG, bookstaxLibraryIMG, bookstaxDiscoverIMG],
-		link: 'https://bookstax.pages.dev/',
-		github: 'https://github.com/sujithvarughese/bookstax',
-		tech: ["JavaScript", "OpenAI", "React Native", "Expo", "NodeJS", "Firebase", "HTML", "CSS"],
-		featured: true,
-		isMobile: true,
-		width: "50%"
-	},
-	{
 		title: "MedScope",
 		coverImage: medscopeCoverIMG,
 		coverVideo: medscopeCoverMP4,
@@ -87,6 +67,26 @@ export const projects = [
 		images: [medscopeHomeIMG, medscopeDrugIMG, medscopeProfileIMG],
 		link: 'https://medscope.pages.dev/',
 		github: 'https://github.com/sujithvarughese/medscope',
+		tech: ["JavaScript", "OpenAI", "React Native", "Expo", "NodeJS", "Firebase", "HTML", "CSS"],
+		featured: true,
+		isMobile: true,
+		width: "50%"
+	},
+	{
+		title: "BookStax",
+		coverImage: bookstaxCoverIMG,
+		coverVideo: bookstaxCoverMP4,
+		coverGif: bookstaxCoverGIF,
+		heading: "Reading organizer to keep track of your reading and discover new books.",
+		description: "While most current reading apps are simply online stores to buy e-books, this app is geared toward organization and efficient note-taking, while still having the ability to discover and purchase books through Apple and Amazon.",
+		captions: [
+			"Integration with New York Times Best Sellers API and OpenLibrary's search API",
+			"Nested navigators with several stacks and tabs using react-native-navigation.",
+			"Google Firebase to manage and log in users."
+		],
+		images: [bookstaxHomeIMG, bookstaxLibraryIMG, bookstaxDiscoverIMG],
+		link: 'https://bookstax.pages.dev/',
+		github: 'https://github.com/sujithvarughese/bookstax',
 		tech: ["JavaScript", "OpenAI", "React Native", "Expo", "NodeJS", "Firebase", "HTML", "CSS"],
 		featured: true,
 		isMobile: true,
