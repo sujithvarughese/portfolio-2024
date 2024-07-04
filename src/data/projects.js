@@ -22,11 +22,18 @@ import fitnessInstructionsIMG from "../assets/images/projects/simpler-fitness/in
 import realtyCoverIMG from "../assets/images/projects/realty-solutions/cover.png"
 import realtyCoverGIF from "../assets/images/projects/realty-solutions/cover.gif"
 import realtyCoverMP4 from "../assets/images/projects/realty-solutions/cover.mp4"
-import fmrIMG from "../assets/images/projects/realty-solutions/fmr.png"
-import messagesIMG from "../assets/images/projects/realty-solutions/messages.png"
-import receiptsIMG from "../assets/images/projects/realty-solutions/receipts.png"
-import mobileFinancesIMG from "../assets/images/projects/realty-solutions/mobile-finances.png"
-import searchIMG from "../assets/images/projects/realty-solutions/search.png"
+//import fmrIMG from "../assets/images/projects/realty-solutions/fmr.png"
+//import messagesIMG from "../assets/images/projects/realty-solutions/messages.png"
+//import receiptsIMG from "../assets/images/projects/realty-solutions/receipts.png"
+//import mobileFinancesIMG from "../assets/images/projects/realty-solutions/mobile-finances.png"
+//import searchIMG from "../assets/images/projects/realty-solutions/search.png"
+
+import fmrIMG from "../assets/images/projects/realty-solutions/lw-fmr.png"
+import messagesIMG from "../assets/images/projects/realty-solutions/lw-messages.png"
+import galleryModeIMG from "../assets/images/projects/realty-solutions/lw-gallery.png"
+import listModeIMG from "../assets/images/projects/realty-solutions/lw-listmode.png"
+import dashboardIMG from "../assets/images/projects/realty-solutions/lw-dashboard.png"
+
 
 import onTheBooksCoverIMG from "../assets/images/projects/on-the-books/cover.jpeg"
 import onTheBooksCoverGIF from "../assets/images/projects/on-the-books/cover.gif"
@@ -53,6 +60,28 @@ import bjMobile from "../assets/images/projects/blackjack/bj-mobile.png"
 
 export const projects = [
 	{
+		title: "LeaseWise",
+		coverImage: realtyCoverIMG,
+		coverVideo: realtyCoverMP4,
+		coverGif: realtyCoverGIF,
+		heading: "Property management app to manage finances, communicate with tenants, and get market rental data.",
+		description: "Through my experience in property management, my biggest gripe is the lack of an efficient system for managing payments and tenant-owner communication.\n\nI created LeaseWise as an app where all properties can be organized in one place. View mortgage details, insurance premiums, association fees, send rent receipts and directly communicate with tenants.",
+		captions: [
+			"Retrieve mortgage information, then determine monthly payments, view live payoff quotes, and get profits/losses.",
+			"User roles for tenants and owners/managers, authorized and authenticated using JSON web tokens securely attached to signed HTTP cookies.",
+			"HUD.gov API integration to retrieve rental rates for any location in the US.",
+		],
+		images : [dashboardIMG, galleryModeIMG, messagesIMG, listModeIMG, fmrIMG],
+		desktop: rsDesktop,
+		mobile: rsMobile,
+		link: 'https://lease-wise.com',
+		github: 'https://github.com/sujithvarughese/leasewise-client',
+		tech: ["JavaScript", "NodeJS", "React", "MongoDB", "Styled Components", "HTML", "CSS"],
+		featured: true,
+		isMobile: false,
+		width: "50%"
+	},
+	{
 		title: "MedScope",
 		coverImage: medscopeCoverIMG,
 		coverVideo: medscopeCoverMP4,
@@ -71,48 +100,6 @@ export const projects = [
 		featured: true,
 		isMobile: true,
 		width: "50%"
-	},
-	{
-		title: "BookStax",
-		coverImage: bookstaxCoverIMG,
-		coverVideo: bookstaxCoverMP4,
-		coverGif: bookstaxCoverGIF,
-		heading: "Reading organizer to keep track of your reading and discover new books.",
-		description: "While most current reading apps are simply online stores to buy e-books, this app is geared toward organization and efficient note-taking, while still having the ability to discover and purchase books through Apple and Amazon.",
-		captions: [
-			"Integration with New York Times Best Sellers API and OpenLibrary's search API",
-			"Nested navigators with several stacks and tabs using react-native-navigation.",
-			"Google Firebase to manage and log in users."
-		],
-		images: [bookstaxHomeIMG, bookstaxLibraryIMG, bookstaxDiscoverIMG],
-		link: 'https://bookstax.pages.dev/',
-		github: 'https://github.com/sujithvarughese/bookstax',
-		tech: ["JavaScript", "OpenAI", "React Native", "Expo", "NodeJS", "Firebase", "HTML", "CSS"],
-		featured: true,
-		isMobile: true,
-		width: "50%"
-	},
-	{
-		title: "LeaseWise",
-		coverImage: realtyCoverIMG,
-		coverVideo: realtyCoverMP4,
-		coverGif: realtyCoverGIF,
-		heading: "Property management app to manage finances, communicate with tenants, and get market rental data.",
-		description: "Through my experience in property management, my biggest gripe is the lack of an efficient system for managing payments and tenant-owner communication.\n\nI created LeaseWise as an app where all properties can be organized in one place. View mortgage details, insurance premiums, association fees, send rent receipts and directly communicate with tenants.",
-		captions: [
-			"Retrieve mortgage information, then determine monthly payments, view live payoff quotes, and get profits/losses.",
-			"User roles for tenants and owners/managers, authorized and authenticated using JSON web tokens securely attached to signed HTTP cookies.",
-			"HUD.gov API integration to retrieve rental rates for any location in the US.",
-		],
-		images : [mobileFinancesIMG, searchIMG, messagesIMG, receiptsIMG, fmrIMG],
-		desktop: rsDesktop,
-		mobile: rsMobile,
-		link: 'https://lease-wise.com',
-		github: 'https://github.com/sujithvarughese/leasewise-client',
-		tech: ["JavaScript", "NodeJS", "React", "MongoDB", "Styled Components", "HTML", "CSS"],
-		featured: true,
-		isMobile: false,
-		width: "40%"
 	},
 	{
 		title: "Simpler Fitness",
@@ -135,6 +122,26 @@ export const projects = [
 		width: "20%"
 	},
 	{
+		title: "BookStax",
+		coverImage: bookstaxCoverIMG,
+		coverVideo: bookstaxCoverMP4,
+		coverGif: bookstaxCoverGIF,
+		heading: "Reading organizer to keep track of your reading and discover new books.",
+		description: "While most current reading apps are simply online stores to buy e-books, this app is geared toward organization and efficient note-taking, while still having the ability to discover and purchase books through Apple and Amazon.",
+		captions: [
+			"Integration with New York Times Best Sellers API and OpenLibrary's search API",
+			"Nested navigators with several stacks and tabs using react-native-navigation.",
+			"Google Firebase to manage and log in users."
+		],
+		images: [bookstaxHomeIMG, bookstaxLibraryIMG, bookstaxDiscoverIMG],
+		link: 'https://bookstax.pages.dev/',
+		github: 'https://github.com/sujithvarughese/bookstax',
+		tech: ["JavaScript", "OpenAI", "React Native", "Expo", "NodeJS", "Firebase", "HTML", "CSS"],
+		featured: true,
+		isMobile: true,
+		width: "20%"
+	},
+	{
 		title: "Beat Blackjack",
 		coverImage: blackjackCoverIMG,
 		coverVideo: blackjackCoverMP4,
@@ -154,7 +161,7 @@ export const projects = [
 		tech: ["JavaScript", "React", "ChakraUI", "HTML", "CSS"],
 		featured: false,
 		isMobile: false,
-		width: "20%"
+		width: "40%"
 	},
 	{
 		title: "On the Books",
