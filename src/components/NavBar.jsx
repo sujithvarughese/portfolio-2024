@@ -1,5 +1,6 @@
 import { Nav, Navbar, NavDropdown } from "react-bootstrap"
-import { Container, Stack, Typography } from '@mui/material'
+import { Container, Stack } from '@mui/material'
+import Text from "../components/ui/Text.jsx"
 import { useEffect, useState } from 'react'
 import linkedInIcon from '../assets/icons/linkedin-icon.svg';
 import fbIcon from '../assets/icons/fb-icon.svg';
@@ -45,7 +46,7 @@ const NavBar = () => {
 
         <Nav className="me-auto" style={{ alignItems: "center"}}>
           <Nav.Link href="#projects" className="navbar-link">
-            <Typography fontSize={18}>Projects</Typography>
+            <Text fontSize={18}>Projects</Text>
           </Nav.Link>
 
           <NavDropdown
@@ -64,7 +65,7 @@ const NavBar = () => {
           </NavDropdown>
 
           <Nav.Link href={resume} className="navbar-link" target="_blank" rel="noreferrer">
-            <Typography fontSize={18}>Resumé</Typography>
+            <Text fontSize={18}>Resumé</Text>
           </Nav.Link>
         </Nav>
 
@@ -75,7 +76,7 @@ const NavBar = () => {
                 <a href="http://github.com/sujithvarughese" className="social-icon" target="_blank" rel="noreferrer"><img src={githubIcon} alt="Icon" /></a>
               </div>
               <a href={`mailto:${emailAddress}`} className="vvd connect">
-                <Typography color="#fefefe">CONTACT ME</Typography>
+                <Text color="#fefefe">CONTACT ME</Text>
               </a>
             </span>
           </Box>

@@ -1,7 +1,7 @@
 import { Carousel, Image, ListGroup, Offcanvas } from 'react-bootstrap'
 import Icon from './Icon.jsx'
 import { mobileWarning, projectTestingMessage } from '../data/data.js'
-import { Typography } from '@mui/material'
+import Text from "../components/ui/Text.jsx"
 import { Box, Container, Stack } from '@mui/material'
 const ProjectDrawer = ({ isOpen, onClose, title, description, images, captions, link, isMobile, github, tech }) => {
   return (
@@ -17,7 +17,7 @@ const ProjectDrawer = ({ isOpen, onClose, title, description, images, captions, 
 
       <Offcanvas.Body style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: 'space-around', gap: "8px" }}>
 
-        <Typography variant="body2" textAlign="justify" whiteSpace="break-spaces">{description}</Typography>
+        <Text variant="body2" textAlign="justify" whiteSpace="break-spaces">{description}</Text>
 
         <Carousel data-bs-theme="dark">
           {images.map((image, index) => {
@@ -34,14 +34,14 @@ const ProjectDrawer = ({ isOpen, onClose, title, description, images, captions, 
         <ListGroup as="ol">
           {captions.map((caption, index) =>
             <ListGroup.Item key={index}>
-              <Typography variant="body2">{caption}</Typography>
+              <Text variant="body2">{caption}</Text>
             </ListGroup.Item>)}
         </ListGroup>
 
         {
           isMobile &&
           <Box px={3} py={2}>
-            <Typography variant="subtitle2">{mobileWarning}</Typography>
+            <Text variant="subtitle2">{mobileWarning}</Text>
           </Box>
         }
 
@@ -51,7 +51,7 @@ const ProjectDrawer = ({ isOpen, onClose, title, description, images, captions, 
           {link ?
           <a href={link} target="_blank" rel="noreferrer"><h5>Demo</h5></a>
           :
-          <Typography>{projectTestingMessage}</Typography>
+          <Text>{projectTestingMessage}</Text>
           }
         </Stack>
 

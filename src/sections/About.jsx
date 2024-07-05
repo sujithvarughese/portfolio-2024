@@ -1,6 +1,6 @@
 import { Col, Image, Row, Stack } from 'react-bootstrap'
-import { Box, Button, Container, Grid, Snackbar, TextField, Typography } from '@mui/material'
-
+import { Box, Button, Container, Grid, Snackbar, TextField } from '@mui/material'
+import Text from "../components/ui/Text.jsx"
 import { aboutMeHeadline, aboutMe, aboutMe2, aboutMe3, aboutMeUpdated } from '../data/data.js'
 import profilePicture from "../assets/images/profile/hera.png"
 import { skills } from '../data/data.js'
@@ -11,7 +11,7 @@ import { useGlobalContext } from '../context/GlobalContext.jsx'
 const About = () => {
 
   return (
-    <Container as="section" id="about" sx={{ mt: 16 }}>
+    <Container component="section" id="about" sx={{ mt: 16 }}>
 
       <Box position="relative">
           <Box
@@ -22,12 +22,12 @@ const About = () => {
             p={{xs: 6, md: 8, lg: 10}}
             borderRadius={2}
           >
-            <Typography variant="h2" component="h2" gutterBottom>
+            <Text variant="h2" component="h2" gutterBottom>
               About Me
-            </Typography>
-            <Typography variant="body2" whiteSpace="break-spaces">
+            </Text>
+            <Text variant="body2" whiteSpace="break-spaces">
               {aboutMeUpdated}
-            </Typography>
+            </Text>
           </Box>
 
           <Box

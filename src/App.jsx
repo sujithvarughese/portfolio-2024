@@ -1,6 +1,7 @@
 import NavBar from './components/NavBar.jsx'
 import Hero from './sections/Hero.jsx'
-import Projects from './sections/Projects.jsx'
+import ProjectsTiles from './sections/ProjectsTiles.jsx'
+import { ProjectsTesting } from './sections/Projects.jsx'
 import About from './sections/About.jsx'
 import Contact from './sections/Contact.jsx'
 import Footer from './sections/Footer.jsx'
@@ -13,6 +14,7 @@ import Skills from './sections/Skills.jsx'
 import useMouse from '@react-hook/mouse-position'
 import helloImage from "./assets/images/backgrounds/hello-transparent.png"
 import Box from '@mui/material/Box'
+import SkillList from './components/SkillList.jsx'
 
 const App = () => {
 
@@ -71,8 +73,10 @@ const App = () => {
         initial={{ opacity: 0, y: 1000 }}
         animate={{ y: 0, opacity: 1, transition: { duration: 1, ease: "easeInOut" } }}
       >
-        <Skills />
-        <Projects/>
+        {/* <Skills /> */}
+        <SkillList />
+        {/* <ProjectsTiles/> */}
+        <ProjectsTesting />
         <About />
         <Contact />
         <Footer />

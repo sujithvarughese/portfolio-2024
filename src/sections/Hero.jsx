@@ -6,8 +6,9 @@ import Icon from '../components/Icon.jsx'
 import { useGlobalContext } from '../context/GlobalContext.jsx'
 import { IoLocationSharp } from "react-icons/io5";
 import Box from '@mui/material/Box'
+import Text from "../components/ui/Text.jsx"
 import profilePictureMobile from "../assets/images/profile/profile_pic_small.png"
-import { Container, Stack, Grid, Typography, Toolbar } from '@mui/material'
+import { Container, Stack, Grid, Toolbar } from '@mui/material'
 const Hero = forwardRef((props, ref) => {
 
 
@@ -56,9 +57,9 @@ const Hero = forwardRef((props, ref) => {
         alignItems={{xs: "flex-end", sm: "center"}}
       >
         <Box height={{ xs: 240, sm: 320}} width={{ xs: 320, sm: 430 }} bgcolor='warning.main' py={{xs: 4, sm: 8}} px={2} borderRadius={2}>
-          <Typography variant="h4" fontWeight={700} display={{ sm: "none" }}>{currentNameText}</Typography>
-          <Typography variant="h3" fontWeight={700} display={{ xs: "none", sm: "initial" }}>{currentNameText}</Typography>
-          <Typography variant="h5" fontWeight={600} whiteSpace="break-spaces" py={1}>{currentIntroductionText}</Typography>
+          <Text variant="h4" fontWeight={700} display={{ sm: "none" }}>{currentNameText}</Text>
+          <Text variant="h3" fontWeight={700} display={{ xs: "none", sm: "initial" }}>{currentNameText}</Text>
+          <Text variant="h5" fontWeight={600} whiteSpace="break-spaces" py={1}>{currentIntroductionText}</Text>
 
           <Stack flexDirection="row" >
             <motion.div
@@ -70,7 +71,7 @@ const Hero = forwardRef((props, ref) => {
             >
               <IoLocationSharp fontSize={28}/>
             </motion.div>
-            <Typography variant="h6">{currentLocationText}</Typography>
+            <Text variant="h6">{currentLocationText}</Text>
           </Stack>
         </Box>
 

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Container, Image, Stack } from 'react-bootstrap'
-import classes from "../styles/Projects.module.css"
+import classes from "../styles/ProjectsTiles.module.css"
 import ProjectDrawer from './ProjectDrawer.jsx'
 import { motion, useInView } from 'framer-motion'
 import { FaArrowRightFromBracket } from "react-icons/fa6";

@@ -8,6 +8,7 @@ import { MdDns } from 'react-icons/md'
 import { FaAws, FaGitAlt, FaJava } from 'react-icons/fa'
 import { IoIosRocket } from 'react-icons/io'
 import { VscVscode } from 'react-icons/vsc'
+import { SvgIcon } from '@mui/material'
 
 const Icon = ({ name, variant, styles }) => {
   return (
@@ -20,7 +21,7 @@ const Icon = ({ name, variant, styles }) => {
           ...styles
       }}>
         <span>{name}</span>
-        <span>{logos[name]}</span>
+        <SvgIcon>{logos[name]}</SvgIcon>
       </Stack>
     </Badge>
   )
@@ -28,7 +29,7 @@ const Icon = ({ name, variant, styles }) => {
 
 export default Icon
 
-const logos = {
+export const logos = {
   "JavaScript": <RiJavascriptFill />,
   "Python": <SiPython />,
   "Java": <FaJava />,

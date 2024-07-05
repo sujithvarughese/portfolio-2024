@@ -2,7 +2,8 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import { Link, Typography } from '@mui/material'
+import { Link } from '@mui/material'
+import Text from "../components/ui/Text.jsx"
 import helloImage from "../assets/images/backgrounds/hello-transparant.png"
 const emailAddress = "sujith.varug@gmail.com"
 
@@ -23,13 +24,13 @@ const Contact = () => {
           px: 5,
         }}
       >
-        <Typography variant="h4" component="span">
+        <Text variant="h4" component="span">
           LET'S CONNECT
-        </Typography>
+        </Text>
       </Link>
-      <Typography variant="subtitle1" sx={{ my: 3 }}>
+      <Text variant="subtitle1" sx={{ my: 3 }}>
         Get in touch! Feedback and inquiries are all welcome.
-      </Typography>
+      </Text>
     </Container>
   );
 }

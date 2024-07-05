@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Box from '@mui/material/Box'
-import { Typography } from '@mui/material'
+import Text from "../components/ui/Text.jsx"
 import { styled } from '@mui/material/styles'
 import ButtonBase from '@mui/material/ButtonBase'
 import ProjectDrawer from './ProjectDrawer.jsx'
