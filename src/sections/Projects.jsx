@@ -1,8 +1,9 @@
-import { Container, Box, Typography } from '@mui/material'
+import { Container, Box, Typography, ImageList, ImageListItem, ImageListItemBar } from '@mui/material'
 import { projects } from '../data/projects.js'
 import ProjectTile from '../components/ProjectTile.jsx'
 import { useState } from 'react'
 const Projects = () => {
+
 
   return (
     <Container
@@ -11,13 +12,27 @@ const Projects = () => {
       sx={{ marginTop: "36px" }}
     >
       <Typography variant="h4" textAlign="center">Projects</Typography>
-        <Box mt={2} display='flex' flexWrap='wrap' borderRadius={2} overflow="hidden">
-          {projects?.map((project, index) => {
-            return (
+        <ImageList sx={{ display: { xs: "none", md: "revert" } }} variant="masonry" cols={3} gap={8}>
+          {projects?.map((project, index) =>
+            <ImageListItem key={index}>
               <ProjectTile key={index} {...project}/>
-            )
-          })}
-        </Box>
+              <ImageListItemBar title={project.title} />
+            </ImageListItem>
+
+
+          )}
+        </ImageList>
+
+      <ImageList sx={{ display: { md: "none" } }} variant="masonry" cols={2} gap={8} >
+        {projects?.map((project, index) =>
+          <ImageListItem key={index}>
+            <ProjectTile key={index} {...project}/>
+            <ImageListItemBar title={project.title} />
+          </ImageListItem>
+
+
+        )}
+      </ImageList>
     </Container>
   )
 }

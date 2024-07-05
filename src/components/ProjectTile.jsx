@@ -12,7 +12,7 @@ const ImageBackdrop = styled('div')(({ theme }) => ({
   top: 0,
   bottom: 0,
   background: '#000',
-  opacity: 0.5,
+  opacity: 0.25,
   transition: theme.transitions.create('opacity'),
 }));
 
@@ -74,7 +74,7 @@ const ProjectCard = ({ title, description, coverImage, coverVideo, coverGif, hea
       />
       <ImageIconButton
         style={{
-          width: width,
+          width: "100%",
         }}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
@@ -123,15 +123,6 @@ const ProjectCard = ({ title, description, coverImage, coverVideo, coverGif, hea
             color: 'common.white',
           }}
         >
-          <Typography
-            variant="h6"
-            color="inherit"
-            className="imageTitle"
-          >
-            {title}
-            <div className="imageMarked" />
-          </Typography>
-
 
         </Box>
       </ImageIconButton>
