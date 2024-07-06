@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box'
-import { Button, Container, Grid, Stack, SvgIcon } from '@mui/material'
+import { Button, Container, Grid, Stack, SvgIcon, Tooltip } from '@mui/material'
 import { projectTestingMessage } from '../data/data.js'
 import { logos } from './Icon.jsx'
 import Text from './ui/Text.jsx'
@@ -98,7 +98,15 @@ const Project = ({
 
           <Stack direction="horizontal" style={{ gap: "36px", paddingY: "10px" }}>
             <a href={github} target="_blank" rel="noreferrer"><h5>Github</h5></a>
-            <a href={link} target="_blank" rel="noreferrer"><h5>Demo</h5></a>
+            {
+              isMobile ?
+                <Tooltip title="Warning: This is a mobile app. Items will not render corretly on web browser.">
+                  <a href={link} target="_blank" rel="noreferrer"><h5>Demo</h5></a>
+                </Tooltip>
+                :
+                <a href={link} target="_blank" rel="noreferrer"><h5>Demo</h5></a>
+            }
+
           </Stack>
 
         </Stack>

@@ -82,7 +82,7 @@ export const projects = [
 		width: "50%"
 	},
 	{
-		title: "MedScope",
+		title: "MedScope (Mobile App)",
 		coverImage: medscopeCoverIMG,
 		coverVideo: medscopeCoverMP4,
 		coverGif: medscopeCoverGIF,
@@ -122,7 +122,7 @@ export const projects = [
 		width: "20%"
 	},
 	{
-		title: "BookStax",
+		title: "BookStax (Mobile App)",
 		coverImage: bookstaxCoverIMG,
 		coverVideo: bookstaxCoverMP4,
 		coverGif: bookstaxCoverGIF,
