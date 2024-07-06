@@ -62,10 +62,11 @@ const Hero = forwardRef((props, ref) => {
           px={2}
           borderRadius={2}
           position="absolute"
+          bottom={{ xs: 124, sm: "revert" }}
           borderTop="black 8px solid"
           borderBottom="black 8px solid"
         >
-          <Text fontSize={{ xs: 32, md: 48 }} fontWeight={700}>{currentNameText}</Text>
+          <Text fontSize={{ xs: 28, md: 48 }} fontWeight={700}>{currentNameText}</Text>
           <Text variant="h5" fontWeight={600} whiteSpace="break-spaces" py={1}>{currentIntroductionText}</Text>
 
           <Stack flexDirection="row" >

@@ -64,7 +64,7 @@ export const projects = [
 		coverImage: realtyCoverIMG,
 		coverVideo: realtyCoverMP4,
 		coverGif: realtyCoverGIF,
-		heading: "Full stack property management app where you can manage finances and communicate with tenants. Uses the Realty in US API for a full functioning MLS listings search",
+		heading: "Full stack property management app where you can manage finances and communicate with tenants. Uses the Realty in US API for a full functioning MLS listings search.",
 		description: "Through my experience in property management, my biggest complaint is the lack of an efficient system for managing payments and handling tenant-owner communication.\n\nI created LeaseWise as an app where all properties can be organized in one place. View all your financial data, communicate with tenants, and get current listings in real time.",
 		captions: [
 			"User roles for tenants and managers authenticated using JSON web tokens securely attached to signed HTTP cookies and managed with React context.",
@@ -86,7 +86,7 @@ export const projects = [
 		coverImage: medscopeCoverIMG,
 		coverVideo: medscopeCoverMP4,
 		coverGif: medscopeCoverGIF,
-		heading: "Tired of getting medical advice from the resident reddit doctor? Just plug in your symptoms and and basic info, and AI will lay out your best treatment options",
+		heading: "Tired of getting medical advice from the resident reddit doctor? Just plug in your symptoms and and basic info, and AI will lay out your best treatment options.",
 		description: "Enter up to five symptoms, along with your age and sex. With the help of AI, you will get several options of reliable treatment, sorted in order of effectiveness.\n\nI recently partnered with DrugBank to incorporate their API to further improve accuracy and detail, along with added features such as drug interactions. ",
 		captions: [
 			"Search through drug list with autocompletion using National Institute of Health's RX-Terms API.",
