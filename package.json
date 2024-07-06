@@ -23,6 +23,7 @@
     "react-bootstrap-icons": "^1.11.4",
     "react-dom": "^18.2.0",
     "react-icons": "^5.2.1",
+    "smooth-scrollbar": "^8.8.4",
     "styled-components": "^6.1.11",
     "video.js": "^8.12.0"
   },

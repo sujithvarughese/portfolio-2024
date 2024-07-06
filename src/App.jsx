@@ -16,7 +16,7 @@ import helloImage from "./assets/images/backgrounds/hello-transparent.png"
 import Box from '@mui/material/Box'
 import SkillList from './components/SkillList.jsx'
 import { MessageActionButton, NavActionButton } from './components/ActionButton.jsx'
-
+import Scrollbar from 'smooth-scrollbar'
 const App = () => {
 
   const [isLoading, setIsLoading] = useState(true)
@@ -47,7 +47,21 @@ const App = () => {
       setShowComponents(true)
     }, 1000)
   }, [])
-  
+
+  const options = {
+    damping : 0.07,
+    plugins: {
+
+    },
+  }
+  useEffect(() => {
+    Scrollbar.init(document.body, options);
+
+    return () => {
+      if (Scrollbar) Scrollbar.destroy(document.body)
+    }
+  }, [])
+
   return (
     <Box maxWidth={1400} marginX="auto">
 
