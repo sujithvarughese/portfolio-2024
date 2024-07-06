@@ -4,10 +4,10 @@ import Project from "../components/Project.jsx"
 import Text from "../components/ui/Text.jsx"
 const Projects = () => {
   return (
-    <Container>
-      <Text variant="h4" textAlign="center">Projects</Text>
+    <Container sx={{ marginBottom:56 }}>
+      <Text variant="h4" textAlign="center" sx={{ marginBottom: 16 }}>Projects</Text>
 
-      <Stack gap={16}>
+      <Stack gap={{ xs: 8, md: 16 }}>
         {projects.map(project => <Project key={project.title} {...project} />)}
       </Stack>
 

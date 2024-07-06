@@ -15,6 +15,7 @@ import useMouse from '@react-hook/mouse-position'
 import helloImage from "./assets/images/backgrounds/hello-transparent.png"
 import Box from '@mui/material/Box'
 import SkillList from './components/SkillList.jsx'
+import { MessageActionButton, NavActionButton } from './components/ActionButton.jsx'
 
 const App = () => {
 
@@ -63,7 +64,8 @@ const App = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 1, delay: 1.4 } }}
       >
-        <NavBarFloat />
+        <NavActionButton />
+        <MessageActionButton />
       </motion.div>
 
       <Hero />
@@ -81,8 +83,9 @@ const App = () => {
         <Contact />
         <Footer />
       </motion.div>
-
       }
+
+
 
     </Box>
   )

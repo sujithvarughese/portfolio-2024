@@ -63,7 +63,7 @@ const Project = ({
       />
       <Box
         component={motion.div}
-        sx={{ display: "flex", justifyContent: "center" }}
+        sx={{ overflow: "hidden", display: "flex", justifyContent: "center", flexDirection: { xs: "column", md: "row" } }}
         initial={{ opacity: 0.2 }}
         whileInView={{ opacity: 1}}
         transition={{ duration: 1 }}
@@ -72,14 +72,15 @@ const Project = ({
 
         <Box
           component={motion.button}
-          width="40%"
-          initial={{...cardVariants.offscreen, x: -300}}
+          width={{ xs: "100%", ms: "40%" }}
+          initial={{...cardVariants.offscreen, x: -100}}
           whileInView={cardVariants.onscreen}
           animate={cardVariants.animation}
           viewport={cardVariants.viewport}
           onClick={onOpen}
           onMouseEnter={()=>setIsHovering(true)}
           onMouseLeave={()=>setIsHovering(false)}
+          sx={{ overflow: "hidden" }}
         >
           <Box component="img" src={isHovering ? coverGif : coverImage} alt="project" width={420}/>
         </Box>
@@ -87,13 +88,12 @@ const Project = ({
 
         <Stack
           component={motion.div}
-          width="40%"
-          sx={{ placeSelf: "center", gap: 2, height: "100%" }}
-          initial={{ ...cardVariants.offscreen, x: 300 }}
+          width={{ xs: "100%", ms: "40%" }}
+          sx={{ placeSelf: "center", gap: 2, height: "100%", overflow: "hidden" }}
+          initial={{ ...cardVariants.offscreen, x: 100 }}
           whileInView={cardVariants.onscreen}
           animate={cardVariants.animation}
           viewport={cardVariants.viewport}
-
         >
           <Box>
             <Button fontWeight={700} onClick={onOpen} sx={{ p: 0 }}>{title}</Button>

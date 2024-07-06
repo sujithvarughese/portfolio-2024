@@ -53,10 +53,19 @@ const Hero = forwardRef((props, ref) => {
         flexDirection="row"
         position="relative"
         marginX={{ xs: 1, lg: 12 }}
-        height={{ xs: "70vh", sm: "50vh"}}
-        alignItems={{xs: "flex-end", sm: "center"}}
+        height={{ xs: "100vh" }}
+        alignItems="center"
+
       >
-        <Box height={{ xs: 240, sm: 320}} width={{ xs: 320, sm: 430 }} bgcolor='warning.main' py={{xs: 4, sm: 8}} px={2} borderRadius={2}>
+        <Box
+          height={{ xs: 240, sm: 320}}
+          width={{ xs: 320, md: 480 }}
+          bgcolor='warning.main'
+          py={{xs: 4, sm: 8}}
+          px={2}
+          borderRadius={2}
+          position="absolute"
+        >
           <Text variant="h4" fontWeight={700} display={{ sm: "none" }}>{currentNameText}</Text>
           <Text variant="h3" fontWeight={700} display={{ xs: "none", sm: "initial" }}>{currentNameText}</Text>
           <Text variant="h5" fontWeight={600} whiteSpace="break-spaces" py={1}>{currentIntroductionText}</Text>
@@ -75,26 +84,22 @@ const Hero = forwardRef((props, ref) => {
           </Stack>
         </Box>
 
-        <Box component="img" src={profilePicture2} alt="Profile Picture"
-          width="80%"
-          maxWidth={850}
-          position="absolute"
-          display={{ xs: "none", sm: "initial" }}
-          top={0}
-          right={0}
-          zIndex={-10}
-          borderRadius={2}
-        />
+        <Box display="flex" justifyContent="center">
+          <Box component="img" src={profilePicture2} alt="Profile Picture"
+               width="90%"
+               display={{ xs: "none", sm: "initial" }}
+               zIndex={-10}
+               borderRadius={2}
+          />
+          <Box component="img" src={profilePictureMobile} alt="Profile Picture"
+               display={{ sm: "none" }}
+               zIndex={-10}
+               borderRadius={2}
+          />
 
-        <Box component="img" src={profilePictureMobile} alt="Profile Picture"
-          width="80%"
-          position='absolute'
-          top={0}
-          right={0}
-          display={{ sm: "none" }}
-          zIndex={-10}
-          borderRadius={2}
-        />
+        </Box>
+
+
 
 
       </Stack>

@@ -7,8 +7,8 @@ import Text from './ui/Text.jsx'
 
 const SkillList = () => {
   return (
-    <Container component="section">
-      <Text variant="h4" textAlign="center">Skills</Text>
+    <Container component="section" sx={{ height:"100vh" }}>
+      <Text variant="h4" textAlign="center" sx={{ marginBottom: 16 }}>Skills</Text>
       <Grid container>
         {skills.map(skill =>
           <Grid key={skill} item xs={4} md={3}>

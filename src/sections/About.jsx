@@ -11,7 +11,7 @@ import { useGlobalContext } from '../context/GlobalContext.jsx'
 const About = () => {
 
   return (
-    <Container component="section" id="about" sx={{ mt: 16 }}>
+    <Container component="section" id="about" sx={{ mt: 16, height: "100vh" }}>
 
       <Box position="relative">
           <Box
