@@ -54,11 +54,11 @@ const ProjectDrawer = ({ isOpen, onClose, title, description, images, captions, 
           <Text>{projectTestingMessage}</Text>
           }
         </Stack>
-
+        {/*
         <Container>
           {tech.map((item, index) => <Icon key={index} name={item}/>)}
         </Container>
-
+        */}
       </Offcanvas.Body>
     </Offcanvas>
   )

@@ -96,16 +96,16 @@ const Project = ({
           viewport={cardVariants.viewport}
         >
           <Box>
-            <Button fontWeight={700} onClick={onOpen} sx={{ p: 0 }}>{title}</Button>
+            <Button onClick={onOpen} sx={{ p: 0, fontSize: 24 }}>{title}</Button>
           </Box>
-          <Text variant="caption" sx={{ }}>{heading}</Text>
+          <Text variant="subtitle2" fontSize={18}>{heading}</Text>
 
-          <Container sx={{ display: "flex", gap: 1 }}>
+          <Box sx={{ display: "flex", gap: 1 }}>
             {tech.map((item, index) => <SvgIcon key={index}>{logos[item]}</SvgIcon>)}
-          </Container>
+          </Box>
 
 
-          <Stack direction="horizontal" style={{ gap: "36px", padding: "10px" }}>
+          <Stack direction="horizontal" style={{ gap: "36px", paddingY: "10px" }}>
             <a href={github} target="_blank" rel="noreferrer"><h5>Github</h5></a>
             <a href={link} target="_blank" rel="noreferrer"><h5>Demo</h5></a>
           </Stack>

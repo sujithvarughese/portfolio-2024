@@ -64,12 +64,12 @@ export const projects = [
 		coverImage: realtyCoverIMG,
 		coverVideo: realtyCoverMP4,
 		coverGif: realtyCoverGIF,
-		heading: "Property management app to manage finances, communicate with tenants, and get market rental data.",
-		description: "Through my experience in property management, my biggest gripe is the lack of an efficient system for managing payments and tenant-owner communication.\n\nI created LeaseWise as an app where all properties can be organized in one place. View mortgage details, insurance premiums, association fees, send rent receipts and directly communicate with tenants.",
+		heading: "Full stack property management app where you can manage finances and communicate with tenants. Uses the Realty in US API for a full functioning MLS listings search",
+		description: "Through my experience in property management, my biggest complaint is the lack of an efficient system for managing payments and handling tenant-owner communication.\n\nI created LeaseWise as an app where all properties can be organized in one place. View all your financial data, communicate with tenants, and get current listings in real time.",
 		captions: [
-			"Retrieve mortgage information, then determine monthly payments, view live payoff quotes, and get profits/losses.",
-			"User roles for tenants and owners/managers, authorized and authenticated using JSON web tokens securely attached to signed HTTP cookies.",
+			"User roles for tenants and managers authenticated using JSON web tokens securely attached to signed HTTP cookies and managed with React context.",
 			"HUD.gov API integration to retrieve rental rates for any location in the US.",
+			"Retrieve mortgage information, then determine monthly payments, view live payoff quotes, and get profits/losses."
 		],
 		images : [dashboardIMG, galleryModeIMG, messagesIMG, listModeIMG, fmrIMG],
 		desktop: rsDesktop,
@@ -86,11 +86,11 @@ export const projects = [
 		coverImage: medscopeCoverIMG,
 		coverVideo: medscopeCoverMP4,
 		coverGif: medscopeCoverGIF,
-		heading: "AI powered medical assistant for personalized treatment options based on your symptoms.",
-		description: "Tired of getting your medical advice from the resident Reddit doctor? This app keeps it simple for you. Enter up to five symptoms, along with your age and sex. With the help of AI, you will get several options of reliable treatment, sorted in order of effectiveness.\n\nI recently partnered with DrugBank to incorporate their API to further improve accuracy and detail, along with added features such as drug interactions. ",
+		heading: "Tired of getting medical advice from the resident reddit doctor? Just plug in your symptoms and and basic info, and AI will lay out your best treatment options",
+		description: "Enter up to five symptoms, along with your age and sex. With the help of AI, you will get several options of reliable treatment, sorted in order of effectiveness.\n\nI recently partnered with DrugBank to incorporate their API to further improve accuracy and detail, along with added features such as drug interactions. ",
 		captions: [
-			"Search through drug list with autocompletion.",
-			"Get treatment based on age, sex, and selected list of symptoms.",
+			"Search through drug list with autocompletion using National Institute of Health's RX-Terms API.",
+			"Uses Open AI through personally created prompts that returns data in our desired JSON format.",
 			"Google OAuth 2.0 for authentication."
 		],
 		images: [medscopeHomeIMG, medscopeDrugIMG, medscopeProfileIMG],
@@ -106,11 +106,11 @@ export const projects = [
 		coverImage: simplerFitnessCoverIMG,
 		coverVideo: simplerFitnessCoverMP4,
 		coverGif: simplerFitnessCoverGIF,
-		heading: "AI-powered exercise app that creates customized routines and detailed instructions of each workout.",
-		description: "At the start of the pandemic, I built a home gym hoping my family would use it. Within months, the equipment began collecting dust. I realized the problem for my family, like many of us wanting to get in shape is that we simply don't know what to do and how to do it safely.\n\nI created this app as a solution to create personal workout routines based on experience level, time, available equipment, and target body parts.",
+		heading: "Want to get fit but don't know where to start? This AI-powered mobile exercise app creates customized routines based on your profile and your available equipment.",
+		description: "Most of us want to get in shape but usually don't know what to do and how to do it safely.\n\nI created this app as a solution that creates personal workout routines based on experience level, time, available equipment, and target body parts.",
 		captions: [
 			"Custom workouts through OpenAI prompt returns data to back end in JSON.",
-			"JSON data used to find workout details from Mongo Database with about 1500 different workouts.",
+			"JSON data from Open AI is then used to query workout details and instructions from Mongo Database.",
 			"Workouts are efficiently loaded: Front end utilizes infinite-type scrolling which fetches paginated results as user scrolls."
 		],
 		images: [fitnessBrowseIMG, fitnessSearchIMG, fitnessInstructionsIMG],
@@ -126,7 +126,7 @@ export const projects = [
 		coverImage: bookstaxCoverIMG,
 		coverVideo: bookstaxCoverMP4,
 		coverGif: bookstaxCoverGIF,
-		heading: "Reading organizer to keep track of your reading and discover new books.",
+		heading: "A reading app to keep track of your past and current books, while helping you discover new books using the New York Times Best Sellers API.",
 		description: "While most current reading apps are simply online stores to buy e-books, this app is geared toward organization and efficient note-taking, while still having the ability to discover and purchase books through Apple and Amazon.",
 		captions: [
 			"Integration with New York Times Best Sellers API and OpenLibrary's search API",
@@ -146,7 +146,7 @@ export const projects = [
 		coverImage: blackjackCoverIMG,
 		coverVideo: blackjackCoverMP4,
 		coverGif: blackjackCoverGIF,
-		heading: "Learn perfect strategy with hints, live feedback and an ROI tracker.",
+		heading: "Want to learn how to beat the house? Learn perfect strategy with live feedback and return on investment calculations after every move.",
 		description: "Beat Blackjack is designed to teach blackjack strategy while having fun trying to beat the house. Use the optional hint feature at any time to get the correct book play, or choose to get live feedback after every move.\n\n",
 		captions: [
 			"Customizable settings- Choose number of decks, blackjack payouts, your bankroll, number of splits allowed, and more.",
@@ -168,7 +168,7 @@ export const projects = [
 		coverImage: onTheBooksCoverIMG,
 		coverVideo: onTheBooksCoverMP4,
 		coverGif: onTheBooksCoverGIF,
-		heading: "Original reading application designed to help you organize, discover new books, and take notes.",
+		heading: "The original reading application built early in my development journey. This web app is designed to help you organize, discover new books, and take notes.",
 		description: "One of the first full-stack web applications I designed and created. This is the original version of the BOOKSTAX app, and performs much of the same functionality.",
 		captions: [
 			"OpenLibrary API integration to search books by genre and get previews and recommendations.",
