@@ -7,11 +7,20 @@ import { skills } from '../data/data.js'
 import Icon from '../components/Icon.jsx'
 import { useEffect, forwardRef } from 'react'
 import { useGlobalContext } from '../context/GlobalContext.jsx'
+import { motion } from 'framer-motion'
 
 const About = () => {
 
   return (
-    <Container component="section" id="about" sx={{ mt: 16, height: "100vh" }}>
+    <Container
+      component={motion.section}
+      id="about"
+      sx={{ height: "100vh" }}
+      initial={{ y: 400 }}
+      whileInView={{ y: 200}}
+      transition={{ ease: "easeInOut" }}
+      viewport={{ once: true }}
+    >
 
       <Box position="relative">
           <Box

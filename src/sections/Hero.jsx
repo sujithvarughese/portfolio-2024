@@ -41,8 +41,6 @@ const Hero = forwardRef((props, ref) => {
   }, [currentNameText, currentIntroductionText, currentLocationText])
 
 
-
-
   return (
     <Box
       as="section"
@@ -55,19 +53,19 @@ const Hero = forwardRef((props, ref) => {
         marginX={{ xs: 1, lg: 12 }}
         height={{ xs: "100vh" }}
         alignItems="center"
-
+        paddingBottom={{ xs: 16, sm: 36 }}
       >
         <Box
-          height={{ xs: 240, sm: 320}}
           width={{ xs: 320, md: 480 }}
           bgcolor='warning.main'
-          py={{xs: 4, sm: 8}}
+          py={{xs: 4, md: 16}}
           px={2}
           borderRadius={2}
           position="absolute"
+          borderTop="black 8px solid"
+          borderBottom="black 8px solid"
         >
-          <Text variant="h4" fontWeight={700} display={{ sm: "none" }}>{currentNameText}</Text>
-          <Text variant="h3" fontWeight={700} display={{ xs: "none", sm: "initial" }}>{currentNameText}</Text>
+          <Text fontSize={{ xs: 32, md: 48 }} fontWeight={700}>{currentNameText}</Text>
           <Text variant="h5" fontWeight={600} whiteSpace="break-spaces" py={1}>{currentIntroductionText}</Text>
 
           <Stack flexDirection="row" >

@@ -12,6 +12,10 @@ const Contact = () => {
     <Container
       component="section" id="contact"
       sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', my: 9 }}
+      initial={{ y: 0 }}
+      whileInView={{ y: -300}}
+      transition={{ ease: "easeInOut" }}
+      viewport={{ once: true }}
     >
       <Link
         href={`mailto:${emailAddress}`}
