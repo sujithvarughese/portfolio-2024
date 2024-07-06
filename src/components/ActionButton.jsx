@@ -10,14 +10,21 @@ import businessManagementCert from '../assets/images/certificates/business_manag
 import javascriptCert from '../assets/images/certificates/adv_javascript_cert.jpg'
 import reactNativeCert from '../assets/images/certificates/react_native_cert.jpg'
 import mernCert from '../assets/images/certificates/MERN_2024_cert.jpg'
+import Box from '@mui/material/Box'
 const emailAddress = "sujith.varug@gmail.com"
+
+export const ActionButtons = () =>
+  <Box>
+    <NavActionButton />
+    <MessageActionButton />
+  </Box>
 
 export const NavActionButton = () => {
   return (
     <Fab
       aria-label="nav"
       variant="extended"
-      sx={{ position: "fixed", bottom: 16, left: 16, width: 72, height: 72 }}>
+      sx={{ position: "sticky", bottom: 16, left: 16, width: 72, height: 72 }}>
       <NavDropdown
         title={<PiCertificateFill size="54px" />}
         autoClose={true}
@@ -44,7 +51,7 @@ export const MessageActionButton = () => {
       href={`mailto:${emailAddress}`} target="_blank" rel="noreferrer"
       aria-label="message"
       variant="extended"
-      sx={{ position: "fixed", bottom: 16, right: 16, width: 72, height: 72 }}
+      sx={{ width: 72, height: 72 }}
     >
       <BiMessageRoundedDetail size="64px" />
     </Fab>

@@ -63,47 +63,48 @@ const App = () => {
   }, [])
 
   return (
-    <Box maxWidth={1400} marginX="auto">
+    <Box>
+      <Box maxWidth={1400} marginX="auto" position="relative">
 
-      <Box
-        component={motion.div}
-        initial={{ opacity: 0, y: -1000 }}
-        animate={{ y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeInOut", delay: 1.5 } }}
-        sx={{ display: { xs: "none", sm: "initial" } }}
-      >
-        <NavBar/>
+        <Box
+          component={motion.div}
+          initial={{ opacity: 0, y: -1000 }}
+          animate={{ y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeInOut", delay: 1.5 } }}
+
+        >
+          <NavBar/>
+        </Box>
+
+        <Box
+          component={motion.div}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { duration: 1, delay: 1.4 } }}
+          sx={{ display: { sm: "none" } }}
+        >
+
+        </Box>
+
+
+
+        <Hero />
+
+        {showComponents &&
+          <motion.div
+            initial={{ opacity: 0, y: 1000 }}
+            animate={{ y: 0, opacity: 1, transition: { duration: 1, ease: "easeInOut" } }}
+          >
+            {/* <Skills /> */}
+            <SkillList />
+            {/* <ProjectsTiles/> */}
+            <ProjectsTesting />
+            <About />
+            <Contact />
+            <Footer />
+          </motion.div>
+        }
       </Box>
-
-      <Box
-        component={motion.div}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { duration: 1, delay: 1.4 } }}
-        sx={{ display: { sm: "none" } }}
-      >
-        <NavActionButton />
-        <MessageActionButton />
-      </Box>
-
-      <Hero />
-
-      {showComponents &&
-      <motion.div
-        initial={{ opacity: 0, y: 1000 }}
-        animate={{ y: 0, opacity: 1, transition: { duration: 1, ease: "easeInOut" } }}
-      >
-        {/* <Skills /> */}
-        <SkillList />
-        {/* <ProjectsTiles/> */}
-        <ProjectsTesting />
-        <About />
-        <Contact />
-        <Footer />
-      </motion.div>
-      }
-
-
-
     </Box>
+
   )
 }
 

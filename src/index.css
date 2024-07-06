@@ -16,8 +16,8 @@ html {
 }
 body {
   margin: 0;
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
@@ -69,18 +69,8 @@ section {
 
 /************ Navbar Css ************/
 
-nav.navbar {
-  position: fixed;
-  bottom: 3%;
-  padding: 16px 24px;
-  z-index: 99;
-  border-radius: 2px;
-  width: 100%;
-  transition: 1s ease-in-out;
-  background-color: transparent;
-}
 
-@media (min-width: 600px) {
+
   nav.navbar {
     padding: 18px 0;
     width: 100%;
@@ -93,9 +83,8 @@ nav.navbar {
     background-color: #000000;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
-
   }
-}
+
 nav.navbar.scrolled {
   padding: 0px 0;
   background-color: #121212;
@@ -109,14 +98,28 @@ nav.navbar a.navbar-brand:hover {
   color: #66d9ed;
   font-weight: 500;
 }
-#basic-nav-dropdown {
-  font-weight: 400;
-  color: #fff;
-  letter-spacing: 0.8px;
-  padding: 0 25px;
-  font-size: 18px;
-  opacity: 0.75;
+@media (max-width: 599px) {
+  #basic-nav-dropdown {
+    padding: 0;
+    color: #fff;
+    opacity: 0.75;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+  }
 }
+@media (min-width: 600px) {
+  #basic-nav-dropdown {
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 0.8px;
+    padding: 0 25px;
+    font-size: 18px;
+    opacity: 0.75;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
 #basic-nav-dropdown:hover {
   opacity: 1;
   color: #66d9ed ;
@@ -185,13 +188,18 @@ span.navbar-text {
 .social-footer a::before{
   background-color: #ffffff;
 }
+@media (min-width: 600px) {
+  .connect {
+    padding: 10px 34px;
+    font-size: 18px;
+    margin-left: 18px;
+  }
+}
 .connect {
   font-weight: 700;
   color: #fff;
   border: 1px solid #fff;
-  padding: 10px 34px;
-  font-size: 18px;
-  margin-left: 18px;
+  padding: 10px 12px;
   position: relative;
   background-color: transparent;
   transition: 0.3s ease-in-out;

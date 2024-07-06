@@ -39,8 +39,9 @@ const NavBar = () => {
     <Navbar className={isScrolled ? "scrolled" : ""}>
       <Container sx={{ display: "flex", alignItems: "center"}}>
         <Navbar.Brand href="#home" className="navbar-link">
+
           <Nav.Link className="navbar-link">
-            <Box width={48} component="img" src={svInitials} alt="SV" ></Box>
+            <Box sx={{ display: { xs: "none", sm: "initial" } }} width={48} component="img" src={svInitials} alt="SV" ></Box>
           </Nav.Link>
         </Navbar.Brand>
 
@@ -66,16 +67,16 @@ const NavBar = () => {
           </NavDropdown>
 
           <Nav.Link href={resume} className="navbar-link" target="_blank" rel="noreferrer">
-            <Text fontSize={18}>Resumé</Text>
+            <Text fontSize={{ xs: 14, sm: 18 }}>Resumé</Text>
           </Nav.Link>
         </Nav>
 
           <Box>
             <span className="navbar-text">
-              <div className="social-icon">
+              <Box className="social-icon" sx={{ display: { xs: "none", sm: "initial" } }}>
                 <a href="http://facebook.com/sujithvarughese" className="social-icon" target="_blank" rel="noreferrer"><img src={fbIcon} alt="Icon" /></a>
                 <a href="http://github.com/sujithvarughese" className="social-icon" target="_blank" rel="noreferrer"><img src={githubIcon} alt="Icon" /></a>
-              </div>
+              </Box>
               <a href={`mailto:${emailAddress}`} className="vvd connect">
                 <Text color="#fefefe">CONTACT ME</Text>
               </a>

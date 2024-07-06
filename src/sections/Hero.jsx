@@ -53,7 +53,7 @@ const Hero = forwardRef((props, ref) => {
         marginX={{ xs: 1, lg: 12 }}
         height={{ xs: "100vh" }}
         alignItems="center"
-        paddingBottom={{ xs: 16, sm: 36 }}
+        paddingBottom={{ xs: 26, sm: 36 }}
       >
         <Box
           width={{ xs: 320, md: 480 }}
@@ -62,7 +62,7 @@ const Hero = forwardRef((props, ref) => {
           px={2}
           borderRadius={2}
           position="absolute"
-          bottom={{ xs: 124, sm: "revert" }}
+          bottom={{ xs: 164, sm: "revert" }}
           borderTop="black 8px solid"
           borderBottom="black 8px solid"
         >
