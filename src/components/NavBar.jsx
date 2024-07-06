@@ -45,10 +45,11 @@ const NavBar = () => {
         </Navbar.Brand>
 
         <Nav className="me-auto" style={{ alignItems: "center"}}>
-          <Nav.Link href="#projects" className="navbar-link">
+          {/*
+            <Nav.Link href="#projects" className="navbar-link">
             <Text fontSize={18}>Projects</Text>
           </Nav.Link>
-
+          */}
           <NavDropdown
             title="Certificates"
             id="basic-nav-dropdown"

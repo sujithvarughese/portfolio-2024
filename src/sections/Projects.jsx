@@ -8,6 +8,7 @@ const Projects = () => {
     <>
       <Container
         component={motion.section}
+        id="projects"
         sx={{ display: { sm: "none" } }}
         initial={{ y: 300 }}
         whileInView={{ y: 100}}
@@ -23,6 +24,7 @@ const Projects = () => {
       </Container>
       <Container
         component={motion.section}
+        id="projects"
         sx={{ marginY: -32, display: { xs: "none", sm: "revert" } }}
         initial={{ y: 0 }}
         whileInView={{ y: -300}}
