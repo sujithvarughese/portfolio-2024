@@ -251,7 +251,7 @@ span.navbar-text {
 .large {
   display: none;
 }
-@media (min-width: 600px) {
+@media (min-width: 789px) {
   .small {
     display: none;
   }

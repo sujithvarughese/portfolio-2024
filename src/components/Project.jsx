@@ -10,20 +10,20 @@ import { useState } from 'react'
 const cardVariants = {
   offscreen: {
     y: 100,
-    scale: 0.3
+    scale: 0.3,
+    opacity: 0.2
   },
   onscreen: {
     x: 0,
     y: 0,
     scale: 1,
+    opacity: 1,
     transition: {
       ease: "easeInOut",
       duration: 1
     }
   },
   viewport: { once: true },
-  animation: { transition: { duration: 4 } }
-
 };
 
 
@@ -64,19 +64,14 @@ const Project = ({
       <Box
         component={motion.div}
         sx={{ overflow: "hidden", display: "flex", justifyContent: "center", flexDirection: { xs: "column", md: "row" } }}
-        initial={{ opacity: 0.2 }}
-        whileInView={{ opacity: 1}}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
+        initial={cardVariants.offscreen}
+        whileInView={cardVariants.onscreen}
+        viewport={cardVariants.viewport}
       >
 
         <Box
           component={motion.button}
           width={{ xs: "100%", ms: "40%" }}
-          initial={{...cardVariants.offscreen, x: -100}}
-          whileInView={cardVariants.onscreen}
-          animate={cardVariants.animation}
-          viewport={cardVariants.viewport}
           onClick={onOpen}
           onMouseEnter={()=>setIsHovering(true)}
           onMouseLeave={()=>setIsHovering(false)}
@@ -90,10 +85,6 @@ const Project = ({
           component={motion.div}
           width={{ xs: "100%", ms: "40%" }}
           sx={{ placeSelf: "center", gap: 2, height: "100%", overflow: "hidden" }}
-          initial={{ ...cardVariants.offscreen, x: 100 }}
-          whileInView={cardVariants.onscreen}
-          animate={cardVariants.animation}
-          viewport={cardVariants.viewport}
         >
           <Box>
             <Button onClick={onOpen} sx={{ p: 0, fontSize: 24 }}>{title}</Button>

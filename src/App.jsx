@@ -14,7 +14,7 @@ import Skills from './sections/Skills.jsx'
 import useMouse from '@react-hook/mouse-position'
 import helloImage from "./assets/images/backgrounds/hello-transparent.png"
 import Box from '@mui/material/Box'
-import SkillList from './components/SkillList.jsx'
+import SkillList from './sections/SkillList.jsx'
 import { MessageActionButton, NavActionButton } from './components/ActionButton.jsx'
 import Scrollbar from 'smooth-scrollbar'
 const App = () => {
@@ -65,22 +65,24 @@ const App = () => {
   return (
     <Box maxWidth={1400} marginX="auto">
 
-      <motion.div
-        className="large"
+      <Box
+        component={motion.div}
         initial={{ opacity: 0, y: -1000 }}
         animate={{ y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeInOut", delay: 1.5 } }}
+        sx={{ display: { xs: "none", sm: "initial" } }}
       >
         <NavBar/>
-      </motion.div>
+      </Box>
 
-      <motion.div
-        className="small"
+      <Box
+        component={motion.div}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 1, delay: 1.4 } }}
+        sx={{ display: { sm: "none" } }}
       >
         <NavActionButton />
         <MessageActionButton />
-      </motion.div>
+      </Box>
 
       <Hero />
 

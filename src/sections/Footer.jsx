@@ -5,10 +5,11 @@ import githubIcon from "../assets/icons/github-mark-white.svg"
 import sendMessageIcon from "../assets/icons/send-message.svg"
 import { emailAddress } from '../data/data.js'
 import Text from "../components/ui/Text.jsx"
+import Box from '@mui/material/Box'
 
 const Footer = () => {
   return (
-    <footer className="footer" style={{ padding: 36 }}>
+    <Box component="footer" className="footer" sx={{ paddingTop: { xs: 32 , sm: 36 }  }}>
       <Stack className="text-center">
         <Stack className="social-icon social-footer">
           <a href={`mailto:${emailAddress}`} target="_blank" rel="noreferrer"><img src={sendMessageIcon} alt="Icon" /></a>
@@ -20,7 +21,7 @@ const Footer = () => {
           <Text style={style}>Copyright 2024. All Rights Reserved</Text>
         </div>
       </Stack>
-    </footer>
+    </Box>
   )
 }
 
