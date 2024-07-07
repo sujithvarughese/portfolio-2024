@@ -41,7 +41,7 @@ const NavBar = () => {
         <Navbar.Brand href="#home" className="navbar-link">
 
           <Nav.Link className="navbar-link">
-            <Box sx={{ display: { xs: "none", sm: "initial" } }} width={48} component="img" src={svInitials} alt="SV" ></Box>
+            <Box width={{ xs: 32, sm: 48}} component="img" src={svInitials} alt="SV" ></Box>
           </Nav.Link>
         </Navbar.Brand>
 

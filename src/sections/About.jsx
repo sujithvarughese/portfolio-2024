@@ -120,7 +120,7 @@ const About = () => {
             position={{ xs: "initial", md: "absolute" }}
 
             right={0}
-            bottom={320}
+            bottom={-360}
             width="100%"
             maxWidth={{ sm: 180, md: 500, lg: 600 }}
             zIndex={-10}

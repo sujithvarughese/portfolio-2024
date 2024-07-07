@@ -87,7 +87,7 @@ const Project = ({
           sx={{ placeSelf: "center", gap: 2, height: "100%", overflow: "hidden" }}
         >
           <Box>
-            <Button onClick={onOpen} sx={{ p: 0, fontSize: 24 }}>{title}</Button>
+            <Button onClick={onOpen} sx={{ p: 0, fontSize: 24, color: "warning.main" }}>{title}</Button>
           </Box>
           <Text variant="subtitle2" fontSize={18}>{heading}</Text>
 
@@ -97,14 +97,14 @@ const Project = ({
 
 
           <Stack direction="horizontal" style={{ gap: "36px", paddingY: "10px" }}>
-            <a href={github} target="_blank" rel="noreferrer"><h5>Github</h5></a>
+            <a href={github} target="_blank" rel="noreferrer"><Text variant="subtitle1" color="warning.main">Github</Text></a>
             {
               isMobile ?
                 <Tooltip title="Warning: This is a mobile app. Items will not render corretly on web browser.">
-                  <a href={link} target="_blank" rel="noreferrer"><h5>Demo</h5></a>
+                  <a href={link} target="_blank" rel="noreferrer"><Text variant="subtitle1" color="warning.main">Demo</Text></a>
                 </Tooltip>
                 :
-                <a href={link} target="_blank" rel="noreferrer"><h5>Demo</h5></a>
+                <a href={link} target="_blank" rel="noreferrer"><Text variant="subtitle1" color="warning.main">Demo</Text></a>
             }
 
           </Stack>
