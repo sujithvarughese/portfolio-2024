@@ -23,7 +23,7 @@ const Contact = () => {
           underline="none"
           sx={{
             border: '4px solid currentColor',
-            borderRadius: 0,
+            borderRadius: 3,
             height: 'auto',
             py: 2,
             px: 5,
@@ -51,7 +51,7 @@ const Contact = () => {
           underline="none"
           sx={{
             border: '4px solid currentColor',
-            borderRadius: 0,
+            borderRadius: 3,
             height: 'auto',
             py: 2,
             px: 5,

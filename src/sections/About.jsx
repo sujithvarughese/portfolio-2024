@@ -49,7 +49,7 @@ const About = () => {
             justifyContent='center'
             bgcolor='warning.main'
             p={{xs: 3, md: 8, lg: 10}}
-            borderRadius={2}
+            borderRadius={3}
             zIndex={10}
           >
             <Text variant="h2" component="h2" gutterBottom>
@@ -73,7 +73,7 @@ const About = () => {
               component="img"
               src={profilePicture}
               alt="Profile Picture"
-              borderRadius={2}
+              borderRadius={3}
             />
           </Box>
 
@@ -98,7 +98,7 @@ const About = () => {
             justifyContent='center'
             bgcolor='warning.main'
             p={{xs: 3, md: 8, lg: 10}}
-            borderRadius={2}
+            borderRadius={3}
             zIndex={10}
           >
             <Text variant="h2" component="h2" gutterBottom>
@@ -129,7 +129,7 @@ const About = () => {
               component="img"
               src={profilePicture}
               alt="Profile Picture"
-              borderRadius={2}
+              borderRadius={3}
             />
           </Box>
 

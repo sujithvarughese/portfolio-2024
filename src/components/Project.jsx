@@ -70,14 +70,21 @@ const Project = ({
       >
 
         <Box
-          component={motion.button}
+          component="button"
+          variant="contained"
           width={{ xs: "100%", ms: "40%" }}
           onClick={onOpen}
           onMouseEnter={()=>setIsHovering(true)}
           onMouseLeave={()=>setIsHovering(false)}
-          sx={{ overflow: "hidden" }}
+          sx={{ overflow: "hidden", border: "none" }}
         >
-          <Box component="img" src={isHovering ? coverGif : coverImage} alt="project" width={420}/>
+          <Box
+            component="img"
+            src={isHovering ? coverGif : coverImage}
+            alt="project"
+            width={420}
+            sx={{ border: isHovering ? "5px solid #ED6C02" : "", borderRadius: 3 }}
+          />
         </Box>
 
 
