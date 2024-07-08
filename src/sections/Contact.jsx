@@ -14,8 +14,8 @@ const Contact = () => {
       <Container
         component={motion.section} id="contact"
         sx={{ display: { xs: 'flex', sm: 'none' }, flexDirection: 'column', alignItems: 'center'}}
-        initial={{ y: 0 }}
-        whileInView={{ y: 300}}
+        initial={{ y: 300 }}
+        whileInView={{ y: 200}}
         viewport={{ once: true }}
       >
         <Link
@@ -42,8 +42,8 @@ const Contact = () => {
       <Container
         component={motion.section} id="contact"
         sx={{ display: { xs: "none", sm: 'flex' }, flexDirection: 'column', alignItems: 'center'}}
-        initial={{ y: 100 }}
-        whileInView={{ y: -100}}
+        initial={{ y: 200 }}
+        whileInView={{ y: 100}}
         viewport={{ once: true }}
       >
         <Link

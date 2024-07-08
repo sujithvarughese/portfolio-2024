@@ -27,7 +27,7 @@ const Projects = () => {
         id="projects"
         sx={{ marginY: -32, display: { xs: "none", sm: "revert" } }}
         initial={{ y: 0 }}
-        whileInView={{ y: -300}}
+        whileInView={{ y: -150}}
         transition={{ ease: "easeInOut" }}
         viewport={{ once: true }}
       >
