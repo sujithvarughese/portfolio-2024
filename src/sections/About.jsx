@@ -4,7 +4,7 @@ import Text from "../components/ui/Text.jsx"
 import { aboutMeHeadline, aboutMe, aboutMe2, aboutMe3, aboutMeUpdated } from '../data/data.js'
 import profilePicture from "../assets/images/profile/hera.png"
 import { skills } from '../data/data.js'
-import Icon from '../components/Icon.jsx'
+import Icon from '../components/IconPill.jsx'
 import { useEffect, forwardRef } from 'react'
 import { useGlobalContext } from '../context/GlobalContext.jsx'
 import { motion } from 'framer-motion'

@@ -1,5 +1,5 @@
 import { Carousel, Image, ListGroup, Offcanvas } from 'react-bootstrap'
-import Icon from './Icon.jsx'
+import IconPill from './IconPill.jsx'
 import { mobileWarning, projectTestingMessage } from '../data/data.js'
 import Text from "../components/ui/Text.jsx"
 import { Box, Container, Stack } from '@mui/material'

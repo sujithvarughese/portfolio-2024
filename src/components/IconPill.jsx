@@ -10,7 +10,7 @@ import { IoIosRocket } from 'react-icons/io'
 import { VscVscode } from 'react-icons/vsc'
 import { SvgIcon } from '@mui/material'
 
-const Icon = ({ name, variant, styles }) => {
+const IconPill = ({ name, variant, styles }) => {
   return (
     <Badge pill bg={variant || "info"} style={{ margin: "2px" }}>
       <Stack
@@ -27,7 +27,7 @@ const Icon = ({ name, variant, styles }) => {
   )
 }
 
-export default Icon
+export default IconPill
 
 export const logos = {
   "JavaScript": <RiJavascriptFill />,

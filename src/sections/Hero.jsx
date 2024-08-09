@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 import { introductionText, descriptionText, fullName, bio, aboutMeUpdated } from '../data/data.js'
 import { forwardRef, useEffect, useState } from 'react'
 import profilePicture2 from "../assets/images/profile/profile_pic.png"
-import Icon from '../components/Icon.jsx'
+import Icon from '../components/IconPill.jsx'
 import { useGlobalContext } from '../context/GlobalContext.jsx'
 import { IoLocationSharp } from "react-icons/io5";
 import Box from '@mui/material/Box'

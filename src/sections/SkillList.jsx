@@ -1,8 +1,6 @@
 import { Container, Grid } from '@mui/material'
-import Box from '@mui/material/Box'
 import { skills } from '../data/data.js'
-import Icon from "../components/Icon.jsx"
-import IconSkill from '../components/ui/IconSkill.jsx'
+import IconSkill from '../components/IconSkill.jsx'
 import Text from '../components/ui/Text.jsx'
 import { motion } from 'framer-motion'
 

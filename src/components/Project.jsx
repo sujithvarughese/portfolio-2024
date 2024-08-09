@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box'
 import { Button, Container, Grid, Stack, SvgIcon, Tooltip } from '@mui/material'
 import { projectTestingMessage } from '../data/data.js'
-import { logos } from './Icon.jsx'
+import { logos } from './IconPill.jsx'
 import Text from './ui/Text.jsx'
 import { motion } from 'framer-motion'
 import ProjectDrawer from './ProjectDrawer.jsx'
