@@ -58,7 +58,6 @@ const NavBar = () => {
             id="basic-nav-dropdown"
             menuVariant="dark"
             autoClose={true}
-            fontFamily="Avenir Next Condensed"
           >
             <NavDropdown.Item href={diploma} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>Bachelor's Diploma</Text></NavDropdown.Item>
             <NavDropdown.Item href={comptiaCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>CompTia A+</Text></NavDropdown.Item>
@@ -92,7 +91,7 @@ const NavBar = () => {
 
 
           <Nav.Link href={resume} className="navbar-link" target="_blank" rel="noreferrer">
-            Resumé
+            <Text fontSize={{ xs: 14, sm: 18 }}>Resumé</Text>
           </Nav.Link>
         </Nav>
 

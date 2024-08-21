@@ -1,11 +1,12 @@
 import Box from '@mui/material/Box'
-import { Button, Container, Grid, Stack, SvgIcon, Tooltip } from '@mui/material'
+import { Button, Container, Grid, Modal, Stack, SvgIcon, Tooltip } from '@mui/material'
 import { projectTestingMessage } from '../data/data.js'
 import { logos } from './IconPill.jsx'
 import Text from './ui/Text.jsx'
 import { motion } from 'framer-motion'
 import ProjectDrawer from './ProjectDrawer.jsx'
 import { useState } from 'react'
+import MobilePopUp from './MobilePopUp.jsx'
 
 const cardVariants = {
   offscreen: {
@@ -44,6 +45,7 @@ const Project = ({
 }) => {
 
   const [showDrawer, setShowDrawer] = useState(false)
+  const [showMobileModal, setShowMobileModal] = useState(false)
   const onOpen = () => setShowDrawer(true)
 
   const [isHovering, setIsHovering] = useState(false)
@@ -107,21 +109,21 @@ const Project = ({
             <a href={github} target="_blank" rel="noreferrer"><Text variant="subtitle1" fontSize="20px" color="warning.main">Github</Text></a>
             {
               isMobile ?
-                <Tooltip title="Warning: This is a mobile app. Items will not render corretly on web browser.">
-                  <a href={link} target="_blank" rel="noreferrer"><Text variant="subtitle1" fontSize="20px" color="warning.main">Demo</Text></a>
-                </Tooltip>
+                <>
+                  <Box component="button" onClick={()=>setShowMobileModal(!showMobileModal)} p={0} border="none" ><Text variant="subtitle1" fontSize="20px" color="warning.main">Demo</Text></Box>
+                  {showMobileModal && <MobilePopUp open={showMobileModal} onClose={() => setShowMobileModal(false)} link={link} />}
+                </>
                 :
                 <a href={link} target="_blank" rel="noreferrer"><Text variant="subtitle1" fontSize="20px" color="warning.main">Demo</Text></a>
             }
-
           </Stack>
 
         </Stack>
 
       </Box>
     </>
-
   )
 }
+
 
 export default Project

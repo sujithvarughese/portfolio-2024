@@ -70,7 +70,6 @@ const App = () => {
           component={motion.div}
           initial={{ opacity: 0, y: -1000 }}
           animate={{ y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeInOut", delay: 1.5 } }}
-
         >
           <NavBar/>
         </Box>
