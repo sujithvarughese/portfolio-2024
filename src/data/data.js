@@ -15,11 +15,11 @@ export const skillsFull = ['JavaScript', 'Python', 'Java', 'OpenAI', 'React', 'R
 export const programmingSkills = ["JavaScript", "Python", "Java"]
 
 
-export const softwareSkills = "Experienced in both functional and object-oriented programming: JavaScript (including TypeScript), Python, and Java."
+export const softwareSkills = "Proficient in both functional and object-oriented programming: JavaScript, Python, and Java."
 
-export const fullStackSkills = "Well-versed in libraries and frameworks: Two years experience in React, React Native, NextJS, HTML, CSS, NodeJS, Express, SQL, and MongoDB."
+export const fullStackSkills = "Two years experience in React, React Native, NextJS, HTML, CSS, NodeJS, Express, SQL, and MongoDB."
 
-export const deploymentSkills = "Proficient in the software developmental life cycle from design to maintenance, including testing, DNS configuration, and app store publishing."
+export const deploymentSkills = "Experienced in the software developmental life cycle, network configuration, and app store publishing."
 export const fullName = "Sujith Varughese"
 export const bio = "Software Engineer."
 export const introductionText = "My name is Sujith."

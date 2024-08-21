@@ -9,29 +9,28 @@ const Projects = () => {
       <Container
         component={motion.section}
         id="projects"
-        sx={{ display: { sm: "none" } }}
-        initial={{ y: 300 }}
-        whileInView={{ y: 100}}
+        sx={{ display: { sm: "none" }}}
+        initial={{ y: 200 }}
+        whileInView={{ y: 0}}
         transition={{ ease: "easeInOut" }}
         viewport={{ once: true }}
       >
-        <Text variant="h4" textAlign="center" sx={{ marginBottom: 16 }}>Projects</Text>
-
+        <Text variant="h4" textAlign="center" sx={{ marginBottom: 12 }}>Projects</Text>
         <Stack gap={{ xs: 8, md: 16 }}>
           {projects.map(project => <Project key={project.title} {...project} />)}
         </Stack>
-
       </Container>
+
       <Container
         component={motion.section}
         id="projects"
-        sx={{ marginY: -32, display: { xs: "none", sm: "revert" } }}
-        initial={{ y: 0 }}
-        whileInView={{ y: -150}}
+        sx={{ display: { xs: "none", sm: "revert" } }}
+        initial={{ y: 200 }}
+        whileInView={{ y: 0}}
         transition={{ ease: "easeInOut" }}
         viewport={{ once: true }}
       >
-        <Text variant="h4" textAlign="center" sx={{ marginBottom: 16 }}>Projects</Text>
+        <Text variant="h3" textAlign="center" sx={{ marginBottom: 16 }}>Projects</Text>
 
         <Stack gap={{ xs: 8, md: 16 }}>
           {projects.map(project => <Project key={project.title} {...project} />)}
@@ -43,4 +42,4 @@ const Projects = () => {
   )
 }
 
-export { Projects as ProjectsTesting }
+export default Projects

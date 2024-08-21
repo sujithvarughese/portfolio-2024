@@ -9,7 +9,7 @@ import Box from '@mui/material/Box'
 
 const Footer = () => {
   return (
-    <Box component="footer" className="footer" sx={{ paddingTop: { xs: 32 , sm: 36 }  }}>
+    <Box component="footer" className="footer" sx={{ paddingTop: 32 }}>
       <Stack className="text-center">
         <Stack className="social-icon social-footer">
           <a href={`mailto:${emailAddress}`} target="_blank" rel="noreferrer"><img src={sendMessageIcon} alt="Icon" /></a>

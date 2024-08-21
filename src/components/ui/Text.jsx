@@ -2,7 +2,7 @@ import { Typography } from '@mui/material'
 
 const Text = (props) => {
   return (
-    <Typography fontFamily="Montserrat" {...props} >
+    <Typography fontFamily="Avenir Next Condensed" {...props} >
       {props.children}
     </Typography>
   )

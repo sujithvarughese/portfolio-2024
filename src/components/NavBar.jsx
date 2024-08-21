@@ -1,4 +1,4 @@
-import { Nav, Navbar, NavDropdown } from "react-bootstrap"
+import { Dropdown, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import { Container, Stack } from '@mui/material'
 import Text from "../components/ui/Text.jsx"
 import { useEffect, useState } from 'react'
@@ -11,6 +11,7 @@ const emailAddress = "sujith.varug@gmail.com"
 
 import resume from "../assets/images/certificates/resume-2024.pdf"
 import diploma from "../assets/images/certificates/diploma.png"
+import comptiaCert from "../assets/images/certificates/compTIA_cert.pdf"
 import metaCert from "../assets/images/certificates/meta_frontend_cert.png"
 import javascriptCert from "../assets/images/certificates/adv_javascript_cert.jpg"
 import reactNativeCert from "../assets/images/certificates/react_native_cert.jpg"
@@ -51,23 +52,47 @@ const NavBar = () => {
             <Text fontSize={18}>Projects</Text>
           </Nav.Link>
           */}
-          <NavDropdown
+
+             <NavDropdown
             title="Certificates"
             id="basic-nav-dropdown"
             menuVariant="dark"
             autoClose={true}
+            fontFamily="Avenir Next Condensed"
           >
-            <NavDropdown.Item href={diploma} target="_blank" rel="noreferrer">Bachelor's Diploma</NavDropdown.Item>
-            <NavDropdown.Item href={metaCert} target="_blank" rel="noreferrer">Meta Front End Developer</NavDropdown.Item>
-            <NavDropdown.Item href={accountingCert} target="_blank" rel="noreferrer">Accounting Technology</NavDropdown.Item>
-            <NavDropdown.Item href={businessManagementCert} target="_blank" rel="noreferrer">Business Management</NavDropdown.Item>
-            <NavDropdown.Item href={javascriptCert} target="_blank" rel="noreferrer">Advanced Javascript</NavDropdown.Item>
-            <NavDropdown.Item href={reactNativeCert} target="_blank" rel="noreferrer">React Native 2024</NavDropdown.Item>
-            <NavDropdown.Item href={mernCert} target="_blank" rel="noreferrer">MERN Stack 2024</NavDropdown.Item>
+            <NavDropdown.Item href={diploma} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>Bachelor's Diploma</Text></NavDropdown.Item>
+            <NavDropdown.Item href={comptiaCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>CompTia A+</Text></NavDropdown.Item>
+            <NavDropdown.Item href={metaCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>Meta Front End Developer</Text></NavDropdown.Item>
+            <NavDropdown.Item href={accountingCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>Accounting Technology</Text></NavDropdown.Item>
+            <NavDropdown.Item href={businessManagementCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>Business Management</Text></NavDropdown.Item>
+            <NavDropdown.Item href={javascriptCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>Advanced Javascript</Text></NavDropdown.Item>
+            <NavDropdown.Item href={reactNativeCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>React Native 2024</Text></NavDropdown.Item>
+            <NavDropdown.Item href={mernCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>MERN Stack 2024</Text></NavDropdown.Item>
           </NavDropdown>
+          {/*
+              <Dropdown>
+            <Dropdown.Toggle variant="dark">
+              Certificates
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item href={diploma} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>Bachelor's Diploma</Text></Dropdown.Item>
+              <Dropdown.Item href={comptiaCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>CompTia A+</Text></Dropdown.Item>
+              <Dropdown.Item href={metaCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>Meta Front End Developer</Text></Dropdown.Item>
+              <Dropdown.Item href={accountingCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>Accounting Technology</Text></Dropdown.Item>
+              <Dropdown.Item href={businessManagementCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>Business Management</Text></Dropdown.Item>
+              <Dropdown.Item href={javascriptCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>Advanced Javascript</Text></Dropdown.Item>
+              <Dropdown.Item href={reactNativeCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>React Native 2024</Text></Dropdown.Item>
+              <Dropdown.Item href={mernCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>MERN Stack 2024</Text></Dropdown.Item>
+              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+
+            </Dropdown.Menu>
+          </Dropdown>
+         */ }
+
+
 
           <Nav.Link href={resume} className="navbar-link" target="_blank" rel="noreferrer">
-            <Text fontSize={{ xs: 14, sm: 18 }}>Resumé</Text>
+            Resumé
           </Nav.Link>
         </Nav>
 

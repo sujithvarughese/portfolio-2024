@@ -13,13 +13,13 @@ const About = () => {
 
   const cardVariants = {
     offscreen: {
-      y: 400,
+      y: 200,
       scale: 0.3,
       opacity: 0.2
     },
     onscreen: {
       x: 0,
-      y: 400,
+      y: 0,
       scale: 1,
       opacity: 1,
       transition: {
@@ -35,14 +35,13 @@ const About = () => {
       <Container
         component="section"
         id="about"
-        sx={{ height: "100vh", display: { md: "none"} }}
+        sx={{ display: { md: "none"} }}
       >
-
         <Box position="relative">
           <Box
             component={motion.div}
-            initial={{...cardVariants.offscreen, y: 50, x: -50}}
-            whileInView={{ ...cardVariants.onscreen, y: 200}}
+            initial={{...cardVariants.offscreen, x: -50}}
+            whileInView={{ ...cardVariants.onscreen }}
             viewport={cardVariants.viewport}
             margin="auto"
             maxWidth={600}
@@ -62,10 +61,10 @@ const About = () => {
 
           <Box
             component={motion.div}
-            initial={{...cardVariants.offscreen, y: 200, x: 50}}
-            whileInView={{ ...cardVariants.onscreen, y: 180}}
+            initial={{...cardVariants.offscreen, x: 50}}
+            whileInView={{ ...cardVariants.onscreen}}
             viewport={cardVariants.viewport}
-            maxWidth={280}
+            maxWidth="80%"
             zIndex={-10}
             margin="auto"
           >
@@ -84,7 +83,7 @@ const About = () => {
       <Container
         component={motion.section}
         id="about"
-        sx={{ height: "100vh", display: { xs: "none", md: "revert" }  }}
+        sx={{ display: { xs: "none", md: "revert" }, marginBottom: 52 }}
       >
 
         <Box position="relative">
@@ -101,15 +100,13 @@ const About = () => {
             borderRadius={3}
             zIndex={10}
           >
-            <Text variant="h2" component="h2" gutterBottom>
+            <Text variant="h2" component="h2" fontSize="28" gutterBottom>
               About Me
             </Text>
 
-            <Text variant="body2" whiteSpace="break-spaces" fontSize={{ sm: 16 }}>
+            <Text variant="body2" whiteSpace="break-spaces">
               {aboutMeUpdated}
             </Text>
-
-
           </Box>
 
           <Box
@@ -118,7 +115,6 @@ const About = () => {
             whileInView={{ ...cardVariants.onscreen}}
             viewport={cardVariants.viewport}
             position={{ xs: "initial", md: "absolute" }}
-
             right={0}
             bottom={-360}
             width="100%"
@@ -132,7 +128,6 @@ const About = () => {
               borderRadius={3}
             />
           </Box>
-
         </Box>
 
       </Container>

@@ -1,7 +1,7 @@
 import NavBar from './components/NavBar.jsx'
 import Hero from './sections/Hero.jsx'
 import ProjectsTiles from './sections/ProjectsTiles.jsx'
-import { ProjectsTesting } from './sections/Projects.jsx'
+import Projects from './sections/Projects.jsx'
 import About from './sections/About.jsx'
 import Contact from './sections/Contact.jsx'
 import Footer from './sections/Footer.jsx'
@@ -89,18 +89,18 @@ const App = () => {
         <Hero />
 
         {showComponents &&
-          <motion.div
+          <Stack
+            component={motion.div}
             initial={{ opacity: 0, y: 1000 }}
             animate={{ y: 0, opacity: 1, transition: { duration: 1, ease: "easeInOut" } }}
           >
-            {/* <Skills /> */}
             <SkillList />
             {/* <ProjectsTiles/> */}
-            <ProjectsTesting />
+            <Projects />
             <About />
             <Contact />
             <Footer />
-          </motion.div>
+          </Stack>
         }
       </Box>
     </Box>

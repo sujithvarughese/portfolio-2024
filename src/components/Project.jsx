@@ -104,14 +104,14 @@ const Project = ({
 
 
           <Stack direction="horizontal" style={{ gap: "36px", paddingY: "10px" }}>
-            <a href={github} target="_blank" rel="noreferrer"><Text variant="subtitle1" color="warning.main">Github</Text></a>
+            <a href={github} target="_blank" rel="noreferrer"><Text variant="subtitle1" fontSize="20px" color="warning.main">Github</Text></a>
             {
               isMobile ?
                 <Tooltip title="Warning: This is a mobile app. Items will not render corretly on web browser.">
-                  <a href={link} target="_blank" rel="noreferrer"><Text variant="subtitle1" color="warning.main">Demo</Text></a>
+                  <a href={link} target="_blank" rel="noreferrer"><Text variant="subtitle1" fontSize="20px" color="warning.main">Demo</Text></a>
                 </Tooltip>
                 :
-                <a href={link} target="_blank" rel="noreferrer"><Text variant="subtitle1" color="warning.main">Demo</Text></a>
+                <a href={link} target="_blank" rel="noreferrer"><Text variant="subtitle1" fontSize="20px" color="warning.main">Demo</Text></a>
             }
 
           </Stack>

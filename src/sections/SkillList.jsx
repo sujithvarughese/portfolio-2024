@@ -9,9 +9,9 @@ const SkillList = () => {
     <>
       <Container
         component={motion.section}
-        sx={{ height:"100vh", display: { sm: "none"} }}
-        initial={{ y: 100 }}
-        whileInView={{ y: -50}}
+        sx={{ display: { sm: "none"} }}
+        initial={{ y: 200 }}
+        whileInView={{ y: 0}}
         transition={{ ease: "easeInOut" }}
       >
         <Text variant="h4" textAlign="center" sx={{ marginBottom: 12 }}>Skills</Text>
@@ -22,14 +22,15 @@ const SkillList = () => {
             </Grid>)}
         </Grid>
       </Container>
+
       <Container
         component={motion.section}
-        sx={{ height:"100vh", display: { xs: "none", sm: "revert" } }}
-        initial={{ y: 0 }}
-        whileInView={{ y: -200}}
+        sx={{ display: { xs: "none", sm: "revert" } }}
+        initial={{ y: 200 }}
+        whileInView={{ y: 0}}
         transition={{ ease: "easeInOut" }}
       >
-        <Text variant="h4" textAlign="center" sx={{ marginBottom: 12 }}>Skills</Text>
+        <Text variant="h3" textAlign="center" sx={{ marginBottom: 12 }}>Skills</Text>
         <Grid container>
           {skills.map(skill =>
             <Grid key={skill} item xs={4} md={3}>
