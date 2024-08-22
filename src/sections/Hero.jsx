@@ -14,7 +14,7 @@ import Skills from './Skills.jsx'
 import resume from "../assets/images/certificates/resume-2024.pdf"
 import diploma from "../assets/images/certificates/diploma.png"
 import comptiaCert from "../assets/images/certificates/compTIA_cert.pdf"
-import metaCert from "../assets/images/certificates/meta_frontend_cert.png"
+import metaCert from "../assets/images/certificates/meta_frontend_cert.pdf"
 
 const Hero = forwardRef((props, ref) => {
 
