@@ -62,6 +62,7 @@ const Project = ({
         link={link}
         github={github}
         tech={tech}
+        isMobile={isMobile}
       />
       <Box
         component={motion.div}
@@ -74,7 +75,7 @@ const Project = ({
         <Box
           component="button"
           variant="contained"
-          width={{ xs: "100%", ms: "40%" }}
+          width={{ xs: "100%", md: "50%" }}
           onClick={onOpen}
           onMouseEnter={()=>setIsHovering(true)}
           onMouseLeave={()=>setIsHovering(false)}
@@ -84,7 +85,7 @@ const Project = ({
             component="img"
             src={isHovering ? coverGif : coverImage}
             alt="project"
-            width={420}
+            width={{ sm: 420 }}
             sx={{ border: isHovering ? "5px solid #ED6C02" : "", borderRadius: 3 }}
           />
         </Box>
@@ -92,7 +93,7 @@ const Project = ({
 
         <Stack
           component={motion.div}
-          width={{ xs: "100%", ms: "40%" }}
+          width={{ xs: "100%", md: "50%" }}
           sx={{ placeSelf: "center", gap: 2, height: "100%", overflow: "hidden" }}
         >
           <Box>

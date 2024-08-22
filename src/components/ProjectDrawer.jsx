@@ -3,54 +3,75 @@ import IconPill from './IconPill.jsx'
 import { mobileWarning, projectTestingMessage } from '../data/data.js'
 import Text from "../components/ui/Text.jsx"
 import { Box, Container, Stack } from '@mui/material'
+import MobilePopUp from './MobilePopUp.jsx'
+import { useState } from 'react'
 const ProjectDrawer = ({ isOpen, onClose, title, description, images, captions, link, isMobile, github, tech }) => {
+
+  const [showMobileModal, setShowMobileModal] = useState(false)
+
+
   return (
     <Offcanvas
         show={isOpen}
         onHide={onClose}
+        scroll="true"
+        style={{ height: "100vh" }}
     >
       <Offcanvas.Header closeButton>
         <Offcanvas.Title><h3>{title}</h3></Offcanvas.Title>
       </Offcanvas.Header>
 
       <Offcanvas.Body
-        style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: 'space-around', gap: "8px", paddingTop: "8px", paddingBottom: "8px", overflowY: "scroll" }}>
+        style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: 'space-evenly', gap: "8px", paddingTop: "8px", paddingBottom: "8px" }}>
 
-        <Text variant="body2" textAlign="justify" whiteSpace="break-spaces">{description}</Text>
+        <Text variant="body1" textAlign="justify" whiteSpace="break-spaces">{description}</Text>
 
-        <Carousel data-bs-theme="dark">
-          {images.map((image, index) => {
-            return (
-              <Carousel.Item key={index}>
-                <Container>
-                  <Image src={image} alt="app-image" style={{ width: "300px" }} />
-                </Container>
-              </Carousel.Item>
-            )
-          })}
-        </Carousel>
+        <Box display={{ sm: "none" }}>
+          <Carousel data-bs-theme="dark">
+            {images.map((image, index) => {
+              return (
+                <Carousel.Item key={index}>
+                  <Container>
+                    <Image src={image} alt="app-image" style={{ width: "300px", height: "300px" }} />
+                  </Container>
+                </Carousel.Item>
+              )
+            })}
+          </Carousel>
+        </Box>
+
+        <Box display={{ xs: "none", sm: "revert" }}>
+          <Carousel data-bs-theme="dark">
+            {images.map((image, index) => {
+              return (
+                <Carousel.Item key={index}>
+                  <Container>
+                    <Image src={image} alt="app-image" style={{ width: "300px" }} />
+                  </Container>
+                </Carousel.Item>
+              )
+            })}
+          </Carousel>
+        </Box>
 
         <ListGroup as="ol">
           {captions.map((caption, index) =>
             <ListGroup.Item key={index}>
-              <Text variant="body2">{caption}</Text>
+              <Text variant="body1">{caption}</Text>
             </ListGroup.Item>)}
         </ListGroup>
 
-        {
-          isMobile &&
-          <Box px={3} py={2}>
-            <Text variant="subtitle2">{mobileWarning}</Text>
-          </Box>
-        }
-
         <Stack direction="horizontal" style={{ justifyContent: "center", gap: "36px", padding: "10px" }}>
 
-          <a href={github} target="_blank" rel="noreferrer"><h5>Github</h5></a>
-          {link ?
-          <a href={link} target="_blank" rel="noreferrer"><h5>Demo</h5></a>
-          :
-          <Text>{projectTestingMessage}</Text>
+          <a href={github} target="_blank" rel="noreferrer"><Text variant="subtitle1" fontSize="20px" color="warning.main">Github</Text></a>
+          {
+            isMobile ?
+              <>
+                <Box component="button" onClick={()=>setShowMobileModal(!showMobileModal)} p={0} border="none" ><Text variant="subtitle1" fontSize="20px" color="warning.main">Demo</Text></Box>
+                {showMobileModal && <MobilePopUp open={showMobileModal} onClose={() => setShowMobileModal(false)} link={link} />}
+              </>
+              :
+              <a href={link} target="_blank" rel="noreferrer"><Text variant="subtitle1" fontSize="20px" color="warning.main">Demo</Text></a>
           }
         </Stack>
         {/*
