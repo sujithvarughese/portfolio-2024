@@ -53,7 +53,7 @@ const Hero = forwardRef((props, ref) => {
       as="section"
       id="home"
       ref={ref}
-      paddingTop={12}
+
       marginX={{ xs: 1, lg: 12 }}
     >
       <Stack

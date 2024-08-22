@@ -8,14 +8,13 @@ const ProjectDrawer = ({ isOpen, onClose, title, description, images, captions, 
     <Offcanvas
         show={isOpen}
         onHide={onClose}
-
-
     >
       <Offcanvas.Header closeButton>
         <Offcanvas.Title><h3>{title}</h3></Offcanvas.Title>
       </Offcanvas.Header>
 
-      <Offcanvas.Body style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: 'space-around', gap: "8px" }}>
+      <Offcanvas.Body
+        style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: 'space-around', gap: "8px", paddingTop: "8px", paddingBottom: "8px", overflowY: "scroll" }}>
 
         <Text variant="body2" textAlign="justify" whiteSpace="break-spaces">{description}</Text>
 

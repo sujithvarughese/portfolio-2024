@@ -3,7 +3,7 @@ import { Button, Modal } from '@mui/material'
 import Box from '@mui/material/Box'
 import Text from './ui/Text.jsx'
 
-const MobilePopUp = ({ open, onClose }) => {
+const MobilePopUp = ({ open, onClose, link }) => {
 
   return (
     <Modal
@@ -16,10 +16,10 @@ const MobilePopUp = ({ open, onClose }) => {
         <Text id="modal-modal-title" variant="h6" component="h2">
           Warning
         </Text>
-        <Text id="modal-modal-description" sx={{ mt: 2 }}>
-          This is a mobile application not designed for desktop. Layouts, icons, and images will not be rendered properly in a web browser. This demo is designed as a general overview and to test functionality.
+        <Text id="modal-modal-description" sx={{ mt: 2, mb: 2 }}>
+          This is a mobile application not designed for web or mobile browsers. This demo is designed to view navigation and functionality. Layout, images, and icons will not be rendered true to application.
         </Text>
-        <Box component="button" variant="text" sx={{ mt: 2 }} border="none" p={0}><Text variant="subtitle1" fontSize="20px" color="warning.main">Continue to App</Text></Box>
+        <a href={link} target="_blank" rel="noreferrer"><Text variant="subtitle1" fontSize="20px" color="warning.main">Continue to App</Text></a>
       </Box>
     </Modal>
   )
