@@ -24,7 +24,9 @@ const ProjectDrawer = ({ isOpen, onClose, title, description, images, captions, 
       <Offcanvas.Body
         style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: 'space-evenly', gap: "8px", paddingTop: "8px", paddingBottom: "8px" }}>
 
-        <Text variant="body1" textAlign="justify" whiteSpace="break-spaces">{description}</Text>
+        <Box display={{ xs: "none", sm: "revert" }}>
+          <Text variant="body1" textAlign="justify" whiteSpace="break-spaces">{description}</Text>
+        </Box>
 
         <Box display={{ sm: "none" }}>
           <Carousel data-bs-theme="dark">
