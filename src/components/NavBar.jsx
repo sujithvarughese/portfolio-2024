@@ -60,7 +60,7 @@ const NavBar = () => {
             autoClose={true}
           >
             <NavDropdown.Item href={diploma} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>Bachelor's Diploma</Text></NavDropdown.Item>
-            <NavDropdown.Item href={comptiaCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>CompTia A+</Text></NavDropdown.Item>
+            <NavDropdown.Item href={comptiaCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>CompTIA A+</Text></NavDropdown.Item>
             <NavDropdown.Item href={metaCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>Meta Front End Developer</Text></NavDropdown.Item>
             <NavDropdown.Item href={accountingCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>Accounting Technology</Text></NavDropdown.Item>
             <NavDropdown.Item href={businessManagementCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>Business Management</Text></NavDropdown.Item>
