@@ -95,7 +95,7 @@ const Hero = forwardRef((props, ref) => {
             padding={1}
           >
             <Link href={diploma} className="social-icon" target="_blank" rel="noreferrer" underline="none">
-              <Text color="black">Bachelors of Computer Science, 2022</Text>
+              <Text color="black">Bachelor of Computer Science, 2022</Text>
             </Link>
             <Link href={comptiaCert} className="social-icon" target="_blank" rel="noreferrer" underline="none">
               <Text color="black">CompTIA A+ Certified</Text>

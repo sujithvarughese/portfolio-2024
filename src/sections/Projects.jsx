@@ -30,7 +30,7 @@ const Projects = () => {
         transition={{ ease: "easeInOut" }}
         viewport={{ once: true }}
       >
-        <Text variant="h3" textAlign="center" sx={{ marginBottom: 16 }}>Projects</Text>
+        <Text variant="h3" textAlign="center" sx={{ marginBottom: 12 }}>Projects</Text>
 
         <Stack gap={{ xs: 8, md: 16 }}>
           {projects.map(project => <Project key={project.title} {...project} />)}

@@ -35,7 +35,7 @@ const About = () => {
       <Container
         component="section"
         id="about"
-        sx={{ display: { md: "none"} }}
+        sx={{ display: { md: "none"}, marginTop: 16 }}
       >
         <Box position="relative">
           <Box
@@ -54,7 +54,7 @@ const About = () => {
             <Text variant="h2" component="h2" gutterBottom>
               About Me
             </Text>
-            <Text variant="body2" whiteSpace="break-spaces" fontSize={{ sm: 16 }}>
+            <Text variant="body2" whiteSpace="break-spaces" fontSize={{ sm: 20 }}>
               {aboutMeUpdated}
             </Text>
           </Box>
@@ -64,9 +64,10 @@ const About = () => {
             initial={{...cardVariants.offscreen, x: 50}}
             whileInView={{ ...cardVariants.onscreen}}
             viewport={cardVariants.viewport}
-            maxWidth="80%"
+            maxWidth="60%"
             zIndex={-10}
             margin="auto"
+            marginTop="-12px"
           >
             <Box
               component="img"
@@ -77,13 +78,12 @@ const About = () => {
           </Box>
 
         </Box>
-
       </Container>
 
       <Container
         component={motion.section}
         id="about"
-        sx={{ display: { xs: "none", md: "revert" }, marginBottom: 52 }}
+        sx={{ display: { xs: "none", md: "revert" }, marginBottom: 52, marginTop: 16 }}
       >
 
         <Box position="relative">
@@ -104,7 +104,7 @@ const About = () => {
               About Me
             </Text>
 
-            <Text variant="body2" whiteSpace="break-spaces">
+            <Text variant="body2" whiteSpace="break-spaces" fontSize={20}>
               {aboutMeUpdated}
             </Text>
           </Box>
