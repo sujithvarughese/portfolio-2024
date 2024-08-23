@@ -94,14 +94,14 @@ const Hero = forwardRef((props, ref) => {
             animate={{ opacity: 1, transition: { duration: 1, delay: 1.4 } }}
             padding={1}
           >
-            <Link href={diploma} className="social-icon" target="_blank" rel="noreferrer" underline="none">
-              <Text color="black">Bachelor of Computer Science, 2022</Text>
+            <Link href={diploma}  target="_blank" rel="noreferrer" underline="none">
+              <Text color="black" sx={{ "&:hover": { color: "white" }}}>Bachelor of Computer Science, 2022</Text>
             </Link>
-            <Link href={comptiaCert} className="social-icon" target="_blank" rel="noreferrer" underline="none">
-              <Text color="black">CompTIA A+ Certified</Text>
+            <Link href={comptiaCert} target="_blank" rel="noreferrer" underline="none">
+              <Text color="black" sx={{ "&:hover": { color: "white" }}}>CompTIA A+ Certified</Text>
             </Link>
-            <Link href={metaCert} className="social-icon" target="_blank" rel="noreferrer" underline="none">
-              <Text color="black">Meta Front End Developer Certified</Text>
+            <Link href={metaCert} target="_blank" rel="noreferrer" underline="none">
+              <Text color="black" sx={{ "&:hover": { color: "white" }}}>Meta Front End Developer Certified</Text>
             </Link>
           </Stack>
 
