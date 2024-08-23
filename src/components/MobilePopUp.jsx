@@ -17,7 +17,7 @@ const MobilePopUp = ({ open, onClose, link }) => {
           Warning
         </Text>
         <Text id="modal-modal-description" sx={{ mt: 2, mb: 2 }}>
-          This is a mobile application and is not designed for web or mobile browsers. This demo to illustrate navigation and functionality. Layout, images, and icons will not be rendered true to application.
+          This is a mobile application and is not designed for web or mobile browsers. This demo is to illustrate navigation and functionality only. Layout, images, and icons will not be rendered true to application.
         </Text>
         <a href={link} target="_blank" rel="noreferrer"><Text variant="subtitle1" fontSize="20px" color="warning.main">Continue to App</Text></a>
       </Box>
