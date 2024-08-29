@@ -82,26 +82,6 @@ export const projects = [
 		width: "50%"
 	},
 	{
-		title: "MedScope (Mobile App)",
-		coverImage: medscopeCoverIMG,
-		coverVideo: medscopeCoverMP4,
-		coverGif: medscopeCoverGIF,
-		heading: "Tired of getting medical advice from the resident reddit doctor? Just plug in your symptoms and and basic info, and AI will lay out your best treatment options.",
-		description: "Enter up to five symptoms, along with your age and sex. With the help of AI, you will get several options of reliable treatment, sorted in order of effectiveness.\n\nI recently partnered with DrugBank to incorporate their API to further improve accuracy and detail, along with added features such as drug interactions. ",
-		captions: [
-			"Search through drug list with autocompletion using National Institute of Health's RX-Terms API.",
-			"Uses Open AI through personally created prompts that returns data in our desired JSON format.",
-			"Google OAuth 2.0 for authentication."
-		],
-		images: [medscopeHomeIMG, medscopeDrugIMG, medscopeProfileIMG],
-		link: 'https://medscope.pages.dev/',
-		github: 'https://github.com/sujithvarughese/medscope',
-		tech: ["JavaScript", "OpenAI", "React Native", "Expo", "NodeJS", "Firebase", "HTML", "CSS"],
-		featured: true,
-		isMobile: true,
-		width: "50%"
-	},
-	{
 		title: "Simpler Fitness",
 		coverImage: simplerFitnessCoverIMG,
 		coverVideo: simplerFitnessCoverMP4,
@@ -120,6 +100,26 @@ export const projects = [
 		featured: true,
 		isMobile: false,
 		width: "20%"
+	},
+	{
+		title: "MedScope (Mobile App)",
+		coverImage: medscopeCoverIMG,
+		coverVideo: medscopeCoverMP4,
+		coverGif: medscopeCoverGIF,
+		heading: "Tired of getting medical advice from the resident reddit doctor? Just plug in your symptoms and and basic info, and AI will lay out your best treatment options.",
+		description: "Enter up to five symptoms, along with your age and sex. With the help of AI, you will get several options of reliable treatment, sorted in order of effectiveness.\n\nI recently partnered with DrugBank to incorporate their API to further improve accuracy and detail, along with added features such as drug interactions. ",
+		captions: [
+			"Search through drug list with autocompletion using National Institute of Health's RX-Terms API.",
+			"Uses Open AI through personally created prompts that returns data in our desired JSON format.",
+			"Google OAuth 2.0 for authentication."
+		],
+		images: [medscopeHomeIMG, medscopeDrugIMG, medscopeProfileIMG],
+		link: 'https://medscope.pages.dev/',
+		github: 'https://github.com/sujithvarughese/medscope',
+		tech: ["JavaScript", "OpenAI", "React Native", "Expo", "NodeJS", "Firebase", "HTML", "CSS"],
+		featured: true,
+		isMobile: true,
+		width: "50%"
 	},
 	{
 		title: "BookStax (Mobile App)",
