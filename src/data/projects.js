@@ -102,6 +102,28 @@ export const projects = [
 		width: "20%"
 	},
 	{
+		title: "Beat Blackjack",
+		coverImage: blackjackCoverIMG,
+		coverVideo: blackjackCoverMP4,
+		coverGif: blackjackCoverGIF,
+		heading: "Want to learn how to beat the house? Learn perfect strategy with live feedback and return on investment calculations after every move.",
+		description: "Beat Blackjack is designed to teach blackjack strategy while having fun trying to beat the house. Use the optional hint feature at any time to get the correct book play, or choose to get live feedback after every move.\n\n",
+		captions: [
+			"Customizable settings- Choose number of decks, blackjack payouts, your bankroll, number of splits allowed, and more.",
+			"Live stat tracker that updates every hand with the amount won or lost and your current return on investment.",
+			"Context API for global variables and Reducer for global state management",
+		],
+		images: [blackjackMobileIMG, blackjackDesktopIMG],
+		desktop: bjDesktop,
+		mobile: bjMobile,
+		link: 'https://beat-blackjack.com',
+		github: 'https://github.com/sujithvarughese/beat-blackjack',
+		tech: ["JavaScript", "React", "ChakraUI", "HTML", "CSS"],
+		featured: false,
+		isMobile: false,
+		width: "40%"
+	},
+	{
 		title: "MedScope (Mobile App)",
 		coverImage: medscopeCoverIMG,
 		coverVideo: medscopeCoverMP4,
@@ -140,28 +162,6 @@ export const projects = [
 		featured: true,
 		isMobile: true,
 		width: "20%"
-	},
-	{
-		title: "Beat Blackjack",
-		coverImage: blackjackCoverIMG,
-		coverVideo: blackjackCoverMP4,
-		coverGif: blackjackCoverGIF,
-		heading: "Want to learn how to beat the house? Learn perfect strategy with live feedback and return on investment calculations after every move.",
-		description: "Beat Blackjack is designed to teach blackjack strategy while having fun trying to beat the house. Use the optional hint feature at any time to get the correct book play, or choose to get live feedback after every move.\n\n",
-		captions: [
-			"Customizable settings- Choose number of decks, blackjack payouts, your bankroll, number of splits allowed, and more.",
-			"Live stat tracker that updates every hand with the amount won or lost and your current return on investment.",
-			"Context API for global variables and Reducer for global state management",
-		],
-		images: [blackjackMobileIMG, blackjackDesktopIMG],
-		desktop: bjDesktop,
-		mobile: bjMobile,
-		link: 'https://beat-blackjack.com',
-		github: 'https://github.com/sujithvarughese/beat-blackjack',
-		tech: ["JavaScript", "React", "ChakraUI", "HTML", "CSS"],
-		featured: false,
-		isMobile: false,
-		width: "40%"
 	},
 	{
 		title: "On the Books",
