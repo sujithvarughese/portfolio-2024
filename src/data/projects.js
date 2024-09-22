@@ -139,7 +139,7 @@ export const projects = [
 		link: 'https://medscope.pages.dev/',
 		github: 'https://github.com/sujithvarughese/medscope',
 		tech: ["JavaScript", "OpenAI", "React Native", "Expo", "NodeJS", "Firebase", "HTML", "CSS"],
-		featured: true,
+		featured: false,
 		isMobile: true,
 		width: "50%"
 	},
@@ -159,7 +159,7 @@ export const projects = [
 		link: 'https://bookstax.pages.dev/',
 		github: 'https://github.com/sujithvarughese/bookstax',
 		tech: ["JavaScript", "OpenAI", "React Native", "Expo", "NodeJS", "Firebase", "HTML", "CSS"],
-		featured: true,
+		featured: false,
 		isMobile: true,
 		width: "20%"
 	},

@@ -7,6 +7,7 @@ import { motion } from 'framer-motion'
 import ProjectDrawer from './ProjectDrawer.jsx'
 import { useState } from 'react'
 import MobilePopUp from './MobilePopUp.jsx'
+import { IoIosStar } from "react-icons/io";
 
 const cardVariants = {
   offscreen: {
@@ -41,7 +42,7 @@ const Project = ({
   captions,
   images,
   tech,
-  width
+  featured
 }) => {
 
   const [showDrawer, setShowDrawer] = useState(false)
@@ -96,8 +97,15 @@ const Project = ({
           width={{ xs: "100%", md: "50%" }}
           sx={{ placeSelf: "center", gap: 2, height: "100%", overflow: "hidden" }}
         >
-          <Box>
+          <Box display="flex" alignItems="center" gap={2}>
             <Button onClick={onOpen} sx={{ p: 0, fontSize: 24, color: "warning.main" }}>{title}</Button>
+            {featured &&
+              <Box display="flex" gap={1} border="2px orange solid" padding={1} borderRadius={2}>
+                <IoIosStar color="orange"/>
+                <Text>FEATURED APP</Text>
+                <IoIosStar color="orange" />
+              </Box>
+              }
           </Box>
           <Text variant="subtitle2" fontSize={18}>{heading}</Text>
 
