@@ -22,6 +22,8 @@ import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import { useGlobalContext } from '../context/GlobalContext.jsx'
 import Box from '@mui/material/Box'
 
+const githubLink = "https://github.com/sujithvarughese"
+
 
 const NavBar = () => {
 
@@ -92,6 +94,9 @@ const NavBar = () => {
 
           <Nav.Link href={resume} className="navbar-link" target="_blank" rel="noreferrer">
             <Text fontSize={{ xs: 14, sm: 18 }}>Resumé</Text>
+          </Nav.Link>
+          <Nav.Link href={githubLink} className="navbar-link" target="_blank" rel="noreferrer">
+            <Text fontSize={{ xs: 14, sm: 18 }}>GitHub</Text>
           </Nav.Link>
         </Nav>
 
