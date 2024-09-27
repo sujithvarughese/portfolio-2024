@@ -75,7 +75,7 @@ export const projects = [
 		desktop: rsDesktop,
 		mobile: rsMobile,
 		link: 'https://lease-wise.com',
-		github: 'https://github.com/sujithvarughese/leasewise-client',
+		github: 'https://github.com/sujithvarughese/leasewise-api',
 		tech: ["JavaScript", "NodeJS", "React", "MongoDB", "Styled Components", "HTML", "CSS"],
 		featured: true,
 		isMobile: false,
