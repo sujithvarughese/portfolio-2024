@@ -95,8 +95,8 @@ const App = () => {
           >
             <SkillList />
             {/* <ProjectsTiles/> */}
-            <Projects />
             <About />
+            <Projects />
             <Contact />
             <Footer />
           </Stack>
