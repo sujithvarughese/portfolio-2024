@@ -1,21 +1,14 @@
 import NavBar from './components/NavBar.jsx'
 import Hero from './sections/Hero.jsx'
-import ProjectsTiles from './sections/ProjectsTiles.jsx'
 import Projects from './sections/Projects.jsx'
 import About from './sections/About.jsx'
 import Contact from './sections/Contact.jsx'
 import Footer from './sections/Footer.jsx'
-import NavBarFloat from './components/NavBarFloat.jsx'
-import { useRef, Fragment, useEffect, useState } from 'react'
-import MessageFloat from './components/MessageFloat.jsx'
-import { motion, useMotionValue, useMotionValueEvent, useScroll } from 'framer-motion'
-import { Container, Stack } from 'react-bootstrap'
-import Skills from './sections/Skills.jsx'
-import useMouse from '@react-hook/mouse-position'
-import helloImage from "./assets/images/backgrounds/hello-transparent.png"
+import { useEffect, useState } from 'react'
+import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
+import { Stack } from 'react-bootstrap'
 import Box from '@mui/material/Box'
 import SkillList from './sections/SkillList.jsx'
-import { MessageActionButton, NavActionButton } from './components/ActionButton.jsx'
 import Scrollbar from 'smooth-scrollbar'
 const App = () => {
 
@@ -80,10 +73,7 @@ const App = () => {
           animate={{ opacity: 1, transition: { duration: 1, delay: 1.4 } }}
           sx={{ display: { sm: "none" } }}
         >
-
         </Box>
-
-
 
         <Hero />
 
