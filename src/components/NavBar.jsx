@@ -9,7 +9,7 @@ import svInitials from "../assets/images/profile/sv.jpeg"
 
 const emailAddress = "sujith.varug@gmail.com"
 
-import resume from "../assets/images/certificates/varughese-sujith-resume.pdf"
+import resume from "../assets/images/certificates/varughese_resume.pdf"
 import diploma from "../assets/images/certificates/diploma.png"
 import comptiaCert from "../assets/images/certificates/compTIA_cert.pdf"
 import metaCert from "../assets/images/certificates/meta_frontend_cert.png"
@@ -95,9 +95,12 @@ const NavBar = () => {
           <Nav.Link href={resume} className="navbar-link" target="_blank" rel="noreferrer">
             <Text fontSize={{ xs: 14, sm: 18 }}>Resumé</Text>
           </Nav.Link>
-          <Nav.Link href={githubLink} className="navbar-link" target="_blank" rel="noreferrer">
+          {/*
+           <Nav.Link href={githubLink} className="navbar-link" target="_blank" rel="noreferrer">
             <Text fontSize={{ xs: 14, sm: 18 }}>GitHub</Text>
           </Nav.Link>
+          */}
+
         </Nav>
 
           <Box>

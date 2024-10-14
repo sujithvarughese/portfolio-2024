@@ -44,7 +44,6 @@ const App = () => {
   const options = {
     damping : 0.07,
     plugins: {
-
     },
   }
   useEffect(() => {
