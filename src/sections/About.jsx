@@ -1,12 +1,7 @@
-import { Col, Image, Row, Stack } from 'react-bootstrap'
-import { Box, Button, Container, Grid, Snackbar, TextField } from '@mui/material'
+import { Box, Container } from '@mui/material'
 import Text from "../components/ui/Text.jsx"
-import { aboutMeHeadline, aboutMe, aboutMe2, aboutMe3, aboutMeUpdated } from '../data/data.js'
+import { aboutMeUpdated } from '../data/data.js'
 import profilePicture from "../assets/images/profile/hera.png"
-import { skills } from '../data/data.js'
-import Icon from '../components/IconPill.jsx'
-import { useEffect, forwardRef } from 'react'
-import { useGlobalContext } from '../context/GlobalContext.jsx'
 import { motion } from 'framer-motion'
 
 const About = () => {

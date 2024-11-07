@@ -12,7 +12,7 @@ import {
   SiHtml5, SiJest, SiJetbrains,
   SiMongodb, SiMui,
   SiOpenai, SiPostman,
-  SiPython, SiStyledcomponents, SiTailwindcss
+  SiPython, SiStyledcomponents, SiTailwindcss, SiGooglecloud
 } from "react-icons/si";
 import {FaAws, FaGitAlt, FaJava} from "react-icons/fa";
 import {FaFacebookF, FaLinkedinIn, FaNode, FaReact} from "react-icons/fa6";
@@ -47,8 +47,9 @@ const logos = {
   "SQL": <TbFileTypeSql />,
   "Firebase": <SiFirebase />,
   "AWS": <FaAws />,
+  "Google Cloud": <SiGooglecloud />,
   "Google Analytics": <SiGoogleanalytics />,
-  "DNS & Networks": <MdDns />,
+  "Network Configuration": <MdDns />,
   "API Integration": <TbApiApp />,
   "GraphQL": <SiGraphql />,
   "Data Structures": <TbBinaryTree />,
@@ -63,7 +64,7 @@ const logos = {
   "Postman": <SiPostman />,
   "Scrum": <DiScrum />,
   "Testing": <SiJest />,
-  "Deployment": <IoIosRocket />,
+  "App Deployment": <IoIosRocket />,
   "VSCode": <VscVscode />,
   "JetBrains": <SiJetbrains />,
   "Facebook": <FaFacebookF />,

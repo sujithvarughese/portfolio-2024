@@ -58,13 +58,13 @@ const App = () => {
     <Box>
       <Box maxWidth={1400} marginX="auto" position="relative">
 
-        <Box
+        {/*<Box
           component={motion.div}
           initial={{ opacity: 0, y: -1000 }}
           animate={{ y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeInOut", delay: 1.5 } }}
-        >
+        >*/}
           <NavBar/>
-        </Box>
+        {/*</Box>*/}
 
         <Box
           component={motion.div}
