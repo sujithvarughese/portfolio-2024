@@ -8,6 +8,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
+import Text from '../ui/Text.jsx'
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -21,10 +22,11 @@ const Response = ({ open, handleClose, response, loading, error }) => {
       open={open}
       TransitionComponent={Transition}
       keepMounted
+      maxWidth="xl"
       onClose={handleClose}
       aria-describedby="alert-dialog-slide-description"
     >
-      <DialogTitle>{"AI Assistant"}</DialogTitle>
+      <DialogTitle>AI Assistant</DialogTitle>
       <DialogContent>
         {loading ?
           <Box sx={{ display: 'flex', justifySelf: "center" }}>
@@ -32,7 +34,7 @@ const Response = ({ open, handleClose, response, loading, error }) => {
           </Box>
         :
         <DialogContentText id="alert-dialog-slide-description">
-          {response}
+          <Text sx={{whiteSpace: "pre"}}>{response}</Text>
         </DialogContentText>
         }
       </DialogContent>
