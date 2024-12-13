@@ -10,7 +10,7 @@ const GlobalProvider = ({ children }) => {
 
   const [alertState, setAlertState] = useState({
     isOpen: false,
-    type: "",
+    type: '',
     message: "",
   })
 
