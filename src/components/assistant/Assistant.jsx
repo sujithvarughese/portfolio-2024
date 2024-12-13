@@ -29,6 +29,7 @@ const Assistant = () => {
       <TextField
         id="outlined-controlled"
         placeholder="What are Sujith's skills?"
+        label="Ask about me!"
         variant="outlined"
         value={query}
         onChange={(e) => setQuery(e.target.value)}

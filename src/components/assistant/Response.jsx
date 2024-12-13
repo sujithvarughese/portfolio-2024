@@ -27,7 +27,7 @@ const Response = ({ open, handleClose, response, loading, error }) => {
       <DialogTitle>{"AI Assistant"}</DialogTitle>
       <DialogContent>
         {loading ?
-          <Box sx={{ display: 'flex' }}>
+          <Box sx={{ display: 'flex', justifySelf: "center" }}>
             <CircularProgress />
           </Box>
         :
