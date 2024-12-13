@@ -33,7 +33,8 @@ export const getOpenAIResponse = async (prompt) => {
 		const messages = await openai.get(`/threads/${threadId}/messages`)
 		openai.delete(`https://api.openai.com/v1/threads/${threadId}`)
 		let message = messages.data.data[0].content[0].text.value
-		return message[message.length - 3].match(/[a-z]/i) ? message.substring(0, message.length - 13).concat(".") : message
+		console.log(message)
+		return message[message.length - 2] === "】" ? message.substring(0, message.length - 13).concat(".") : message
 	} else {
 		console.log(run.status);
 	}
