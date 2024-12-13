@@ -6,12 +6,14 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-const Response = ({ open, handleClose}) => {
+const Response = ({ open, handleClose, response, loading, error }) => {
 
 
   return (
@@ -24,14 +26,18 @@ const Response = ({ open, handleClose}) => {
     >
       <DialogTitle>{"AI Assistant"}</DialogTitle>
       <DialogContent>
+        {loading ?
+          <Box sx={{ display: 'flex' }}>
+            <CircularProgress />
+          </Box>
+        :
         <DialogContentText id="alert-dialog-slide-description">
-          Let Google help apps determine location. This means sending anonymous
-          location data to Google, even when no apps are running.
+          {response}
         </DialogContentText>
+        }
       </DialogContent>
       <DialogActions>
-        <Button onClick={handleClose}>Disagree</Button>
-        <Button onClick={handleClose}>Agree</Button>
+
       </DialogActions>
     </Dialog>
   )

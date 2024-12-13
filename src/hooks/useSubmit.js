@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { assistantAPI } from '../utilities/axios.js'
+import { assistantAPI, getOpenAIResponse } from '../utilities/axios.js'
 
 const method = "POST"
 const url = "/thread"
@@ -10,21 +10,16 @@ const useSubmit = () => {
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
 
-  const submitForm = async (configObject) => {
+  const submitForm = async (prompt) => {
     setResponse(null)
     setError("")
     setLoading(true)
-    const { requestConfig } = configObject
-    console.log(requestConfig)
     try {
-      const res = await assistantAPI[method.toLowerCase()]( url, {
-        ...requestConfig,
-      })
-      setResponse(res.data)
+      const res = await getOpenAIResponse(prompt)
+      setResponse(res)
       return true
     } catch (err) {
       setError(err.message)
-      console.log(err)
     } finally {
       setLoading(false)
     }

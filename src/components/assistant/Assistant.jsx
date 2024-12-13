@@ -21,7 +21,7 @@ const Assistant = () => {
 
   const handleSubmit = () => {
     handleClickOpen()
-    submitForm({ requestConfig: { query: query } })
+    submitForm(query)
   }
 
   return (
