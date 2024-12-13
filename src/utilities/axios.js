@@ -5,6 +5,7 @@ import { config } from "./constants.js";
 
 const assistantAPI = axios.create({
 	baseURL: config.url.API_URL,
+	withCredentials: false
 });
 // response
 assistantAPI.interceptors.response.use(
