@@ -84,7 +84,7 @@ const Project = ({
         >
           <Box
             component="img"
-            src={isHovering ? coverGif : coverImage}
+            src={isHovering ? coverImage : coverGif}
             alt="project"
             width={{ sm: 420 }}
             sx={{ border: isHovering ? "5px solid #ED6C02" : "", borderRadius: 3 }}
