@@ -24,7 +24,7 @@ import {VscVscode} from "react-icons/vsc";
 
 const IconSkill = ({ name }) => {
   return (
-    <Stack alignItems="center" sx={{py: {xs: 2, sm: 3, md: 4, } }}>
+    <Stack alignItems="center" sx={{py: {xs: 2, sm: 3, md: 4, }, "&:hover": { color: "dodgerblue" } }}>
       <SvgIcon
         inheritViewBox
         fontSize="large"
