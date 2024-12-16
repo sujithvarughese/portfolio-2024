@@ -10,12 +10,13 @@ import Text from "../components/ui/Text.jsx"
 import profilePictureMobile from "../assets/images/profile/profile-1-small.png"
 import { Container, Stack, Grid, Toolbar, Link } from '@mui/material'
 import Skills from './Skills.jsx'
-
+import christmasBg from "../assets/images/backgrounds/christmas.jpg"
 import resume from "../assets/images/certificates/resume-2024.pdf"
 import diploma from "../assets/images/certificates/diploma.png"
 import comptiaCert from "../assets/images/certificates/compTIA_cert.pdf"
 import metaCert from "../assets/images/certificates/meta_frontend_cert.pdf"
 import Assistant from '../components/assistant/Assistant.jsx'
+import { Image } from 'react-bootstrap'
 
 const Hero = forwardRef((props, ref) => {
 
@@ -64,15 +65,18 @@ const Hero = forwardRef((props, ref) => {
       >
         <Box
           width={{ xs: 320, md: 480 }}
+          height={{ xs: 320, md: 480 }}
           bgcolor='warning.main'
           py={{xs: 4, md: 16}}
           px={2}
           borderRadius={2}
           position="absolute"
           bottom={{ xs: 24, sm: "revert" }}
-          borderTop="black 8px solid"
-          borderBottom="black 8px solid"
+          //borderTop="black 8px solid"
+          //borderBottom="black 8px solid"
+          sx={{  backgroundImage:`url(${christmasBg})`, backgroundSize: "cover", backgroundPosition: "right"}}
         >
+
           <Text fontSize={{ xs: 28, md: 48 }} fontWeight={700}>{currentNameText}</Text>
           <Text variant="h5" fontWeight={600} whiteSpace="break-spaces" py={1}>{currentIntroductionText}</Text>
 

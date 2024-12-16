@@ -3,6 +3,8 @@ import Text from "../components/ui/Text.jsx"
 import { aboutMeUpdated } from '../data/data.js'
 import profilePicture from "../assets/images/profile/hera.png"
 import { motion } from 'framer-motion'
+import santaHatImg from "../assets/images/backgrounds/santa-hat.png"
+import { Image } from 'react-bootstrap'
 
 const About = () => {
 
@@ -33,6 +35,7 @@ const About = () => {
         sx={{ display: { md: "none"}, marginTop: 16 }}
       >
         <Box position="relative">
+
           <Box
             component={motion.div}
             initial={{...cardVariants.offscreen, x: -50}}
@@ -46,6 +49,9 @@ const About = () => {
             borderRadius={3}
             zIndex={10}
           >
+            <Box position="absolute" top={-150} left={140} width={200}>
+              <Image src={santaHatImg} alt="santa_hat" />
+            </Box>
             <Text variant="h2" component="h2" gutterBottom>
               About Me
             </Text>
@@ -95,6 +101,9 @@ const About = () => {
             borderRadius={3}
             zIndex={10}
           >
+            <Box position="absolute" top={-200} left={250} width={280}>
+              <Image src={santaHatImg} alt="santa_hat" />
+            </Box>
             <Text variant="h2" component="h2" fontSize="28" gutterBottom>
               About Me
             </Text>
