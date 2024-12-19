@@ -29,12 +29,12 @@ const Response = ({ open, handleClose, response, loading, error }) => {
       <DialogTitle>AI Assistant</DialogTitle>
       <DialogContent>
         {loading ?
-          <Box sx={{ display: 'flex', justifySelf: "center" }}>
+          <Box sx={{ display: 'flex', justifyContent: "center" }}>
             <CircularProgress />
           </Box>
         :
         <DialogContentText id="alert-dialog-slide-description">
-          <Text sx={{whiteSpace: "pre"}}>{response}</Text>
+          <Text whiteSpace="break-spaces">{response}</Text>
         </DialogContentText>
         }
       </DialogContent>
