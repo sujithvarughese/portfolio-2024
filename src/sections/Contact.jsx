@@ -1,10 +1,6 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import { Link } from '@mui/material'
 import Text from "../components/ui/Text.jsx"
-import helloImage from "../assets/images/backgrounds/hello-transparant.png"
 import { motion } from 'framer-motion'
 const emailAddress = "sujith.varug@gmail.com"
 

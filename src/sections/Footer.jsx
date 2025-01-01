@@ -1,5 +1,4 @@
-import { Container, Col, Row, Stack } from 'react-bootstrap'
-import linkedInIcon from '../assets/icons/linkedin-icon.svg';
+import { Stack } from 'react-bootstrap'
 import fbIcon from '../assets/icons/fb-icon.svg';
 import githubIcon from "../assets/icons/github-mark-white.svg"
 import sendMessageIcon from "../assets/icons/send-message.svg"

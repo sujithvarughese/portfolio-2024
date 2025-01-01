@@ -1,13 +1,11 @@
 import Box from '@mui/material/Box'
-import { Button, Container, Grid, Modal, Stack, SvgIcon, Tooltip } from '@mui/material'
-import { projectTestingMessage } from '../data/data.js'
+import { Button, Stack, SvgIcon } from '@mui/material'
 import { logos } from './IconPill.jsx'
 import Text from './ui/Text.jsx'
 import { motion } from 'framer-motion'
 import ProjectDrawer from './ProjectDrawer.jsx'
 import { useState } from 'react'
 import MobilePopUp from './MobilePopUp.jsx'
-import { IoIosStar } from "react-icons/io";
 
 const cardVariants = {
   offscreen: {
@@ -72,7 +70,6 @@ const Project = ({
         whileInView={cardVariants.onscreen}
         viewport={cardVariants.viewport}
       >
-
         <Box
           component="button"
           variant="contained"
@@ -99,13 +96,6 @@ const Project = ({
         >
           <Box display="flex" alignItems="center">
             <Button onClick={onOpen} sx={{ p: 0, fontSize: 24, color: "warning.main" }}>{title}</Button>
-            {/*{featured &&
-              <Box display="flex" gap={1} border="2px orange solid" padding={1} borderRadius={2}>
-                <IoIosStar color="orange"/>
-                <Text>FEATURED APP</Text>
-                <IoIosStar color="orange" />
-              </Box>
-              }*/}
           </Box>
           <Text variant="subtitle2" fontSize={18}>{heading}</Text>
 

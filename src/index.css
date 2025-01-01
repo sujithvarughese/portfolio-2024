@@ -71,19 +71,19 @@ section {
 
 
 
-  nav.navbar {
-    padding: 18px 0;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    transition:  0.32s ease-in-out;
-    backdrop-filter: blur(10px);
-    background-color: #000000;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-  }
+nav.navbar {
+  padding: 18px 0;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition:  0.32s ease-in-out;
+  backdrop-filter: blur(10px);
+  background-color: #000000;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
 
 nav.navbar.scrolled {
   padding: 0px 0;

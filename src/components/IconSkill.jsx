@@ -46,7 +46,7 @@ const logos = {
   "MongoDB": <SiMongodb />,
   "SQL": <TbFileTypeSql />,
   "Firebase": <SiFirebase />,
-  "AWS": <FaAws />,
+  "Amazon Web Services": <FaAws />,
   "Google Cloud": <SiGooglecloud />,
   "Google Analytics": <SiGoogleanalytics />,
   "Network Configuration": <MdDns />,

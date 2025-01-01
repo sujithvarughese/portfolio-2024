@@ -1,4 +1,4 @@
-import { Container, Stack } from '@mui/material'
+import { Stack } from '@mui/material'
 import Text from "../components/ui/Text.jsx"
 import {softwareSkills, fullStackSkills, deploymentSkills } from "../data/data.js"
 import { HiOutlineComputerDesktop } from "react-icons/hi2";

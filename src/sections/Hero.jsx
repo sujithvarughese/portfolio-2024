@@ -1,22 +1,18 @@
 import { motion } from "framer-motion"
-import { introductionText, descriptionText, fullName, bio, aboutMeUpdated } from '../data/data.js'
+import { fullName, bio } from '../data/data.js'
 import { forwardRef, useEffect, useState } from 'react'
 import profilePicture2 from "../assets/images/profile/profile-1.png"
-import Icon from '../components/IconPill.jsx'
-import { useGlobalContext } from '../context/GlobalContext.jsx'
 import { IoLocationSharp } from "react-icons/io5";
 import Box from '@mui/material/Box'
 import Text from "../components/ui/Text.jsx"
 import profilePictureMobile from "../assets/images/profile/profile-1-small.png"
-import { Container, Stack, Grid, Toolbar, Link } from '@mui/material'
+import { Stack, Link } from '@mui/material'
 import Skills from './Skills.jsx'
 import christmasBg from "../assets/images/backgrounds/christmas.jpg"
-import resume from "../assets/images/certificates/resume-2024.pdf"
 import diploma from "../assets/images/certificates/diploma.png"
 import comptiaCert from "../assets/images/certificates/compTIA_cert.pdf"
 import metaCert from "../assets/images/certificates/meta_frontend_cert.pdf"
 import Assistant from '../components/assistant/Assistant.jsx'
-import { Image } from 'react-bootstrap'
 
 const Hero = forwardRef((props, ref) => {
 
