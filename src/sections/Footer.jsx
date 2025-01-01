@@ -1,5 +1,5 @@
 import { Stack } from 'react-bootstrap'
-import fbIcon from '../assets/icons/fb-icon.svg';
+import linkedInIcon from '../assets/icons/linkedin-icon.svg';
 import githubIcon from "../assets/icons/github-mark-white.svg"
 import sendMessageIcon from "../assets/icons/send-message.svg"
 import { emailAddress } from '../data/data.js'
@@ -10,15 +10,16 @@ const Footer = () => {
   return (
     <Box component="footer" className="footer" sx={{ paddingTop: 32 }}>
       <Stack className="text-center">
+
         <Stack className="social-icon social-footer">
-          <a href={`mailto:${emailAddress}`} target="_blank" rel="noreferrer"><img src={sendMessageIcon} alt="Icon" /></a>
-          <a href="http://facebook.com/sujithvarughese" target="_blank" rel="noreferrer"><img src={fbIcon} alt="Icon" /></a>
-          <a href="http://github.com/sujithvarughese" target="_blank" rel="noreferrer"><img src={githubIcon} alt="Icon" /></a>
+          <a href={`mailto:${emailAddress}`} target="_blank" rel="noreferrer" style={{ marginRight: 6 }}><img src={sendMessageIcon} alt="Icon" /></a>
+          <a href="https://www.linkedin.com/in/sujithvarughese/" target="_blank" rel="noreferrer"><img src={linkedInIcon} alt="Icon" /></a>
+          <a href="http://github.com/sujithvarughese" target="_blank" rel="noreferrer" style={{ marginLeft: 6 }}><img src={githubIcon} alt="Icon" /></a>
         </Stack>
 
-        <div>
-          <Text style={style}>Copyright 2024. All Rights Reserved</Text>
-        </div>
+
+        <Text style={style}>Copyright 2025. All Rights Reserved</Text>
+
       </Stack>
     </Box>
   )
