@@ -51,7 +51,6 @@ const Hero = forwardRef((props, ref) => {
       as="section"
       id="home"
       ref={ref}
-
       marginX={{ xs: 1, lg: 12 }}
     >
       <Stack
@@ -60,14 +59,14 @@ const Hero = forwardRef((props, ref) => {
         alignItems="center"
       >
         <Box
-          width={{ xs: 320, md: 480 }}
-          height={{ xs: 320, md: 480 }}
+          width={{ xs: 300, md: 480 }}
+          height={{ xs: 300, md: 480 }}
           bgcolor='warning.main'
           py={{xs: 4, md: 16}}
           px={2}
           borderRadius={2}
           position="absolute"
-          bottom={{ xs: 24, sm: "revert" }}
+          bottom={{ xs: 8, sm: "revert" }}
           //borderTop="black 8px solid"
           //borderBottom="black 8px solid"
           sx={{  backgroundImage:`url(${christmasBg})`, backgroundSize: "cover", backgroundPosition: "right"}}

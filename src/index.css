@@ -69,8 +69,6 @@ section {
 
 /************ Navbar Css ************/
 
-
-
 nav.navbar {
   padding: 18px 0;
   width: 100%;
@@ -85,10 +83,6 @@ nav.navbar {
   border-bottom-left-radius: 8px;
 }
 
-nav.navbar.scrolled {
-  padding: 0px 0;
-  background-color: #121212;
-}
 
 nav.navbar a.navbar-brand {
   width: 7%;
