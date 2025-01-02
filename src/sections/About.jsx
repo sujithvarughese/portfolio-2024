@@ -1,4 +1,4 @@
-import { Box, Container } from '@mui/material'
+import { Box, Container, Stack } from '@mui/material'
 import Text from "../components/ui/Text.jsx"
 import { aboutMeUpdated } from '../data/data.js'
 import profilePicture from "../assets/images/profile/hera.png"
@@ -11,7 +11,7 @@ const About = () => {
   const cardVariants = {
     offscreen: {
       y: 50,
-      scale: 0.3,
+      scale: 0.8,
       opacity: 0.2
     },
     onscreen: {
@@ -28,115 +28,52 @@ const About = () => {
   };
 
   return (
-    <>
-      <Container
-        component="section"
-        id="about"
-        sx={{ display: { md: "none"}, marginTop: 16 }}
-      >
-        <Box position="relative">
-
-          <Box
-            component={motion.div}
-            initial={{...cardVariants.offscreen, x: -50}}
-            whileInView={{ ...cardVariants.onscreen }}
-            viewport={cardVariants.viewport}
-            margin="auto"
-            maxWidth={600}
-            justifyContent='center'
-            bgcolor='warning.main'
-            p={{xs: 3, md: 8, lg: 10}}
-            borderRadius={3}
-            zIndex={10}
-          >
-            <Box position="absolute" top={-150} left={140} width={200}>
-              <Image src={santaHatImg} alt="santa_hat" />
-            </Box>
-            <Text variant="h2" component="h2" gutterBottom>
-              About Me
-            </Text>
-            <Text variant="body2" whiteSpace="break-spaces" fontSize={{ sm: 20 }}>
-              {aboutMeUpdated}
-            </Text>
+    <Container component={motion.section} id="about" sx={{ marginY: 24 }}>
+      <Stack flexDirection={{ xs: "column", md: "row"}} position="relative" alignItems="center">
+        <Box
+          component={motion.div}
+          initial={{...cardVariants.offscreen, x: -50}}
+          whileInView={{ ...cardVariants.onscreen}}
+          viewport={cardVariants.viewport}
+          maxWidth={{xs: 600, lg: 750}}
+          bgcolor='warning.main'
+          p={{xs: 3, md: 8, lg: 10}}
+          borderRadius={3}
+          zIndex={10}
+        >
+          <Box position="absolute" top={-200} left={80} width={280}>
+            <Image src={santaHatImg} alt="santa_hat" />
           </Box>
-
-          <Box
-            component={motion.div}
-            initial={{...cardVariants.offscreen, x: 50}}
-            whileInView={{ ...cardVariants.onscreen}}
-            viewport={cardVariants.viewport}
-            maxWidth="60%"
-            zIndex={-10}
-            margin="auto"
-            marginTop="-12px"
-          >
-            <Box
-              component="img"
-              src={profilePicture}
-              alt="Profile Picture"
-              borderRadius={3}
-            />
-          </Box>
-
-        </Box>
-      </Container>
-
-      <Container
-        component={motion.section}
-        id="about"
-        sx={{ display: { xs: "none", md: "revert" }, marginBottom: 52, marginTop: 24 }}
-      >
-
-        <Box position="relative">
-          <Box
-            component={motion.div}
-            initial={{...cardVariants.offscreen, x: -300}}
-            whileInView={{ ...cardVariants.onscreen}}
-            viewport={cardVariants.viewport}
-            margin={{ xs: "auto", md: "initial" }}
-            maxWidth={{sm: 600, lg: 750}}
-            justifyContent='center'
-            bgcolor='warning.main'
-            p={{xs: 3, md: 8, lg: 10}}
-            borderRadius={3}
-            zIndex={10}
-          >
-            <Box position="absolute" top={-200} left={250} width={280}>
-              <Image src={santaHatImg} alt="santa_hat" />
-            </Box>
-            <Text variant="h2" component="h2" fontSize="28" gutterBottom>
-              About Me
-            </Text>
-
-            <Text variant="body2" whiteSpace="break-spaces" fontSize={20}>
-              {aboutMeUpdated}
-            </Text>
-          </Box>
-
-          <Box
-            component={motion.div}
-            initial={{...cardVariants.offscreen, x: 50}}
-            whileInView={{ ...cardVariants.onscreen}}
-            viewport={cardVariants.viewport}
-            position={{ xs: "initial", md: "absolute" }}
-            right={0}
-            bottom={-360}
-            width="100%"
-            maxWidth={{ sm: 180, md: 500, lg: 600 }}
-            zIndex={-10}
-          >
-            <Box
-              component="img"
-              src={profilePicture}
-              alt="Profile Picture"
-              borderRadius={3}
-            />
-          </Box>
+          <Text variant="h2" component="h2" fontSize="28" gutterBottom>
+            About Me
+          </Text>
+          <Text variant="body2" whiteSpace="break-spaces" fontSize={20}>
+            {aboutMeUpdated}
+          </Text>
         </Box>
 
-      </Container>
+        <Box
+          component={motion.div}
+          initial={{...cardVariants.offscreen, x: 50}}
+          whileInView={{ ...cardVariants.onscreen}}
+          viewport={cardVariants.viewport}
+          maxWidth={{ xs: 360, md: 500, lg: 600 }}
+          zIndex={-10}
+          marginLeft={{ xs: 0, md: -10 }}
+          marginTop={{ xs: -5, md: 0 }}
+        >
+          <Box
+            component="img"
+            src={profilePicture}
+            alt="Profile Picture"
+            borderRadius={3}
+          />
+        </Box>
+      </Stack>
 
-    </>
+    </Container>
+
+
 
   )
 }
