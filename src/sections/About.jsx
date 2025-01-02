@@ -28,7 +28,7 @@ const About = () => {
   };
 
   return (
-    <Container component={motion.section} id="about" sx={{ marginY: 24 }}>
+    <Container component={motion.section} id="about" sx={{ marginTop: 24, marginBottom: 12 }}>
       <Stack flexDirection={{ xs: "column", md: "row"}} position="relative" alignItems="center">
         <Box
           component={motion.div}

@@ -9,7 +9,7 @@ const Projects = () => {
     <Container
       component={motion.section}
       id="projects"
-      initial={{ y: 100 }}
+      initial={{ y: 50 }}
       whileInView={{ y: 0}}
       transition={{ ease: "easeInOut" }}
       viewport={{ once: true }}

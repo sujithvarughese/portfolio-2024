@@ -9,13 +9,14 @@ const Contact = () => {
     <Container
       component={motion.section} id="contact"
       sx={{ display: "flex", flexDirection: 'column', alignItems: 'center', paddingTop: "24px"}}
-      initial={{ y: 100 }}
-      whileInView={{ y: 0}}
       viewport={{ once: true }}
     >
       <Link
         href={`mailto:${emailAddress}`}
         underline="none"
+        initial={{ scale: 0.6 }}
+        whileInView={{ scale: 1, transition: { ease: "easeInOut", duration: 1 } }}
+        viewport={{ once: true }}
         sx={{
           border: '4px solid currentColor',
           borderRadius: 3,

@@ -8,7 +8,7 @@ const SkillList = () => {
   return (
     <Container
       component={motion.section}
-      initial={{ y: 200 }}
+      initial={{ y: 100 }}
       whileInView={{ y: 0}}
       transition={{ ease: "easeInOut" }}
     >

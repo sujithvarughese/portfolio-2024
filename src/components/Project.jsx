@@ -10,7 +10,7 @@ import MobilePopUp from './MobilePopUp.jsx'
 const cardVariants = {
   offscreen: {
     y: 20,
-    scale: 0.3,
+    scale: 0.8,
     opacity: 0.2
   },
   onscreen: {
