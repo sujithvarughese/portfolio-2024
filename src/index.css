@@ -244,9 +244,9 @@ span.navbar-text {
 }
 
 .footer {
-  height: 500px;
+  height: 400px;
   background-image: url("./assets/images/backgrounds/chessboard.png");
-  background-position: center;
+  background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
 }

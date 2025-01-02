@@ -8,24 +8,18 @@ import Box from '@mui/material/Box'
 
 const Footer = () => {
   return (
-    <Box component="footer" className="footer" sx={{ paddingTop: 32 }}>
+    <Box component="footer" className="footer">
       <Stack className="text-center">
-
         <Stack className="social-icon social-footer">
           <a href={`mailto:${emailAddress}`} target="_blank" rel="noreferrer" style={{ marginRight: 6 }}><img src={sendMessageIcon} alt="Icon" /></a>
           <a href="https://www.linkedin.com/in/sujithvarughese/" target="_blank" rel="noreferrer"><img src={linkedInIcon} alt="Icon" /></a>
           <a href="http://github.com/sujithvarughese" target="_blank" rel="noreferrer" style={{ marginLeft: 6 }}><img src={githubIcon} alt="Icon" /></a>
         </Stack>
-
-
         <Text style={style}>Copyright 2025. All Rights Reserved</Text>
-
       </Stack>
     </Box>
   )
 }
-
-
 
 const style = {
   fontWeight: "400",

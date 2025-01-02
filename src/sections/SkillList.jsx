@@ -6,39 +6,20 @@ import { motion } from 'framer-motion'
 
 const SkillList = () => {
   return (
-    <>
-      <Container
-        component={motion.section}
-        sx={{ display: { sm: "none"} }}
-        initial={{ y: 200 }}
-        whileInView={{ y: 0}}
-        transition={{ ease: "easeInOut" }}
-      >
-        <Text variant="h4" textAlign="center" sx={{ marginBottom: 12 }}>Skills</Text>
-        <Grid container>
-          {skills.map(skill =>
-            <Grid key={skill} item xs={4} md={3}>
-              <IconSkill name={skill} />
-            </Grid>)}
-        </Grid>
-      </Container>
-
-      <Container
-        component={motion.section}
-        sx={{ display: { xs: "none", sm: "revert" } }}
-        initial={{ y: 200 }}
-        whileInView={{ y: 0}}
-        transition={{ ease: "easeInOut" }}
-      >
-        <Text variant="h3" textAlign="center" sx={{ marginBottom: 12 }}>Skills</Text>
-        <Grid container>
-          {skills.map(skill =>
-            <Grid key={skill} item xs={4} md={3}>
-              <IconSkill name={skill} />
-            </Grid>)}
-        </Grid>
-      </Container>
-    </>
+    <Container
+      component={motion.section}
+      initial={{ y: 200 }}
+      whileInView={{ y: 0}}
+      transition={{ ease: "easeInOut" }}
+    >
+      <Text variant="h3" textAlign="center" mb={2}>Skills</Text>
+      <Grid container>
+        {skills.map(skill =>
+          <Grid key={skill} item xs={3}>
+            <IconSkill name={skill} />
+          </Grid>)}
+      </Grid>
+    </Container>
 
   )
 }

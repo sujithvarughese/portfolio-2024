@@ -10,7 +10,7 @@ const About = () => {
 
   const cardVariants = {
     offscreen: {
-      y: 200,
+      y: 50,
       scale: 0.3,
       opacity: 0.2
     },
@@ -84,7 +84,7 @@ const About = () => {
       <Container
         component={motion.section}
         id="about"
-        sx={{ display: { xs: "none", md: "revert" }, marginBottom: 52, marginTop: 16 }}
+        sx={{ display: { xs: "none", md: "revert" }, marginBottom: 52, marginTop: 24 }}
       >
 
         <Box position="relative">

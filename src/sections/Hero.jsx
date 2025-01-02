@@ -59,17 +59,17 @@ const Hero = forwardRef((props, ref) => {
         alignItems="center"
       >
         <Box
-          width={{ xs: 300, md: 480 }}
-          height={{ xs: 300, md: 480 }}
+          width={{ xs: 250, md: 480 }}
+          height={{ xs: 360, md: 480 }}
           bgcolor='warning.main'
-          py={{xs: 4, md: 16}}
+          py={{xs: 8, md: 16}}
           px={2}
           borderRadius={2}
           position="absolute"
-          bottom={{ xs: 8, sm: "revert" }}
+          bottom={{ xs: 42, sm: "revert" }}
           //borderTop="black 8px solid"
           //borderBottom="black 8px solid"
-          sx={{  backgroundImage:`url(${christmasBg})`, backgroundSize: "cover", backgroundPosition: "right"}}
+          sx={{  backgroundImage:`url(${christmasBg})`, backgroundSize: "cover", backgroundPosition: "center"}}
         >
 
           <Text fontSize={{ xs: 28, md: 48 }} fontWeight={700}>{currentNameText}</Text>
@@ -116,6 +116,7 @@ const Hero = forwardRef((props, ref) => {
           />
           <Box component="img" src={profilePictureMobile} alt="Profile Picture"
                display={{ sm: "none" }}
+               width="90%"
                zIndex={-10}
                borderRadius={2}
           />

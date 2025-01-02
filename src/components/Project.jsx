@@ -9,7 +9,7 @@ import MobilePopUp from './MobilePopUp.jsx'
 
 const cardVariants = {
   offscreen: {
-    y: 100,
+    y: 20,
     scale: 0.3,
     opacity: 0.2
   },
@@ -104,16 +104,22 @@ const Project = ({
           </Box>
 
 
-          <Stack direction="horizontal" style={{ gap: "36px", paddingY: "10px" }}>
-            <a href={github} target="_blank" rel="noreferrer"><Text variant="subtitle1" fontSize="20px" color="warning.main">Github</Text></a>
+          <Stack direction="horizontal" sx={{ gap: "36px", paddingY: "10px", justifyContent: { xs: "space-evenly", md: "flex-start" } }}>
+            <Box component="button" sx={{ border: '2px orange solid' }}>
+              <a href={github} target="_blank" rel="noreferrer"><Text variant="subtitle1" fontSize="20px" color="warning.main">Github</Text></a>
+            </Box>
             {
               isMobile ?
                 <>
-                  <Box component="button" onClick={()=>setShowMobileModal(!showMobileModal)} p={0} border="none" ><Text variant="subtitle1" fontSize="20px" color="warning.main">Demo</Text></Box>
+                  <Box component="button" onClick={() => setShowMobileModal(!showMobileModal)} border="none" sx={{ border: "2px orange solid" }}>
+                    <Text variant="subtitle1" fontSize="20px" color="warning.main">Demo</Text>
+                  </Box>
                   {showMobileModal && <MobilePopUp open={showMobileModal} onClose={() => setShowMobileModal(false)} link={link} />}
                 </>
                 :
-                <a href={link} target="_blank" rel="noreferrer"><Text variant="subtitle1" fontSize="20px" color="warning.main">Demo</Text></a>
+                <Box component="button" sx={{ border: "2px orange solid" }}>
+                  <a href={link} target="_blank" rel="noreferrer"><Text variant="subtitle1" fontSize="20px" color="warning.main">Demo</Text></a>
+                </Box>
             }
           </Stack>
 
@@ -123,6 +129,5 @@ const Project = ({
     </>
   )
 }
-
 
 export default Project

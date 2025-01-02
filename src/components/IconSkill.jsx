@@ -29,7 +29,7 @@ const IconSkill = ({ name }) => {
         inheritViewBox
         fontSize="large"
       >{logos[name]}</SvgIcon>
-      <Text sx={{ fontSize: 14, fontWeight: 700 }}>{name}</Text>
+      <Text sx={{ fontSize: 14, fontWeight: { xs: 500, md: 700 }, textAlign: "center" }}>{name}</Text>
     </Stack>
   )
 }
@@ -40,14 +40,14 @@ const logos = {
   "Java": <FaJava />,
   "OpenAI": <SiOpenai />,
   "React": <FaReact />,
-  "React Native": <FaReact />,
+  "React & React Native": <FaReact />,
   "Expo": <SiExpo />,
   "NodeJS": <FaNode />,
   "MongoDB": <SiMongodb />,
   "SQL": <TbFileTypeSql />,
   "Firebase": <SiFirebase />,
   "Amazon Web Services": <FaAws />,
-  "Google Cloud": <SiGooglecloud />,
+  "Google Cloud Platform": <SiGooglecloud />,
   "Google Analytics": <SiGoogleanalytics />,
   "Network Configuration": <MdDns />,
   "API Integration": <TbApiApp />,
