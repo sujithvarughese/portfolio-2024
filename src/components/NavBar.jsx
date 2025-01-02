@@ -1,5 +1,5 @@
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap'
-import { Container } from '@mui/material'
+import { Container, Link } from '@mui/material'
 import Text from "../components/ui/Text.jsx"
 import linkedInIcon from '../assets/icons/linkedin-icon.svg';
 import githubIcon from "../assets/icons/github-mark-white.svg"
@@ -23,7 +23,7 @@ const NavBar = () => {
 
         <Navbar.Brand href="#home" className="navbar-link">
           <Nav.Link className="navbar-link">
-            <Box width={{ xs: 32, sm: 48}} component="img" src={svInitials} alt="SV" ></Box>
+            <Box width={48} display={{ xs: "none", sm: "initial" }} component="img" src={svInitials} alt="SV" ></Box>
           </Nav.Link>
         </Navbar.Brand>
 
@@ -34,30 +34,30 @@ const NavBar = () => {
             menuVariant="dark"
             autoClose={true}
           >
-            <NavDropdown.Item href={diploma} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>Bachelor's Diploma</Text></NavDropdown.Item>
-            <NavDropdown.Item href={comptiaCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>CompTIA A+</Text></NavDropdown.Item>
-            <NavDropdown.Item href={metaCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>Meta Front End Developer</Text></NavDropdown.Item>
-            <NavDropdown.Item href={accountingCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>Accounting Technology</Text></NavDropdown.Item>
-            <NavDropdown.Item href={businessManagementCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>Business Management</Text></NavDropdown.Item>
-            <NavDropdown.Item href={javascriptCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>Advanced Javascript</Text></NavDropdown.Item>
-            <NavDropdown.Item href={reactNativeCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>React Native 2024</Text></NavDropdown.Item>
-            <NavDropdown.Item href={mernCert} target="_blank" rel="noreferrer"><Text fontSize={{ xs: 14, sm: 18 }}>MERN Stack 2024</Text></NavDropdown.Item>
+            <NavDropdown.Item href={diploma} target="_blank" rel="noreferrer"><Text fontSize={18}>Bachelor's Diploma</Text></NavDropdown.Item>
+            <NavDropdown.Item href={comptiaCert} target="_blank" rel="noreferrer"><Text fontSize={18}>CompTIA A+</Text></NavDropdown.Item>
+            <NavDropdown.Item href={metaCert} target="_blank" rel="noreferrer"><Text fontSize={18}>Meta Front End Developer</Text></NavDropdown.Item>
+            <NavDropdown.Item href={accountingCert} target="_blank" rel="noreferrer"><Text fontSize={18}>Accounting Technology</Text></NavDropdown.Item>
+            <NavDropdown.Item href={businessManagementCert} target="_blank" rel="noreferrer"><Text fontSize={18}>Business Management</Text></NavDropdown.Item>
+            <NavDropdown.Item href={javascriptCert} target="_blank" rel="noreferrer"><Text fontSize={18}>Advanced Javascript</Text></NavDropdown.Item>
+            <NavDropdown.Item href={reactNativeCert} target="_blank" rel="noreferrer"><Text fontSize={18}>React Native 2024</Text></NavDropdown.Item>
+            <NavDropdown.Item href={mernCert} target="_blank" rel="noreferrer"><Text fontSize={18}>MERN Stack 2024</Text></NavDropdown.Item>
           </NavDropdown>
 
           <Nav.Link href={resume} className="navbar-link" target="_blank" rel="noreferrer">
-            <Text fontSize={{ xs: 14, sm: 18 }}>Resumé</Text>
+            <Text fontSize={18}>Resumé</Text>
           </Nav.Link>
         </Nav>
 
         <Box>
           <span className="navbar-text">
-            <Box className="social-icon" sx={{ display: { xs: "none", sm: "initial" } }}>
+            <Box className="social-icon">
               <a href="https://www.linkedin.com/in/sujithvarughese/" className="social-icon" target="_blank" rel="noreferrer"><img src={linkedInIcon} alt="Icon" /></a>
-              <a href="http://github.com/sujithvarughese" className="social-icon" target="_blank" rel="noreferrer"><img src={githubIcon} alt="Icon" /></a>
+              <a href="http://github.com/sujithvarughese" className="social-icon" target="_blank" rel="noreferrer" style={{ marginLeft: "8px"}}><img src={githubIcon} alt="Icon" /></a>
             </Box>
-            <a href={`mailto:${emailAddress}`} className="vvd connect">
+            <Link as="a" href={`mailto:${emailAddress}`} className="vvd connect" sx={{ marginLeft: 2 }}>
               <Text color="#fefefe">CONTACT ME</Text>
-            </a>
+            </Link>
           </span>
         </Box>
 

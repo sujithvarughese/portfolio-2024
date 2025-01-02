@@ -104,7 +104,7 @@ const Project = ({
           </Box>
 
 
-          <Stack direction="horizontal" sx={{ gap: "36px", paddingY: "10px", justifyContent: { xs: "space-evenly", md: "flex-start" } }}>
+          <Stack direction="horizontal" sx={{ gap: "36px", justifyContent: { xs: "space-evenly", md: "flex-start" } }}>
             <Box component="button" sx={{ border: '2px orange solid' }}>
               <a href={github} target="_blank" rel="noreferrer"><Text variant="subtitle1" fontSize="20px" color="warning.main">Github</Text></a>
             </Box>

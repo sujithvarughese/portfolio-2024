@@ -16,7 +16,7 @@ const Projects = () => {
     >
       <Text variant="h3" textAlign="center" sx={{ marginBottom: 4 }}>Projects</Text>
 
-      <Stack gap={{ xs: 8, md: 16 }}>
+      <Stack gap={6}>
         {projects.map(project => <Project key={project.title} {...project} />)}
       </Stack>
     </Container>

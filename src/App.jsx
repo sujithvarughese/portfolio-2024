@@ -19,7 +19,7 @@ const App = () => {
   }, [])
 
   return (
-    <Box maxWidth={1400} m="auto">
+    <Box maxWidth={1920} m="auto">
       <NavBar/>
       <Hero />
       <SkillList />
