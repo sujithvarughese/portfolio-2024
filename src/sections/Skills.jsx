@@ -5,6 +5,7 @@ import { HiOutlineComputerDesktop } from "react-icons/hi2";
 import { AiOutlineDeploymentUnit } from "react-icons/ai";
 import { RiStackLine } from "react-icons/ri";
 import Box from '@mui/material/Box'
+import { motion } from 'framer-motion'
 
 
 
@@ -14,7 +15,12 @@ const Skills = () => {
     <Box as="section" id="skills">
       <Stack flexDirection={{ md: "row" }} gap={2} my={12} mx={2} >
 
-        <Stack borderLeft={{ md: "solid 6px #1976d2" }} borderBottom={{ xs: "solid 6px #1976d2", md: "none" }}>
+        <Stack component={motion.div} borderLeft={{ md: "solid 6px #1976d2" }} borderBottom={{ xs: "solid 6px #1976d2", md: "none" }}
+           initial={{ opacity: 0 }}
+           whileInView={{ opacity: 100}}
+           transition={{ ease: "easeInOut", duration: 2 }}
+           viewport={{ once: true }}
+        >
           <Stack flexDirection="row" alignItems="center" justifyContent="center">
             <Box><HiOutlineComputerDesktop size={56} /></Box>
             <Text variant="h4" fontWeight={700}>Programmer.</Text>
@@ -22,7 +28,12 @@ const Skills = () => {
           <Box padding={4} ><Text variant="body1">{softwareSkills}</Text></Box>
         </Stack>
 
-        <Stack borderLeft={{ md: "solid 6px #1976d2" }} borderBottom={{ xs: "solid 6px #1976d2", md: "none" }}>
+        <Stack component={motion.div} borderLeft={{ md: "solid 6px #1976d2" }} borderBottom={{ xs: "solid 6px #1976d2", md: "none" }}
+           initial={{ opacity: 0 }}
+           whileInView={{ opacity: 100}}
+           transition={{ ease: "easeInOut", duration: 3 }}
+           viewport={{ once: true }}
+        >
           <Stack flexDirection="row" alignItems="center" justifyContent="center">
             <Box ><RiStackLine size={56} /></Box>
             <Text variant="h4" fontWeight={700}>Developer.</Text>
@@ -30,7 +41,12 @@ const Skills = () => {
           <Box padding={4} ><Text variant="body1">{fullStackSkills}</Text></Box>
         </Stack>
 
-        <Stack borderLeft={{ md: "solid 6px #1976d2" }} borderBottom={{ xs: "solid 6px #1976d2", md: "none" }}>
+        <Stack component={motion.div} borderLeft={{ md: "solid 6px #1976d2" }} borderBottom={{ xs: "solid 6px #1976d2", md: "none" }}
+           initial={{ opacity: 0 }}
+           whileInView={{ opacity: 100}}
+           transition={{ ease: "easeInOut", duration: 4 }}
+           viewport={{ once: true }}
+        >
           <Stack flexDirection="row" alignItems="center" justifyContent="center">
             <Box ><AiOutlineDeploymentUnit size={56}/></Box>
             <Text variant="h4" fontWeight={700}>Engineer.</Text>

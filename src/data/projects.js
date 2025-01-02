@@ -87,7 +87,7 @@ export const projects = [
 		coverImage: simplerFitnessCoverIMG,
 		coverVideo: simplerFitnessCoverMP4,
 		coverGif: simplerFitnessCoverGIF,
-		heading: "This AI-powered mobile exercise app uses OpenAI to creates detailed customized routines based on your profile and your available equipment.",
+		heading: "This AI-powered mobile exercise app uses OpenAI to create detailed customized routines based on your profile and your available equipment.",
 		description: "Get detailed information on thousands of workouts and use artificial intelligence to create personalized workouts, whether you're working out from home or the gym.",
 		captions: [
 			"Uses React Router, reducers, and Context API for navigation and state management.",
@@ -108,7 +108,7 @@ export const projects = [
 		coverImage: blackjackCoverIMG,
 		coverVideo: blackjackCoverMP4,
 		coverGif: blackjackCoverGIF,
-		heading: "Learn perfect strategy with hints and live feedback after every move, along with real-time ROI calculations.",
+		heading: "Beat the house with hints and live feedback after every move, along with real-time ROI calculations.",
 		description: "Beat Blackjack is designed to teach blackjack strategy while having fun trying to beat the house. Use the optional hint feature at any time to get the correct book play, or choose to get live feedback after every move.\n\n",
 		captions: [
 			"Customizable settings- Choose number of decks, blackjack payouts, your bankroll, number of splits allowed, and more.",
